@@ -29,7 +29,7 @@ A class for handling trits.
 
 
 
-*Defined in data/trits.ts:131*
+*Defined in [data/trits.ts:131](https://github.com/iotaeco/iota-pico-data/blob/142ff7f/src/data/trits.ts#L131)*
 
 
 
@@ -56,7 +56,7 @@ ___
 
 
 
-*Defined in data/trits.ts:109*
+*Defined in [data/trits.ts:109](https://github.com/iotaeco/iota-pico-data/blob/142ff7f/src/data/trits.ts#L109)*
 
 
 
@@ -83,7 +83,7 @@ ___
 
 
 
-*Defined in data/trits.ts:101*
+*Defined in [data/trits.ts:101](https://github.com/iotaeco/iota-pico-data/blob/142ff7f/src/data/trits.ts#L101)*
 
 
 
@@ -110,7 +110,7 @@ ___
 
 
 
-*Defined in data/trits.ts:70*
+*Defined in [data/trits.ts:70](https://github.com/iotaeco/iota-pico-data/blob/142ff7f/src/data/trits.ts#L70)*
 
 
 
@@ -145,7 +145,7 @@ ___
 
 
 
-*Defined in data/trits.ts:50*
+*Defined in [data/trits.ts:50](https://github.com/iotaeco/iota-pico-data/blob/142ff7f/src/data/trits.ts#L50)*
 
 
 

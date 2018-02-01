@@ -1,6 +1,6 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
-import { Trytes } from "./Trytes";
+import { Trytes } from "./trytes";
 
 /**
  * A class for handling trits.

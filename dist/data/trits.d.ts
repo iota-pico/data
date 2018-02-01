@@ -1,4 +1,4 @@
-import { Trytes } from "./Trytes";
+import { Trytes } from "./trytes";
 /**
  * A class for handling trits.
  */

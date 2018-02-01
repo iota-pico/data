@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const coreError_1 = require("@iota-pico/core/dist/error/coreError");
 const numberHelper_1 = require("@iota-pico/core/dist/helpers/numberHelper");
-const Trytes_1 = require("./Trytes");
+const trytes_1 = require("./trytes");
 /**
  * A class for handling trits.
  */
@@ -22,7 +22,7 @@ class Trits {
         const trits = [];
         const trytesString = value.toString();
         for (let i = 0; i < trytesString.length; i++) {
-            const idx = Trytes_1.Trytes.ALPHABET.indexOf(trytesString.charAt(i));
+            const idx = trytes_1.Trytes.ALPHABET.indexOf(trytesString.charAt(i));
             trits[i * 3] = Trits.TRYTES_TRITS[idx][0];
             trits[i * 3 + 1] = Trits.TRYTES_TRITS[idx][1];
             trits[i * 3 + 2] = Trits.TRYTES_TRITS[idx][2];
@@ -71,16 +71,16 @@ class Trits {
         let trytes = "";
         for (let i = 0; i < this._trits.length; i += 3) {
             // Iterate over all possible tryte values to find correct trit representation
-            for (let j = 0; j < Trytes_1.Trytes.ALPHABET.length; j++) {
+            for (let j = 0; j < trytes_1.Trytes.ALPHABET.length; j++) {
                 if (Trits.TRYTES_TRITS[j][0] === this._trits[i] &&
                     Trits.TRYTES_TRITS[j][1] === this._trits[i + 1] &&
                     Trits.TRYTES_TRITS[j][2] === this._trits[i + 2]) {
-                    trytes += Trytes_1.Trytes.ALPHABET.charAt(j);
+                    trytes += trytes_1.Trytes.ALPHABET.charAt(j);
                     break;
                 }
             }
         }
-        return Trytes_1.Trytes.create(trytes);
+        return trytes_1.Trytes.create(trytes);
     }
     /**
      * Get the trits as a number.
