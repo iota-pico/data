@@ -7,7 +7,19 @@ export declare class Trits {
     private readonly _trits;
     private constructor();
     /**
-     * Create instance of trits from trytes
+     * Create empty trits.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    static empty(): Trits;
+    /**
+     * Create instance of trits from number array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    static fromValue(value: number[]): Trits;
+    /**
+     * Create instance of trits from trytes.
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
@@ -33,4 +45,9 @@ export declare class Trits {
      * @returns The trits converted to a number.
      */
     toNumber(): number;
+    /**
+     * What is the length of the trits.
+     * @returns Length of the trits.
+     */
+    length(): number;
 }

@@ -43,7 +43,28 @@ export class Trits {
     }
 
     /**
-     * Create instance of trits from trytes
+     * Create empty trits.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public static empty(): Trits {
+        return new Trits([]);
+    }
+
+    /**
+     * Create instance of trits from number array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public static fromValue(value: number[]): Trits {
+        if (value === null || value === undefined) {
+            throw new CoreError("The supplied value does not contain valid trits");
+        }
+        return new Trits(value);
+    }
+
+    /**
+     * Create instance of trits from trytes.
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
@@ -136,5 +157,13 @@ export class Trits {
         }
 
         return returnValue;
+    }
+
+    /**
+     * What is the length of the trits.
+     * @returns Length of the trits.
+     */
+    public length(): number {
+        return this._trits.length;
     }
 }

@@ -11,7 +11,26 @@ class Trits {
         this._trits = trits;
     }
     /**
-     * Create instance of trits from trytes
+     * Create empty trits.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    static empty() {
+        return new Trits([]);
+    }
+    /**
+     * Create instance of trits from number array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    static fromValue(value) {
+        if (value === null || value === undefined) {
+            throw new coreError_1.CoreError("The supplied value does not contain valid trits");
+        }
+        return new Trits(value);
+    }
+    /**
+     * Create instance of trits from trytes.
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
@@ -92,6 +111,13 @@ class Trits {
             returnValue = returnValue * 3 + this._trits[i];
         }
         return returnValue;
+    }
+    /**
+     * What is the length of the trits.
+     * @returns Length of the trits.
+     */
+    length() {
+        return this._trits.length;
     }
 }
 Trits.TRYTES_TRITS = [
