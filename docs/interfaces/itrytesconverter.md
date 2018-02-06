@@ -29,7 +29,7 @@ The generic type for the conversion methods.
 
 
 
-*Defined in [interfaces/ITrytesConverter.ts:21](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/interfaces/ITrytesConverter.ts#L21)*
+*Defined in [interfaces/ITrytesConverter.ts:21](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/interfaces/ITrytesConverter.ts#L21)*
 
 
 
@@ -64,7 +64,7 @@ ___
 
 
 
-*Defined in [interfaces/ITrytesConverter.ts:14](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/interfaces/ITrytesConverter.ts#L14)*
+*Defined in [interfaces/ITrytesConverter.ts:14](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/interfaces/ITrytesConverter.ts#L14)*
 
 
 

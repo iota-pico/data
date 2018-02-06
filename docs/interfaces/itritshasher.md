@@ -19,7 +19,7 @@ Represents an interface to hash trits.
 
 
 
-*Defined in interfaces/ITritsHasher.ts:25*
+*Defined in [interfaces/ITritsHasher.ts:25](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/interfaces/ITritsHasher.ts#L25)*
 
 
 
@@ -54,7 +54,7 @@ ___
 
 
 
-*Defined in interfaces/ITritsHasher.ts:12*
+*Defined in [interfaces/ITritsHasher.ts:12](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/interfaces/ITritsHasher.ts#L12)*
 
 
 
@@ -87,7 +87,7 @@ ___
 
 
 
-*Defined in interfaces/ITritsHasher.ts:17*
+*Defined in [interfaces/ITritsHasher.ts:17](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/interfaces/ITritsHasher.ts#L17)*
 
 
 
@@ -112,7 +112,7 @@ ___
 
 
 
-*Defined in interfaces/ITritsHasher.ts:33*
+*Defined in [interfaces/ITritsHasher.ts:33](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/interfaces/ITritsHasher.ts#L33)*
 
 
 

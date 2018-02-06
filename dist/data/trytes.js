@@ -6,6 +6,7 @@ const stringHelper_1 = require("@iota-pico/core/dist/helpers/stringHelper");
  * A class for handling trytes.
  */
 class Trytes {
+    /* @internal */
     constructor(trytes) {
         this._trytes = trytes;
     }

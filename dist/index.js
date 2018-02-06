@@ -8,5 +8,6 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 __export(require("./converters/asciiTrytesConverter"));
 __export(require("./converters/objectTrytesConverter"));
+__export(require("./converters/tritsWordConverter"));
 __export(require("./data/trits"));
 __export(require("./data/trytes"));

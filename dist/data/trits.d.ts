@@ -3,9 +3,6 @@ import { Trytes } from "./trytes";
  * A class for handling trits.
  */
 export declare class Trits {
-    private static readonly TRYTES_TRITS;
-    private readonly _trits;
-    private constructor();
     /**
      * Create empty trits.
      * @param value Trytes used to create trits.

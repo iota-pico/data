@@ -32,7 +32,7 @@ A class for handling trits.
 
 
 
-*Defined in [data/trits.ts:166](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L166)*
+*Defined in [data/trits.ts:169](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L169)*
 
 
 
@@ -59,7 +59,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:152](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L152)*
+*Defined in [data/trits.ts:155](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L155)*
 
 
 
@@ -86,7 +86,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:130](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L130)*
+*Defined in [data/trits.ts:133](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L133)*
 
 
 
@@ -113,7 +113,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:122](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L122)*
+*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L125)*
 
 
 
@@ -140,7 +140,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:50](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L50)*
+*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L53)*
 
 
 
@@ -167,7 +167,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:91](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L91)*
+*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L94)*
 
 
 
@@ -202,7 +202,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:71](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L71)*
+*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L74)*
 
 
 
@@ -237,7 +237,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:59](https://github.com/iotaeco/iota-pico-data/blob/fb98133/src/data/trits.ts#L59)*
+*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/9a36b90/src/data/trits.ts#L62)*
 
 
 

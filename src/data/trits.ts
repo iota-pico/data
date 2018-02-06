@@ -6,6 +6,7 @@ import { Trytes } from "./trytes";
  * A class for handling trits.
  */
 export class Trits {
+    /* @internal */
     private static readonly TRYTES_TRITS: number[][] = [
         [0, 0, 0],
         [1, 0, 0],
@@ -36,8 +37,10 @@ export class Trits {
         [-1, 0, 0]
     ];
 
+    /* @internal */
     private readonly _trits: number[];
 
+    /* @internal */
     private constructor(trits: number[]) {
         this._trits = trits;
     }

@@ -3,8 +3,6 @@
  */
 export declare class Trytes {
     static ALPHABET: string;
-    private readonly _trytes;
-    private constructor();
     /**
      * Create trytes from a string.
      * @param value A string to create the trytes from.

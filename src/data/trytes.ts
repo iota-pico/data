@@ -7,8 +7,10 @@ import { StringHelper } from "@iota-pico/core/dist/helpers/stringHelper";
 export class Trytes {
     public static ALPHABET: string = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
+    /* @internal */
     private readonly _trytes: string;
 
+    /* @internal */
     private constructor(trytes: string) {
         this._trytes = trytes;
     }

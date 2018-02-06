@@ -7,6 +7,7 @@ const trytes_1 = require("./trytes");
  * A class for handling trits.
  */
 class Trits {
+    /* @internal */
     constructor(trits) {
         this._trits = trits;
     }
@@ -120,6 +121,7 @@ class Trits {
         return this._trits.length;
     }
 }
+/* @internal */
 Trits.TRYTES_TRITS = [
     [0, 0, 0],
     [1, 0, 0],
