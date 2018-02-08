@@ -16,7 +16,6 @@
 
 ### Interfaces
 
-* [ITritsHasher](interfaces/itritshasher.md)
 * [ITrytesConverter](interfaces/itrytesconverter.md)
 
 
