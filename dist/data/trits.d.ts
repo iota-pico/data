@@ -14,7 +14,7 @@ export declare class Trits {
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    static fromValue(value: number[]): Trits;
+    static fromTritsArray(value: number[]): Trits;
     /**
      * Create instance of trits from trytes.
      * @param value Trytes used to create trits.
@@ -31,7 +31,7 @@ export declare class Trits {
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    toValue(): number[];
+    toTritsArray(): number[];
     /**
      * Get the trits as trytes.
      * @returns Instance of Trytes.

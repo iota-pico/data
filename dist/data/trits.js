@@ -24,7 +24,7 @@ class Trits {
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    static fromValue(value) {
+    static fromTritsArray(value) {
         if (value === null || value === undefined) {
             throw new coreError_1.CoreError("The supplied value does not contain valid trits");
         }
@@ -80,7 +80,7 @@ class Trits {
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    toValue() {
+    toTritsArray() {
         return this._trits;
     }
     /**

@@ -39,7 +39,7 @@ export class TritsWordConverter {
             throw new CoreError("Trits can not be null or undefined");
         }
 
-        const tritsData = trits.toValue();
+        const tritsData = trits.toTritsArray();
 
         if (tritsData.length !== TritsWordConverter.TRITS_LENGTH) {
             throw new CoreError(`Invalid trits length ${tritsData.length} it should be ${TritsWordConverter.TRITS_LENGTH}`);
@@ -173,7 +173,7 @@ export class TritsWordConverter {
             }
         }
 
-        return Trits.fromValue(Array.from(trits));
+        return Trits.fromTritsArray(Array.from(trits));
     }
 
     /**

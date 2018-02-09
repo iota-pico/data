@@ -30,7 +30,7 @@ Trytes converter that converts to and from a string.
 
 
 
-*Defined in [converters/asciiTrytesConverter.ts:43](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/converters/asciiTrytesConverter.ts#L43)*
+*Defined in [converters/asciiTrytesConverter.ts:43](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/converters/asciiTrytesConverter.ts#L43)*
 
 
 
@@ -65,7 +65,7 @@ ___
 
 
 
-*Defined in [converters/asciiTrytesConverter.ts:15](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/converters/asciiTrytesConverter.ts#L15)*
+*Defined in [converters/asciiTrytesConverter.ts:15](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/converters/asciiTrytesConverter.ts#L15)*
 
 
 

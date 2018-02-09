@@ -17,11 +17,11 @@ describe("Trits", () => {
         });
 
         it("can succeed converting with trytes empty string", () => {
-            chai.expect(Trits.fromTrytes(Trytes.create("")).toValue()).to.deep.equal([]);
+            chai.expect(Trits.fromTrytes(Trytes.create("")).toTritsArray()).to.deep.equal([]);
         });
 
         it("can succeed converting with non-empty string", () => {
-            chai.expect(Trits.fromTrytes(Trytes.create("ABCDEFG9999")).toValue()).to.deep.equal(
+            chai.expect(Trits.fromTrytes(Trytes.create("ABCDEFG9999")).toTritsArray()).to.deep.equal(
                 [1, 0, 0, -1, 1, 0, 0, 1, 0, 1, 1, 0, -1, -1, 1, 0, -1, 1, 1, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         });
     });
@@ -58,24 +58,24 @@ describe("Trits", () => {
         });
 
         it("can succeed converting with zero", () => {
-            chai.expect(Trits.fromNumber(0).toValue()).to.deep.equal([]);
+            chai.expect(Trits.fromNumber(0).toTritsArray()).to.deep.equal([]);
         });
 
         it("can succeed converting with positive integer", () => {
-            chai.expect(Trits.fromNumber(43).toValue()).to.deep.equal([1, -1, -1, -1, 1]);
+            chai.expect(Trits.fromNumber(43).toTritsArray()).to.deep.equal([1, -1, -1, -1, 1]);
         });
 
         it("can succeed converting with negative integer", () => {
-            chai.expect(Trits.fromNumber(-43).toValue()).to.deep.equal([-1, 1, 1, 1, -1]);
+            chai.expect(Trits.fromNumber(-43).toTritsArray()).to.deep.equal([-1, 1, 1, 1, -1]);
         });
 
         it("can succeed converting with max positive integer", () => {
-            chai.expect(Trits.fromNumber(Number.MAX_SAFE_INTEGER).toValue()).to.deep.equal(
+            chai.expect(Trits.fromNumber(Number.MAX_SAFE_INTEGER).toTritsArray()).to.deep.equal(
                 [1, 1, 1, 1, 0, 1, -1, -1, 1, 0, 0, 1, 1, 1, -1, 0, 0, -1, -1, -1, 0, -1, -1, 0, -1, -1, 1, -1, 1, -1, -1, 0, -1, -1, 1]);
         });
 
         it("can succeed converting with min negative integer", () => {
-            chai.expect(Trits.fromNumber(Number.MIN_SAFE_INTEGER).toValue()).to.deep.equal(
+            chai.expect(Trits.fromNumber(Number.MIN_SAFE_INTEGER).toTritsArray()).to.deep.equal(
                 [-1, -1, -1, -1, -0, -1, 1, 1, -1, -0, -0, -1, -1, -1, 1, -0, -0, 1, 1, 1, -0, 1, 1, -0, 1, 1, -1, 1, -1, 1, 1, -0, 1, 1, -1]);
         });
     });

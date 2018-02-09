@@ -13,12 +13,12 @@ A class for handling trits.
 
 * [length](trits.md#length)
 * [toNumber](trits.md#tonumber)
+* [toTritsArray](trits.md#totritsarray)
 * [toTrytes](trits.md#totrytes)
-* [toValue](trits.md#tovalue)
 * [empty](trits.md#empty)
 * [fromNumber](trits.md#fromnumber)
+* [fromTritsArray](trits.md#fromtritsarray)
 * [fromTrytes](trits.md#fromtrytes)
-* [fromValue](trits.md#fromvalue)
 
 
 
@@ -32,7 +32,7 @@ A class for handling trits.
 
 
 
-*Defined in [data/trits.ts:169](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L169)*
+*Defined in [data/trits.ts:169](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L169)*
 
 
 
@@ -59,7 +59,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:155](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L155)*
+*Defined in [data/trits.ts:155](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L155)*
 
 
 
@@ -78,42 +78,15 @@ The trits converted to a number.
 
 ___
 
-<a id="totrytes"></a>
+<a id="totritsarray"></a>
 
-###  toTrytes
+###  toTritsArray
 
-► **toTrytes**(): [Trytes](trytes.md)
-
-
-
-*Defined in [data/trits.ts:133](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L133)*
+► **toTritsArray**(): `number`[]
 
 
 
-Get the trits as trytes.
-
-
-
-
-**Returns:** [Trytes](trytes.md)
-Instance of Trytes.
-
-
-
-
-
-
-___
-
-<a id="tovalue"></a>
-
-###  toValue
-
-► **toValue**(): `number`[]
-
-
-
-*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L125)*
+*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L125)*
 
 
 
@@ -132,6 +105,33 @@ Array representation of the trits.
 
 ___
 
+<a id="totrytes"></a>
+
+###  toTrytes
+
+► **toTrytes**(): [Trytes](trytes.md)
+
+
+
+*Defined in [data/trits.ts:133](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L133)*
+
+
+
+Get the trits as trytes.
+
+
+
+
+**Returns:** [Trytes](trytes.md)
+Instance of Trytes.
+
+
+
+
+
+
+___
+
 <a id="empty"></a>
 
 ### «Static» empty
@@ -140,7 +140,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L53)*
+*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L53)*
 
 
 
@@ -167,7 +167,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L94)*
+*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L94)*
 
 
 
@@ -194,26 +194,26 @@ An instance of Trits.
 
 ___
 
-<a id="fromtrytes"></a>
+<a id="fromtritsarray"></a>
 
-### «Static» fromTrytes
+### «Static» fromTritsArray
 
-► **fromTrytes**(value: *[Trytes](trytes.md)*): [Trits](trits.md)
-
-
-
-*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L74)*
+► **fromTritsArray**(value: *`number`[]*): [Trits](trits.md)
 
 
 
-Create instance of trits from trytes.
+*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L62)*
+
+
+
+Create instance of trits from number array.
 
 
 **Parameters:**
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | [Trytes](trytes.md)   |  Trytes used to create trits. |
+| value | `number`[]   |  Trytes used to create trits. |
 
 
 
@@ -229,26 +229,26 @@ An instance of Trits.
 
 ___
 
-<a id="fromvalue"></a>
+<a id="fromtrytes"></a>
 
-### «Static» fromValue
+### «Static» fromTrytes
 
-► **fromValue**(value: *`number`[]*): [Trits](trits.md)
-
-
-
-*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/2c0048f/src/data/trits.ts#L62)*
+► **fromTrytes**(value: *[Trytes](trytes.md)*): [Trits](trits.md)
 
 
 
-Create instance of trits from number array.
+*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/ff8437b/src/data/trits.ts#L74)*
+
+
+
+Create instance of trits from trytes.
 
 
 **Parameters:**
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `number`[]   |  Trytes used to create trits. |
+| value | [Trytes](trytes.md)   |  Trytes used to create trits. |
 
 
 

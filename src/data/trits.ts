@@ -59,7 +59,7 @@ export class Trits {
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    public static fromValue(value: number[]): Trits {
+    public static fromTritsArray(value: number[]): Trits {
         if (value === null || value === undefined) {
             throw new CoreError("The supplied value does not contain valid trits");
         }
@@ -122,7 +122,7 @@ export class Trits {
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    public toValue(): number[] {
+    public toTritsArray(): number[] {
         return this._trits;
     }
 
