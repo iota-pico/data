@@ -1,6 +1,6 @@
 {
     "name": "@iota-pico/data",
-    "version": "0.6.0",
+    "version": "0.6.1",
     "description": "IOTA Pico Framework Data Structures and Helpers",
     "main": "dist/index.js",
     "typings": "dist/index.d.ts",
@@ -41,7 +41,7 @@
         "dist": "npm-run-all build test docs security"
     },
     "dependencies": {
-        "@iota-pico/core": "^0.6.0"
+        "@iota-pico/core": "^0.6.1"
     },
     "devDependencies": {
         "@types/chai": "^4.1.1",
@@ -54,8 +54,8 @@
         "ts-node": "^4.1.0",
         "tslint": "^5.9.1",
         "tslint-microsoft-contrib": "^5.0.2",
-        "typedoc": "^0.9.0",
+        "typedoc": "^0.10.0",
         "typedoc-plugin-markdown": "^1.0.12",
-        "typescript": "^2.7.0-rc"
+        "typescript": "^2.7.1"
     }
 }
