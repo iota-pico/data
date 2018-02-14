@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.6.2
+
+* Added Address object
+* Added Tag object
+* Added Transaction object
+
 ## v0.6.1
 
 * Version bump
