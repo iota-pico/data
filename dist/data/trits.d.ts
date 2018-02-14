@@ -47,4 +47,11 @@ export declare class Trits {
      * @returns Length of the trits.
      */
     length(): number;
+    /**
+     * Get a sub of the trits.
+     * @param start The start position to get the sub.
+     * @param length The length of the sub.
+     * @returns The trits sub.
+     */
+    sub(start: number, length: number): Trits;
 }

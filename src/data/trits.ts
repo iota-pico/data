@@ -169,4 +169,14 @@ export class Trits {
     public length(): number {
         return this._trits.length;
     }
+
+    /**
+     * Get a sub of the trits.
+     * @param start The start position to get the sub.
+     * @param length The length of the sub.
+     * @returns The trits sub.
+     */
+    public sub(start: number, length: number): Trits {
+        return Trits.fromTritsArray(this._trits.slice(start, start + length));
+    }
 }

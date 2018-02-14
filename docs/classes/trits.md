@@ -12,6 +12,7 @@ A class for handling trits.
 ### Methods
 
 * [length](trits.md#length)
+* [sub](trits.md#sub)
 * [toNumber](trits.md#tonumber)
 * [toTritsArray](trits.md#totritsarray)
 * [toTrytes](trits.md#totrytes)
@@ -32,7 +33,7 @@ A class for handling trits.
 
 
 
-*Defined in [data/trits.ts:169](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L169)*
+*Defined in [data/trits.ts:169](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L169)*
 
 
 
@@ -51,6 +52,42 @@ Length of the trits.
 
 ___
 
+<a id="sub"></a>
+
+###  sub
+
+► **sub**(start: *`number`*, length: *`number`*): [Trits](trits.md)
+
+
+
+*Defined in [data/trits.ts:179](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L179)*
+
+
+
+Get a sub of the trits.
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| start | `number`   |  The start position to get the sub. |
+| length | `number`   |  The length of the sub. |
+
+
+
+
+
+**Returns:** [Trits](trits.md)
+The trits sub.
+
+
+
+
+
+
+___
+
 <a id="tonumber"></a>
 
 ###  toNumber
@@ -59,7 +96,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:155](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L155)*
+*Defined in [data/trits.ts:155](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L155)*
 
 
 
@@ -86,7 +123,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L125)*
+*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L125)*
 
 
 
@@ -113,7 +150,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:133](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L133)*
+*Defined in [data/trits.ts:133](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L133)*
 
 
 
@@ -140,7 +177,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L53)*
+*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L53)*
 
 
 
@@ -167,7 +204,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L94)*
+*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L94)*
 
 
 
@@ -202,7 +239,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L62)*
+*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L62)*
 
 
 
@@ -237,7 +274,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trits.ts#L74)*
+*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L74)*
 
 
 

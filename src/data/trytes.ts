@@ -23,7 +23,7 @@ export class Trytes {
      */
     public static create(value: string, length: number = 0): Trytes {
         if (!Trytes.isValid(value, length)) {
-            throw new CoreError("The supplied value and length do not contain valid trytes");
+            throw new CoreError("The supplied value and length do not contain valid trytes", { value, length });
         }
         return new Trytes(value);
     }
@@ -48,5 +48,23 @@ export class Trytes {
      */
     public toString(): string {
         return this._trytes;
+    }
+
+    /**
+     * Get the length of the trytes.
+     * @returns The length of the trytes.
+     */
+    public length(): number {
+        return this._trytes.length;
+    }
+
+    /**
+     * Get a sub of the trytes.
+     * @param start The start position to get the sub.
+     * @param length The length of the sub.
+     * @returns The trytes sub.
+     */
+    public sub(start: number, length: number): Trytes {
+        return Trytes.create(this._trytes.substr(start, length));
     }
 }

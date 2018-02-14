@@ -22,4 +22,16 @@ export declare class Trytes {
      * @returns String representation of the trytes.
      */
     toString(): string;
+    /**
+     * Get the length of the trytes.
+     * @returns The length of the trytes.
+     */
+    length(): number;
+    /**
+     * Get a sub of the trytes.
+     * @param start The start position to get the sub.
+     * @param length The length of the sub.
+     * @returns The trytes sub.
+     */
+    sub(start: number, length: number): Trytes;
 }

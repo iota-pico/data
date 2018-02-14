@@ -16,6 +16,8 @@ A class for handling trytes.
 
 ### Methods
 
+* [length](trytes.md#length)
+* [sub](trytes.md#sub)
 * [toString](trytes.md#tostring)
 * [create](trytes.md#create)
 * [isValid](trytes.md#isvalid)
@@ -30,7 +32,7 @@ A class for handling trytes.
 
 **●  ALPHABET**:  *`string`*  = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-*Defined in [data/trytes.ts:8](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trytes.ts#L8)*
+*Defined in [data/trytes.ts:8](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trytes.ts#L8)*
 
 
 
@@ -40,6 +42,69 @@ ___
 
 
 ## Methods
+<a id="length"></a>
+
+###  length
+
+► **length**(): `number`
+
+
+
+*Defined in [data/trytes.ts:57](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trytes.ts#L57)*
+
+
+
+Get the length of the trytes.
+
+
+
+
+**Returns:** `number`
+The length of the trytes.
+
+
+
+
+
+
+___
+
+<a id="sub"></a>
+
+###  sub
+
+► **sub**(start: *`number`*, length: *`number`*): [Trytes](trytes.md)
+
+
+
+*Defined in [data/trytes.ts:67](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trytes.ts#L67)*
+
+
+
+Get a sub of the trytes.
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| start | `number`   |  The start position to get the sub. |
+| length | `number`   |  The length of the sub. |
+
+
+
+
+
+**Returns:** [Trytes](trytes.md)
+The trytes sub.
+
+
+
+
+
+
+___
+
 <a id="tostring"></a>
 
 ###  toString
@@ -48,7 +113,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:49](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trytes.ts#L49)*
+*Defined in [data/trytes.ts:49](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trytes.ts#L49)*
 
 
 
@@ -75,7 +140,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:24](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trytes.ts#L24)*
+*Defined in [data/trytes.ts:24](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trytes.ts#L24)*
 
 
 
@@ -111,7 +176,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:37](https://github.com/iotaeco/iota-pico-data/blob/bbc3047/src/data/trytes.ts#L37)*
+*Defined in [data/trytes.ts:37](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trytes.ts#L37)*
 
 
 

@@ -18,7 +18,7 @@ class Trytes {
      */
     static create(value, length = 0) {
         if (!Trytes.isValid(value, length)) {
-            throw new coreError_1.CoreError("The supplied value and length do not contain valid trytes");
+            throw new coreError_1.CoreError("The supplied value and length do not contain valid trytes", { value, length });
         }
         return new Trytes(value);
     }
@@ -42,6 +42,22 @@ class Trytes {
      */
     toString() {
         return this._trytes;
+    }
+    /**
+     * Get the length of the trytes.
+     * @returns The length of the trytes.
+     */
+    length() {
+        return this._trytes.length;
+    }
+    /**
+     * Get a sub of the trytes.
+     * @param start The start position to get the sub.
+     * @param length The length of the sub.
+     * @returns The trytes sub.
+     */
+    sub(start, length) {
+        return Trytes.create(this._trytes.substr(start, length));
     }
 }
 Trytes.ALPHABET = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ";
