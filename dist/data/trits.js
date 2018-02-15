@@ -24,7 +24,7 @@ class Trits {
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    static fromTritsArray(value) {
+    static fromArray(value) {
         if (value === null || value === undefined) {
             throw new coreError_1.CoreError("The supplied value does not contain valid trits");
         }
@@ -77,11 +77,78 @@ class Trits {
         return new Trits(trits);
     }
     /**
+     * Add two trits together.
+     * @param a The first trit.
+     * @param b The second trit.
+     * @return New trit which is the addition of the a + b.
+     */
+    static add(a, b) {
+        const out = new Array(Math.max(a._trits.length, b._trits.length));
+        let carry = 0;
+        let iA;
+        let iB;
+        for (let i = 0; i < out.length; i++) {
+            iA = i < a._trits.length ? a._trits[i] : 0;
+            iB = i < b._trits.length ? b._trits[i] : 0;
+            const fA = Trits.fullAdd(iA, iB, carry);
+            out[i] = fA[0];
+            carry = fA[1];
+        }
+        return Trits.fromArray(out);
+    }
+    /* @internal */
+    static fullAdd(a, b, c) {
+        const sA = Trits.sum(a, b);
+        const cA = Trits.cons(a, b);
+        const cB = Trits.cons(sA, c);
+        const cOut = Trits.any(cA, cB);
+        const sOUt = Trits.sum(sA, c);
+        return [sOUt, cOut];
+    }
+    /* @internal */
+    static sum(a, b) {
+        const s = a + b;
+        switch (s) {
+            case 2: return -1;
+            case -2: return 1;
+            default: return s;
+        }
+    }
+    /* @internal */
+    static cons(a, b) {
+        if (a === b) {
+            return a;
+        }
+        return 0;
+    }
+    /* @internal */
+    static any(a, b) {
+        const s = a + b;
+        if (s > 0) {
+            return 1;
+        }
+        else if (s < 0) {
+            return -1;
+        }
+        return 0;
+    }
+    /**
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    toTritsArray() {
-        return this._trits;
+    toArray() {
+        return this._trits.slice();
+    }
+    /**
+     * Create instance of trits from number array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    fromArray(value) {
+        if (value === null || value === undefined) {
+            throw new coreError_1.CoreError("The supplied value does not contain valid trits");
+        }
+        this._trits = value.slice();
     }
     /**
      * Get the trits as trytes.
@@ -127,7 +194,7 @@ class Trits {
      * @returns The trits sub.
      */
     sub(start, length) {
-        return Trits.fromTritsArray(this._trits.slice(start, start + length));
+        return Trits.fromArray(this._trits.slice(start, start + length));
     }
 }
 /* @internal */

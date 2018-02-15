@@ -11,6 +11,7 @@ A class for handling tags.
 
 ### Properties
 
+* [EMPTY](tag.md#empty)
 * [LENGTH](tag.md#length)
 
 
@@ -23,13 +24,27 @@ A class for handling tags.
 
 ---
 ## Properties
+<a id="empty"></a>
+
+### «Static» EMPTY
+
+**●  EMPTY**:  *[Tag](tag.md)*  =  Tag.create(Trytes.create("9".repeat(Tag.LENGTH)))
+
+*Defined in [data/tag.ts:11](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/tag.ts#L11)*
+
+
+
+
+
+___
+
 <a id="length"></a>
 
 ### «Static» LENGTH
 
 **●  LENGTH**:  *`number`*  = 27
 
-*Defined in data/tag.ts:9*
+*Defined in [data/tag.ts:9](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/tag.ts#L9)*
 
 
 
@@ -47,7 +62,7 @@ ___
 
 
 
-*Defined in data/tag.ts:36*
+*Defined in [data/tag.ts:48](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/tag.ts#L48)*
 
 
 
@@ -74,7 +89,7 @@ ___
 
 
 
-*Defined in data/tag.ts:24*
+*Defined in [data/tag.ts:26](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/tag.ts#L26)*
 
 
 
@@ -92,7 +107,7 @@ Create tag from trytes.
 
 
 **Returns:** [Tag](tag.md)
-An instance of Address.
+An instance of Tag.
 
 
 

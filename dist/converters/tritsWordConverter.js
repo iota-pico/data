@@ -16,7 +16,7 @@ class TritsWordConverter {
         if (trits === undefined || trits === null) {
             throw new coreError_1.CoreError("Trits can not be null or undefined");
         }
-        const tritsData = trits.toTritsArray();
+        const tritsData = trits.toArray();
         if (tritsData.length !== TritsWordConverter.TRITS_LENGTH) {
             throw new coreError_1.CoreError(`Invalid trits length ${tritsData.length} it should be ${TritsWordConverter.TRITS_LENGTH}`);
         }
@@ -131,7 +131,7 @@ class TritsWordConverter {
                 trits[i] = -trits[i];
             }
         }
-        return trits_1.Trits.fromTritsArray(Array.from(trits));
+        return trits_1.Trits.fromArray(Array.from(trits));
     }
     /**
      * Negates the (unsigned) input array.

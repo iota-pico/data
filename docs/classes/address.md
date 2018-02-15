@@ -12,13 +12,14 @@ A class for handling addresses.
 ### Properties
 
 * [LENGTH](address.md#length)
+* [LENGTH_CHECKSUM](address.md#length_checksum)
 * [LENGTH_WITH_CHECKSUM](address.md#length_with_checksum)
 
 
 ### Methods
 
-* [hasChecksum](address.md#haschecksum)
 * [toTrytes](address.md#totrytes)
+* [toTrytesWithChecksum](address.md#totryteswithchecksum)
 * [create](address.md#create)
 
 
@@ -31,7 +32,21 @@ A class for handling addresses.
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in data/address.ts:9*
+*Defined in [data/address.ts:9](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/address.ts#L9)*
+
+
+
+
+
+___
+
+<a id="length_checksum"></a>
+
+### «Static» LENGTH_CHECKSUM
+
+**●  LENGTH_CHECKSUM**:  *`number`*  = 9
+
+*Defined in [data/address.ts:11](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/address.ts#L11)*
 
 
 
@@ -43,9 +58,9 @@ ___
 
 ### «Static» LENGTH_WITH_CHECKSUM
 
-**●  LENGTH_WITH_CHECKSUM**:  *`number`*  = 90
+**●  LENGTH_WITH_CHECKSUM**:  *`number`*  =  Address.LENGTH + Address.LENGTH_CHECKSUM
 
-*Defined in data/address.ts:11*
+*Defined in [data/address.ts:13](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/address.ts#L13)*
 
 
 
@@ -55,33 +70,6 @@ ___
 
 
 ## Methods
-<a id="haschecksum"></a>
-
-###  hasChecksum
-
-► **hasChecksum**(): `boolean`
-
-
-
-*Defined in data/address.ts:49*
-
-
-
-Does the address have a checksum.
-
-
-
-
-**Returns:** `boolean`
-True if the address has a checksum.
-
-
-
-
-
-
-___
-
 <a id="totrytes"></a>
 
 ###  toTrytes
@@ -90,17 +78,44 @@ ___
 
 
 
-*Defined in data/address.ts:41*
+*Defined in [data/address.ts:54](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/address.ts#L54)*
 
 
 
-Convert the address to trytes.
+Convert the address to trytes with no checksum.
 
 
 
 
 **Returns:** [Trytes](trytes.md)
-Trytes version of the address.
+Trytes version of the address with no checksum.
+
+
+
+
+
+
+___
+
+<a id="totryteswithchecksum"></a>
+
+###  toTrytesWithChecksum
+
+► **toTrytesWithChecksum**(): [Trytes](trytes.md)
+
+
+
+*Defined in [data/address.ts:62](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/address.ts#L62)*
+
+
+
+Convert the address to trytes with a checksum, creating a blank one if needed.
+
+
+
+
+**Returns:** [Trytes](trytes.md)
+Trytes version of the address with checksu,.
 
 
 
@@ -117,7 +132,7 @@ ___
 
 
 
-*Defined in data/address.ts:29*
+*Defined in [data/address.ts:31](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/address.ts#L31)*
 
 
 

@@ -1,58 +1,94 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { Address } from "./address";
+import { Hash } from "./hash";
+import { SignatureFragment } from "./signatureFragment";
 import { Tag } from "./tag";
-import { Trits } from "./trits";
+import { TryteNumber } from "./tryteNumber";
 import { Trytes } from "./trytes";
 
 /**
  * A class for handling transactions.
  */
 export class Transaction {
-    /* The valid length for a tag without a checksum */
+    /* The valid length for a transaction */
     public static readonly LENGTH: number = 2673;
 
     /* @internal */
-    private static readonly NUMBER_TRITS_LENGTH: number = 27;
+    private static readonly EMPTY_11: TryteNumber = TryteNumber.fromNumber(0, 11);
 
-    public signatureMessageFragment: Trytes;
+    /* @internal */
+    private static readonly CHECK_VALUE: string = "9".repeat(16);
+
+    public signatureMessageFragment: SignatureFragment;
     public address: Address;
-    public value: number;
+    public value: TryteNumber;
     public obsoleteTag: Tag;
-    public timestamp: number;
-    public currentIndex: number;
-    public lastIndex: number;
-    public bundle: Trytes;
-    public trunkTransaction: Trytes;
-    public branchTransaction: Trytes;
-
+    public timestamp: TryteNumber;
+    public currentIndex: TryteNumber;
+    public lastIndex: TryteNumber;
+    public bundle: Hash;
+    public trunkTransaction: Hash;
+    public branchTransaction: Hash;
     public tag: Tag;
-    public attachmentTimestamp: number;
-    public attachmentTimestampLowerBound: number;
-    public attachmentTimestampUpperBound: number;
-    public nonce: Trytes;
+    public attachmentTimestamp: TryteNumber;
+    public attachmentTimestampLowerBound: TryteNumber;
+    public attachmentTimestampUpperBound: TryteNumber;
+    public nonce: Tag;
 
     /* @internal */
     private constructor() {
     }
 
     /**
-     * Create instance of transaction from parameters.
-     * @param address The address for the transaction.
-     * @param value The value for the transaction.
-     * @param obsoleteTag The obsolete tag for the transaction/
-     * @returns An instance of this.
+     * * Create instance of transaction from parameters.
+     * @param signatureMessageFragment The signature message fragment.
+     * @param address The address.
+     * @param value The value.
+     * @param obsoleteTag Obsolete transaction tag.
+     * @param timestamp The timestamp.
+     * @param currentIndex The current index.
+     * @param lastIndex The last index.
+     * @param bundle The bundle.
+     * @param trunkTransaction The trunk transaction.
+     * @param branchTransaction The branch transaction.
+     * @param tag The tag.
+     * @param attachmentTimestamp The attachment timestamp.
+     * @param attachmentTimestampLowerBound The attachment timestamp lower bound.
+     * @param attachmentTimestampUpperBound  The attachment timestamp upper bound.
+     * @param nonce The nonce.
+     * @return New instance of transaction.
      */
-    public static fromParams(address: Address, value: number, obsoleteTag: Tag, tag: Tag, timestamp: number): Transaction {
-        if (address === null || address === undefined) {
-            throw new CoreError("The address can not be undefined or null");
-        }
-
+    public static fromParams(signatureMessageFragment: SignatureFragment,
+                             address: Address,
+                             value: number,
+                             obsoleteTag: Tag,
+                             timestamp: number,
+                             currentIndex: number,
+                             lastIndex: number,
+                             bundle: Hash,
+                             trunkTransaction: Hash,
+                             branchTransaction: Hash,
+                             tag: Tag,
+                             attachmentTimestamp: number,
+                             attachmentTimestampLowerBound: number,
+                             attachmentTimestampUpperBound: number,
+                             nonce: Tag): Transaction {
         const tx = new Transaction();
+        tx.signatureMessageFragment = signatureMessageFragment;
         tx.address = address;
-        tx.value = value;
+        tx.value = TryteNumber.fromNumber(value, 11);
         tx.obsoleteTag = obsoleteTag;
+        tx.timestamp = TryteNumber.fromNumber(timestamp);
+        tx.currentIndex = TryteNumber.fromNumber(currentIndex);
+        tx.lastIndex = TryteNumber.fromNumber(lastIndex);
+        tx.bundle = bundle;
+        tx.trunkTransaction = trunkTransaction;
+        tx.branchTransaction = branchTransaction;
         tx.tag = tag;
-        tx.timestamp = timestamp;
+        tx.attachmentTimestamp = TryteNumber.fromNumber(attachmentTimestamp);
+        tx.attachmentTimestampLowerBound = TryteNumber.fromNumber(attachmentTimestampLowerBound);
+        tx.attachmentTimestampUpperBound = TryteNumber.fromNumber(attachmentTimestampUpperBound);
+        tx.nonce = nonce;
         return tx;
     }
 
@@ -75,30 +111,27 @@ export class Transaction {
         const checkIndexLength = 16;
         const check = trytes.sub(checkIndexStart, checkIndexLength).toString();
 
-        const checkRegEx = new RegExp(`^9{${checkIndexLength}}$`);
-        if (!checkRegEx.test(check)) {
+        if (check !== Transaction.CHECK_VALUE) {
             throw new CoreError(`The trytes between ${checkIndexStart} and ${checkIndexStart + checkIndexLength} should be all 9s`, { check });
         }
 
-        const transactionTrits = Trits.fromTrytes(trytes);
-
         const tx = new Transaction();
-        tx.signatureMessageFragment = trytes.sub(0, 2187);
-        tx.address = Address.create(trytes.sub(2187, Address.LENGTH));
-        tx.value = transactionTrits.sub(6804, 33).toNumber();
-        tx.obsoleteTag = Tag.create(trytes.sub(2295, Tag.LENGTH));
-        tx.timestamp = transactionTrits.sub(6966, Transaction.NUMBER_TRITS_LENGTH).toNumber();
-        tx.currentIndex = transactionTrits.sub(6993, Transaction.NUMBER_TRITS_LENGTH).toNumber();
-        tx.lastIndex = transactionTrits.sub(7020, Transaction.NUMBER_TRITS_LENGTH).toNumber();
-        tx.bundle = trytes.sub(2349, 81);
-        tx.trunkTransaction = trytes.sub(2430, 81);
-        tx.branchTransaction = trytes.sub(2511, 81);
 
+        tx.signatureMessageFragment = SignatureFragment.create(trytes.sub(0, SignatureFragment.LENGTH));
+        tx.address = Address.create(trytes.sub(2187, Address.LENGTH));
+        tx.value = TryteNumber.fromTrytes(trytes.sub(2268, 11), 11);
+        tx.obsoleteTag = Tag.create(trytes.sub(2295, Tag.LENGTH));
+        tx.timestamp = TryteNumber.fromTrytes(trytes.sub(2322, TryteNumber.LENGTH_9));
+        tx.currentIndex = TryteNumber.fromTrytes(trytes.sub(2331, TryteNumber.LENGTH_9));
+        tx.lastIndex = TryteNumber.fromTrytes(trytes.sub(2340, TryteNumber.LENGTH_9));
+        tx.bundle = Hash.create(trytes.sub(2349, Hash.LENGTH));
+        tx.trunkTransaction = Hash.create(trytes.sub(2430, Hash.LENGTH));
+        tx.branchTransaction = Hash.create(trytes.sub(2511, Hash.LENGTH));
         tx.tag = Tag.create(trytes.sub(2592, Tag.LENGTH));
-        tx.attachmentTimestamp = transactionTrits.sub(7857, Transaction.NUMBER_TRITS_LENGTH).toNumber();
-        tx.attachmentTimestampLowerBound = transactionTrits.sub(7884, Transaction.NUMBER_TRITS_LENGTH).toNumber();
-        tx.attachmentTimestampUpperBound = transactionTrits.sub(7911, Transaction.NUMBER_TRITS_LENGTH).toNumber();
-        tx.nonce = trytes.sub(2646, 27);
+        tx.attachmentTimestamp = TryteNumber.fromTrytes(trytes.sub(2619, TryteNumber.LENGTH_9));
+        tx.attachmentTimestampLowerBound = TryteNumber.fromTrytes(trytes.sub(2628, TryteNumber.LENGTH_9));
+        tx.attachmentTimestampUpperBound = TryteNumber.fromTrytes(trytes.sub(2637, TryteNumber.LENGTH_9));
+        tx.nonce = Tag.create(trytes.sub(2646, Tag.LENGTH));
 
         return tx;
     }
@@ -108,88 +141,54 @@ export class Transaction {
      * @return The transaction as trytes.
      */
     public toTrytes(): Trytes {
-        if (!this.signatureMessageFragment) {
+        if (this.signatureMessageFragment === undefined || this.signatureMessageFragment === null) {
             throw new CoreError(`The hash must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
         }
 
-        if (!this.address) {
+        if (this.address === undefined || this.address === null) {
             throw new CoreError(`The address must be set to create transaction trytes`, { address: this.address });
         }
 
-        if (!this.obsoleteTag) {
+        if (this.obsoleteTag === undefined || this.obsoleteTag === null) {
             throw new CoreError(`The obsoleteTag must be set to create transaction trytes`, { obsoleteTag: this.obsoleteTag });
         }
 
-        if (!this.bundle) {
+        if (this.bundle === undefined || this.bundle === null) {
             throw new CoreError(`The bundle must be set to create transaction trytes`, { bundle: this.bundle });
         }
 
-        if (!this.trunkTransaction) {
+        if (this.trunkTransaction === undefined || this.trunkTransaction === null) {
             throw new CoreError(`The trunkTransaction must be set to create transaction trytes`, { trunkTransaction: this.trunkTransaction });
         }
 
-        if (!this.branchTransaction) {
+        if (this.branchTransaction === undefined || this.branchTransaction === null) {
             throw new CoreError(`The branchTransaction must be set to create transaction trytes`, { branchTransaction: this.branchTransaction });
         }
 
-        if (!this.nonce) {
+        if (this.nonce === undefined || this.nonce === null) {
             throw new CoreError(`The nonce must be set to create transaction trytes`, { nonce: this.nonce });
         }
 
-        const valueTrits = Trits.fromNumber(this.value || 0).toTritsArray();
-        while (valueTrits.length < 81) {
-            valueTrits[valueTrits.length] = 0;
-        }
-
-        const timestampTrits = Trits.fromNumber(this.timestamp || 0).toTritsArray();
-        while (timestampTrits.length < Transaction.NUMBER_TRITS_LENGTH) {
-            timestampTrits[timestampTrits.length] = 0;
-        }
-
-        const currentIndexTrits = Trits.fromNumber(this.currentIndex || 0).toTritsArray();
-        while (currentIndexTrits.length < Transaction.NUMBER_TRITS_LENGTH) {
-            currentIndexTrits[currentIndexTrits.length] = 0;
-        }
-
-        const lastIndexTrits = Trits.fromNumber(this.lastIndex).toTritsArray();
-        while (lastIndexTrits.length < Transaction.NUMBER_TRITS_LENGTH) {
-            lastIndexTrits[lastIndexTrits.length] = 0;
-        }
-
-        const attachmentTimestampTrits = Trits.fromNumber(this.attachmentTimestamp || 0).toTritsArray();
-        while (attachmentTimestampTrits.length < Transaction.NUMBER_TRITS_LENGTH) {
-            attachmentTimestampTrits[attachmentTimestampTrits.length] = 0;
-        }
-
-        const attachmentTimestampLowerBoundTrits = Trits.fromNumber(this.attachmentTimestampLowerBound || 0).toTritsArray();
-        while (attachmentTimestampLowerBoundTrits.length < Transaction.NUMBER_TRITS_LENGTH) {
-            attachmentTimestampLowerBoundTrits[attachmentTimestampLowerBoundTrits.length] = 0;
-        }
-
-        const attachmentTimestampUpperBoundTrits = Trits.fromNumber(this.attachmentTimestampUpperBound || 0).toTritsArray();
-        while (attachmentTimestampUpperBoundTrits.length < Transaction.NUMBER_TRITS_LENGTH) {
-            attachmentTimestampUpperBoundTrits[attachmentTimestampUpperBoundTrits.length] = 0;
-        }
-
-        const trytes = this.signatureMessageFragment.toString()
-                + this.address.toTrytes().toString()
-                + Trits.fromTritsArray(valueTrits).toTrytes().toString()
-                + this.obsoleteTag.toTrytes().toString()
-                + Trits.fromTritsArray(timestampTrits).toTrytes().toString()
-                + Trits.fromTritsArray(currentIndexTrits).toTrytes().toString()
-                + Trits.fromTritsArray(lastIndexTrits).toTrytes().toString()
-                + this.bundle.toString()
-                + this.trunkTransaction.toString()
-                + this.branchTransaction.toString()
-                + (this.tag || this.obsoleteTag).toTrytes().toString()
-                + Trits.fromTritsArray(attachmentTimestampTrits).toTrytes().toString()
-                + Trits.fromTritsArray(attachmentTimestampLowerBoundTrits).toTrytes().toString()
-                + Trits.fromTritsArray(attachmentTimestampUpperBoundTrits).toTrytes().toString()
-                + this.nonce.toString();
+        const trytes = this.signatureMessageFragment.toTrytes().toString()
+            + this.address.toTrytes().toString()
+            + (this.value || Transaction.EMPTY_11).toTrytes().toString()
+            + Transaction.CHECK_VALUE
+            + this.obsoleteTag.toTrytes().toString()
+            + (this.timestamp || TryteNumber.EMPTY_9).toTrytes().toString()
+            + (this.currentIndex || TryteNumber.EMPTY_9).toTrytes().toString()
+            + (this.lastIndex || TryteNumber.EMPTY_9).toTrytes().toString()
+            + this.bundle.toTrytes().toString()
+            + this.trunkTransaction.toTrytes().toString()
+            + this.branchTransaction.toTrytes().toString()
+            + (this.tag || this.obsoleteTag).toTrytes().toString()
+            + (this.attachmentTimestamp || TryteNumber.EMPTY_9).toTrytes().toString()
+            + (this.attachmentTimestampLowerBound || TryteNumber.EMPTY_9).toTrytes().toString()
+            + (this.attachmentTimestampUpperBound || TryteNumber.EMPTY_9).toTrytes().toString()
+            + this.nonce.toTrytes().toString();
 
         const length = trytes.length;
         if (length !== Transaction.LENGTH) {
-            throw new CoreError(`The trytes must be ${Transaction.LENGTH} in length`, { length });
+            throw new CoreError(`The trytes must be ${Transaction.LENGTH} in length ${length}`, { length });
         }
 
         return Trytes.create(trytes);

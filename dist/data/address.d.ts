@@ -4,6 +4,7 @@ import { Trytes } from "./trytes";
  */
 export declare class Address {
     static readonly LENGTH: number;
+    static readonly LENGTH_CHECKSUM: number;
     static readonly LENGTH_WITH_CHECKSUM: number;
     /**
      * Create address from trytes.
@@ -12,13 +13,13 @@ export declare class Address {
      */
     static create(address: Trytes): Address;
     /**
-     * Convert the address to trytes.
-     * @returns Trytes version of the address.
+     * Convert the address to trytes with no checksum.
+     * @returns Trytes version of the address with no checksum.
      */
     toTrytes(): Trytes;
     /**
-     * Does the address have a checksum.
-     * @returns True if the address has a checksum.
+     * Convert the address to trytes with a checksum, creating a blank one if needed.
+     * @returns Trytes version of the address with checksu,.
      */
-    hasChecksum(): boolean;
+    toTrytesWithChecksum(): Trytes;
 }

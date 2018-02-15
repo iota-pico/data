@@ -4,10 +4,11 @@ import { Trytes } from "./trytes";
  */
 export declare class Tag {
     static readonly LENGTH: number;
+    static readonly EMPTY: Tag;
     /**
      * Create tag from trytes.
      * @param tag The trytes to create the tag from.
-     * @returns An instance of Address.
+     * @returns An instance of Tag.
      */
     static create(tag: Trytes): Tag;
     /**

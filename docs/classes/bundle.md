@@ -1,0 +1,138 @@
+[@iota-pico/data](../README.md) > [Bundle](../classes/bundle.md)
+
+
+
+# Class: Bundle
+
+
+A class for handling bundles.
+
+## Index
+
+### Constructors
+
+* [constructor](bundle.md#constructor)
+
+
+### Properties
+
+* [transactions](bundle.md#transactions)
+
+
+### Methods
+
+* [addSignatureFragments](bundle.md#addsignaturefragments)
+* [addTransactions](bundle.md#addtransactions)
+
+
+
+---
+## Constructors
+<a id="constructor"></a>
+
+
+### ⊕ **new Bundle**(): [Bundle](bundle.md)
+
+
+*Defined in data/bundle.ts:13*
+
+
+
+Create a new instance of Bundle.
+
+
+
+
+**Returns:** [Bundle](bundle.md)
+
+---
+
+
+## Properties
+<a id="transactions"></a>
+
+###  transactions
+
+**●  transactions**:  *[Transaction](transaction.md)[]* 
+
+*Defined in data/bundle.ts:13*
+
+
+
+
+
+___
+
+
+## Methods
+<a id="addsignaturefragments"></a>
+
+###  addSignatureFragments
+
+► **addSignatureFragments**(signatureFragments: *[SignatureFragment](signaturefragment.md)[]*): `void`
+
+
+
+*Defined in data/bundle.ts:43*
+
+
+
+Add signature fragments to the bundle.
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| signatureFragments | [SignatureFragment](signaturefragment.md)[]   |  The signature fragments to add to the bundle transactions. |
+
+
+
+
+
+**Returns:** `void`
+
+
+
+
+
+___
+
+<a id="addtransactions"></a>
+
+###  addTransactions
+
+► **addTransactions**(signatureMessageLength: *`number`*, address: *[Address](address.md)*, value: *`number`*, tag: *[Tag](tag.md)*, timestamp: *`number`*): `void`
+
+
+
+*Defined in data/bundle.ts:30*
+
+
+
+Add new transactions to the bundle.
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| signatureMessageLength | `number`   |  The number of transactions to add. |
+| address | [Address](address.md)   |  The address for the transactions. |
+| value | `number`   |  The value for the first of the transactions. |
+| tag | [Tag](tag.md)   |  The tag to include in the transactions. |
+| timestamp | `number`   |  The timestamp for the transactions. |
+
+
+
+
+
+**Returns:** `void`
+
+
+
+
+
+___
+
+

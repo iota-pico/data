@@ -1,14 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const coreError_1 = require("@iota-pico/core/dist/error/coreError");
+const trytes_1 = require("./trytes");
 /**
  * A class for handling addresses.
  */
 class Address {
     /* @internal */
-    constructor(trytes, hasChecksum) {
-        this._trytes = trytes;
-        this._hasChecksum = hasChecksum;
+    constructor(addressTrytes, checksumTrytes) {
+        this._addressTrytes = addressTrytes;
+        this._checksumTrytes = checksumTrytes;
     }
     /**
      * Create address from trytes.
@@ -16,29 +17,46 @@ class Address {
      * @returns An instance of Address.
      */
     static create(address) {
-        const length = address.length();
-        if (length !== Address.LENGTH && length !== Address.LENGTH_WITH_CHECKSUM) {
-            throw new coreError_1.CoreError(`The address should either be ${Address.LENGTH} or ${Address.LENGTH_WITH_CHECKSUM} characters in length`, { length });
+        if (address === undefined || address === null) {
+            throw new coreError_1.CoreError("The address should not be undefined or null");
         }
-        return new Address(address, length === Address.LENGTH_WITH_CHECKSUM);
+        const trytesString = address.toString();
+        if (trytesString.length !== Address.LENGTH && trytesString.length !== Address.LENGTH_WITH_CHECKSUM) {
+            throw new coreError_1.CoreError(`The address should either be ${Address.LENGTH} or ${Address.LENGTH_WITH_CHECKSUM} characters in length`, { length: trytesString.length });
+        }
+        const addressTrytes = trytesString.substr(0, Address.LENGTH);
+        let checksumTrytes;
+        if (trytesString.length === Address.LENGTH_WITH_CHECKSUM) {
+            checksumTrytes = trytesString.substr(Address.LENGTH);
+        }
+        return new Address(addressTrytes, checksumTrytes);
     }
     /**
-     * Convert the address to trytes.
-     * @returns Trytes version of the address.
+     * Convert the address to trytes with no checksum.
+     * @returns Trytes version of the address with no checksum.
      */
     toTrytes() {
-        return this._trytes;
+        return trytes_1.Trytes.create(this._addressTrytes);
     }
     /**
-     * Does the address have a checksum.
-     * @returns True if the address has a checksum.
+     * Convert the address to trytes with a checksum, creating a blank one if needed.
+     * @returns Trytes version of the address with checksu,.
      */
-    hasChecksum() {
-        return this._hasChecksum;
+    toTrytesWithChecksum() {
+        let checksum;
+        if (this._checksumTrytes) {
+            checksum = this._checksumTrytes;
+        }
+        else {
+            checksum = "9".repeat(Address.LENGTH_CHECKSUM);
+        }
+        return trytes_1.Trytes.create(this._addressTrytes + checksum);
     }
 }
 /* The valid length for a tag without a checksum */
 Address.LENGTH = 81;
+/* The valid length for a checksum */
+Address.LENGTH_CHECKSUM = 9;
 /* The valid length for a tag with a checksum */
-Address.LENGTH_WITH_CHECKSUM = 90;
+Address.LENGTH_WITH_CHECKSUM = Address.LENGTH + Address.LENGTH_CHECKSUM;
 exports.Address = Address;

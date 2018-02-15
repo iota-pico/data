@@ -7,18 +7,20 @@ import { Trytes } from "./trytes";
 export class Address {
     /* The valid length for a tag without a checksum */
     public static readonly LENGTH: number = 81;
+    /* The valid length for a checksum */
+    public static readonly LENGTH_CHECKSUM: number = 9;
     /* The valid length for a tag with a checksum */
-    public static readonly LENGTH_WITH_CHECKSUM: number = 90;
+    public static readonly LENGTH_WITH_CHECKSUM: number = Address.LENGTH + Address.LENGTH_CHECKSUM;
 
     /* @internal */
-    private readonly _trytes: Trytes;
+    private readonly _addressTrytes: string;
     /* @internal */
-    private readonly _hasChecksum: boolean;
+    private readonly _checksumTrytes: string;
 
     /* @internal */
-    private constructor(trytes: Trytes, hasChecksum: boolean) {
-        this._trytes = trytes;
-        this._hasChecksum  = hasChecksum;
+    private constructor(addressTrytes: string, checksumTrytes: string) {
+        this._addressTrytes = addressTrytes;
+        this._checksumTrytes  = checksumTrytes;
     }
 
     /**
@@ -27,26 +29,43 @@ export class Address {
      * @returns An instance of Address.
      */
     public static create(address: Trytes): Address {
-        const length = address.length();
-        if (length !== Address.LENGTH && length !== Address.LENGTH_WITH_CHECKSUM) {
-            throw new CoreError(`The address should either be ${Address.LENGTH} or ${Address.LENGTH_WITH_CHECKSUM} characters in length`, { length });
+        if (address === undefined || address === null) {
+            throw new CoreError("The address should not be undefined or null");
         }
-        return new Address(address, length === Address.LENGTH_WITH_CHECKSUM);
+
+        const trytesString = address.toString();
+
+        if (trytesString.length !== Address.LENGTH && trytesString.length !== Address.LENGTH_WITH_CHECKSUM) {
+            throw new CoreError(`The address should either be ${Address.LENGTH} or ${Address.LENGTH_WITH_CHECKSUM} characters in length`, { length: trytesString.length });
+        }
+
+        const addressTrytes = trytesString.substr(0, Address.LENGTH);
+        let checksumTrytes;
+        if (trytesString.length === Address.LENGTH_WITH_CHECKSUM) {
+            checksumTrytes = trytesString.substr(Address.LENGTH);
+        }
+        return new Address(addressTrytes, checksumTrytes);
     }
 
     /**
-     * Convert the address to trytes.
-     * @returns Trytes version of the address.
+     * Convert the address to trytes with no checksum.
+     * @returns Trytes version of the address with no checksum.
      */
     public toTrytes(): Trytes {
-        return this._trytes;
+        return Trytes.create(this._addressTrytes);
     }
 
     /**
-     * Does the address have a checksum.
-     * @returns True if the address has a checksum.
+     * Convert the address to trytes with a checksum, creating a blank one if needed.
+     * @returns Trytes version of the address with checksu,.
      */
-    public hasChecksum(): boolean {
-        return this._hasChecksum;
+    public toTrytesWithChecksum(): Trytes {
+        let checksum;
+        if (this._checksumTrytes) {
+            checksum = this._checksumTrytes;
+        } else {
+            checksum = "9".repeat(Address.LENGTH_CHECKSUM);
+        }
+        return Trytes.create(this._addressTrytes + checksum);
     }
 }

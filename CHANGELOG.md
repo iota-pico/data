@@ -1,10 +1,17 @@
 # Changelog
 
-## v0.6.2
+## v0.7.0
 
 * Added Address object
+* Added Bundle object
+* Added Hash object
+* Added SignatureFragment object
 * Added Tag object
 * Added Transaction object
+* Added TryteNumber object
+* Trits toTritsArray renamed to toArray
+* Trits fromTritsArray renamed to fromArray
+* Trits toArray returns copy of data
 
 ## v0.6.1
 

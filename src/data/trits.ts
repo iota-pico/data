@@ -38,7 +38,7 @@ export class Trits {
     ];
 
     /* @internal */
-    private readonly _trits: number[];
+    private _trits: number[];
 
     /* @internal */
     private constructor(trits: number[]) {
@@ -59,7 +59,7 @@ export class Trits {
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    public static fromTritsArray(value: number[]): Trits {
+    public static fromArray(value: number[]): Trits {
         if (value === null || value === undefined) {
             throw new CoreError("The supplied value does not contain valid trits");
         }
@@ -119,11 +119,90 @@ export class Trits {
     }
 
     /**
+     * Add two trits together.
+     * @param a The first trit.
+     * @param b The second trit.
+     * @return New trit which is the addition of the a + b.
+     */
+    public static add(a: Trits, b: Trits): Trits {
+        const out = new Array(Math.max(a._trits.length, b._trits.length));
+        let carry = 0;
+        let iA;
+        let iB;
+
+        for (let i = 0; i < out.length; i++) {
+
+            iA = i < a._trits.length ? a._trits[i] : 0;
+            iB = i < b._trits.length ? b._trits[i] : 0;
+            const fA = Trits.fullAdd(iA, iB, carry);
+            out[i] = fA[0];
+            carry = fA[1];
+        }
+
+        return Trits.fromArray(out);
+    }
+
+    /* @internal */
+    private static fullAdd(a: number, b: number, c: number): number[] {
+        const sA = Trits.sum(a, b);
+        const cA = Trits.cons(a, b);
+        const cB = Trits.cons(sA, c);
+        const cOut = Trits.any(cA, cB);
+        const sOUt = Trits.sum(sA, c);
+
+        return [sOUt, cOut];
+    }
+
+    /* @internal */
+    private static sum(a: number, b: number): number {
+        const s = a + b;
+
+        switch (s) {
+            case 2: return -1;
+            case -2: return 1;
+            default: return s;
+        }
+    }
+
+    /* @internal */
+    private static cons(a: number, b: number): number {
+        if (a === b) {
+            return a;
+        }
+        return 0;
+    }
+
+    /* @internal */
+    private static any(a: number, b: number): number {
+        const s = a + b;
+
+        if (s > 0) {
+            return 1;
+        } else if (s < 0) {
+            return -1;
+        }
+
+        return 0;
+    }
+
+    /**
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    public toTritsArray(): number[] {
-        return this._trits;
+    public toArray(): number[] {
+        return this._trits.slice();
+    }
+
+    /**
+     * Create instance of trits from number array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public fromArray(value: number[]): void {
+        if (value === null || value === undefined) {
+            throw new CoreError("The supplied value does not contain valid trits");
+        }
+        this._trits = value.slice();
     }
 
     /**
@@ -177,6 +256,7 @@ export class Trits {
      * @returns The trits sub.
      */
     public sub(start: number, length: number): Trits {
-        return Trits.fromTritsArray(this._trits.slice(start, start + length));
+        return Trits.fromArray(this._trits.slice(start, start + length));
     }
+
 }

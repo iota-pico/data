@@ -11,20 +11,56 @@ A class for handling trits.
 
 ### Methods
 
+* [fromArray](trits.md#fromarray)
 * [length](trits.md#length)
 * [sub](trits.md#sub)
+* [toArray](trits.md#toarray)
 * [toNumber](trits.md#tonumber)
-* [toTritsArray](trits.md#totritsarray)
 * [toTrytes](trits.md#totrytes)
 * [empty](trits.md#empty)
+* [fromArray](trits.md#fromarray-1)
 * [fromNumber](trits.md#fromnumber)
-* [fromTritsArray](trits.md#fromtritsarray)
 * [fromTrytes](trits.md#fromtrytes)
 
 
 
 ---
 ## Methods
+<a id="fromarray"></a>
+
+###  fromArray
+
+► **fromArray**(value: *`number`[]*): `void`
+
+
+
+*Defined in [data/trits.ts:134](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L134)*
+
+
+
+Create instance of trits from number array.
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| value | `number`[]   |  Trytes used to create trits. |
+
+
+
+
+
+**Returns:** `void`
+An instance of Trits.
+
+
+
+
+
+
+___
+
 <a id="length"></a>
 
 ###  length
@@ -33,7 +69,7 @@ A class for handling trits.
 
 
 
-*Defined in [data/trits.ts:169](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L169)*
+*Defined in [data/trits.ts:181](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L181)*
 
 
 
@@ -60,7 +96,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:179](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L179)*
+*Defined in [data/trits.ts:191](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L191)*
 
 
 
@@ -88,42 +124,15 @@ The trits sub.
 
 ___
 
-<a id="tonumber"></a>
+<a id="toarray"></a>
 
-###  toNumber
+###  toArray
 
-► **toNumber**(): `number`
-
-
-
-*Defined in [data/trits.ts:155](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L155)*
+► **toArray**(): `number`[]
 
 
 
-Get the trits as a number.
-
-
-
-
-**Returns:** `number`
-The trits converted to a number.
-
-
-
-
-
-
-___
-
-<a id="totritsarray"></a>
-
-###  toTritsArray
-
-► **toTritsArray**(): `number`[]
-
-
-
-*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L125)*
+*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L125)*
 
 
 
@@ -142,6 +151,33 @@ Array representation of the trits.
 
 ___
 
+<a id="tonumber"></a>
+
+###  toNumber
+
+► **toNumber**(): `number`
+
+
+
+*Defined in [data/trits.ts:167](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L167)*
+
+
+
+Get the trits as a number.
+
+
+
+
+**Returns:** `number`
+The trits converted to a number.
+
+
+
+
+
+
+___
+
 <a id="totrytes"></a>
 
 ###  toTrytes
@@ -150,7 +186,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:133](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L133)*
+*Defined in [data/trits.ts:145](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L145)*
 
 
 
@@ -177,7 +213,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L53)*
+*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L53)*
 
 
 
@@ -196,50 +232,15 @@ An instance of Trits.
 
 ___
 
-<a id="fromnumber"></a>
+<a id="fromarray-1"></a>
 
-### «Static» fromNumber
+### «Static» fromArray
 
-► **fromNumber**(value: *`number`*): [Trits](trits.md)
-
-
-
-*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L94)*
+► **fromArray**(value: *`number`[]*): [Trits](trits.md)
 
 
 
-Create instance of trits from number
-
-
-**Parameters:**
-
-| Param | Type | Description |
-| ------ | ------ | ------ |
-| value | `number`   |  Number used to create trits. |
-
-
-
-
-
-**Returns:** [Trits](trits.md)
-An instance of Trits.
-
-
-
-
-
-
-___
-
-<a id="fromtritsarray"></a>
-
-### «Static» fromTritsArray
-
-► **fromTritsArray**(value: *`number`[]*): [Trits](trits.md)
-
-
-
-*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L62)*
+*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L62)*
 
 
 
@@ -266,6 +267,41 @@ An instance of Trits.
 
 ___
 
+<a id="fromnumber"></a>
+
+### «Static» fromNumber
+
+► **fromNumber**(value: *`number`*): [Trits](trits.md)
+
+
+
+*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L94)*
+
+
+
+Create instance of trits from number
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| value | `number`   |  Number used to create trits. |
+
+
+
+
+
+**Returns:** [Trits](trits.md)
+An instance of Trits.
+
+
+
+
+
+
+___
+
 <a id="fromtrytes"></a>
 
 ### «Static» fromTrytes
@@ -274,7 +310,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/bba235e/src/data/trits.ts#L74)*
+*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L74)*
 
 
 
