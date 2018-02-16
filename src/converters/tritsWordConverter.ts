@@ -1,5 +1,4 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
-import { Trits } from "../data/trits";
 
 /**
  * Helper class to convert between trits and words.
@@ -34,27 +33,25 @@ export class TritsWordConverter {
      * @param trits The trits to convert.
      * @returns Words array.
      */
-    public static tritsToWords(trits: Trits): Uint32Array {
+    public static tritsToWords(trits: number[]): Uint32Array {
         if (trits === undefined || trits === null) {
             throw new CoreError("Trits can not be null or undefined");
         }
 
-        const tritsData = trits.toArray();
-
-        if (tritsData.length !== TritsWordConverter.TRITS_LENGTH) {
-            throw new CoreError(`Invalid trits length ${tritsData.length} it should be ${TritsWordConverter.TRITS_LENGTH}`);
+        if (trits.length !== TritsWordConverter.TRITS_LENGTH) {
+            throw new CoreError(`Invalid trits length ${trits.length} it should be ${TritsWordConverter.TRITS_LENGTH}`);
         }
 
         let base = new Uint32Array(TritsWordConverter.INT_LENGTH);
 
-        if (tritsData.slice(0, 242).every((a) => a === -1)) {
+        if (trits.slice(0, 242).every((a) => a === -1)) {
             base = TritsWordConverter.HALF_3.slice();
             TritsWordConverter.bigIntNot(base);
             TritsWordConverter.bigIntAddSmall(base, 1);
         } else {
             let size = 1;
-            for (let i = tritsData.length - 1; i-- > 0;) {
-                const trit = tritsData[i] + 1;
+            for (let i = trits.length - 1; i-- > 0;) {
+                const trit = trits[i] + 1;
 
                 //multiply by radix
                 {
@@ -115,7 +112,7 @@ export class TritsWordConverter {
      * @param words The words to convert to trits
      * @returns Trits array.
      */
-    public static wordsToTrits(words: Uint32Array): Trits {
+    public static wordsToTrits(words: Uint32Array): number[] {
         if (words === undefined || words === null) {
             throw new CoreError("Words can not be null or undefined");
         }
@@ -173,7 +170,7 @@ export class TritsWordConverter {
             }
         }
 
-        return Trits.fromArray(Array.from(trits));
+        return Array.from(trits);
     }
 
     /**

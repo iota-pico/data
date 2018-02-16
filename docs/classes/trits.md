@@ -17,7 +17,7 @@ A class for handling trits.
 * [toArray](trits.md#toarray)
 * [toNumber](trits.md#tonumber)
 * [toTrytes](trits.md#totrytes)
-* [empty](trits.md#empty)
+* [add](trits.md#add)
 * [fromArray](trits.md#fromarray-1)
 * [fromNumber](trits.md#fromnumber)
 * [fromTrytes](trits.md#fromtrytes)
@@ -34,7 +34,7 @@ A class for handling trits.
 
 
 
-*Defined in [data/trits.ts:134](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L134)*
+*Defined in [data/trits.ts:192](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L192)*
 
 
 
@@ -69,7 +69,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:181](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L181)*
+*Defined in [data/trits.ts:239](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L239)*
 
 
 
@@ -96,7 +96,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:191](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L191)*
+*Defined in [data/trits.ts:249](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L249)*
 
 
 
@@ -132,7 +132,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:125](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L125)*
+*Defined in [data/trits.ts:183](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L183)*
 
 
 
@@ -159,7 +159,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:167](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L167)*
+*Defined in [data/trits.ts:225](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L225)*
 
 
 
@@ -186,7 +186,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:145](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L145)*
+*Defined in [data/trits.ts:203](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L203)*
 
 
 
@@ -205,25 +205,34 @@ Instance of Trytes.
 
 ___
 
-<a id="empty"></a>
+<a id="add"></a>
 
-### «Static» empty
+### «Static» add
 
-► **empty**(): [Trits](trits.md)
-
-
-
-*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L53)*
+► **add**(a: *[Trits](trits.md)*, b: *[Trits](trits.md)*): [Trits](trits.md)
 
 
 
-Create empty trits.
+*Defined in [data/trits.ts:118](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L118)*
+
+
+
+Add two trits together.
+
+
+**Parameters:**
+
+| Param | Type | Description |
+| ------ | ------ | ------ |
+| a | [Trits](trits.md)   |  The first trit. |
+| b | [Trits](trits.md)   |  The second trit. |
+
 
 
 
 
 **Returns:** [Trits](trits.md)
-An instance of Trits.
+New trit which is the addition of the a + b.
 
 
 
@@ -240,7 +249,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:62](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L62)*
+*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L53)*
 
 
 
@@ -275,7 +284,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:94](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L94)*
+*Defined in [data/trits.ts:85](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L85)*
 
 
 
@@ -310,7 +319,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:74](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/data/trits.ts#L74)*
+*Defined in [data/trits.ts:65](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L65)*
 
 
 

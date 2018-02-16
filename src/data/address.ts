@@ -60,12 +60,10 @@ export class Address {
      * @returns Trytes version of the address with checksu,.
      */
     public toTrytesWithChecksum(): Trytes {
-        let checksum;
         if (this._checksumTrytes) {
-            checksum = this._checksumTrytes;
+            return Trytes.create(this._addressTrytes + this._checksumTrytes);
         } else {
-            checksum = "9".repeat(Address.LENGTH_CHECKSUM);
+            throw new CoreError(`This address has no checksum calculated for it`);
         }
-        return Trytes.create(this._addressTrytes + checksum);
     }
 }

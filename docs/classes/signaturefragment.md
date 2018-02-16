@@ -30,7 +30,7 @@ A class for handling signature fragments.
 
 **●  EMPTY**:  *[SignatureFragment](signaturefragment.md)*  =  SignatureFragment.create(Trytes.create("9".repeat(SignatureFragment.LENGTH)))
 
-*Defined in data/signatureFragment.ts:11*
+*Defined in [data/signatureFragment.ts:11](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/signatureFragment.ts#L11)*
 
 
 
@@ -44,7 +44,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 2187
 
-*Defined in data/signatureFragment.ts:9*
+*Defined in [data/signatureFragment.ts:9](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/signatureFragment.ts#L9)*
 
 
 
@@ -62,7 +62,7 @@ ___
 
 
 
-*Defined in data/signatureFragment.ts:42*
+*Defined in [data/signatureFragment.ts:42](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/signatureFragment.ts#L42)*
 
 
 
@@ -89,7 +89,7 @@ ___
 
 
 
-*Defined in data/signatureFragment.ts:26*
+*Defined in [data/signatureFragment.ts:26](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/signatureFragment.ts#L26)*
 
 
 

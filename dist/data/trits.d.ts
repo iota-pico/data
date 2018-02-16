@@ -4,12 +4,6 @@ import { Trytes } from "./trytes";
  */
 export declare class Trits {
     /**
-     * Create empty trits.
-     * @param value Trytes used to create trits.
-     * @returns An instance of Trits.
-     */
-    static empty(): Trits;
-    /**
      * Create instance of trits from number array.
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.

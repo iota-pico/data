@@ -34,7 +34,7 @@ A class for handling bundles.
 ### ⊕ **new Bundle**(): [Bundle](bundle.md)
 
 
-*Defined in data/bundle.ts:13*
+*Defined in [data/bundle.ts:13](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/bundle.ts#L13)*
 
 
 
@@ -55,7 +55,7 @@ Create a new instance of Bundle.
 
 **●  transactions**:  *[Transaction](transaction.md)[]* 
 
-*Defined in data/bundle.ts:13*
+*Defined in [data/bundle.ts:13](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/bundle.ts#L13)*
 
 
 
@@ -73,7 +73,7 @@ ___
 
 
 
-*Defined in data/bundle.ts:43*
+*Defined in [data/bundle.ts:43](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/bundle.ts#L43)*
 
 
 
@@ -106,7 +106,7 @@ ___
 
 
 
-*Defined in data/bundle.ts:30*
+*Defined in [data/bundle.ts:30](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/bundle.ts#L30)*
 
 
 

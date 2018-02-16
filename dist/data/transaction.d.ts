@@ -9,6 +9,7 @@ import { Trytes } from "./trytes";
  */
 export declare class Transaction {
     static readonly LENGTH: number;
+    static readonly CHECK_VALUE: string;
     signatureMessageFragment: SignatureFragment;
     address: Address;
     value: TryteNumber;
@@ -25,7 +26,7 @@ export declare class Transaction {
     attachmentTimestampUpperBound: TryteNumber;
     nonce: Tag;
     /**
-     * * Create instance of transaction from parameters.
+     * Create instance of transaction from parameters.
      * @param signatureMessageFragment The signature message fragment.
      * @param address The address.
      * @param value The value.

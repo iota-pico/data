@@ -48,18 +48,6 @@ describe("Bundle", () => {
             chai.expect(() => obj.addSignatureFragments(undefined)).to.throw(CoreError);
         });
 
-        it("can fail to add signatures of different length", () => {
-            const obj = new Bundle();
-
-            obj.addTransactions(2, Address.create(
-                Trytes.create("A".repeat(81))),
-                                100,
-                                Tag.create(Trytes.create("B".repeat(27))),
-                                2345);
-
-            chai.expect(() => obj.addSignatureFragments([])).to.throw(CoreError);
-        });
-
         it("can succeed adding signatures", () => {
             const obj = new Bundle();
 

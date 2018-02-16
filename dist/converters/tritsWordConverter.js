@@ -1,7 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const coreError_1 = require("@iota-pico/core/dist/error/coreError");
-const trits_1 = require("../data/trits");
 /**
  * Helper class to convert between trits and words.
  * Converted from here https://github.com/iotaledger/iota.lib.js/blob/master/lib/crypto/converter/words.js
@@ -16,20 +15,19 @@ class TritsWordConverter {
         if (trits === undefined || trits === null) {
             throw new coreError_1.CoreError("Trits can not be null or undefined");
         }
-        const tritsData = trits.toArray();
-        if (tritsData.length !== TritsWordConverter.TRITS_LENGTH) {
-            throw new coreError_1.CoreError(`Invalid trits length ${tritsData.length} it should be ${TritsWordConverter.TRITS_LENGTH}`);
+        if (trits.length !== TritsWordConverter.TRITS_LENGTH) {
+            throw new coreError_1.CoreError(`Invalid trits length ${trits.length} it should be ${TritsWordConverter.TRITS_LENGTH}`);
         }
         let base = new Uint32Array(TritsWordConverter.INT_LENGTH);
-        if (tritsData.slice(0, 242).every((a) => a === -1)) {
+        if (trits.slice(0, 242).every((a) => a === -1)) {
             base = TritsWordConverter.HALF_3.slice();
             TritsWordConverter.bigIntNot(base);
             TritsWordConverter.bigIntAddSmall(base, 1);
         }
         else {
             let size = 1;
-            for (let i = tritsData.length - 1; i-- > 0;) {
-                const trit = tritsData[i] + 1;
+            for (let i = trits.length - 1; i-- > 0;) {
+                const trit = trits[i] + 1;
                 //multiply by radix
                 {
                     const sz = size;
@@ -131,7 +129,7 @@ class TritsWordConverter {
                 trits[i] = -trits[i];
             }
         }
-        return trits_1.Trits.fromArray(Array.from(trits));
+        return Array.from(trits);
     }
     /**
      * Negates the (unsigned) input array.

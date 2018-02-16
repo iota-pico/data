@@ -13,11 +13,11 @@ export class Transaction {
     /* The valid length for a transaction */
     public static readonly LENGTH: number = 2673;
 
-    /* @internal */
-    private static readonly EMPTY_11: TryteNumber = TryteNumber.fromNumber(0, 11);
+    /* Additional check value always all 9s */
+    public static readonly CHECK_VALUE: string = "9".repeat(16);
 
     /* @internal */
-    private static readonly CHECK_VALUE: string = "9".repeat(16);
+    private static readonly EMPTY_11: TryteNumber = TryteNumber.fromNumber(0, 11);
 
     public signatureMessageFragment: SignatureFragment;
     public address: Address;
@@ -40,7 +40,7 @@ export class Transaction {
     }
 
     /**
-     * * Create instance of transaction from parameters.
+     * Create instance of transaction from parameters.
      * @param signatureMessageFragment The signature message fragment.
      * @param address The address.
      * @param value The value.

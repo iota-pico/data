@@ -43,14 +43,12 @@ class Address {
      * @returns Trytes version of the address with checksu,.
      */
     toTrytesWithChecksum() {
-        let checksum;
         if (this._checksumTrytes) {
-            checksum = this._checksumTrytes;
+            return trytes_1.Trytes.create(this._addressTrytes + this._checksumTrytes);
         }
         else {
-            checksum = "9".repeat(Address.LENGTH_CHECKSUM);
+            throw new coreError_1.CoreError(`This address has no checksum calculated for it`);
         }
-        return trytes_1.Trytes.create(this._addressTrytes + checksum);
     }
 }
 /* The valid length for a tag without a checksum */

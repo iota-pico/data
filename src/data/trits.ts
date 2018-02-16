@@ -46,15 +46,6 @@ export class Trits {
     }
 
     /**
-     * Create empty trits.
-     * @param value Trytes used to create trits.
-     * @returns An instance of Trits.
-     */
-    public static empty(): Trits {
-        return new Trits([]);
-    }
-
-    /**
      * Create instance of trits from number array.
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
@@ -190,7 +181,7 @@ export class Trits {
      * @returns Array representation of the trits.
      */
     public toArray(): number[] {
-        return this._trits.slice();
+        return this._trits;
     }
 
     /**
@@ -202,7 +193,7 @@ export class Trits {
         if (value === null || value === undefined) {
             throw new CoreError("The supplied value does not contain valid trits");
         }
-        this._trits = value.slice();
+        this._trits = value;
     }
 
     /**

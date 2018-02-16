@@ -15,7 +15,7 @@ class Transaction {
     constructor() {
     }
     /**
-     * * Create instance of transaction from parameters.
+     * Create instance of transaction from parameters.
      * @param signatureMessageFragment The signature message fragment.
      * @param address The address.
      * @param value The value.
@@ -140,8 +140,8 @@ class Transaction {
 }
 /* The valid length for a transaction */
 Transaction.LENGTH = 2673;
+/* Additional check value always all 9s */
+Transaction.CHECK_VALUE = "9".repeat(16);
 /* @internal */
 Transaction.EMPTY_11 = tryteNumber_1.TryteNumber.fromNumber(0, 11);
-/* @internal */
-Transaction.CHECK_VALUE = "9".repeat(16);
 exports.Transaction = Transaction;

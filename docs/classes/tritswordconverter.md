@@ -22,11 +22,11 @@ Helper class to convert between trits and words. Converted from here [https://gi
 
 ### «Static» tritsToWords
 
-► **tritsToWords**(trits: *[Trits](trits.md)*): `Uint32Array`
+► **tritsToWords**(trits: *`number`[]*): `Uint32Array`
 
 
 
-*Defined in [converters/tritsWordConverter.ts:37](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/converters/tritsWordConverter.ts#L37)*
+*Defined in [converters/tritsWordConverter.ts:36](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/converters/tritsWordConverter.ts#L36)*
 
 
 
@@ -37,7 +37,7 @@ Convert trits to words.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| trits | [Trits](trits.md)   |  The trits to convert. |
+| trits | `number`[]   |  The trits to convert. |
 
 
 
@@ -57,11 +57,11 @@ ___
 
 ### «Static» wordsToTrits
 
-► **wordsToTrits**(words: *`Uint32Array`*): [Trits](trits.md)
+► **wordsToTrits**(words: *`Uint32Array`*): `number`[]
 
 
 
-*Defined in [converters/tritsWordConverter.ts:118](https://github.com/iotaeco/iota-pico-data/blob/706d60c/src/converters/tritsWordConverter.ts#L118)*
+*Defined in [converters/tritsWordConverter.ts:115](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/converters/tritsWordConverter.ts#L115)*
 
 
 
@@ -78,7 +78,7 @@ Converts the given word array to trits.
 
 
 
-**Returns:** [Trits](trits.md)
+**Returns:** `number`[]
 Trits array.
 
 

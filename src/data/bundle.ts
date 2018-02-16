@@ -44,9 +44,7 @@ export class Bundle {
         if (signatureFragments === undefined || signatureFragments === null) {
             throw new CoreError("The signatureFragments should not be undefined or null");
         }
-        if (signatureFragments.length !== this.transactions.length) {
-            throw new CoreError("The signatureFragments should contain as many elements as the number of transactions");
-        }
+
         for (let i = 0; i < this.transactions.length; i++) {
             this.transactions[i].signatureMessageFragment = (signatureFragments[i] || SignatureFragment.EMPTY);
             this.transactions[i].trunkTransaction = Hash.EMPTY;
