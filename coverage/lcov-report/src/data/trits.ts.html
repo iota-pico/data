@@ -1,0 +1,824 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <title>Code coverage report for src/data/trits.ts</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="..\..\prettify.css" />
+    <link rel="stylesheet" href="..\..\base.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <style type='text/css'>
+        .coverage-summary .sorter {
+            background-image: url(..\..\sort-arrow-sprite.png);
+        }
+    </style>
+</head>
+<body>
+<div class='wrapper'>
+  <div class='pad1'>
+    <h1>
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/data</a> trits.ts
+    </h1>
+    <div class='clearfix'>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Statements</span>
+        <span class='fraction'>45/80</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">52.63% </span>
+        <span class="quiet">Branches</span>
+        <span class='fraction'>20/38</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">46.67% </span>
+        <span class="quiet">Functions</span>
+        <span class='fraction'>7/15</span>
+      </div>
+      <div class='fl pad1y space-right2'>
+        <span class="strong">56.25% </span>
+        <span class="quiet">Lines</span>
+        <span class='fraction'>45/80</span>
+      </div>
+    </div>
+  </div>
+  <div class='status-line medium'></div>
+<pre><table class="coverage">
+<tr><td class="line-count quiet">1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+68
+69
+70
+71
+72
+73
+74
+75
+76
+77
+78
+79
+80
+81
+82
+83
+84
+85
+86
+87
+88
+89
+90
+91
+92
+93
+94
+95
+96
+97
+98
+99
+100
+101
+102
+103
+104
+105
+106
+107
+108
+109
+110
+111
+112
+113
+114
+115
+116
+117
+118
+119
+120
+121
+122
+123
+124
+125
+126
+127
+128
+129
+130
+131
+132
+133
+134
+135
+136
+137
+138
+139
+140
+141
+142
+143
+144
+145
+146
+147
+148
+149
+150
+151
+152
+153
+154
+155
+156
+157
+158
+159
+160
+161
+162
+163
+164
+165
+166
+167
+168
+169
+170
+171
+172
+173
+174
+175
+176
+177
+178
+179
+180
+181
+182
+183
+184
+185
+186
+187
+188
+189
+190
+191
+192
+193
+194
+195
+196
+197
+198
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225
+226
+227
+228
+229
+230
+231
+232
+233
+234
+235
+236
+237
+238
+239
+240
+241
+242
+243
+244
+245
+246
+247
+248
+249
+250
+251
+252
+253
+254</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">115x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">39x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-yes">335x</span>
+<span class="cline-any cline-yes">335x</span>
+<span class="cline-any cline-yes">335x</span>
+<span class="cline-any cline-yes">335x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">37x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">49x</span>
+<span class="cline-any cline-yes">5x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">300x</span>
+<span class="cline-any cline-yes">300x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">300x</span>
+<span class="cline-any cline-yes">115x</span>
+<span class="cline-any cline-yes">115x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">300x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-yes">4x</span>
+<span class="cline-any cline-yes">80x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">44x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">45x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">336x</span>
+<span class="cline-any cline-yes">866x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">336x</span>
+<span class="cline-any cline-yes">336x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">36x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-yes">902x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">34x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-no">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
+import { Trytes } from "./trytes";
+&nbsp;
+/**
+ * A class for handling trits.
+ */
+export class Trits {
+    /* @internal */
+    private static readonly TRYTES_TRITS: number[][] = [
+        [0, 0, 0],
+        [1, 0, 0],
+        [-1, 1, 0],
+        [0, 1, 0],
+        [1, 1, 0],
+        [-1, -1, 1],
+        [0, -1, 1],
+        [1, -1, 1],
+        [-1, 0, 1],
+        [0, 0, 1],
+        [1, 0, 1],
+        [-1, 1, 1],
+        [0, 1, 1],
+        [1, 1, 1],
+        [-1, -1, -1],
+        [0, -1, -1],
+        [1, -1, -1],
+        [-1, 0, -1],
+        [0, 0, -1],
+        [1, 0, -1],
+        [-1, 1, -1],
+        [0, 1, -1],
+        [1, 1, -1],
+        [-1, -1, 0],
+        [0, -1, 0],
+        [1, -1, 0],
+        [-1, 0, 0]
+    ];
+&nbsp;
+    /* @internal */
+    private _trits: number[];
+&nbsp;
+    /* @internal */
+    private constructor(trits: number[]) {
+        this._trits = trits;
+    }
+&nbsp;
+    /**
+     * Create instance of trits from number array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public static fromArray(value: number[]): Trits {
+        <span class="missing-if-branch" title="if path not taken" >I</span>if (value === null || value === undefined) {
+<span class="cstat-no" title="statement not covered" >            throw new CoreError("The supplied value does not contain valid trits");</span>
+        }
+        return new Trits(value);
+    }
+&nbsp;
+    /**
+     * Create instance of trits from trytes.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public static fromTrytes(value: Trytes): Trits {
+        if (value === null || value === undefined) {
+            throw new CoreError("The supplied value does not contain valid trytes");
+        }
+        const trits: number[] = [];
+        const trytesString = value.toString();
+        for (let i = 0; i &lt; trytesString.length; i++) {
+            const idx = Trytes.ALPHABET.indexOf(trytesString.charAt(i));
+            trits[i * 3] = Trits.TRYTES_TRITS[idx][0];
+            trits[i * 3 + 1] = Trits.TRYTES_TRITS[idx][1];
+            trits[i * 3 + 2] = Trits.TRYTES_TRITS[idx][2];
+        }
+        return new Trits(trits);
+    }
+&nbsp;
+    /**
+     * Create instance of trits from number
+     * @param value Number used to create trits.
+     * @returns An instance of Trits.
+     */
+    public static fromNumber(value: number): Trits {
+        if (!NumberHelper.isInteger(value)) {
+            throw new CoreError("The supplied value is not an integer");
+        }
+        const trits: number[] = [];
+        let absoluteValue = value &lt; 0 ? -value : value;
+&nbsp;
+        while (absoluteValue &gt; 0) {
+            let remainder = absoluteValue % 3;
+            absoluteValue = Math.floor(absoluteValue / 3);
+&nbsp;
+            if (remainder &gt; 1) {
+                remainder = -1;
+                absoluteValue++;
+            }
+&nbsp;
+            trits[trits.length] = remainder;
+        }
+        if (value &lt; 0) {
+            for (let i = 0; i &lt; trits.length; i++) {
+                trits[i] = -trits[i];
+            }
+        }
+&nbsp;
+        return new Trits(trits);
+    }
+&nbsp;
+    /**
+     * Add two trits together.
+     * @param a The first trit.
+     * @param b The second trit.
+     * @return New trit which is the addition of the a + b.
+     */
+    public <span class="fstat-no" title="function not covered" >static</span> add(a: Trits, b: Trits): Trits {
+        const out = <span class="cstat-no" title="statement not covered" >new Array(Math.max(a._trits.length, b._trits.length));</span>
+        let carry = <span class="cstat-no" title="statement not covered" >0;</span>
+        let iA;
+        let iB;
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        for (let i = 0; i &lt; out.length; i++) {</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >            iA = i &lt; a._trits.length ? a._trits[i] : 0;</span>
+<span class="cstat-no" title="statement not covered" >            iB = i &lt; b._trits.length ? b._trits[i] : 0;</span>
+            const fA = <span class="cstat-no" title="statement not covered" >Trits.fullAdd(iA, iB, carry);</span>
+<span class="cstat-no" title="statement not covered" >            out[i] = fA[0];</span>
+<span class="cstat-no" title="statement not covered" >            carry = fA[1];</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return Trits.fromArray(out);</span>
+    }
+&nbsp;
+    /* @internal */
+    private <span class="fstat-no" title="function not covered" >static</span> fullAdd(a: number, b: number, c: number): number[] {
+        const sA = <span class="cstat-no" title="statement not covered" >Trits.sum(a, b);</span>
+        const cA = <span class="cstat-no" title="statement not covered" >Trits.cons(a, b);</span>
+        const cB = <span class="cstat-no" title="statement not covered" >Trits.cons(sA, c);</span>
+        const cOut = <span class="cstat-no" title="statement not covered" >Trits.any(cA, cB);</span>
+        const sOUt = <span class="cstat-no" title="statement not covered" >Trits.sum(sA, c);</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return [sOUt, cOut];</span>
+    }
+&nbsp;
+    /* @internal */
+    private <span class="fstat-no" title="function not covered" >static</span> sum(a: number, b: number): number {
+        const s = <span class="cstat-no" title="statement not covered" >a + b;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        switch (s) {</span>
+            case 2: <span class="cstat-no" title="statement not covered" >return -1;</span>
+            case -2: <span class="cstat-no" title="statement not covered" >return 1;</span>
+            default: <span class="cstat-no" title="statement not covered" >return s;</span>
+        }
+    }
+&nbsp;
+    /* @internal */
+    private <span class="fstat-no" title="function not covered" >static</span> cons(a: number, b: number): number {
+<span class="cstat-no" title="statement not covered" >        if (a === b) {</span>
+<span class="cstat-no" title="statement not covered" >            return a;</span>
+        }
+<span class="cstat-no" title="statement not covered" >        return 0;</span>
+    }
+&nbsp;
+    /* @internal */
+    private <span class="fstat-no" title="function not covered" >static</span> any(a: number, b: number): number {
+        const s = <span class="cstat-no" title="statement not covered" >a + b;</span>
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        if (s &gt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return 1;</span>
+        } else <span class="cstat-no" title="statement not covered" >if (s &lt; 0) {</span>
+<span class="cstat-no" title="statement not covered" >            return -1;</span>
+        }
+&nbsp;
+<span class="cstat-no" title="statement not covered" >        return 0;</span>
+    }
+&nbsp;
+    /**
+     * Get the value of the trits array.
+     * @returns Array representation of the trits.
+     */
+    public toArray(): number[] {
+        return this._trits;
+    }
+&nbsp;
+    /**
+     * Create instance of trits from number array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public <span class="fstat-no" title="function not covered" >fromArray</span>(value: number[]): void {
+<span class="cstat-no" title="statement not covered" >        if (value === null || value === undefined) {</span>
+<span class="cstat-no" title="statement not covered" >            throw new CoreError("The supplied value does not contain valid trits");</span>
+        }
+<span class="cstat-no" title="statement not covered" >        this._trits = value;</span>
+    }
+&nbsp;
+    /**
+     * Get the trits as trytes.
+     * @returns Instance of Trytes.
+     */
+    public toTrytes(): Trytes {
+        let trytes = "";
+&nbsp;
+        for (let i = 0; i &lt; this._trits.length; i += 3) {
+            // Iterate over all possible tryte values to find correct trit representation
+            for (let j = 0; j &lt; Trytes.ALPHABET.length; j++) {
+                if (Trits.TRYTES_TRITS[j][0] === this._trits[i] &amp;&amp;
+                    Trits.TRYTES_TRITS[j][1] === this._trits[i + 1] &amp;&amp;
+                    Trits.TRYTES_TRITS[j][2] === this._trits[i + 2]) {
+                    trytes += Trytes.ALPHABET.charAt(j);
+                    break;
+                }
+            }
+        }
+&nbsp;
+        return Trytes.create(trytes);
+    }
+&nbsp;
+    /**
+     * Get the trits as a number.
+     * @returns The trits converted to a number.
+     */
+    public toNumber(): number {
+        let returnValue = 0;
+&nbsp;
+        for (let i = this._trits.length - 1; i &gt;= 0; i--) {
+            returnValue = returnValue * 3 + this._trits[i];
+        }
+&nbsp;
+        return returnValue;
+    }
+&nbsp;
+    /**
+     * What is the length of the trits.
+     * @returns Length of the trits.
+     */
+    public <span class="fstat-no" title="function not covered" >length</span>(): number {
+<span class="cstat-no" title="statement not covered" >        return this._trits.length;</span>
+    }
+&nbsp;
+    /**
+     * Get a sub of the trits.
+     * @param start The start position to get the sub.
+     * @param length The length of the sub.
+     * @returns The trits sub.
+     */
+    public <span class="fstat-no" title="function not covered" >sub</span>(start: number, length: number): Trits {
+<span class="cstat-no" title="statement not covered" >        return Trits.fromArray(this._trits.slice(start, start + length));</span>
+    }
+&nbsp;
+}
+&nbsp;</pre></td></tr>
+</table></pre>
+<div class='push'></div><!-- for sticky footer -->
+</div><!-- /wrapper -->
+<div class='footer quiet pad2 space-top1 center small'>
+  Code coverage
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Mon Feb 19 2018 13:42:01 GMT+0300 (Turkey Standard Time)
+</div>
+</div>
+<script src="..\..\prettify.js"></script>
+<script>
+window.onload = function () {
+        if (typeof prettyPrint === 'function') {
+            prettyPrint();
+        }
+};
+</script>
+<script src="..\..\sorter.js"></script>
+</body>
+</html>

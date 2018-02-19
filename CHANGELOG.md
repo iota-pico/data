@@ -12,6 +12,8 @@
 * Trits toTritsArray renamed to toArray
 * Trits fromTritsArray renamed to fromArray
 * Trits toArray returns copy of data
+* Added code coverage to testing
+
 
 ## v0.6.1
 
