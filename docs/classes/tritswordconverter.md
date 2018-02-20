@@ -26,7 +26,7 @@ Helper class to convert between trits and words. Converted from here [https://gi
 
 
 
-*Defined in [converters/tritsWordConverter.ts:36](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/converters/tritsWordConverter.ts#L36)*
+*Defined in [converters/tritsWordConverter.ts:36](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/converters/tritsWordConverter.ts#L36)*
 
 
 
@@ -61,7 +61,7 @@ ___
 
 
 
-*Defined in [converters/tritsWordConverter.ts:115](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/converters/tritsWordConverter.ts#L115)*
+*Defined in [converters/tritsWordConverter.ts:115](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/converters/tritsWordConverter.ts#L115)*
 
 
 

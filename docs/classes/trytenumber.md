@@ -32,7 +32,7 @@ A class for handling tryte number.
 
 **●  EMPTY_9**:  *[TryteNumber](trytenumber.md)*  =  TryteNumber.fromNumber(0, TryteNumber.LENGTH_9)
 
-*Defined in [data/tryteNumber.ts:13](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/tryteNumber.ts#L13)*
+*Defined in [data/tryteNumber.ts:13](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tryteNumber.ts#L13)*
 
 
 
@@ -46,7 +46,7 @@ ___
 
 **●  LENGTH_9**:  *`number`*  = 9
 
-*Defined in [data/tryteNumber.ts:11](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/tryteNumber.ts#L11)*
+*Defined in [data/tryteNumber.ts:11](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tryteNumber.ts#L11)*
 
 
 
@@ -64,7 +64,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:86](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/tryteNumber.ts#L86)*
+*Defined in [data/tryteNumber.ts:86](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tryteNumber.ts#L86)*
 
 
 
@@ -91,7 +91,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:78](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/tryteNumber.ts#L78)*
+*Defined in [data/tryteNumber.ts:78](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tryteNumber.ts#L78)*
 
 
 
@@ -118,7 +118,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:29](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/tryteNumber.ts#L29)*
+*Defined in [data/tryteNumber.ts:29](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tryteNumber.ts#L29)*
 
 
 
@@ -154,7 +154,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:57](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/tryteNumber.ts#L57)*
+*Defined in [data/tryteNumber.ts:57](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tryteNumber.ts#L57)*
 
 
 

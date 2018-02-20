@@ -31,7 +31,7 @@ A class for handling transfers.
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in data/transfer.ts:9*
+*Defined in [data/transfer.ts:9](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/transfer.ts#L9)*
 
 
 
@@ -45,7 +45,7 @@ ___
 
 **●  message**:  *[Trytes](trytes.md)* 
 
-*Defined in data/transfer.ts:11*
+*Defined in [data/transfer.ts:11](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/transfer.ts#L11)*
 
 
 
@@ -59,7 +59,7 @@ ___
 
 **●  tag**:  *[Tag](tag.md)* 
 
-*Defined in data/transfer.ts:12*
+*Defined in [data/transfer.ts:12](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/transfer.ts#L12)*
 
 
 
@@ -73,7 +73,7 @@ ___
 
 **●  value**:  *`number`* 
 
-*Defined in data/transfer.ts:10*
+*Defined in [data/transfer.ts:10](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/transfer.ts#L10)*
 
 
 
@@ -91,7 +91,7 @@ ___
 
 
 
-*Defined in data/transfer.ts:26*
+*Defined in [data/transfer.ts:26](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/transfer.ts#L26)*
 
 
 

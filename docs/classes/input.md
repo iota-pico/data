@@ -31,7 +31,7 @@ A class for handling inputs.
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in data/input.ts:8*
+*Defined in [data/input.ts:8](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/input.ts#L8)*
 
 
 
@@ -45,7 +45,7 @@ ___
 
 **●  balance**:  *`number`* 
 
-*Defined in data/input.ts:11*
+*Defined in [data/input.ts:11](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/input.ts#L11)*
 
 
 
@@ -59,7 +59,7 @@ ___
 
 **●  keyIndex**:  *`number`* 
 
-*Defined in data/input.ts:10*
+*Defined in [data/input.ts:10](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/input.ts#L10)*
 
 
 
@@ -73,7 +73,7 @@ ___
 
 **●  security**:  *[AddressSecurity](../enums/addresssecurity.md)* 
 
-*Defined in data/input.ts:9*
+*Defined in [data/input.ts:9](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/input.ts#L9)*
 
 
 
@@ -91,7 +91,7 @@ ___
 
 
 
-*Defined in data/input.ts:25*
+*Defined in [data/input.ts:25](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/input.ts#L25)*
 
 
 

@@ -11,6 +11,7 @@ import { TryteNumber } from "./tryteNumber";
  */
 export class Bundle {
     public transactions: Transaction[];
+    public inclusionState: boolean;
 
     /**
      * Create a new instance of Bundle.

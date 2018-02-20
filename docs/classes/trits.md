@@ -34,7 +34,7 @@ A class for handling trits.
 
 
 
-*Defined in [data/trits.ts:192](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L192)*
+*Defined in [data/trits.ts:192](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L192)*
 
 
 
@@ -69,7 +69,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:239](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L239)*
+*Defined in [data/trits.ts:239](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L239)*
 
 
 
@@ -96,7 +96,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:249](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L249)*
+*Defined in [data/trits.ts:249](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L249)*
 
 
 
@@ -132,7 +132,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:183](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L183)*
+*Defined in [data/trits.ts:183](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L183)*
 
 
 
@@ -159,7 +159,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:225](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L225)*
+*Defined in [data/trits.ts:225](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L225)*
 
 
 
@@ -186,7 +186,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:203](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L203)*
+*Defined in [data/trits.ts:203](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L203)*
 
 
 
@@ -213,7 +213,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:118](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L118)*
+*Defined in [data/trits.ts:118](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L118)*
 
 
 
@@ -249,7 +249,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L53)*
+*Defined in [data/trits.ts:53](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L53)*
 
 
 
@@ -284,7 +284,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:85](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L85)*
+*Defined in [data/trits.ts:85](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L85)*
 
 
 
@@ -319,7 +319,7 @@ ___
 
 
 
-*Defined in [data/trits.ts:65](https://github.com/iotaeco/iota-pico-data/blob/fd25b7f/src/data/trits.ts#L65)*
+*Defined in [data/trits.ts:65](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trits.ts#L65)*
 
 
 

@@ -7,6 +7,7 @@ import { Transaction } from "./transaction";
  */
 export declare class Bundle {
     transactions: Transaction[];
+    inclusionState: boolean;
     /**
      * Create a new instance of Bundle.
      */
