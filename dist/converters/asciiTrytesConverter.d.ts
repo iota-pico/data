@@ -9,11 +9,11 @@ export declare class AsciiTrytesConverter implements ITrytesConverter<string> {
      * @param string value to convert into trytes.
      * @returns The trytes representation of the value.
      */
-    to(value: string | null | undefined): Trytes;
+    to(value: string): Trytes;
     /**
      * Convert trytes into a string value.
      * @param trytes to convert into a string value.
      * @returns The string value converted from the trytes.
      */
-    from(trytes: Trytes | null | undefined): string;
+    from(trytes: Trytes): string;
 }

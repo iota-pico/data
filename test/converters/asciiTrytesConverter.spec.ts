@@ -15,22 +15,22 @@ describe("AsciiTrytesConverter", () => {
     describe("to", () => {
         it("can fail to convert with undefined string", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(() => obj.to(undefined)).to.throw(CoreError);
+            chai.expect(() => obj.to(undefined)).to.throw("The value");
         });
 
         it("can fail to convert with null string", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(() => obj.to(null)).to.throw(CoreError);
-        });
-
-        it("can succeed converting with empty string", () => {
-            const obj = new AsciiTrytesConverter();
-            chai.expect(obj.to("").toString()).to.equal("");
+            chai.expect(() => obj.to(null)).to.throw("The value");
         });
 
         it("can fail with non ascii characters", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(() => obj.to("This is a test ℜ")).to.throw(CoreError);
+            chai.expect(() => obj.to("This is a test ℜ")).to.throw("non ASCII");
+        });
+
+        it("can suuceed converting with empty string", () => {
+            const obj = new AsciiTrytesConverter();
+            chai.expect(obj.to("").toString()).to.equal("");
         });
 
         it("can succeed converting with non-empty string", () => {
@@ -47,12 +47,17 @@ describe("AsciiTrytesConverter", () => {
     describe("from", () => {
         it("can fail to convert with undefined string", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(() => obj.from(undefined)).to.throw(CoreError);
+            chai.expect(() => obj.from(undefined)).to.throw("is empty");
         });
 
         it("can fail to convert with null string", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(() => obj.from(null)).to.throw(CoreError);
+            chai.expect(() => obj.from(null)).to.throw("is empty");
+        });
+
+        it("can fail to convert with an an object that is not trytes", () => {
+            const obj = new AsciiTrytesConverter();
+            chai.expect(() => obj.from(<any>{})).to.throw("is empty");
         });
 
         it("can succeed converting with empty string", () => {
@@ -62,7 +67,7 @@ describe("AsciiTrytesConverter", () => {
 
         it("can fail with odd length trytes", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(() => obj.from(Trytes.create("ABC"))).to.throw(CoreError);
+            chai.expect(() => obj.from(Trytes.create("ABC"))).to.throw("even number");
         });
 
         it("can succeed converting with non-empty string", () => {

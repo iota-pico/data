@@ -22,12 +22,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>28/28</span>
+        <span class='fraction'>29/29</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>10/10</span>
+        <span class='fraction'>8/8</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -37,7 +37,7 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>28/28</span>
+        <span class='fraction'>29/29</span>
       </div>
     </div>
   </div>
@@ -111,7 +111,9 @@
 66
 67
 68
-69</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+69
+70</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -154,32 +156,33 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">13x</span>
+<span class="cline-any cline-yes">17x</span>
+<span class="cline-any cline-yes">3x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">14x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">11x</span>
-<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">12x</span>
+<span class="cline-any cline-yes">199x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">199x</span>
+<span class="cline-any cline-yes">199x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
-<span class="cline-any cline-yes">193x</span>
+<span class="cline-any cline-yes">199x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">193x</span>
-<span class="cline-any cline-yes">193x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">193x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">193x</span>
+<span class="cline-any cline-yes">199x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">12x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { StringHelper } from "@iota-pico/core/dist/helpers/stringHelper";
 import { Trytes } from "../data/trytes";
 import { ITrytesConverter } from "../interfaces/ITrytesConverter";
@@ -193,13 +196,13 @@ export class AsciiTrytesConverter implements ITrytesConverter&lt;string&gt; {
      * @param string value to convert into trytes.
      * @returns The trytes representation of the value.
      */
-    public to(value: string | null | undefined): Trytes {
+    public to(value: string): Trytes {
         if (!StringHelper.isString(value)) {
-            throw new CoreError("Value is not a string", { value });
+            throw new CoreError("The value must not be string", { value });
         }
 &nbsp;
         if (!StringHelper.isAscii(value)) {
-            throw new CoreError("Value contains non ASCII characters", { value });
+            throw new CoreError("The value contains non ASCII characters", { value });
         }
 &nbsp;
         let trytes = "";
@@ -221,14 +224,14 @@ export class AsciiTrytesConverter implements ITrytesConverter&lt;string&gt; {
      * @param trytes to convert into a string value.
      * @returns The string value converted from the trytes.
      */
-    public from(trytes: Trytes | null | undefined): string {
-        if (trytes === undefined || trytes === null) {
-            throw new CoreError("Trytes can not be undefined or null");
+    public from(trytes: Trytes): string {
+        if (!ObjectHelper.isType(trytes, Trytes)) {
+            throw new CoreError("The trytes parameter is empty or not the correct type");
         }
         const trytesString = trytes.toString();
 &nbsp;
         if (trytesString.length % 2 === 1) {
-            throw new CoreError("Trytes length must be an even number");
+            throw new CoreError("The trytes length must be an even number");
         }
 &nbsp;
         let ascii = "";
@@ -253,7 +256,7 @@ export class AsciiTrytesConverter implements ITrytesConverter&lt;string&gt; {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 20 2018 14:49:10 GMT+0300 (Turkey Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Wed Feb 21 2018 15:53:28 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

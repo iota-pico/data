@@ -10,7 +10,7 @@ export declare class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
      * @param object to convert into trytes.
      * @returns The trytes representation of the object.
      */
-    to(value: T | null | undefined): Trytes;
+    to(value: T): Trytes;
     /**
      * Convert trytes into a string value.
      * @param trytes to convert into a string value.

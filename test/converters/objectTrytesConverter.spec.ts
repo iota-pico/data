@@ -1,7 +1,6 @@
 /**
  * Tests for ObjectTrytesConverter.
  */
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import * as chai from "chai";
 import { ObjectTrytesConverter } from "../../src/converters/objectTrytesConverter";
 import { Trytes } from "../../src/data/trytes";
@@ -15,12 +14,25 @@ describe("ObjectTrytesConverter", () => {
     describe("to", () => {
         it("can fail to convert with undefined string", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.to(undefined)).to.throw(CoreError);
+            chai.expect(() => obj.to(undefined)).to.throw("The value");
         });
 
         it("can fail to convert with null string", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.to(null)).to.throw(CoreError);
+            chai.expect(() => obj.to(null)).to.throw("The value");
+        });
+
+        it("can fail when JSON.stringify fails", () => {
+            const obj = new ObjectTrytesConverter();
+
+            const testObj = {};
+            Object.defineProperty(testObj, "myProp", {
+                get: () => {
+                    throw new Error("blah");
+                },
+                enumerable: true
+            });
+            chai.expect(() => obj.to(testObj)).to.throw("object to JSON");
         });
 
         it("can succeed converting with empty string", () => {
@@ -45,34 +57,49 @@ describe("ObjectTrytesConverter", () => {
 
         it("can succeed converting with objects", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.to({ a: "foo", b: [ 1, 2, 3], c: true}).toString()).to.equal("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBHDFDIDTCQD");
+            chai.expect(obj.to({ a: "foo", b: [1, 2, 3], c: true }).toString()).to.equal("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBHDFDIDTCQD");
         });
 
         it("can succeed converting with objects with non ASCII characters", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.to({ a: "foo", b: [ 1, 2, 3], c: "ℜ"}).toString()).to.equal("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD");
+            chai.expect(obj.to({ a: "foo", b: [1, 2, 3], c: "ℜ" }).toString()).to.equal("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD");
         });
     });
 
     describe("from", () => {
         it("can fail to convert with undefined string", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(undefined)).to.throw(CoreError);
+            chai.expect(() => obj.from(undefined)).to.throw("empty or not the correct type");
         });
 
         it("can fail to convert with null string", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(null)).to.throw(CoreError);
-        });
-
-        it("can succeed converting with empty string", () => {
-            const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("GAGA"))).to.equal("");
+            chai.expect(() => obj.from(null)).to.throw("empty or not the correct type");
         });
 
         it("can fail with odd length trytes", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.create("ABC"))).to.throw(CoreError);
+            chai.expect(() => obj.from(Trytes.create("ABC"))).to.throw("be an even number");
+        });
+
+        it("can fail with not enough data", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(() => obj.from(Trytes.create(""))).to.throw("do not represent an object");
+        });
+
+        it("can fail with invalid start and end characters", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(() => obj.from(Trytes.create("BABA"))).to.throw("do not represent an object");
+        });
+
+        it("can fail if the JSON.parse fails", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(() => obj.from(Trytes.create("ODCCCCQD"))).to.throw("converting the object from JSON");
+        });
+
+        it("can succeed converting with empty JSON string", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.create("GAGA"))).to.equal("");
         });
 
         it("can succeed with non ascii characters", () => {
@@ -92,12 +119,12 @@ describe("ObjectTrytesConverter", () => {
 
         it("can succeed converting with objects", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBHDFDIDTCQD"))).to.deep.equal({ a: "foo", b: [ 1, 2, 3], c: true});
+            chai.expect(obj.from(Trytes.create("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBHDFDIDTCQD"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: true });
         });
 
         it("can succeed converting with objects with non ASCII characters", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD"))).to.deep.equal({ a: "foo", b: [ 1, 2, 3], c: "ℜ"});
+            chai.expect(obj.from(Trytes.create("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: "ℜ" });
         });
     });
 });

@@ -1,4 +1,5 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { StringHelper } from "@iota-pico/core/dist/helpers/stringHelper";
 import { Trytes } from "../data/trytes";
 import { ITrytesConverter } from "../interfaces/ITrytesConverter";
@@ -12,13 +13,13 @@ export class AsciiTrytesConverter implements ITrytesConverter<string> {
      * @param string value to convert into trytes.
      * @returns The trytes representation of the value.
      */
-    public to(value: string | null | undefined): Trytes {
+    public to(value: string): Trytes {
         if (!StringHelper.isString(value)) {
-            throw new CoreError("Value is not a string", { value });
+            throw new CoreError("The value must not be string", { value });
         }
 
         if (!StringHelper.isAscii(value)) {
-            throw new CoreError("Value contains non ASCII characters", { value });
+            throw new CoreError("The value contains non ASCII characters", { value });
         }
 
         let trytes = "";
@@ -40,14 +41,14 @@ export class AsciiTrytesConverter implements ITrytesConverter<string> {
      * @param trytes to convert into a string value.
      * @returns The string value converted from the trytes.
      */
-    public from(trytes: Trytes | null | undefined): string {
-        if (trytes === undefined || trytes === null) {
-            throw new CoreError("Trytes can not be undefined or null");
+    public from(trytes: Trytes): string {
+        if (!ObjectHelper.isType(trytes, Trytes)) {
+            throw new CoreError("The trytes parameter is empty or not the correct type");
         }
         const trytesString = trytes.toString();
 
         if (trytesString.length % 2 === 1) {
-            throw new CoreError("Trytes length must be an even number");
+            throw new CoreError("The trytes length must be an even number");
         }
 
         let ascii = "";

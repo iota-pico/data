@@ -1,5 +1,6 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { JsonHelper } from "@iota-pico/core/dist/helpers/jsonHelper";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { StringHelper } from "@iota-pico/core/dist/helpers/stringHelper";
 import { Trytes } from "../data/trytes";
 import { ITrytesConverter } from "../interfaces/ITrytesConverter";
@@ -15,9 +16,9 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
      * @param object to convert into trytes.
      * @returns The trytes representation of the object.
      */
-    public to(value: T | null | undefined): Trytes {
-        if (value === undefined || value === null) {
-            throw new CoreError("Value can not be undefined or null");
+    public to(value: T): Trytes {
+        if (ObjectHelper.isEmpty(value)) {
+            throw new CoreError("The value can not be empty");
         }
 
         let json;
@@ -27,14 +28,7 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
             throw new CoreError("There was a problem converting the object to JSON", { err });
         }
 
-        let encoded;
-        try {
-            encoded = StringHelper.encodeNonASCII(json);
-        } catch (err) {
-            throw new CoreError("There was a problem encoding the non ASCII characters", { err });
-        }
-
-        return new AsciiTrytesConverter().to(encoded);
+        return new AsciiTrytesConverter().to(StringHelper.encodeNonASCII(json));
     }
 
     /**
@@ -42,9 +36,9 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
      * @param trytes to convert into a string value.
      * @returns The string value converted from the trytes.
      */
-    public from(trytes: Trytes | null | undefined): T {
-        if (trytes === undefined || trytes === null) {
-            throw new CoreError("Trytes can not be undefined or null");
+    public from(trytes: Trytes): T {
+        if (!ObjectHelper.isType(trytes, Trytes)) {
+            throw new CoreError("The trytes parameter is empty or not the correct type");
         }
 
         const ascii = new AsciiTrytesConverter().from(trytes);
@@ -59,12 +53,7 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
             throw new CoreError("The trytes do not represent an object");
         }
 
-        let decoded;
-        try {
-            decoded = StringHelper.decodeNonASCII(ascii);
-        } catch (err) {
-            throw new CoreError("There was a problem decoding non ASCII characters", { err });
-        }
+        const decoded = StringHelper.decodeNonASCII(ascii);
 
         let obj;
         try {
