@@ -43,7 +43,8 @@
         "dist": "npm-run-all build test docs"
     },
     "dependencies": {
-        "@iota-pico/core": "^0.7.0"
+        "@iota-pico/core": "^0.7.0",
+        "big-integer": "^1.6.26"
     },
     "devDependencies": {
         "@types/chai": "^4.1.1",

@@ -16,5 +16,5 @@ export declare class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
      * @param trytes to convert into a string value.
      * @returns The string value converted from the trytes.
      */
-    from(trytes: Trytes | null | undefined): T;
+    from(trytes: Trytes): T;
 }

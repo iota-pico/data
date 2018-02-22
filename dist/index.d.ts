@@ -3,7 +3,7 @@
  */
 export * from "./converters/asciiTrytesConverter";
 export * from "./converters/objectTrytesConverter";
-export * from "./converters/tritsWordConverter";
+export * from "./converters/tritsConverter";
 export * from "./data/addressSecurity";
 export * from "./data/address";
 export * from "./data/bundle";
