@@ -1,5 +1,6 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Trits } from "./trits";
 import { Trytes } from "./trytes";
 
@@ -29,6 +30,10 @@ export class TryteNumber {
     public static fromNumber(value: number, length: number = TryteNumber.LENGTH_9): TryteNumber {
         let trytes;
 
+        if (!NumberHelper.isInteger(length) || length <= 0) {
+            throw new CoreError("The length should be a number > 0", { length });
+        }
+
         if (value === undefined || value === null) {
             trytes = "9".repeat(length);
         } else {
@@ -55,10 +60,14 @@ export class TryteNumber {
      * @returns An instance of TryteNumber.
      */
     public static fromTrytes(value: Trytes, length: number = TryteNumber.LENGTH_9): TryteNumber {
-        if (value === undefined || value === null) {
-            throw new CoreError("The value should not be undefined or null");
+        if (!ObjectHelper.isType(value, Trytes)) {
+            throw new CoreError("The value should be a valid Trytes object");
         }
         let tryteString = value.toString();
+
+        if (!NumberHelper.isInteger(length) || length <= 0) {
+            throw new CoreError("The length should be a number > 0", { length });
+        }
 
         if (tryteString.length > length) {
             throw new CoreError("The value contains too many characters", { length: tryteString.length });

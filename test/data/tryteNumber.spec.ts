@@ -1,15 +1,19 @@
 /**
  * Tests for TryteNumber.
  */
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import * as chai from "chai";
 import { Trits } from "../../src/data/trits";
 import { TryteNumber } from "../../src/data/tryteNumber";
+import { Trytes } from "../../src/data/trytes";
 
 describe("TryteNumber", () => {
     describe("fromNumber", () => {
         it("can fail with not a number params", () => {
-            chai.expect(() => TryteNumber.fromNumber(Number.NaN)).to.throw(CoreError);
+            chai.expect(() => TryteNumber.fromNumber(Number.NaN)).to.throw("The value");
+        });
+
+        it("can fail with invalid length", () => {
+            chai.expect(() => TryteNumber.fromNumber(0, 0)).to.throw("The length");
         });
 
         it("can succeed with undefined params", () => {
@@ -42,6 +46,21 @@ describe("TryteNumber", () => {
             chai.expect(obj.toTrytes().toString()).to.equal("CA9999999999");
             chai.expect(Trits.fromTrytes(obj.toTrytes()).toArray()).to.deep
                 .equal([0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
+        });
+    });
+
+    describe("fromTrytes", () => {
+        it("can fail with not a trytes params", () => {
+            chai.expect(() => TryteNumber.fromTrytes(undefined)).to.throw("The value");
+        });
+        it("can fail with invalid length", () => {
+            chai.expect(() => TryteNumber.fromTrytes(Trytes.create("A".repeat(10)), 0)).to.throw("The length");
+        });
+        it("can fail with too long trytes params", () => {
+            chai.expect(() => TryteNumber.fromTrytes(Trytes.create("A".repeat(10)))).to.throw("too many");
+        });
+        it("can suceed with too few trytes", () => {
+            chai.expect(TryteNumber.fromTrytes(Trytes.create("A".repeat(3))).toTrytes().toString()).to.equal("A".repeat(3) + "9".repeat(6));
         });
     });
 });

@@ -17,90 +17,9 @@ export class TritsConverter {
     private static readonly MIN_TRIT_VALUE: bigInteger.BigInteger = TritsConverter.MAX_TRIT_VALUE.negate();
 
     /* @internal */
-    private static readonly TRITS_LENGTH: number = 243;
-    /* @internal */
     private static readonly BIT_HASH_LENGTH: number = 384;
     /* @internal */
     private static readonly BYTE_HASH_LENGTH: number = TritsConverter.BIT_HASH_LENGTH / 8;
-    /* @internal */
-    private static readonly WORD_LENGTH: number = TritsConverter.BYTE_HASH_LENGTH / 4;
-
-    /**
-     * Convert trits to words.
-     * @param trits The trits to convert.
-     * @returns Words array.
-     */
-    public static tritsToWords(trits: number[]): Uint32Array {
-        if (!ArrayHelper.isTyped(trits, Number)) {
-            throw new CoreError("The trits must be a non empty number array");
-        }
-
-        if (trits.length !== TritsConverter.TRITS_LENGTH) {
-            throw new CoreError(`Invalid trits length ${trits.length} it should be ${TritsConverter.TRITS_LENGTH}`);
-        }
-
-        const bigInt = TritsConverter.tritsToBigInteger(trits, 0, trits.length);
-
-        const bytes = Array(TritsConverter.BYTE_HASH_LENGTH);
-        console.log("tritsToWords:bytes", bytes.length, JSON.stringify(bytes));
-        TritsConverter.bigIntegerToBytes(bigInt, bytes, 0);
-
-        console.log("tritsToWords:trits", trits.length, JSON.stringify(trits));
-        console.log("tritsToWords:bigInt", bigInt.toString());
-        console.log("tritsToWords:bytes", bytes.length, JSON.stringify(bytes));
-
-        // const arrayBuffer = new ArrayBuffer(bytes.length);
-        // const view = new DataView(arrayBuffer);
-        // for (let i = 0; i < bytes.length; i++) {
-        //     view.setInt8(i, bytes[i]);
-        // }
-        const words = new Uint32Array(bytes.length / 4);
-
-        for (let i = 0; i < words.length; i++) {
-            words[i] = TritsConverter.byteArrayToWord(bytes, i * 4);
-        }
-
-        return words;
-    }
-
-    /**
-     * Converts the given word array to trits.
-     * @param words The words to convert to trits
-     * @returns Trits array.
-     */
-    public static wordsToTrits(words: Uint32Array): number[] {
-        if (!ObjectHelper.isType(words, Uint32Array) || words.length === 0) {
-            throw new CoreError("Words must be a non empty Uint32Array");
-        }
-
-        if (words.length !== TritsConverter.WORD_LENGTH) {
-            throw new CoreError(`Invalid words length ${words.length} it should be ${TritsConverter.WORD_LENGTH}`);
-        }
-
-        // const arrayBuffer = new ArrayBuffer(words.length * 4);
-        // const view = new DataView(arrayBuffer);
-        // for (let i = 0; i < words.length; i++) {
-        //     view.setUint32(i * 4, words[i]);
-        // }
-        // const bytes = new Int8Array(arrayBuffer);
-
-        const bytes = Array(words.length * 4);
-
-        for (let i = 0; i < words.length; i++) {
-            TritsConverter.wordToByteArray(words[i], bytes, i * 4);
-        }
-
-        const bigInt = TritsConverter.bytesToBigInteger(bytes, 0, bytes.length);
-
-        const trits = Array(243);
-        TritsConverter.bigIntegerToTrits(bigInt, trits, 0, trits.length);
-
-        console.log("wordsToTrits:bytes", bytes.length, JSON.stringify(bytes));
-        console.log("wordsToTrits:bigInt", bigInt.toString());
-        console.log("wordsToTrits:trits", trits.length, JSON.stringify(trits));
-
-        return trits;
-    }
 
     /**
      * Convert trits to a bigInteger.
@@ -111,6 +30,14 @@ export class TritsConverter {
     public static tritsToBigInteger(trits: number[], offset: number, length: number): bigInteger.BigInteger {
         if (!ArrayHelper.isTyped(trits, Number)) {
             throw new CoreError("The trits must be a non empty number array");
+        }
+
+        if (!NumberHelper.isInteger(offset) || offset < 0) {
+            throw new CoreError("The offset must be a number >= 0");
+        }
+
+        if (!NumberHelper.isInteger(length) || length <= 0) {
+            throw new CoreError("The length must be a number > 0");
         }
 
         if (offset + length > trits.length) {
@@ -147,7 +74,7 @@ export class TritsConverter {
         }
 
         if (!NumberHelper.isInteger(length) || length <= 0) {
-            throw new CoreError("The size must be a number > 0");
+            throw new CoreError("The length must be a number > 0");
         }
 
         if (offset + length > trits.length) {
@@ -182,8 +109,8 @@ export class TritsConverter {
      * @param offset The offset within the bytes to start conversion.
      * @param length The length of the bytes to use for conversion.
      */
-    public static bytesToBigInteger(source: number[], offset: number, length: number): bigInteger.BigInteger {
-        if (!ArrayHelper.isTyped(source, Number)) {
+    public static bytesToBigInteger(source: Int8Array, offset: number, length: number): bigInteger.BigInteger {
+        if (!ObjectHelper.isType(source, Int8Array) || source.length === 0) {
             throw new CoreError("The source must be a non empty number array");
         }
 
@@ -192,7 +119,7 @@ export class TritsConverter {
         }
 
         if (!NumberHelper.isInteger(length) || length <= 0) {
-            throw new CoreError("The size must be a number > 0");
+            throw new CoreError("The length must be a number > 0");
         }
 
         if (source.length - offset < TritsConverter.BYTE_HASH_LENGTH) {
@@ -208,10 +135,8 @@ export class TritsConverter {
             while (bytes[paddingOffset] === firstByte && paddingOffset < bytes.length - 1) {
                 paddingOffset++;
             }
-            if (paddingOffset > 0) {
-                // Strip any padding
-                bytes = bytes.slice(paddingOffset);
-            }
+            // Strip any padding
+            bytes = bytes.slice(paddingOffset);
         }
 
         // If the first padding character is negative then reverse the 2s complement
@@ -225,10 +150,11 @@ export class TritsConverter {
             }
         }
 
-        // Convert the signed bytes back to unsigned
-        bytes = bytes.map(byte => byte < 0 ? byte + 256 : byte);
-
-        const hexString = `${isNeg ? "-" : ""}${bytes.map(n => `00${n.toString(16)}`.slice(-2)).join("")}`;
+        const dv = new DataView(bytes.buffer);
+        let hexString = `${isNeg ? "-" : ""}`;
+        for (let h = 0; h < bytes.length; h++) {
+            hexString += `00${dv.getUint8(h).toString(16)}`.slice(-2);
+        }
 
         return bigInteger(hexString, 16);
     }
@@ -239,12 +165,12 @@ export class TritsConverter {
      * @param destination The destination array to store the bytes.
      * @param offset The offset within the array to store the bytes.
      */
-    public static bigIntegerToBytes(value: bigInteger.BigInteger, destination: number[], offset: number): void {
+    public static bigIntegerToBytes(value: bigInteger.BigInteger, destination: Int8Array, offset: number): void {
         if (!ObjectHelper.isType(value, bigInteger)) {
             throw new CoreError("The value must be a bigInteger type");
         }
 
-        if (!ArrayHelper.isArray(destination)) {
+        if (!ObjectHelper.isType(destination, Int8Array) || destination.length === 0) {
             throw new CoreError("The destination must be an array");
         }
 
@@ -298,32 +224,5 @@ export class TritsConverter {
         for (let j = bytes.length; j-- > 0;) {
             destination[i++] = bytes[bytes.length - 1 - j];
         }
-    }
-
-    /* @internal */
-    private static wordToByteArray(long: number, bytes: number[], offset: number): number[] {
-        const buffer = new ArrayBuffer(4);
-        const view = new DataView(buffer);
-        view.setUint32(0, long);
-
-        console.log("w2b long", long);
-        for (let index = 0; index < 4; index++) {
-            bytes[index + offset] = view.getInt8(3 - index);
-        }
-        console.log("w2b bytes", JSON.stringify(bytes.slice(offset, offset + 4)));
-
-        return bytes;
-    }
-
-    /* @internal */
-    private static byteArrayToWord(bytes: number[], offset: number): number {
-        const buffer = new ArrayBuffer(4);
-        const view = new DataView(buffer);
-        console.log("b2w bytes", JSON.stringify(bytes.slice(offset, offset + 4)));
-        for (let index = 0; index < 4; index++) {
-            view.setInt8(index, bytes[index + offset]);
-        }
-        console.log("b2w long", new Uint32Array(buffer)[0]);
-        return new Uint32Array(buffer)[0];
     }
 }

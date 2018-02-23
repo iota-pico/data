@@ -30,7 +30,7 @@ A class for handling tags.
 
 **●  EMPTY**:  *[Tag](tag.md)*  =  Tag.create(Trytes.create("9".repeat(Tag.LENGTH)))
 
-*Defined in [data/tag.ts:11](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tag.ts#L11)*
+*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L12)*
 
 
 
@@ -44,7 +44,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 27
 
-*Defined in [data/tag.ts:9](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tag.ts#L9)*
+*Defined in [data/tag.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L10)*
 
 
 
@@ -62,7 +62,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:48](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tag.ts#L48)*
+*Defined in [data/tag.ts:49](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L49)*
 
 
 
@@ -89,7 +89,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:26](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/tag.ts#L26)*
+*Defined in [data/tag.ts:27](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L27)*
 
 
 

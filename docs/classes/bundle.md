@@ -35,7 +35,7 @@ A class for handling bundles.
 ### ⊕ **new Bundle**(): [Bundle](bundle.md)
 
 
-*Defined in [data/bundle.ts:14](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/bundle.ts#L14)*
+*Defined in [data/bundle.ts:15](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/bundle.ts#L15)*
 
 
 
@@ -56,7 +56,7 @@ Create a new instance of Bundle.
 
 **●  inclusionState**:  *`boolean`* 
 
-*Defined in [data/bundle.ts:14](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/bundle.ts#L14)*
+*Defined in [data/bundle.ts:15](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/bundle.ts#L15)*
 
 
 
@@ -70,7 +70,7 @@ ___
 
 **●  transactions**:  *[Transaction](transaction.md)[]* 
 
-*Defined in [data/bundle.ts:13](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/bundle.ts#L13)*
+*Defined in [data/bundle.ts:14](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/bundle.ts#L14)*
 
 
 
@@ -88,7 +88,7 @@ ___
 
 
 
-*Defined in [data/bundle.ts:44](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/bundle.ts#L44)*
+*Defined in [data/bundle.ts:45](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/bundle.ts#L45)*
 
 
 
@@ -121,7 +121,7 @@ ___
 
 
 
-*Defined in [data/bundle.ts:31](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/bundle.ts#L31)*
+*Defined in [data/bundle.ts:32](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/bundle.ts#L32)*
 
 
 

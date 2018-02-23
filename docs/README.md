@@ -23,7 +23,7 @@
 * [Transaction](classes/transaction.md)
 * [Transfer](classes/transfer.md)
 * [Trits](classes/trits.md)
-* [TritsWordConverter](classes/tritswordconverter.md)
+* [TritsConverter](classes/tritsconverter.md)
 * [TryteNumber](classes/trytenumber.md)
 * [Trytes](classes/trytes.md)
 

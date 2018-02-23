@@ -5,18 +5,6 @@ import bigInteger from "big-integer";
  */
 export declare class TritsConverter {
     /**
-     * Convert trits to words.
-     * @param trits The trits to convert.
-     * @returns Words array.
-     */
-    static tritsToWords(trits: number[]): Uint32Array;
-    /**
-     * Converts the given word array to trits.
-     * @param words The words to convert to trits
-     * @returns Trits array.
-     */
-    static wordsToTrits(words: Uint32Array): number[];
-    /**
      * Convert trits to a bigInteger.
      * @param trits The trits to convert.
      * @param offset Offset within the array to start.
@@ -37,12 +25,12 @@ export declare class TritsConverter {
      * @param offset The offset within the bytes to start conversion.
      * @param length The length of the bytes to use for conversion.
      */
-    static bytesToBigInteger(source: number[], offset: number, length: number): bigInteger.BigInteger;
+    static bytesToBigInteger(source: Int8Array, offset: number, length: number): bigInteger.BigInteger;
     /**
      * Convert the bigInteger into bytes.
      * @param value The value to convert.
      * @param destination The destination array to store the bytes.
      * @param offset The offset within the array to store the bytes.
      */
-    static bigIntegerToBytes(value: bigInteger.BigInteger, destination: number[], offset: number): void;
+    static bigIntegerToBytes(value: bigInteger.BigInteger, destination: Int8Array, offset: number): void;
 }

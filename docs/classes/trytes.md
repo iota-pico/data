@@ -32,7 +32,7 @@ A class for handling trytes.
 
 **●  ALPHABET**:  *`string`*  = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-*Defined in [data/trytes.ts:8](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trytes.ts#L8)*
+*Defined in [data/trytes.ts:9](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L9)*
 
 
 
@@ -50,7 +50,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:57](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trytes.ts#L57)*
+*Defined in [data/trytes.ts:64](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L64)*
 
 
 
@@ -77,7 +77,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:67](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trytes.ts#L67)*
+*Defined in [data/trytes.ts:74](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L74)*
 
 
 
@@ -113,7 +113,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:49](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trytes.ts#L49)*
+*Defined in [data/trytes.ts:56](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L56)*
 
 
 
@@ -140,7 +140,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:24](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trytes.ts#L24)*
+*Defined in [data/trytes.ts:25](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L25)*
 
 
 
@@ -176,7 +176,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:37](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/data/trytes.ts#L37)*
+*Defined in [data/trytes.ts:44](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L44)*
 
 
 

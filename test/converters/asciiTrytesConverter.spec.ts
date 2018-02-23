@@ -1,7 +1,6 @@
 /**
  * Tests for AsciiTrytesConverter.
  */
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import * as chai from "chai";
 import { AsciiTrytesConverter } from "../../src/converters/asciiTrytesConverter";
 import { Trytes } from "../../src/data/trytes";

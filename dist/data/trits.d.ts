@@ -23,22 +23,16 @@ export declare class Trits {
     static fromNumber(value: number): Trits;
     /**
      * Add two trits together.
-     * @param a The first trit.
-     * @param b The second trit.
+     * @param first The first trit.
+     * @param second The second trit.
      * @return New trit which is the addition of the a + b.
      */
-    static add(a: Trits, b: Trits): Trits;
+    static add(first: Trits, second: Trits): Trits;
     /**
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
     toArray(): number[];
-    /**
-     * Create instance of trits from number array.
-     * @param value Trytes used to create trits.
-     * @returns An instance of Trits.
-     */
-    fromArray(value: number[]): void;
     /**
      * Get the trits as trytes.
      * @returns Instance of Trytes.

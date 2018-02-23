@@ -1,4 +1,5 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Address } from "./address";
 import { Hash } from "./hash";
 import { SignatureFragment } from "./signatureFragment";
@@ -98,8 +99,8 @@ export class Transaction {
      * @returns An instance of this.
      */
     public static fromTrytes(trytes: Trytes): Transaction {
-        if (trytes === null || trytes === undefined) {
-            throw new CoreError("The trytes can not be undefined or null");
+        if (!ObjectHelper.isType(trytes, Trytes)) {
+            throw new CoreError("The trytes should be a valid Trytes object");
         }
 
         const length = trytes.length();
@@ -142,7 +143,7 @@ export class Transaction {
      */
     public toTrytes(): Trytes {
         if (this.signatureMessageFragment === undefined || this.signatureMessageFragment === null) {
-            throw new CoreError(`The hash must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
+            throw new CoreError(`The signatureMessageFragment must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
         }
 
         if (this.address === undefined || this.address === null) {

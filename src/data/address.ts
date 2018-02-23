@@ -1,4 +1,5 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Trytes } from "./trytes";
 
 /**
@@ -29,8 +30,8 @@ export class Address {
      * @returns An instance of Address.
      */
     public static create(address: Trytes): Address {
-        if (address === undefined || address === null) {
-            throw new CoreError("The address should not be undefined or null");
+        if (!ObjectHelper.isType(address, Trytes)) {
+            throw new CoreError("The address should be a valid Trytes object");
         }
 
         const trytesString = address.toString();

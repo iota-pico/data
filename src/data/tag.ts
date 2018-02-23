@@ -1,4 +1,5 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Trytes } from "./trytes";
 
 /**
@@ -24,8 +25,8 @@ export class Tag {
      * @returns An instance of Tag.
      */
     public static create(tag: Trytes): Tag {
-        if (tag === undefined || tag === null) {
-            throw new CoreError("The tag should not be undefined or null");
+        if (!ObjectHelper.isType(tag, Trytes)) {
+            throw new CoreError("The tag should be a valid Trytes object");
         }
 
         let trytesString = tag.toString();

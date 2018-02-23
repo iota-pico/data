@@ -31,11 +31,13 @@ The generic type for the conversion methods.
 
 ###  from
 
-► **from**(trytes: *[Trytes](trytes.md)⎮`null`⎮`undefined`*): `T`
+► **from**(trytes: *[Trytes](trytes.md)*): `T`
 
 
 
-*Defined in [converters/objectTrytesConverter.ts:45](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/converters/objectTrytesConverter.ts#L45)*
+*Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[from](../interfaces/itrytesconverter.md#from)*
+
+*Defined in [converters/objectTrytesConverter.ts:39](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/converters/objectTrytesConverter.ts#L39)*
 
 
 
@@ -46,7 +48,7 @@ Convert trytes into a string value.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| trytes | [Trytes](trytes.md)⎮`null`⎮`undefined`   |  to convert into a string value. |
+| trytes | [Trytes](trytes.md)   |  to convert into a string value. |
 
 
 
@@ -66,11 +68,13 @@ ___
 
 ###  to
 
-► **to**(value: *`T`⎮`null`⎮`undefined`*): [Trytes](trytes.md)
+► **to**(value: *`T`*): [Trytes](trytes.md)
 
 
 
-*Defined in [converters/objectTrytesConverter.ts:18](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/converters/objectTrytesConverter.ts#L18)*
+*Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[to](../interfaces/itrytesconverter.md#to)*
+
+*Defined in [converters/objectTrytesConverter.ts:19](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/converters/objectTrytesConverter.ts#L19)*
 
 
 
@@ -81,7 +85,7 @@ Convert an object value into trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `T`⎮`null`⎮`undefined`   |  - |
+| value | `T`   |  - |
 
 
 

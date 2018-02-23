@@ -26,11 +26,13 @@ Trytes converter that converts to and from a string.
 
 ###  from
 
-► **from**(trytes: *[Trytes](trytes.md)⎮`null`⎮`undefined`*): `string`
+► **from**(trytes: *[Trytes](trytes.md)*): `string`
 
 
 
-*Defined in [converters/asciiTrytesConverter.ts:43](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/converters/asciiTrytesConverter.ts#L43)*
+*Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[from](../interfaces/itrytesconverter.md#from)*
+
+*Defined in [converters/asciiTrytesConverter.ts:44](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/converters/asciiTrytesConverter.ts#L44)*
 
 
 
@@ -41,7 +43,7 @@ Convert trytes into a string value.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| trytes | [Trytes](trytes.md)⎮`null`⎮`undefined`   |  to convert into a string value. |
+| trytes | [Trytes](trytes.md)   |  to convert into a string value. |
 
 
 
@@ -61,11 +63,11 @@ ___
 
 ###  to
 
-► **to**(value: *`string`⎮`null`⎮`undefined`*): [Trytes](trytes.md)
+► **to**(value: *`string`*): [Trytes](trytes.md)
 
 
 
-*Defined in [converters/asciiTrytesConverter.ts:15](https://github.com/iotaeco/iota-pico-data/blob/9a9a210/src/converters/asciiTrytesConverter.ts#L15)*
+*Defined in [converters/asciiTrytesConverter.ts:16](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/converters/asciiTrytesConverter.ts#L16)*
 
 
 
@@ -76,7 +78,7 @@ Convert a string value into trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `string`⎮`null`⎮`undefined`   |  - |
+| value | `string`   |  - |
 
 
 

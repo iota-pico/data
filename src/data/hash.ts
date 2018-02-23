@@ -1,4 +1,5 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Trytes } from "./trytes";
 
 /**
@@ -24,8 +25,8 @@ export class Hash {
      * @returns An instance of Hash.
      */
     public static create(hash: Trytes): Hash {
-        if (hash === undefined || hash === null) {
-            throw new CoreError("The hash should not be undefined or null");
+        if (!ObjectHelper.isType(hash, Trytes)) {
+            throw new CoreError("The hash should be a valid Trytes object");
         }
 
         const length = hash.length();

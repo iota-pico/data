@@ -1,7 +1,6 @@
 /**
  * Tests for Bundle.
  */
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import * as chai from "chai";
 import { Address } from "../../src/data/address";
 import { Bundle } from "../../src/data/bundle";
@@ -45,7 +44,7 @@ describe("Bundle", () => {
     describe("addSignatureFragments", () => {
         it("can fail to add signatures", () => {
             const obj = new Bundle();
-            chai.expect(() => obj.addSignatureFragments(undefined)).to.throw(CoreError);
+            chai.expect(() => obj.addSignatureFragments(undefined)).to.throw("The signatureFragments");
         });
 
         it("can succeed adding signatures", () => {

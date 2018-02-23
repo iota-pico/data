@@ -1,4 +1,5 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Trytes } from "./trytes";
 
 /**
@@ -24,8 +25,8 @@ export class SignatureFragment {
      * @returns An instance of SignatureFragment.
      */
     public static create(signatureFragment: Trytes): SignatureFragment {
-        if (signatureFragment === undefined || signatureFragment === null) {
-            throw new CoreError("The signatureFragment should not be undefined or null");
+        if (!ObjectHelper.isType(signatureFragment, Trytes)) {
+            throw new CoreError("The signatureFragment should be a valid Trytes object");
         }
 
         const length = signatureFragment.length();

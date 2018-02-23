@@ -1,5 +1,7 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ArrayHelper } from "@iota-pico/core/dist/helpers/arrayHelper";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Trytes } from "./trytes";
 
 /**
@@ -38,7 +40,7 @@ export class Trits {
     ];
 
     /* @internal */
-    private _trits: number[];
+    private readonly _trits: number[];
 
     /* @internal */
     private constructor(trits: number[]) {
@@ -51,8 +53,8 @@ export class Trits {
      * @returns An instance of Trits.
      */
     public static fromArray(value: number[]): Trits {
-        if (value === null || value === undefined) {
-            throw new CoreError("The supplied value does not contain valid trits");
+        if (!ArrayHelper.isTyped(value, Number)) {
+            throw new CoreError("The value does not contain valid trits");
         }
         return new Trits(value);
     }
@@ -63,8 +65,8 @@ export class Trits {
      * @returns An instance of Trits.
      */
     public static fromTrytes(value: Trytes): Trits {
-        if (value === null || value === undefined) {
-            throw new CoreError("The supplied value does not contain valid trytes");
+        if (!ObjectHelper.isType(value, Trytes)) {
+            throw new CoreError("The value should be a valid Trytes object");
         }
         const trits: number[] = [];
         const trytesString = value.toString();
@@ -84,7 +86,7 @@ export class Trits {
      */
     public static fromNumber(value: number): Trits {
         if (!NumberHelper.isInteger(value)) {
-            throw new CoreError("The supplied value is not an integer");
+            throw new CoreError("The value is not an integer");
         }
         const trits: number[] = [];
         let absoluteValue = value < 0 ? -value : value;
@@ -111,20 +113,27 @@ export class Trits {
 
     /**
      * Add two trits together.
-     * @param a The first trit.
-     * @param b The second trit.
+     * @param first The first trit.
+     * @param second The second trit.
      * @return New trit which is the addition of the a + b.
      */
-    public static add(a: Trits, b: Trits): Trits {
-        const out = new Array(Math.max(a._trits.length, b._trits.length));
+    public static add(first: Trits, second: Trits): Trits {
+        if (!ObjectHelper.isType(first, Trits)) {
+            throw new CoreError("The first should be a valid Trits object");
+        }
+        if (!ObjectHelper.isType(second, Trits)) {
+            throw new CoreError("The seconds should be a valid Trits object");
+        }
+
+        const out = new Array(Math.max(first._trits.length, second._trits.length));
         let carry = 0;
         let iA;
         let iB;
 
         for (let i = 0; i < out.length; i++) {
 
-            iA = i < a._trits.length ? a._trits[i] : 0;
-            iB = i < b._trits.length ? b._trits[i] : 0;
+            iA = i < first._trits.length ? first._trits[i] : 0;
+            iB = i < second._trits.length ? second._trits[i] : 0;
             const fA = Trits.fullAdd(iA, iB, carry);
             out[i] = fA[0];
             carry = fA[1];
@@ -185,18 +194,6 @@ export class Trits {
     }
 
     /**
-     * Create instance of trits from number array.
-     * @param value Trytes used to create trits.
-     * @returns An instance of Trits.
-     */
-    public fromArray(value: number[]): void {
-        if (value === null || value === undefined) {
-            throw new CoreError("The supplied value does not contain valid trits");
-        }
-        this._trits = value;
-    }
-
-    /**
      * Get the trits as trytes.
      * @returns Instance of Trytes.
      */
@@ -247,6 +244,12 @@ export class Trits {
      * @returns The trits sub.
      */
     public sub(start: number, length: number): Trits {
+        if (!NumberHelper.isInteger(start) || start < 0) {
+            throw new CoreError("The start must be a number >= 0");
+        }
+        if (!NumberHelper.isInteger(length) || (start + length) > this._trits.length) {
+            throw new CoreError(`The start + length must <= ${this._trits.length}`);
+        }
         return Trits.fromArray(this._trits.slice(start, start + length));
     }
 

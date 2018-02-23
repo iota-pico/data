@@ -1,4 +1,5 @@
 import { CoreError } from "@iota-pico/core/dist/error/coreError";
+import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { Address } from "./address";
 import { Hash } from "./hash";
 import { SignatureFragment } from "./signatureFragment";
@@ -42,8 +43,8 @@ export class Bundle {
      * @param signatureFragments The signature fragments to add to the bundle transactions.
      */
     public addSignatureFragments(signatureFragments: SignatureFragment[]): void {
-        if (signatureFragments === undefined || signatureFragments === null) {
-            throw new CoreError("The signatureFragments should not be undefined or null");
+        if (ObjectHelper.isEmpty(signatureFragments)) {
+            throw new CoreError("The signatureFragments should be an array of SignatureFragments");
         }
 
         for (let i = 0; i < this.transactions.length; i++) {
