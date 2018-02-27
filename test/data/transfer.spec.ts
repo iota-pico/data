@@ -21,12 +21,12 @@ describe("Transfer", () => {
             chai.expect(() => Transfer.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), -1, undefined, undefined)).to.throw("The value");
         });
 
-        it("can fail with undefined trytes", () => {
-            chai.expect(() => Transfer.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), 0, undefined, undefined)).to.throw("The message");
+        it("can fail with invalid message", () => {
+            chai.expect(() => Transfer.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), 0, <any>"ABC", undefined)).to.throw("The message");
         });
 
-        it("can fail with undefined tag", () => {
-            chai.expect(() => Transfer.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), 0, Trytes.fromString("B".repeat(81)), undefined)).to.throw("The tag");
+        it("can fail with invalid tag", () => {
+            chai.expect(() => Transfer.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), 0, Trytes.fromString("B".repeat(81)), <any>"ABC")).to.throw("The tag");
         });
 
         it("can succeed with valid parameters", () => {

@@ -36,10 +36,6 @@ describe("Input", () => {
             chai.expect(() => Input.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), 3, 0, undefined)).to.throw("The balance");
         });
 
-        it("can fail with invalid balance 0", () => {
-            chai.expect(() => Input.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), 3, 0, 0)).to.throw("The balance");
-        });
-
         it("can fail with invalid balance -1", () => {
             chai.expect(() => Input.fromParams(Address.fromTrytes(Trytes.fromString("A".repeat(81))), 3, 0, -1)).to.throw("The balance");
         });

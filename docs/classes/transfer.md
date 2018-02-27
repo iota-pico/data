@@ -31,7 +31,7 @@ A class for handling transfers.
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in [data/transfer.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/transfer.ts#L12)*
+*Defined in [data/transfer.ts:12](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transfer.ts#L12)*
 
 
 
@@ -45,7 +45,7 @@ ___
 
 **●  message**:  *[Trytes](trytes.md)* 
 
-*Defined in [data/transfer.ts:14](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/transfer.ts#L14)*
+*Defined in [data/transfer.ts:14](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transfer.ts#L14)*
 
 
 
@@ -59,7 +59,7 @@ ___
 
 **●  tag**:  *[Tag](tag.md)* 
 
-*Defined in [data/transfer.ts:15](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/transfer.ts#L15)*
+*Defined in [data/transfer.ts:15](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transfer.ts#L15)*
 
 
 
@@ -73,7 +73,7 @@ ___
 
 **●  value**:  *`number`* 
 
-*Defined in [data/transfer.ts:13](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/transfer.ts#L13)*
+*Defined in [data/transfer.ts:13](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transfer.ts#L13)*
 
 
 
@@ -91,7 +91,7 @@ ___
 
 
 
-*Defined in [data/transfer.ts:29](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/transfer.ts#L29)*
+*Defined in [data/transfer.ts:29](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transfer.ts#L29)*
 
 
 

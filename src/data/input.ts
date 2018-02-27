@@ -41,8 +41,8 @@ export class Input {
             throw new DataError("The keyIndex should be a number >= 0");
         }
 
-        if (!NumberHelper.isInteger(balance) || balance <= 0) {
-            throw new DataError("The balance should be a number > 0");
+        if (!NumberHelper.isInteger(balance) || balance < 0) {
+            throw new DataError("The balance should be a number >= 0");
         }
 
         const input = new Input();

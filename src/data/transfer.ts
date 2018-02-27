@@ -38,11 +38,11 @@ export class Transfer {
             throw new DataError("The value should be a number >= 0");
         }
 
-        if (!ObjectHelper.isType(message, Trytes)) {
+        if (!ObjectHelper.isEmpty(message) && !ObjectHelper.isType(message, Trytes)) {
             throw new DataError("The message should be a valid Trytes object");
         }
 
-        if (!ObjectHelper.isType(tag, Tag)) {
+        if (!ObjectHelper.isEmpty(tag) && !ObjectHelper.isType(tag, Tag)) {
             throw new DataError("The tag should be a valid Tag object");
         }
 
