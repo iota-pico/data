@@ -18,7 +18,7 @@ A class for handling hashes.
 ### Methods
 
 * [toTrytes](hash.md#totrytes)
-* [create](hash.md#create)
+* [fromTrytes](hash.md#fromtrytes)
 
 
 
@@ -28,9 +28,9 @@ A class for handling hashes.
 
 ### «Static» EMPTY
 
-**●  EMPTY**:  *[Hash](hash.md)*  =  Hash.create(Trytes.create("9".repeat(Hash.LENGTH)))
+**●  EMPTY**:  *[Hash](hash.md)*  =  Hash.fromTrytes(Trytes.fromString("9".repeat(Hash.LENGTH)))
 
-*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/hash.ts#L12)*
+*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/hash.ts#L12)*
 
 
 
@@ -44,7 +44,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/hash.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/hash.ts#L10)*
+*Defined in [data/hash.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/hash.ts#L10)*
 
 
 
@@ -62,7 +62,7 @@ ___
 
 
 
-*Defined in [data/hash.ts:44](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/hash.ts#L44)*
+*Defined in [data/hash.ts:44](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/hash.ts#L44)*
 
 
 
@@ -81,15 +81,15 @@ Trytes version of the hash.
 
 ___
 
-<a id="create"></a>
+<a id="fromtrytes"></a>
 
-### «Static» create
+### «Static» fromTrytes
 
-► **create**(hash: *[Trytes](trytes.md)*): [Hash](hash.md)
+► **fromTrytes**(hash: *[Trytes](trytes.md)*): [Hash](hash.md)
 
 
 
-*Defined in [data/hash.ts:27](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/hash.ts#L27)*
+*Defined in [data/hash.ts:27](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/hash.ts#L27)*
 
 
 

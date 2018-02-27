@@ -6,37 +6,37 @@ import { Trytes } from "../../src/data/trytes";
 
 describe("Trytes", () => {
     it("can be created", () => {
-        const obj = Trytes.create("");
+        const obj = Trytes.fromString("");
         chai.should().exist(obj);
     });
 
-    describe("create", () => {
+    describe("fromString", () => {
         it("can fail to convert with undefined string", () => {
-            chai.expect(() => Trytes.create(undefined)).to.throw("The value");
+            chai.expect(() => Trytes.fromString(undefined)).to.throw("The value");
         });
 
         it("can fail to convert with null string", () => {
-            chai.expect(() => Trytes.create(null)).to.throw("The value");
+            chai.expect(() => Trytes.fromString(null)).to.throw("The value");
         });
 
         it("can fail to convert with non string", () => {
-            chai.expect(() => Trytes.create(<any>123)).to.throw("The value");
+            chai.expect(() => Trytes.fromString(<any>123)).to.throw("The value");
         });
 
         it("can fail with non tryte characters", () => {
-            chai.expect(() => Trytes.create("12345")).to.throw("The value");
+            chai.expect(() => Trytes.fromString("12345")).to.throw("The value");
         });
 
         it("can fail with invalid length", () => {
-            chai.expect(() => Trytes.create("AAA", -1)).to.throw("The length");
+            chai.expect(() => Trytes.fromString("AAA", -1)).to.throw("The length");
         });
 
         it("can succeed converting with empty string", () => {
-            chai.expect(Trytes.create("").toString()).to.equal("");
+            chai.expect(Trytes.fromString("").toString()).to.equal("");
         });
 
         it("can succeed converting with non-empty string", () => {
-            chai.expect(Trytes.create("ABCDEFG9999").toString()).to.equal("ABCDEFG9999");
+            chai.expect(Trytes.fromString("ABCDEFG9999").toString()).to.equal("ABCDEFG9999");
         });
     });
 
@@ -76,27 +76,27 @@ describe("Trytes", () => {
 
     describe("sub", () => {
         it("can fail with undefined start", () => {
-            chai.expect(() => Trytes.create("AAA").sub(undefined, 1)).to.throw("The start");
+            chai.expect(() => Trytes.fromString("AAA").sub(undefined, 1)).to.throw("The start");
         });
 
         it("can fail with negative start", () => {
-            chai.expect(() => Trytes.create("AAA").sub(-1, 1)).to.throw("The start");
+            chai.expect(() => Trytes.fromString("AAA").sub(-1, 1)).to.throw("The start");
         });
 
         it("can fail with undefined length", () => {
-            chai.expect(() => Trytes.create("AAA").sub(0, undefined)).to.throw("The start + length");
+            chai.expect(() => Trytes.fromString("AAA").sub(0, undefined)).to.throw("The start + length");
         });
 
         it("can fail with length too much", () => {
-            chai.expect(() => Trytes.create("AAA").sub(0, 4)).to.throw("The start + length");
+            chai.expect(() => Trytes.fromString("AAA").sub(0, 4)).to.throw("The start + length");
         });
 
         it("can fail with start + length too much", () => {
-            chai.expect(() => Trytes.create("AAA").sub(1, 3)).to.throw("The start + length");
+            chai.expect(() => Trytes.fromString("AAA").sub(1, 3)).to.throw("The start + length");
         });
 
         it("can succeed getting all data", () => {
-            chai.expect(Trytes.create("AAA").sub(0, 3).toString()).to.equal("AAA");
+            chai.expect(Trytes.fromString("AAA").sub(0, 3).toString()).to.equal("AAA");
         });
     });
 });

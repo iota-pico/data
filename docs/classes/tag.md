@@ -18,7 +18,7 @@ A class for handling tags.
 ### Methods
 
 * [toTrytes](tag.md#totrytes)
-* [create](tag.md#create)
+* [fromTrytes](tag.md#fromtrytes)
 
 
 
@@ -28,9 +28,9 @@ A class for handling tags.
 
 ### «Static» EMPTY
 
-**●  EMPTY**:  *[Tag](tag.md)*  =  Tag.create(Trytes.create("9".repeat(Tag.LENGTH)))
+**●  EMPTY**:  *[Tag](tag.md)*  =  Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)))
 
-*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L12)*
+*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/tag.ts#L12)*
 
 
 
@@ -44,7 +44,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 27
 
-*Defined in [data/tag.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L10)*
+*Defined in [data/tag.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/tag.ts#L10)*
 
 
 
@@ -62,7 +62,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:49](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L49)*
+*Defined in [data/tag.ts:49](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/tag.ts#L49)*
 
 
 
@@ -81,15 +81,15 @@ Trytes version of the tag.
 
 ___
 
-<a id="create"></a>
+<a id="fromtrytes"></a>
 
-### «Static» create
+### «Static» fromTrytes
 
-► **create**(tag: *[Trytes](trytes.md)*): [Tag](tag.md)
+► **fromTrytes**(tag: *[Trytes](trytes.md)*): [Tag](tag.md)
 
 
 
-*Defined in [data/tag.ts:27](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/tag.ts#L27)*
+*Defined in [data/tag.ts:27](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/tag.ts#L27)*
 
 
 

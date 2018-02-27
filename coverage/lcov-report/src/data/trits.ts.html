@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>87/87</span>
+        <span class='fraction'>91/91</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>42/42</span>
+        <span class='fraction'>44/44</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>14/14</span>
+        <span class='fraction'>16/16</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>87/87</span>
+        <span class='fraction'>91/91</span>
       </div>
     </div>
   </div>
@@ -299,7 +299,27 @@
 254
 255
 256
-257</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+257
+258
+259
+260
+261
+262
+263
+264
+265
+266
+267
+268
+269
+270
+271
+272
+273
+274
+275
+276
+277</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -345,7 +365,7 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">155x</span>
+<span class="cline-any cline-yes">157x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -354,10 +374,22 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">68x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">2x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">66x</span>
+<span class="cline-any cline-yes">7x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">63x</span>
+<span class="cline-any cline-yes">2x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">61x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -491,7 +523,15 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">59x</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">60x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -555,10 +595,10 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { CoreError } from "@iota-pico/core/dist/error/coreError";
-import { ArrayHelper } from "@iota-pico/core/dist/helpers/arrayHelper";
+<span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ArrayHelper } from "@iota-pico/core/dist/helpers/arrayHelper";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Trytes } from "./trytes";
 &nbsp;
 /**
@@ -566,42 +606,54 @@ import { Trytes } from "./trytes";
  */
 export class Trits {
     /* @internal */
-    private static readonly TRYTES_TRITS: number[][] = [
-        [0, 0, 0],
-        [1, 0, 0],
-        [-1, 1, 0],
-        [0, 1, 0],
-        [1, 1, 0],
-        [-1, -1, 1],
-        [0, -1, 1],
-        [1, -1, 1],
-        [-1, 0, 1],
-        [0, 0, 1],
-        [1, 0, 1],
-        [-1, 1, 1],
-        [0, 1, 1],
-        [1, 1, 1],
-        [-1, -1, -1],
-        [0, -1, -1],
-        [1, -1, -1],
-        [-1, 0, -1],
-        [0, 0, -1],
-        [1, 0, -1],
-        [-1, 1, -1],
-        [0, 1, -1],
-        [1, 1, -1],
-        [-1, -1, 0],
-        [0, -1, 0],
-        [1, -1, 0],
-        [-1, 0, 0]
+    private static readonly TRYTES_TRITS: Int8Array[] = [
+        new Int8Array([0, 0, 0]),
+        new Int8Array([1, 0, 0]),
+        new Int8Array([-1, 1, 0]),
+        new Int8Array([0, 1, 0]),
+        new Int8Array([1, 1, 0]),
+        new Int8Array([-1, -1, 1]),
+        new Int8Array([0, -1, 1]),
+        new Int8Array([1, -1, 1]),
+        new Int8Array([-1, 0, 1]),
+        new Int8Array([0, 0, 1]),
+        new Int8Array([1, 0, 1]),
+        new Int8Array([-1, 1, 1]),
+        new Int8Array([0, 1, 1]),
+        new Int8Array([1, 1, 1]),
+        new Int8Array([-1, -1, -1]),
+        new Int8Array([0, -1, -1]),
+        new Int8Array([1, -1, -1]),
+        new Int8Array([-1, 0, -1]),
+        new Int8Array([0, 0, -1]),
+        new Int8Array([1, 0, -1]),
+        new Int8Array([-1, 1, -1]),
+        new Int8Array([0, 1, -1]),
+        new Int8Array([1, 1, -1]),
+        new Int8Array([-1, -1, 0]),
+        new Int8Array([0, -1, 0]),
+        new Int8Array([1, -1, 0]),
+        new Int8Array([-1, 0, 0])
     ];
 &nbsp;
     /* @internal */
-    private readonly _trits: number[];
+    private readonly _trits: Int8Array;
 &nbsp;
     /* @internal */
-    private constructor(trits: number[]) {
+    private constructor(trits: Int8Array) {
         this._trits = trits;
+    }
+&nbsp;
+    /**
+     * Create instance of trits from Int8Array array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public static fromArray(value: Int8Array): Trits {
+        if (!ObjectHelper.isType(value, Int8Array)) {
+            throw new DataError("The value does not contain valid trits");
+        }
+        return new Trits(value);
     }
 &nbsp;
     /**
@@ -609,11 +661,11 @@ export class Trits {
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    public static fromArray(value: number[]): Trits {
+    public static fromNumberArray(value: number[]): Trits {
         if (!ArrayHelper.isTyped(value, Number)) {
-            throw new CoreError("The value does not contain valid trits");
+            throw new DataError("The value does not contain valid trits");
         }
-        return new Trits(value);
+        return new Trits(new Int8Array(value));
     }
 &nbsp;
     /**
@@ -623,10 +675,10 @@ export class Trits {
      */
     public static fromTrytes(value: Trytes): Trits {
         if (!ObjectHelper.isType(value, Trytes)) {
-            throw new CoreError("The value should be a valid Trytes object");
+            throw new DataError("The value should be a valid Trytes object");
         }
-        const trits: number[] = [];
         const trytesString = value.toString();
+        const trits: Int8Array = new Int8Array(trytesString.length * 3);
         for (let i = 0; i &lt; trytesString.length; i++) {
             const idx = Trytes.ALPHABET.indexOf(trytesString.charAt(i));
             trits[i * 3] = Trits.TRYTES_TRITS[idx][0];
@@ -643,7 +695,7 @@ export class Trits {
      */
     public static fromNumber(value: number): Trits {
         if (!NumberHelper.isInteger(value)) {
-            throw new CoreError("The value is not an integer");
+            throw new DataError("The value is not an integer");
         }
         const trits: number[] = [];
         let absoluteValue = value &lt; 0 ? -value : value;
@@ -665,7 +717,7 @@ export class Trits {
             }
         }
 &nbsp;
-        return new Trits(trits);
+        return new Trits(new Int8Array(trits));
     }
 &nbsp;
     /**
@@ -676,13 +728,13 @@ export class Trits {
      */
     public static add(first: Trits, second: Trits): Trits {
         if (!ObjectHelper.isType(first, Trits)) {
-            throw new CoreError("The first should be a valid Trits object");
+            throw new DataError("The first should be a valid Trits object");
         }
         if (!ObjectHelper.isType(second, Trits)) {
-            throw new CoreError("The seconds should be a valid Trits object");
+            throw new DataError("The seconds should be a valid Trits object");
         }
 &nbsp;
-        const out = new Array(Math.max(first._trits.length, second._trits.length));
+        const out = new Int8Array(Math.max(first._trits.length, second._trits.length));
         let carry = 0;
         let iA;
         let iB;
@@ -700,14 +752,14 @@ export class Trits {
     }
 &nbsp;
     /* @internal */
-    private static fullAdd(a: number, b: number, c: number): number[] {
+    private static fullAdd(a: number, b: number, c: number): Int8Array {
         const sA = Trits.sum(a, b);
         const cA = Trits.cons(a, b);
         const cB = Trits.cons(sA, c);
         const cOut = Trits.any(cA, cB);
         const sOUt = Trits.sum(sA, c);
 &nbsp;
-        return [sOUt, cOut];
+        return new Int8Array([sOUt, cOut]);
     }
 &nbsp;
     /* @internal */
@@ -746,8 +798,16 @@ export class Trits {
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    public toArray(): number[] {
+    public toArray(): Int8Array {
         return this._trits;
+    }
+&nbsp;
+    /**
+     * Get the value of the trits array as a number array.
+     * @returns Array representation of the trits.
+     */
+    public toNumberArray(): number[] {
+        return Array.from(this._trits);
     }
 &nbsp;
     /**
@@ -769,7 +829,7 @@ export class Trits {
             }
         }
 &nbsp;
-        return Trytes.create(trytes);
+        return Trytes.fromString(trytes);
     }
 &nbsp;
     /**
@@ -802,10 +862,10 @@ export class Trits {
      */
     public sub(start: number, length: number): Trits {
         if (!NumberHelper.isInteger(start) || start &lt; 0) {
-            throw new CoreError("The start must be a number &gt;= 0");
+            throw new DataError("The start must be a number &gt;= 0");
         }
         if (!NumberHelper.isInteger(length) || (start + length) &gt; this._trits.length) {
-            throw new CoreError(`The start + length must &lt;= ${this._trits.length}`);
+            throw new DataError(`The start + length must &lt;= ${this._trits.length}`);
         }
         return Trits.fromArray(this._trits.slice(start, start + length));
     }
@@ -817,7 +877,7 @@ export class Trits {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Feb 23 2018 15:26:33 GMT+0300 (Turkey Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 27 2018 10:39:24 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

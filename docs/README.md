@@ -15,6 +15,7 @@
 * [Address](classes/address.md)
 * [AsciiTrytesConverter](classes/asciitrytesconverter.md)
 * [Bundle](classes/bundle.md)
+* [DataError](classes/dataerror.md)
 * [Hash](classes/hash.md)
 * [Input](classes/input.md)
 * [ObjectTrytesConverter](classes/objecttrytesconverter.md)
@@ -23,7 +24,6 @@
 * [Transaction](classes/transaction.md)
 * [Transfer](classes/transfer.md)
 * [Trits](classes/trits.md)
-* [TritsConverter](classes/tritsconverter.md)
 * [TryteNumber](classes/trytenumber.md)
 * [Trytes](classes/trytes.md)
 

@@ -9,7 +9,7 @@ export declare class Trytes {
      * @param length An optional validation length for the trytes, 0 means ignore length.
      * @returns An instance of Trytes.
      */
-    static create(value: string, length?: number): Trytes;
+    static fromString(value: string, length?: number): Trytes;
     /**
      * Does the value contain valid trytes.
      * @param value A string to validate as trytes.

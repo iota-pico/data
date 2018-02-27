@@ -19,7 +19,7 @@ A class for handling trytes.
 * [length](trytes.md#length)
 * [sub](trytes.md#sub)
 * [toString](trytes.md#tostring)
-* [create](trytes.md#create)
+* [fromString](trytes.md#fromstring)
 * [isValid](trytes.md#isvalid)
 
 
@@ -32,7 +32,7 @@ A class for handling trytes.
 
 **●  ALPHABET**:  *`string`*  = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-*Defined in [data/trytes.ts:9](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L9)*
+*Defined in [data/trytes.ts:9](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/trytes.ts#L9)*
 
 
 
@@ -50,7 +50,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:64](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L64)*
+*Defined in [data/trytes.ts:64](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/trytes.ts#L64)*
 
 
 
@@ -77,7 +77,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:74](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L74)*
+*Defined in [data/trytes.ts:74](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/trytes.ts#L74)*
 
 
 
@@ -113,7 +113,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:56](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L56)*
+*Defined in [data/trytes.ts:56](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/trytes.ts#L56)*
 
 
 
@@ -132,15 +132,15 @@ String representation of the trytes.
 
 ___
 
-<a id="create"></a>
+<a id="fromstring"></a>
 
-### «Static» create
+### «Static» fromString
 
-► **create**(value: *`string`*, length?: *`number`*): [Trytes](trytes.md)
+► **fromString**(value: *`string`*, length?: *`number`*): [Trytes](trytes.md)
 
 
 
-*Defined in [data/trytes.ts:25](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L25)*
+*Defined in [data/trytes.ts:25](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/trytes.ts#L25)*
 
 
 
@@ -176,7 +176,7 @@ ___
 
 
 
-*Defined in [data/trytes.ts:44](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/trytes.ts#L44)*
+*Defined in [data/trytes.ts:44](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/trytes.ts#L44)*
 
 
 

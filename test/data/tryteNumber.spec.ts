@@ -20,7 +20,7 @@ describe("TryteNumber", () => {
             const obj = TryteNumber.fromNumber(undefined);
             chai.expect(obj.toNumber()).to.equal(0);
             chai.expect(obj.toTrytes().toString()).to.equal("9".repeat(9));
-            chai.expect(Trits.fromTrytes(obj.toTrytes()).toArray()).to.deep
+            chai.expect(Trits.fromTrytes(obj.toTrytes()).toNumberArray()).to.deep
                 .equal([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         });
 
@@ -28,7 +28,7 @@ describe("TryteNumber", () => {
             const obj = TryteNumber.fromNumber(0);
             chai.expect(obj.toNumber()).to.equal(0);
             chai.expect(obj.toTrytes().toString()).to.equal("9".repeat(9));
-            chai.expect(Trits.fromTrytes(obj.toTrytes()).toArray()).to.deep
+            chai.expect(Trits.fromTrytes(obj.toTrytes()).toNumberArray()).to.deep
                 .equal([0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         });
 
@@ -36,7 +36,7 @@ describe("TryteNumber", () => {
             const obj = TryteNumber.fromNumber(20);
             chai.expect(obj.toNumber()).to.equal(20);
             chai.expect(obj.toTrytes().toString()).to.equal("TA9999999");
-            chai.expect(Trits.fromTrytes(obj.toTrytes()).toArray()).to.deep
+            chai.expect(Trits.fromTrytes(obj.toTrytes()).toNumberArray()).to.deep
                 .equal([-1, 1, -1, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         });
 
@@ -44,7 +44,7 @@ describe("TryteNumber", () => {
             const obj = TryteNumber.fromNumber(30, 12);
             chai.expect(obj.toNumber()).to.equal(30);
             chai.expect(obj.toTrytes().toString()).to.equal("CA9999999999");
-            chai.expect(Trits.fromTrytes(obj.toTrytes()).toArray()).to.deep
+            chai.expect(Trits.fromTrytes(obj.toTrytes()).toNumberArray()).to.deep
                 .equal([0, 1, 0, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]);
         });
     });
@@ -54,13 +54,13 @@ describe("TryteNumber", () => {
             chai.expect(() => TryteNumber.fromTrytes(undefined)).to.throw("The value");
         });
         it("can fail with invalid length", () => {
-            chai.expect(() => TryteNumber.fromTrytes(Trytes.create("A".repeat(10)), 0)).to.throw("The length");
+            chai.expect(() => TryteNumber.fromTrytes(Trytes.fromString("A".repeat(10)), 0)).to.throw("The length");
         });
         it("can fail with too long trytes params", () => {
-            chai.expect(() => TryteNumber.fromTrytes(Trytes.create("A".repeat(10)))).to.throw("too many");
+            chai.expect(() => TryteNumber.fromTrytes(Trytes.fromString("A".repeat(10)))).to.throw("too many");
         });
         it("can suceed with too few trytes", () => {
-            chai.expect(TryteNumber.fromTrytes(Trytes.create("A".repeat(3))).toTrytes().toString()).to.equal("A".repeat(3) + "9".repeat(6));
+            chai.expect(TryteNumber.fromTrytes(Trytes.fromString("A".repeat(3))).toTrytes().toString()).to.equal("A".repeat(3) + "9".repeat(6));
         });
     });
 });

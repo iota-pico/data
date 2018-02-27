@@ -20,7 +20,7 @@ A class for handling addresses.
 
 * [toTrytes](address.md#totrytes)
 * [toTrytesWithChecksum](address.md#totryteswithchecksum)
-* [create](address.md#create)
+* [fromTrytes](address.md#fromtrytes)
 
 
 
@@ -32,7 +32,7 @@ A class for handling addresses.
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/address.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/address.ts#L10)*
+*Defined in [data/address.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/address.ts#L10)*
 
 
 
@@ -46,7 +46,7 @@ ___
 
 **●  LENGTH_CHECKSUM**:  *`number`*  = 9
 
-*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/address.ts#L12)*
+*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/address.ts#L12)*
 
 
 
@@ -60,7 +60,7 @@ ___
 
 **●  LENGTH_WITH_CHECKSUM**:  *`number`*  =  Address.LENGTH + Address.LENGTH_CHECKSUM
 
-*Defined in [data/address.ts:14](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/address.ts#L14)*
+*Defined in [data/address.ts:14](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/address.ts#L14)*
 
 
 
@@ -78,7 +78,7 @@ ___
 
 
 
-*Defined in [data/address.ts:55](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/address.ts#L55)*
+*Defined in [data/address.ts:55](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/address.ts#L55)*
 
 
 
@@ -105,7 +105,7 @@ ___
 
 
 
-*Defined in [data/address.ts:63](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/address.ts#L63)*
+*Defined in [data/address.ts:63](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/address.ts#L63)*
 
 
 
@@ -124,15 +124,15 @@ Trytes version of the address with checksu,.
 
 ___
 
-<a id="create"></a>
+<a id="fromtrytes"></a>
 
-### «Static» create
+### «Static» fromTrytes
 
-► **create**(address: *[Trytes](trytes.md)*): [Address](address.md)
+► **fromTrytes**(address: *[Trytes](trytes.md)*): [Address](address.md)
 
 
 
-*Defined in [data/address.ts:32](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/address.ts#L32)*
+*Defined in [data/address.ts:32](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/address.ts#L32)*
 
 
 

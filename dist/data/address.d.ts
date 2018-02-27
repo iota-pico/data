@@ -11,7 +11,7 @@ export declare class Address {
      * @param address The trytes to create the address from.
      * @returns An instance of Address.
      */
-    static create(address: Trytes): Address;
+    static fromTrytes(address: Trytes): Address;
     /**
      * Convert the address to trytes with no checksum.
      * @returns Trytes version of the address with no checksum.

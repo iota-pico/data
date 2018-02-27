@@ -1,6 +1,6 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Address } from "./address";
 import { AddressSecurity } from "./addressSecurity";
 
@@ -30,19 +30,19 @@ export class Input {
                              keyIndex: number,
                              balance: number): Input {
         if (!ObjectHelper.isType(address, Address)) {
-            throw new CoreError("The address should be a valid Address object");
+            throw new DataError("The address should be a valid Address object");
         }
 
         if (!NumberHelper.isInteger(security) || security < AddressSecurity.low || security > AddressSecurity.high) {
-            throw new CoreError(`The security should be a number between ${AddressSecurity.low} and ${AddressSecurity.high}`);
+            throw new DataError(`The security should be a number between ${AddressSecurity.low} and ${AddressSecurity.high}`);
         }
 
         if (!NumberHelper.isInteger(keyIndex) || keyIndex < 0) {
-            throw new CoreError("The keyIndex should be a number >= 0");
+            throw new DataError("The keyIndex should be a number >= 0");
         }
 
         if (!NumberHelper.isInteger(balance) || balance <= 0) {
-            throw new CoreError("The balance should be a number > 0");
+            throw new DataError("The balance should be a number > 0");
         }
 
         const input = new Input();

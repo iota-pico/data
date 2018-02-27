@@ -1,5 +1,5 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Trytes } from "./trytes";
 
 /**
@@ -9,7 +9,7 @@ export class Tag {
     /* The valid length for a tag */
     public static readonly LENGTH: number = 27;
     /* An empty tag */
-    public static readonly EMPTY: Tag = Tag.create(Trytes.create("9".repeat(Tag.LENGTH)));
+    public static readonly EMPTY: Tag = Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)));
 
     /* @internal */
     private readonly _trytes: string;
@@ -24,15 +24,15 @@ export class Tag {
      * @param tag The trytes to create the tag from.
      * @returns An instance of Tag.
      */
-    public static create(tag: Trytes): Tag {
+    public static fromTrytes(tag: Trytes): Tag {
         if (!ObjectHelper.isType(tag, Trytes)) {
-            throw new CoreError("The tag should be a valid Trytes object");
+            throw new DataError("The tag should be a valid Trytes object");
         }
 
         let trytesString = tag.toString();
 
         if (trytesString.length > Tag.LENGTH) {
-            throw new CoreError(`The tag should be at most ${Tag.LENGTH} characters in length`, { length: trytesString.length });
+            throw new DataError(`The tag should be at most ${Tag.LENGTH} characters in length`, { length: trytesString.length });
         }
 
         while (trytesString.length < Tag.LENGTH) {
@@ -47,6 +47,6 @@ export class Tag {
      * @returns Trytes version of the tag.
      */
     public toTrytes(): Trytes {
-        return Trytes.create(this._trytes);
+        return Trytes.fromString(this._trytes);
     }
 }

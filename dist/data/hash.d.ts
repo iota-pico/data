@@ -10,7 +10,7 @@ export declare class Hash {
      * @param hash The trytes to create the hash from.
      * @returns An instance of Hash.
      */
-    static create(hash: Trytes): Hash;
+    static fromTrytes(hash: Trytes): Hash;
     /**
      * Convert the hash to trytes.
      * @returns Trytes version of the hash.

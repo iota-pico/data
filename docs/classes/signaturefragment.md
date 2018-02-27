@@ -18,7 +18,7 @@ A class for handling signature fragments.
 ### Methods
 
 * [toTrytes](signaturefragment.md#totrytes)
-* [create](signaturefragment.md#create)
+* [fromTrytes](signaturefragment.md#fromtrytes)
 
 
 
@@ -28,9 +28,9 @@ A class for handling signature fragments.
 
 ### «Static» EMPTY
 
-**●  EMPTY**:  *[SignatureFragment](signaturefragment.md)*  =  SignatureFragment.create(Trytes.create("9".repeat(SignatureFragment.LENGTH)))
+**●  EMPTY**:  *[SignatureFragment](signaturefragment.md)*  =  SignatureFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureFragment.LENGTH)))
 
-*Defined in [data/signatureFragment.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/signatureFragment.ts#L12)*
+*Defined in [data/signatureFragment.ts:12](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/signatureFragment.ts#L12)*
 
 
 
@@ -44,7 +44,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 2187
 
-*Defined in [data/signatureFragment.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/signatureFragment.ts#L10)*
+*Defined in [data/signatureFragment.ts:10](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/signatureFragment.ts#L10)*
 
 
 
@@ -62,7 +62,7 @@ ___
 
 
 
-*Defined in [data/signatureFragment.ts:43](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/signatureFragment.ts#L43)*
+*Defined in [data/signatureFragment.ts:43](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/signatureFragment.ts#L43)*
 
 
 
@@ -81,15 +81,15 @@ Trytes version of the signature fragment.
 
 ___
 
-<a id="create"></a>
+<a id="fromtrytes"></a>
 
-### «Static» create
+### «Static» fromTrytes
 
-► **create**(signatureFragment: *[Trytes](trytes.md)*): [SignatureFragment](signaturefragment.md)
+► **fromTrytes**(signatureFragment: *[Trytes](trytes.md)*): [SignatureFragment](signaturefragment.md)
 
 
 
-*Defined in [data/signatureFragment.ts:27](https://github.com/iotaeco/iota-pico-data/blob/6301507/src/data/signatureFragment.ts#L27)*
+*Defined in [data/signatureFragment.ts:27](https://github.com/iotaeco/iota-pico-data/blob/6f61d65/src/data/signatureFragment.ts#L27)*
 
 
 

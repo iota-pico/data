@@ -1,5 +1,5 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Address } from "./address";
 import { Hash } from "./hash";
 import { SignatureFragment } from "./signatureFragment";
@@ -100,12 +100,12 @@ export class Transaction {
      */
     public static fromTrytes(trytes: Trytes): Transaction {
         if (!ObjectHelper.isType(trytes, Trytes)) {
-            throw new CoreError("The trytes should be a valid Trytes object");
+            throw new DataError("The trytes should be a valid Trytes object");
         }
 
         const length = trytes.length();
         if (length !== Transaction.LENGTH) {
-            throw new CoreError(`The trytes must be ${Transaction.LENGTH} in length`, { length });
+            throw new DataError(`The trytes must be ${Transaction.LENGTH} in length`, { length });
         }
 
         const checkIndexStart = 2279;
@@ -113,26 +113,26 @@ export class Transaction {
         const check = trytes.sub(checkIndexStart, checkIndexLength).toString();
 
         if (check !== Transaction.CHECK_VALUE) {
-            throw new CoreError(`The trytes between ${checkIndexStart} and ${checkIndexStart + checkIndexLength} should be all 9s`, { check });
+            throw new DataError(`The trytes between ${checkIndexStart} and ${checkIndexStart + checkIndexLength} should be all 9s`, { check });
         }
 
         const tx = new Transaction();
 
-        tx.signatureMessageFragment = SignatureFragment.create(trytes.sub(0, SignatureFragment.LENGTH));
-        tx.address = Address.create(trytes.sub(2187, Address.LENGTH));
+        tx.signatureMessageFragment = SignatureFragment.fromTrytes(trytes.sub(0, SignatureFragment.LENGTH));
+        tx.address = Address.fromTrytes(trytes.sub(2187, Address.LENGTH));
         tx.value = TryteNumber.fromTrytes(trytes.sub(2268, 11), 11);
-        tx.obsoleteTag = Tag.create(trytes.sub(2295, Tag.LENGTH));
+        tx.obsoleteTag = Tag.fromTrytes(trytes.sub(2295, Tag.LENGTH));
         tx.timestamp = TryteNumber.fromTrytes(trytes.sub(2322, TryteNumber.LENGTH_9));
         tx.currentIndex = TryteNumber.fromTrytes(trytes.sub(2331, TryteNumber.LENGTH_9));
         tx.lastIndex = TryteNumber.fromTrytes(trytes.sub(2340, TryteNumber.LENGTH_9));
-        tx.bundle = Hash.create(trytes.sub(2349, Hash.LENGTH));
-        tx.trunkTransaction = Hash.create(trytes.sub(2430, Hash.LENGTH));
-        tx.branchTransaction = Hash.create(trytes.sub(2511, Hash.LENGTH));
-        tx.tag = Tag.create(trytes.sub(2592, Tag.LENGTH));
+        tx.bundle = Hash.fromTrytes(trytes.sub(2349, Hash.LENGTH));
+        tx.trunkTransaction = Hash.fromTrytes(trytes.sub(2430, Hash.LENGTH));
+        tx.branchTransaction = Hash.fromTrytes(trytes.sub(2511, Hash.LENGTH));
+        tx.tag = Tag.fromTrytes(trytes.sub(2592, Tag.LENGTH));
         tx.attachmentTimestamp = TryteNumber.fromTrytes(trytes.sub(2619, TryteNumber.LENGTH_9));
         tx.attachmentTimestampLowerBound = TryteNumber.fromTrytes(trytes.sub(2628, TryteNumber.LENGTH_9));
         tx.attachmentTimestampUpperBound = TryteNumber.fromTrytes(trytes.sub(2637, TryteNumber.LENGTH_9));
-        tx.nonce = Tag.create(trytes.sub(2646, Tag.LENGTH));
+        tx.nonce = Tag.fromTrytes(trytes.sub(2646, Tag.LENGTH));
 
         return tx;
     }
@@ -143,31 +143,31 @@ export class Transaction {
      */
     public toTrytes(): Trytes {
         if (this.signatureMessageFragment === undefined || this.signatureMessageFragment === null) {
-            throw new CoreError(`The signatureMessageFragment must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
+            throw new DataError(`The signatureMessageFragment must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
         }
 
         if (this.address === undefined || this.address === null) {
-            throw new CoreError(`The address must be set to create transaction trytes`, { address: this.address });
+            throw new DataError(`The address must be set to create transaction trytes`, { address: this.address });
         }
 
         if (this.obsoleteTag === undefined || this.obsoleteTag === null) {
-            throw new CoreError(`The obsoleteTag must be set to create transaction trytes`, { obsoleteTag: this.obsoleteTag });
+            throw new DataError(`The obsoleteTag must be set to create transaction trytes`, { obsoleteTag: this.obsoleteTag });
         }
 
         if (this.bundle === undefined || this.bundle === null) {
-            throw new CoreError(`The bundle must be set to create transaction trytes`, { bundle: this.bundle });
+            throw new DataError(`The bundle must be set to create transaction trytes`, { bundle: this.bundle });
         }
 
         if (this.trunkTransaction === undefined || this.trunkTransaction === null) {
-            throw new CoreError(`The trunkTransaction must be set to create transaction trytes`, { trunkTransaction: this.trunkTransaction });
+            throw new DataError(`The trunkTransaction must be set to create transaction trytes`, { trunkTransaction: this.trunkTransaction });
         }
 
         if (this.branchTransaction === undefined || this.branchTransaction === null) {
-            throw new CoreError(`The branchTransaction must be set to create transaction trytes`, { branchTransaction: this.branchTransaction });
+            throw new DataError(`The branchTransaction must be set to create transaction trytes`, { branchTransaction: this.branchTransaction });
         }
 
         if (this.nonce === undefined || this.nonce === null) {
-            throw new CoreError(`The nonce must be set to create transaction trytes`, { nonce: this.nonce });
+            throw new DataError(`The nonce must be set to create transaction trytes`, { nonce: this.nonce });
         }
 
         const trytes = this.signatureMessageFragment.toTrytes().toString()
@@ -189,10 +189,10 @@ export class Transaction {
 
         const length = trytes.length;
         if (length !== Transaction.LENGTH) {
-            throw new CoreError(`The trytes must be ${Transaction.LENGTH} in length ${length}`, { length });
+            throw new DataError(`The trytes must be ${Transaction.LENGTH} in length ${length}`, { length });
         }
 
-        return Trytes.create(trytes);
+        return Trytes.fromString(trytes);
     }
 
 }

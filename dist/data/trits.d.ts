@@ -4,11 +4,17 @@ import { Trytes } from "./trytes";
  */
 export declare class Trits {
     /**
+     * Create instance of trits from Int8Array array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    static fromArray(value: Int8Array): Trits;
+    /**
      * Create instance of trits from number array.
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    static fromArray(value: number[]): Trits;
+    static fromNumberArray(value: number[]): Trits;
     /**
      * Create instance of trits from trytes.
      * @param value Trytes used to create trits.
@@ -32,7 +38,12 @@ export declare class Trits {
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    toArray(): number[];
+    toArray(): Int8Array;
+    /**
+     * Get the value of the trits array as a number array.
+     * @returns Array representation of the trits.
+     */
+    toNumberArray(): number[];
     /**
      * Get the trits as trytes.
      * @returns Instance of Trytes.

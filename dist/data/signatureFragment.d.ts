@@ -10,7 +10,7 @@ export declare class SignatureFragment {
      * @param signatureFragment The trytes to create the signature fragment from.
      * @returns An instance of SignatureFragment.
      */
-    static create(signatureFragment: Trytes): SignatureFragment;
+    static fromTrytes(signatureFragment: Trytes): SignatureFragment;
     /**
      * Convert the signature fragment to trytes.
      * @returns Trytes version of the signature fragment.

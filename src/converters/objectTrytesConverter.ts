@@ -1,8 +1,8 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { JsonHelper } from "@iota-pico/core/dist/helpers/jsonHelper";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { StringHelper } from "@iota-pico/core/dist/helpers/stringHelper";
 import { Trytes } from "../data/trytes";
+import { DataError } from "../error/dataError";
 import { ITrytesConverter } from "../interfaces/ITrytesConverter";
 import { AsciiTrytesConverter } from "./asciiTrytesConverter";
 
@@ -18,14 +18,14 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
      */
     public to(value: T): Trytes {
         if (ObjectHelper.isEmpty(value)) {
-            throw new CoreError("The value can not be empty");
+            throw new DataError("The value can not be empty");
         }
 
         let json;
         try {
             json = JsonHelper.stringify(value);
         } catch (err) {
-            throw new CoreError("There was a problem converting the object to JSON", { err });
+            throw new DataError("There was a problem converting the object to JSON", { err });
         }
 
         return new AsciiTrytesConverter().to(StringHelper.encodeNonASCII(json));
@@ -38,19 +38,19 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
      */
     public from(trytes: Trytes): T {
         if (!ObjectHelper.isType(trytes, Trytes)) {
-            throw new CoreError("The trytes parameter is empty or not the correct type");
+            throw new DataError("The trytes parameter is empty or not the correct type");
         }
 
         const ascii = new AsciiTrytesConverter().from(trytes);
 
         // Must have a a start and closing pairs
         if (ascii.length < 2) {
-            throw new CoreError("The trytes do not represent an object");
+            throw new DataError("The trytes do not represent an object");
         }
 
         // The start and end must be either {} or "" to represent a JSON object
         if (!((ascii[0] === "{" && ascii[ascii.length - 1] === "}") || (ascii[0] === "\"" && ascii[ascii.length - 1] === "\""))) {
-            throw new CoreError("The trytes do not represent an object");
+            throw new DataError("The trytes do not represent an object");
         }
 
         const decoded = StringHelper.decodeNonASCII(ascii);
@@ -59,7 +59,7 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
         try {
             obj = JSON.parse(decoded);
         } catch (err) {
-            throw new CoreError("There was a problem converting the object from JSON", { err });
+            throw new DataError("There was a problem converting the object from JSON", { err });
         }
 
         return <T>obj;

@@ -61,22 +61,22 @@ describe("AsciiTrytesConverter", () => {
 
         it("can succeed converting with empty string", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(obj.from(Trytes.create(""))).to.equal("");
+            chai.expect(obj.from(Trytes.fromString(""))).to.equal("");
         });
 
         it("can fail with odd length trytes", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(() => obj.from(Trytes.create("ABC"))).to.throw("even number");
+            chai.expect(() => obj.from(Trytes.fromString("ABC"))).to.throw("even number");
         });
 
         it("can succeed converting with non-empty string", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(obj.from(Trytes.create("CCWCXCGDEAXCGDEAPCEAHDTCGDHD"))).to.equal("This is a test");
+            chai.expect(obj.from(Trytes.fromString("CCWCXCGDEAXCGDEAPCEAHDTCGDHD"))).to.equal("This is a test");
         });
 
         it("can succeed converting with multiline string", () => {
             const obj = new AsciiTrytesConverter();
-            chai.expect(obj.from(Trytes.create("CCWCXCGDEAXCGDEAPCEAHDTCGDHDM9J9YBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGD"))).to.equal("This is a test\r\nOn multiple lines");
+            chai.expect(obj.from(Trytes.fromString("CCWCXCGDEAXCGDEAPCEAHDTCGDHDM9J9YBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGD"))).to.equal("This is a test\r\nOn multiple lines");
         });
     });
 });

@@ -1,5 +1,5 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Address } from "./address";
 import { Hash } from "./hash";
 import { SignatureFragment } from "./signatureFragment";
@@ -44,7 +44,7 @@ export class Bundle {
      */
     public addSignatureFragments(signatureFragments: SignatureFragment[]): void {
         if (ObjectHelper.isEmpty(signatureFragments)) {
-            throw new CoreError("The signatureFragments should be an array of SignatureFragments");
+            throw new DataError("The signatureFragments should be an array of SignatureFragments");
         }
 
         for (let i = 0; i < this.transactions.length; i++) {

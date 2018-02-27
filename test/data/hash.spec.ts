@@ -6,17 +6,17 @@ import { Hash } from "../../src/data/hash";
 import { Trytes } from "../../src/data/trytes";
 
 describe("Hash", () => {
-    describe("create", () => {
+    describe("fromTrytes", () => {
         it("can fail with undefined params", () => {
-            chai.expect(() => Hash.create(undefined)).to.throw("The hash");
+            chai.expect(() => Hash.fromTrytes(undefined)).to.throw("The hash");
         });
 
         it("can fail with invalid length", () => {
-            chai.expect(() => Hash.create(Trytes.create("A"))).to.throw("characters in length");
+            chai.expect(() => Hash.fromTrytes(Trytes.fromString("A"))).to.throw("characters in length");
         });
 
         it("can succeed with valid length", () => {
-            const obj = Hash.create(Trytes.create("A".repeat(81)));
+            const obj = Hash.fromTrytes(Trytes.fromString("A".repeat(81)));
             chai.expect(obj.toTrytes().toString()).to.equal("A".repeat(81));
         });
     });

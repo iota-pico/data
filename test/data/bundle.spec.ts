@@ -20,10 +20,10 @@ describe("Bundle", () => {
         it("can succeed adding transactions", () => {
             const obj = new Bundle();
 
-            obj.addTransactions(2, Address.create(
-                Trytes.create("A".repeat(81))),
+            obj.addTransactions(2, Address.fromTrytes(
+                Trytes.fromString("A".repeat(81))),
                                 100,
-                                Tag.create(Trytes.create("B".repeat(27))),
+                                Tag.fromTrytes(Trytes.fromString("B".repeat(27))),
                                 2345);
 
             chai.expect(obj.transactions.length).to.be.equal(2);
@@ -50,14 +50,14 @@ describe("Bundle", () => {
         it("can succeed adding signatures", () => {
             const obj = new Bundle();
 
-            obj.addTransactions(2, Address.create(
-                Trytes.create("A".repeat(81))),
+            obj.addTransactions(2, Address.fromTrytes(
+                Trytes.fromString("A".repeat(81))),
                                 100,
-                                Tag.create(Trytes.create("B".repeat(27))),
+                                Tag.fromTrytes(Trytes.fromString("B".repeat(27))),
                                 2345);
 
             obj.addSignatureFragments([
-                SignatureFragment.create(Trytes.create("A".repeat(2187))),
+                SignatureFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
                 undefined
             ]);
 

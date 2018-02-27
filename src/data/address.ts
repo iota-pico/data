@@ -1,5 +1,5 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Trytes } from "./trytes";
 
 /**
@@ -29,15 +29,15 @@ export class Address {
      * @param address The trytes to create the address from.
      * @returns An instance of Address.
      */
-    public static create(address: Trytes): Address {
+    public static fromTrytes(address: Trytes): Address {
         if (!ObjectHelper.isType(address, Trytes)) {
-            throw new CoreError("The address should be a valid Trytes object");
+            throw new DataError("The address should be a valid Trytes object");
         }
 
         const trytesString = address.toString();
 
         if (trytesString.length !== Address.LENGTH && trytesString.length !== Address.LENGTH_WITH_CHECKSUM) {
-            throw new CoreError(`The address should either be ${Address.LENGTH} or ${Address.LENGTH_WITH_CHECKSUM} characters in length`, { length: trytesString.length });
+            throw new DataError(`The address should either be ${Address.LENGTH} or ${Address.LENGTH_WITH_CHECKSUM} characters in length`, { length: trytesString.length });
         }
 
         const addressTrytes = trytesString.substr(0, Address.LENGTH);
@@ -53,7 +53,7 @@ export class Address {
      * @returns Trytes version of the address with no checksum.
      */
     public toTrytes(): Trytes {
-        return Trytes.create(this._addressTrytes);
+        return Trytes.fromString(this._addressTrytes);
     }
 
     /**
@@ -62,9 +62,9 @@ export class Address {
      */
     public toTrytesWithChecksum(): Trytes {
         if (this._checksumTrytes) {
-            return Trytes.create(this._addressTrytes + this._checksumTrytes);
+            return Trytes.fromString(this._addressTrytes + this._checksumTrytes);
         } else {
-            throw new CoreError(`This address has no checksum calculated for it`);
+            throw new DataError(`This address has no checksum calculated for it`);
         }
     }
 }

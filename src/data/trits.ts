@@ -1,7 +1,7 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { ArrayHelper } from "@iota-pico/core/dist/helpers/arrayHelper";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Trytes } from "./trytes";
 
 /**
@@ -9,42 +9,54 @@ import { Trytes } from "./trytes";
  */
 export class Trits {
     /* @internal */
-    private static readonly TRYTES_TRITS: number[][] = [
-        [0, 0, 0],
-        [1, 0, 0],
-        [-1, 1, 0],
-        [0, 1, 0],
-        [1, 1, 0],
-        [-1, -1, 1],
-        [0, -1, 1],
-        [1, -1, 1],
-        [-1, 0, 1],
-        [0, 0, 1],
-        [1, 0, 1],
-        [-1, 1, 1],
-        [0, 1, 1],
-        [1, 1, 1],
-        [-1, -1, -1],
-        [0, -1, -1],
-        [1, -1, -1],
-        [-1, 0, -1],
-        [0, 0, -1],
-        [1, 0, -1],
-        [-1, 1, -1],
-        [0, 1, -1],
-        [1, 1, -1],
-        [-1, -1, 0],
-        [0, -1, 0],
-        [1, -1, 0],
-        [-1, 0, 0]
+    private static readonly TRYTES_TRITS: Int8Array[] = [
+        new Int8Array([0, 0, 0]),
+        new Int8Array([1, 0, 0]),
+        new Int8Array([-1, 1, 0]),
+        new Int8Array([0, 1, 0]),
+        new Int8Array([1, 1, 0]),
+        new Int8Array([-1, -1, 1]),
+        new Int8Array([0, -1, 1]),
+        new Int8Array([1, -1, 1]),
+        new Int8Array([-1, 0, 1]),
+        new Int8Array([0, 0, 1]),
+        new Int8Array([1, 0, 1]),
+        new Int8Array([-1, 1, 1]),
+        new Int8Array([0, 1, 1]),
+        new Int8Array([1, 1, 1]),
+        new Int8Array([-1, -1, -1]),
+        new Int8Array([0, -1, -1]),
+        new Int8Array([1, -1, -1]),
+        new Int8Array([-1, 0, -1]),
+        new Int8Array([0, 0, -1]),
+        new Int8Array([1, 0, -1]),
+        new Int8Array([-1, 1, -1]),
+        new Int8Array([0, 1, -1]),
+        new Int8Array([1, 1, -1]),
+        new Int8Array([-1, -1, 0]),
+        new Int8Array([0, -1, 0]),
+        new Int8Array([1, -1, 0]),
+        new Int8Array([-1, 0, 0])
     ];
 
     /* @internal */
-    private readonly _trits: number[];
+    private readonly _trits: Int8Array;
 
     /* @internal */
-    private constructor(trits: number[]) {
+    private constructor(trits: Int8Array) {
         this._trits = trits;
+    }
+
+    /**
+     * Create instance of trits from Int8Array array.
+     * @param value Trytes used to create trits.
+     * @returns An instance of Trits.
+     */
+    public static fromArray(value: Int8Array): Trits {
+        if (!ObjectHelper.isType(value, Int8Array)) {
+            throw new DataError("The value does not contain valid trits");
+        }
+        return new Trits(value);
     }
 
     /**
@@ -52,11 +64,11 @@ export class Trits {
      * @param value Trytes used to create trits.
      * @returns An instance of Trits.
      */
-    public static fromArray(value: number[]): Trits {
+    public static fromNumberArray(value: number[]): Trits {
         if (!ArrayHelper.isTyped(value, Number)) {
-            throw new CoreError("The value does not contain valid trits");
+            throw new DataError("The value does not contain valid trits");
         }
-        return new Trits(value);
+        return new Trits(new Int8Array(value));
     }
 
     /**
@@ -66,10 +78,10 @@ export class Trits {
      */
     public static fromTrytes(value: Trytes): Trits {
         if (!ObjectHelper.isType(value, Trytes)) {
-            throw new CoreError("The value should be a valid Trytes object");
+            throw new DataError("The value should be a valid Trytes object");
         }
-        const trits: number[] = [];
         const trytesString = value.toString();
+        const trits: Int8Array = new Int8Array(trytesString.length * 3);
         for (let i = 0; i < trytesString.length; i++) {
             const idx = Trytes.ALPHABET.indexOf(trytesString.charAt(i));
             trits[i * 3] = Trits.TRYTES_TRITS[idx][0];
@@ -86,7 +98,7 @@ export class Trits {
      */
     public static fromNumber(value: number): Trits {
         if (!NumberHelper.isInteger(value)) {
-            throw new CoreError("The value is not an integer");
+            throw new DataError("The value is not an integer");
         }
         const trits: number[] = [];
         let absoluteValue = value < 0 ? -value : value;
@@ -108,7 +120,7 @@ export class Trits {
             }
         }
 
-        return new Trits(trits);
+        return new Trits(new Int8Array(trits));
     }
 
     /**
@@ -119,13 +131,13 @@ export class Trits {
      */
     public static add(first: Trits, second: Trits): Trits {
         if (!ObjectHelper.isType(first, Trits)) {
-            throw new CoreError("The first should be a valid Trits object");
+            throw new DataError("The first should be a valid Trits object");
         }
         if (!ObjectHelper.isType(second, Trits)) {
-            throw new CoreError("The seconds should be a valid Trits object");
+            throw new DataError("The seconds should be a valid Trits object");
         }
 
-        const out = new Array(Math.max(first._trits.length, second._trits.length));
+        const out = new Int8Array(Math.max(first._trits.length, second._trits.length));
         let carry = 0;
         let iA;
         let iB;
@@ -143,14 +155,14 @@ export class Trits {
     }
 
     /* @internal */
-    private static fullAdd(a: number, b: number, c: number): number[] {
+    private static fullAdd(a: number, b: number, c: number): Int8Array {
         const sA = Trits.sum(a, b);
         const cA = Trits.cons(a, b);
         const cB = Trits.cons(sA, c);
         const cOut = Trits.any(cA, cB);
         const sOUt = Trits.sum(sA, c);
 
-        return [sOUt, cOut];
+        return new Int8Array([sOUt, cOut]);
     }
 
     /* @internal */
@@ -189,8 +201,16 @@ export class Trits {
      * Get the value of the trits array.
      * @returns Array representation of the trits.
      */
-    public toArray(): number[] {
+    public toArray(): Int8Array {
         return this._trits;
+    }
+
+    /**
+     * Get the value of the trits array as a number array.
+     * @returns Array representation of the trits.
+     */
+    public toNumberArray(): number[] {
+        return Array.from(this._trits);
     }
 
     /**
@@ -212,7 +232,7 @@ export class Trits {
             }
         }
 
-        return Trytes.create(trytes);
+        return Trytes.fromString(trytes);
     }
 
     /**
@@ -245,10 +265,10 @@ export class Trits {
      */
     public sub(start: number, length: number): Trits {
         if (!NumberHelper.isInteger(start) || start < 0) {
-            throw new CoreError("The start must be a number >= 0");
+            throw new DataError("The start must be a number >= 0");
         }
         if (!NumberHelper.isInteger(length) || (start + length) > this._trits.length) {
-            throw new CoreError(`The start + length must <= ${this._trits.length}`);
+            throw new DataError(`The start + length must <= ${this._trits.length}`);
         }
         return Trits.fromArray(this._trits.slice(start, start + length));
     }

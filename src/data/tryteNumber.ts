@@ -1,6 +1,6 @@
-import { CoreError } from "@iota-pico/core/dist/error/coreError";
 import { NumberHelper } from "@iota-pico/core/dist/helpers/numberHelper";
 import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
+import { DataError } from "../error/dataError";
 import { Trits } from "./trits";
 import { Trytes } from "./trytes";
 
@@ -31,23 +31,23 @@ export class TryteNumber {
         let trytes;
 
         if (!NumberHelper.isInteger(length) || length <= 0) {
-            throw new CoreError("The length should be a number > 0", { length });
+            throw new DataError("The length should be a number > 0", { length });
         }
 
         if (value === undefined || value === null) {
             trytes = "9".repeat(length);
         } else {
             if (!NumberHelper.isInteger(value)) {
-                throw new CoreError("The value is not an integer", { value });
+                throw new DataError("The value is not an integer", { value });
             }
 
-            const trits = Trits.fromNumber(value).toArray();
+            const trits = Trits.fromNumber(value).toNumberArray();
 
             while (trits.length < length * 3) {
                 trits.push(0);
             }
 
-            trytes = Trits.fromArray(trits).toTrytes().toString();
+            trytes = Trits.fromNumberArray(trits).toTrytes().toString();
         }
 
         return new TryteNumber(trytes);
@@ -61,16 +61,16 @@ export class TryteNumber {
      */
     public static fromTrytes(value: Trytes, length: number = TryteNumber.LENGTH_9): TryteNumber {
         if (!ObjectHelper.isType(value, Trytes)) {
-            throw new CoreError("The value should be a valid Trytes object");
+            throw new DataError("The value should be a valid Trytes object");
         }
         let tryteString = value.toString();
 
         if (!NumberHelper.isInteger(length) || length <= 0) {
-            throw new CoreError("The length should be a number > 0", { length });
+            throw new DataError("The length should be a number > 0", { length });
         }
 
         if (tryteString.length > length) {
-            throw new CoreError("The value contains too many characters", { length: tryteString.length });
+            throw new DataError("The value contains too many characters", { length: tryteString.length });
         }
 
         while (tryteString.length < length) {
@@ -85,7 +85,7 @@ export class TryteNumber {
      * @returns Trytes version of the tryte number.
      */
     public toTrytes(): Trytes {
-        return Trytes.create(this._trytes);
+        return Trytes.fromString(this._trytes);
     }
 
     /**
@@ -93,6 +93,6 @@ export class TryteNumber {
      * @returns number value of the tryte number.
      */
     public toNumber(): number {
-        return Trits.fromTrytes(Trytes.create(this._trytes)).toNumber();
+        return Trits.fromTrytes(Trytes.fromString(this._trytes)).toNumber();
     }
 }

@@ -79,52 +79,52 @@ describe("ObjectTrytesConverter", () => {
 
         it("can fail with odd length trytes", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.create("ABC"))).to.throw("be an even number");
+            chai.expect(() => obj.from(Trytes.fromString("ABC"))).to.throw("be an even number");
         });
 
         it("can fail with not enough data", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.create(""))).to.throw("do not represent an object");
+            chai.expect(() => obj.from(Trytes.fromString(""))).to.throw("do not represent an object");
         });
 
         it("can fail with invalid start and end characters", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.create("BABA"))).to.throw("do not represent an object");
+            chai.expect(() => obj.from(Trytes.fromString("BABA"))).to.throw("do not represent an object");
         });
 
         it("can fail if the JSON.parse fails", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.create("ODCCCCQD"))).to.throw("converting the object from JSON");
+            chai.expect(() => obj.from(Trytes.fromString("ODCCCCQD"))).to.throw("converting the object from JSON");
         });
 
         it("can succeed converting with empty JSON string", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("GAGA"))).to.equal("");
+            chai.expect(obj.from(Trytes.fromString("GAGA"))).to.equal("");
         });
 
         it("can succeed with non ascii characters", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDEAKCIDWAVAVARCGA"))).to.equal("This is a test ℜ");
+            chai.expect(obj.from(Trytes.fromString("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDEAKCIDWAVAVARCGA"))).to.equal("This is a test ℜ");
         });
 
         it("can succeed converting with non-empty string", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDGA"))).to.equal("This is a test");
+            chai.expect(obj.from(Trytes.fromString("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDGA"))).to.equal("This is a test");
         });
 
         it("can succeed converting with multiline string", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDKCFDKCBDYBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGDGA"))).to.equal("This is a test\r\nOn multiple lines");
+            chai.expect(obj.from(Trytes.fromString("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDKCFDKCBDYBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGDGA"))).to.equal("This is a test\r\nOn multiple lines");
         });
 
         it("can succeed converting with objects", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBHDFDIDTCQD"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: true });
+            chai.expect(obj.from(Trytes.fromString("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBHDFDIDTCQD"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: true });
         });
 
         it("can succeed converting with objects with non ASCII characters", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(obj.from(Trytes.create("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: "ℜ" });
+            chai.expect(obj.from(Trytes.fromString("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: "ℜ" });
         });
     });
 });
