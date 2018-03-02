@@ -34,7 +34,7 @@ export class TryteNumber {
             throw new DataError("The length should be a number > 0", { length });
         }
 
-        if (value === undefined || value === null) {
+        if (ObjectHelper.isEmpty(value)) {
             trytes = "9".repeat(length);
         } else {
             if (!NumberHelper.isInteger(value)) {
@@ -94,5 +94,21 @@ export class TryteNumber {
      */
     public toNumber(): number {
         return Trits.fromTrytes(Trytes.fromString(this._trytes)).toNumber();
+    }
+
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    public toString(): string {
+        return this.toNumber().toString();
+    }
+
+    /**
+     * Get the value of the object.
+     * @returns string of the trytes.
+     */
+    public valueOf(): number {
+        return this.toNumber();
     }
 }

@@ -1,6 +1,6 @@
 import { Address } from "./address";
 import { Hash } from "./hash";
-import { SignatureFragment } from "./signatureFragment";
+import { SignatureMessageFragment } from "./signatureMessageFragment";
 import { Tag } from "./tag";
 import { TryteNumber } from "./tryteNumber";
 import { Trytes } from "./trytes";
@@ -9,8 +9,9 @@ import { Trytes } from "./trytes";
  */
 export declare class Transaction {
     static readonly LENGTH: number;
+    static readonly CHECK_VALUE_LENGTH: number;
     static readonly CHECK_VALUE: string;
-    signatureMessageFragment: SignatureFragment;
+    signatureMessageFragment: SignatureMessageFragment;
     address: Address;
     value: TryteNumber;
     obsoleteTag: Tag;
@@ -44,7 +45,7 @@ export declare class Transaction {
      * @param nonce The nonce.
      * @return New instance of transaction.
      */
-    static fromParams(signatureMessageFragment: SignatureFragment, address: Address, value: number, obsoleteTag: Tag, timestamp: number, currentIndex: number, lastIndex: number, bundle: Hash, trunkTransaction: Hash, branchTransaction: Hash, tag: Tag, attachmentTimestamp: number, attachmentTimestampLowerBound: number, attachmentTimestampUpperBound: number, nonce: Tag): Transaction;
+    static fromParams(signatureMessageFragment: SignatureMessageFragment, address: Address, value: number, obsoleteTag: Tag, timestamp: number, currentIndex: number, lastIndex: number, bundle: Hash, trunkTransaction: Hash, branchTransaction: Hash, tag: Tag, attachmentTimestamp: number, attachmentTimestampLowerBound: number, attachmentTimestampUpperBound: number, nonce: Tag): Transaction;
     /**
      * Create instance of transaction from trytes.
      * @param trytes The trytes for the this.
@@ -56,4 +57,9 @@ export declare class Transaction {
      * @return The transaction as trytes.
      */
     toTrytes(): Trytes;
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    toString(): string;
 }

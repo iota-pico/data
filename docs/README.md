@@ -19,7 +19,7 @@
 * [Hash](classes/hash.md)
 * [Input](classes/input.md)
 * [ObjectTrytesConverter](classes/objecttrytesconverter.md)
-* [SignatureFragment](classes/signaturefragment.md)
+* [SignatureMessageFragment](classes/signaturemessagefragment.md)
 * [Tag](classes/tag.md)
 * [Transaction](classes/transaction.md)
 * [Transfer](classes/transfer.md)

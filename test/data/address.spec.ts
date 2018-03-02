@@ -27,4 +27,34 @@ describe("Address", () => {
             chai.expect(obj.toTrytesWithChecksum().toString()).to.equal("A".repeat(81) + "B".repeat(9));
         });
     });
+
+    describe("toTrytes", () => {
+        it("can succeed", () => {
+            const obj = Address.fromTrytes(Trytes.fromString("A".repeat(81)));
+            chai.expect(obj.toTrytes().toString()).to.equal("A".repeat(81));
+        });
+    });
+
+    describe("toTrytesWithChecksum", () => {
+        it("can fail if no checksum", () => {
+            const obj = Address.fromTrytes(Trytes.fromString("A".repeat(81)));
+            chai.expect(() => obj.toTrytesWithChecksum()).to.throw("no checksum");
+        });
+        it("can succeed", () => {
+            const obj = Address.fromTrytes(Trytes.fromString("A".repeat(81) + "B".repeat(9)));
+            chai.expect(obj.toTrytesWithChecksum().toString()).to.equal("A".repeat(81) + "B".repeat(9));
+        });
+    });
+
+    describe("toString", () => {
+        it("can succeed without checksum", () => {
+            const obj = Address.fromTrytes(Trytes.fromString("A".repeat(81)));
+            chai.expect(obj.toString()).to.equal("A".repeat(81));
+        });
+
+        it("can succeed with checksum", () => {
+            const obj = Address.fromTrytes(Trytes.fromString("A".repeat(81) + "B".repeat(9)));
+            chai.expect(obj.toString()).to.equal("A".repeat(81) + "B".repeat(9));
+        });
+    });
 });

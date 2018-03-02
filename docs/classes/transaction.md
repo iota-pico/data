@@ -27,11 +27,13 @@ A class for handling transactions.
 * [trunkTransaction](transaction.md#trunktransaction)
 * [value](transaction.md#value)
 * [CHECK_VALUE](transaction.md#check_value)
+* [CHECK_VALUE_LENGTH](transaction.md#check_value_length)
 * [LENGTH](transaction.md#length)
 
 
 ### Methods
 
+* [toString](transaction.md#tostring)
 * [toTrytes](transaction.md#totrytes)
 * [fromParams](transaction.md#fromparams)
 * [fromTrytes](transaction.md#fromtrytes)
@@ -46,7 +48,7 @@ A class for handling transactions.
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in [data/transaction.ts:24](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L24)*
+*Defined in [data/transaction.ts:27](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L27)*
 
 
 
@@ -60,7 +62,7 @@ ___
 
 **●  attachmentTimestamp**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:34](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L34)*
+*Defined in [data/transaction.ts:37](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L37)*
 
 
 
@@ -74,7 +76,7 @@ ___
 
 **●  attachmentTimestampLowerBound**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:35](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L35)*
+*Defined in [data/transaction.ts:38](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L38)*
 
 
 
@@ -88,7 +90,7 @@ ___
 
 **●  attachmentTimestampUpperBound**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:36](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L36)*
+*Defined in [data/transaction.ts:39](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L39)*
 
 
 
@@ -102,7 +104,7 @@ ___
 
 **●  branchTransaction**:  *[Hash](hash.md)* 
 
-*Defined in [data/transaction.ts:32](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L32)*
+*Defined in [data/transaction.ts:35](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L35)*
 
 
 
@@ -116,7 +118,7 @@ ___
 
 **●  bundle**:  *[Hash](hash.md)* 
 
-*Defined in [data/transaction.ts:30](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L30)*
+*Defined in [data/transaction.ts:33](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L33)*
 
 
 
@@ -130,7 +132,7 @@ ___
 
 **●  currentIndex**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:28](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L28)*
+*Defined in [data/transaction.ts:31](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L31)*
 
 
 
@@ -144,7 +146,7 @@ ___
 
 **●  lastIndex**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:29](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L29)*
+*Defined in [data/transaction.ts:32](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L32)*
 
 
 
@@ -158,7 +160,7 @@ ___
 
 **●  nonce**:  *[Tag](tag.md)* 
 
-*Defined in [data/transaction.ts:37](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L37)*
+*Defined in [data/transaction.ts:40](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L40)*
 
 
 
@@ -172,7 +174,7 @@ ___
 
 **●  obsoleteTag**:  *[Tag](tag.md)* 
 
-*Defined in [data/transaction.ts:26](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L26)*
+*Defined in [data/transaction.ts:29](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L29)*
 
 
 
@@ -184,9 +186,9 @@ ___
 
 ###  signatureMessageFragment
 
-**●  signatureMessageFragment**:  *[SignatureFragment](signaturefragment.md)* 
+**●  signatureMessageFragment**:  *[SignatureMessageFragment](signaturemessagefragment.md)* 
 
-*Defined in [data/transaction.ts:23](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L23)*
+*Defined in [data/transaction.ts:26](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L26)*
 
 
 
@@ -200,7 +202,7 @@ ___
 
 **●  tag**:  *[Tag](tag.md)* 
 
-*Defined in [data/transaction.ts:33](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L33)*
+*Defined in [data/transaction.ts:36](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L36)*
 
 
 
@@ -214,7 +216,7 @@ ___
 
 **●  timestamp**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:27](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L27)*
+*Defined in [data/transaction.ts:30](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L30)*
 
 
 
@@ -228,7 +230,7 @@ ___
 
 **●  trunkTransaction**:  *[Hash](hash.md)* 
 
-*Defined in [data/transaction.ts:31](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L31)*
+*Defined in [data/transaction.ts:34](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L34)*
 
 
 
@@ -242,7 +244,7 @@ ___
 
 **●  value**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:25](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L25)*
+*Defined in [data/transaction.ts:28](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L28)*
 
 
 
@@ -254,9 +256,23 @@ ___
 
 ### «Static» CHECK_VALUE
 
-**●  CHECK_VALUE**:  *`string`*  =  "9".repeat(16)
+**●  CHECK_VALUE**:  *`string`*  =  "9".repeat(Transaction.CHECK_VALUE_LENGTH)
 
-*Defined in [data/transaction.ts:18](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L18)*
+*Defined in [data/transaction.ts:21](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L21)*
+
+
+
+
+
+___
+
+<a id="check_value_length"></a>
+
+### «Static» CHECK_VALUE_LENGTH
+
+**●  CHECK_VALUE_LENGTH**:  *`number`*  = 16
+
+*Defined in [data/transaction.ts:18](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L18)*
 
 
 
@@ -270,7 +286,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 2673
 
-*Defined in [data/transaction.ts:15](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L15)*
+*Defined in [data/transaction.ts:15](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L15)*
 
 
 
@@ -280,6 +296,33 @@ ___
 
 
 ## Methods
+<a id="tostring"></a>
+
+###  toString
+
+► **toString**(): `string`
+
+
+
+*Defined in [data/transaction.ts:171](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L171)*
+
+
+
+Get the string view of the object.
+
+
+
+
+**Returns:** `string`
+string of the trytes.
+
+
+
+
+
+
+___
+
 <a id="totrytes"></a>
 
 ###  toTrytes
@@ -288,7 +331,7 @@ ___
 
 
 
-*Defined in [data/transaction.ts:144](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L144)*
+*Defined in [data/transaction.ts:163](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L163)*
 
 
 
@@ -311,11 +354,11 @@ ___
 
 ### «Static» fromParams
 
-► **fromParams**(signatureMessageFragment: *[SignatureFragment](signaturefragment.md)*, address: *[Address](address.md)*, value: *`number`*, obsoleteTag: *[Tag](tag.md)*, timestamp: *`number`*, currentIndex: *`number`*, lastIndex: *`number`*, bundle: *[Hash](hash.md)*, trunkTransaction: *[Hash](hash.md)*, branchTransaction: *[Hash](hash.md)*, tag: *[Tag](tag.md)*, attachmentTimestamp: *`number`*, attachmentTimestampLowerBound: *`number`*, attachmentTimestampUpperBound: *`number`*, nonce: *[Tag](tag.md)*): [Transaction](transaction.md)
+► **fromParams**(signatureMessageFragment: *[SignatureMessageFragment](signaturemessagefragment.md)*, address: *[Address](address.md)*, value: *`number`*, obsoleteTag: *[Tag](tag.md)*, timestamp: *`number`*, currentIndex: *`number`*, lastIndex: *`number`*, bundle: *[Hash](hash.md)*, trunkTransaction: *[Hash](hash.md)*, branchTransaction: *[Hash](hash.md)*, tag: *[Tag](tag.md)*, attachmentTimestamp: *`number`*, attachmentTimestampLowerBound: *`number`*, attachmentTimestampUpperBound: *`number`*, nonce: *[Tag](tag.md)*): [Transaction](transaction.md)
 
 
 
-*Defined in [data/transaction.ts:62](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L62)*
+*Defined in [data/transaction.ts:65](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L65)*
 
 
 
@@ -326,7 +369,7 @@ Create instance of transaction from parameters.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| signatureMessageFragment | [SignatureFragment](signaturefragment.md)   |  The signature message fragment. |
+| signatureMessageFragment | [SignatureMessageFragment](signaturemessagefragment.md)   |  The signature message fragment. |
 | address | [Address](address.md)   |  The address. |
 | value | `number`   |  The value. |
 | obsoleteTag | [Tag](tag.md)   |  Obsolete transaction tag. |
@@ -364,7 +407,7 @@ ___
 
 
 
-*Defined in [data/transaction.ts:101](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/transaction.ts#L101)*
+*Defined in [data/transaction.ts:104](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/transaction.ts#L104)*
 
 
 

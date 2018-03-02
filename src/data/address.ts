@@ -61,10 +61,22 @@ export class Address {
      * @returns Trytes version of the address with checksu,.
      */
     public toTrytesWithChecksum(): Trytes {
-        if (this._checksumTrytes) {
+        if (!ObjectHelper.isEmpty(this._checksumTrytes)) {
             return Trytes.fromString(this._addressTrytes + this._checksumTrytes);
         } else {
             throw new DataError(`This address has no checksum calculated for it`);
+        }
+    }
+
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    public toString(): string {
+        if (!ObjectHelper.isEmpty(this._checksumTrytes)) {
+            return this._addressTrytes + this._checksumTrytes;
+        } else {
+            return this._addressTrytes;
         }
     }
 }

@@ -29,4 +29,14 @@ export declare class TryteNumber {
      * @returns number value of the tryte number.
      */
     toNumber(): number;
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    toString(): string;
+    /**
+     * Get the value of the object.
+     * @returns string of the trytes.
+     */
+    valueOf(): number;
 }

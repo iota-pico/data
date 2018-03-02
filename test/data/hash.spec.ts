@@ -20,4 +20,11 @@ describe("Hash", () => {
             chai.expect(obj.toTrytes().toString()).to.equal("A".repeat(81));
         });
     });
+
+    describe("toString", () => {
+        it("can succeed", () => {
+            const obj = Hash.fromTrytes(Trytes.fromString("A".repeat(81)));
+            chai.expect(obj.toString()).to.equal("A".repeat(81));
+        });
+    });
 });

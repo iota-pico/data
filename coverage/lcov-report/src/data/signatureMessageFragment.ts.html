@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en">
 <head>
-    <title>Code coverage report for src/data/signatureFragment.ts</title>
+    <title>Code coverage report for src/data/signatureMessageFragment.ts</title>
     <meta charset="utf-8" />
     <link rel="stylesheet" href="..\..\prettify.css" />
     <link rel="stylesheet" href="..\..\base.css" />
@@ -16,13 +16,13 @@
 <div class='wrapper'>
   <div class='pad1'>
     <h1>
-      <a href="..\..\index.html">All files</a> / <a href="index.html">src/data</a> signatureFragment.ts
+      <a href="..\..\index.html">All files</a> / <a href="index.html">src/data</a> signatureMessageFragment.ts
     </h1>
     <div class='clearfix'>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>14/14</span>
+        <span class='fraction'>15/15</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
@@ -32,12 +32,12 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>3/3</span>
+        <span class='fraction'>4/4</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>14/14</span>
+        <span class='fraction'>15/15</span>
       </div>
     </div>
   </div>
@@ -89,7 +89,15 @@
 44
 45
 46
-47</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+47
+48
+49
+50
+51
+52
+53
+54
+55</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -107,24 +115,24 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
+<span class="cline-any cline-yes">17x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">19x</span>
+<span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">18x</span>
+<span class="cline-any cline-yes">18x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">17x</span>
-<span class="cline-any cline-yes">17x</span>
-<span class="cline-any cline-yes">1x</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-yes">16x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -135,18 +143,26 @@
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { DataError } from "../error/dataError";
 import { Trytes } from "./trytes";
 &nbsp;
 /**
- * A class for handling signature fragments.
+ * A class for handling signature message fragments.
  */
-export class SignatureFragment {
+export class SignatureMessageFragment {
     /* The valid length for a signature fragment */
     public static readonly LENGTH: number = 2187;
     /* An empty signature fragment */
-    public static readonly EMPTY: SignatureFragment = SignatureFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureFragment.LENGTH)));
+    public static readonly EMPTY: SignatureMessageFragment = SignatureMessageFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureMessageFragment.LENGTH)));
 &nbsp;
     /* @internal */
     private readonly _trytes: Trytes;
@@ -158,19 +174,19 @@ export class SignatureFragment {
 &nbsp;
     /**
      * Create signature fragment from trytes.
-     * @param signatureFragment The trytes to create the signature fragment from.
-     * @returns An instance of SignatureFragment.
+     * @param signatureMessageFragment The trytes to create the signature fragment from.
+     * @returns An instance of SignatureMessageFragment.
      */
-    public static fromTrytes(signatureFragment: Trytes): SignatureFragment {
-        if (!ObjectHelper.isType(signatureFragment, Trytes)) {
-            throw new DataError("The signatureFragment should be a valid Trytes object");
+    public static fromTrytes(signatureMessageFragment: Trytes): SignatureMessageFragment {
+        if (!ObjectHelper.isType(signatureMessageFragment, Trytes)) {
+            throw new DataError("The signatureMessageFragment should be a valid Trytes object");
         }
 &nbsp;
-        const length = signatureFragment.length();
-        if (length !== SignatureFragment.LENGTH) {
-            throw new DataError(`The signatureFragment should be ${SignatureFragment.LENGTH} characters in length`, { length });
+        const length = signatureMessageFragment.length();
+        if (length !== SignatureMessageFragment.LENGTH) {
+            throw new DataError(`The signatureMessageFragment should be ${SignatureMessageFragment.LENGTH} characters in length`, { length });
         }
-        return new SignatureFragment(signatureFragment);
+        return new SignatureMessageFragment(signatureMessageFragment);
     }
 &nbsp;
     /**
@@ -180,6 +196,14 @@ export class SignatureFragment {
     public toTrytes(): Trytes {
         return this._trytes;
     }
+&nbsp;
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    public toString(): string {
+        return this._trytes.toString();
+    }
 }
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -187,7 +211,7 @@ export class SignatureFragment {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 27 2018 16:01:34 GMT+0300 (Turkey Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 02 2018 14:23:27 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

@@ -16,4 +16,9 @@ export declare class Tag {
      * @returns Trytes version of the tag.
      */
     toTrytes(): Trytes;
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    toString(): string;
 }

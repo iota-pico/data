@@ -22,22 +22,22 @@
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Statements</span>
-        <span class='fraction'>75/75</span>
+        <span class='fraction'>93/93</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Branches</span>
-        <span class='fraction'>52/52</span>
+        <span class='fraction'>38/38</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Functions</span>
-        <span class='fraction'>4/4</span>
+        <span class='fraction'>5/5</span>
       </div>
       <div class='fl pad1y space-right2'>
         <span class="strong">100% </span>
         <span class="quiet">Lines</span>
-        <span class='fraction'>75/75</span>
+        <span class='fraction'>93/93</span>
       </div>
     </div>
   </div>
@@ -241,7 +241,33 @@
 196
 197
 198
-199</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
+199
+200
+201
+202
+203
+204
+205
+206
+207
+208
+209
+210
+211
+212
+213
+214
+215
+216
+217
+218
+219
+220
+221
+222
+223
+224
+225</td><td class="line-coverage quiet"><span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-yes">1x</span>
@@ -254,6 +280,9 @@
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">1x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">1x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -376,8 +405,32 @@
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-yes">9x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-yes">9x</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-neutral">&nbsp;</span>
+<span class="cline-any cline-yes">11x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
@@ -438,12 +491,11 @@
 <span class="cline-any cline-yes">3x</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span>
-<span class="cline-any cline-neutral">&nbsp;</span>
 <span class="cline-any cline-neutral">&nbsp;</span></td><td class="text"><pre class="prettyprint lang-js">import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { DataError } from "../error/dataError";
 import { Address } from "./address";
 import { Hash } from "./hash";
-import { SignatureFragment } from "./signatureFragment";
+import { SignatureMessageFragment } from "./signatureMessageFragment";
 import { Tag } from "./tag";
 import { TryteNumber } from "./tryteNumber";
 import { Trytes } from "./trytes";
@@ -455,13 +507,16 @@ export class Transaction {
     /* The valid length for a transaction */
     public static readonly LENGTH: number = 2673;
 &nbsp;
+    /* Check value length */
+    public static readonly CHECK_VALUE_LENGTH: number = 16;
+&nbsp;
     /* Additional check value always all 9s */
-    public static readonly CHECK_VALUE: string = "9".repeat(16);
+    public static readonly CHECK_VALUE: string = "9".repeat(Transaction.CHECK_VALUE_LENGTH);
 &nbsp;
     /* @internal */
     private static readonly EMPTY_11: TryteNumber = TryteNumber.fromNumber(0, 11);
 &nbsp;
-    public signatureMessageFragment: SignatureFragment;
+    public signatureMessageFragment: SignatureMessageFragment;
     public address: Address;
     public value: TryteNumber;
     public obsoleteTag: Tag;
@@ -500,7 +555,7 @@ export class Transaction {
      * @param nonce The nonce.
      * @return New instance of transaction.
      */
-    public static fromParams(signatureMessageFragment: SignatureFragment,
+    public static fromParams(signatureMessageFragment: SignatureMessageFragment,
                              address: Address,
                              value: number,
                              obsoleteTag: Tag,
@@ -559,21 +614,37 @@ export class Transaction {
 &nbsp;
         const tx = new Transaction();
 &nbsp;
-        tx.signatureMessageFragment = SignatureFragment.fromTrytes(trytes.sub(0, SignatureFragment.LENGTH));
-        tx.address = Address.fromTrytes(trytes.sub(2187, Address.LENGTH));
-        tx.value = TryteNumber.fromTrytes(trytes.sub(2268, 11), 11);
-        tx.obsoleteTag = Tag.fromTrytes(trytes.sub(2295, Tag.LENGTH));
-        tx.timestamp = TryteNumber.fromTrytes(trytes.sub(2322, TryteNumber.LENGTH_9));
-        tx.currentIndex = TryteNumber.fromTrytes(trytes.sub(2331, TryteNumber.LENGTH_9));
-        tx.lastIndex = TryteNumber.fromTrytes(trytes.sub(2340, TryteNumber.LENGTH_9));
-        tx.bundle = Hash.fromTrytes(trytes.sub(2349, Hash.LENGTH));
-        tx.trunkTransaction = Hash.fromTrytes(trytes.sub(2430, Hash.LENGTH));
-        tx.branchTransaction = Hash.fromTrytes(trytes.sub(2511, Hash.LENGTH));
-        tx.tag = Tag.fromTrytes(trytes.sub(2592, Tag.LENGTH));
-        tx.attachmentTimestamp = TryteNumber.fromTrytes(trytes.sub(2619, TryteNumber.LENGTH_9));
-        tx.attachmentTimestampLowerBound = TryteNumber.fromTrytes(trytes.sub(2628, TryteNumber.LENGTH_9));
-        tx.attachmentTimestampUpperBound = TryteNumber.fromTrytes(trytes.sub(2637, TryteNumber.LENGTH_9));
-        tx.nonce = Tag.fromTrytes(trytes.sub(2646, Tag.LENGTH));
+        let startPos = 0;
+        tx.signatureMessageFragment = SignatureMessageFragment.fromTrytes(trytes.sub(startPos, SignatureMessageFragment.LENGTH));
+        startPos += SignatureMessageFragment.LENGTH;
+        tx.address = Address.fromTrytes(trytes.sub(startPos, Address.LENGTH));
+        startPos += Address.LENGTH;
+        tx.value = TryteNumber.fromTrytes(trytes.sub(startPos, 11), 11);
+        startPos += 11;
+        startPos += Transaction.CHECK_VALUE_LENGTH;
+        tx.obsoleteTag = Tag.fromTrytes(trytes.sub(startPos, Tag.LENGTH));
+        startPos += Tag.LENGTH;
+        tx.timestamp = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.currentIndex = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.lastIndex = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.bundle = Hash.fromTrytes(trytes.sub(startPos, Hash.LENGTH));
+        startPos += Hash.LENGTH;
+        tx.trunkTransaction = Hash.fromTrytes(trytes.sub(startPos, Hash.LENGTH));
+        startPos += Hash.LENGTH;
+        tx.branchTransaction = Hash.fromTrytes(trytes.sub(startPos, Hash.LENGTH));
+        startPos += Hash.LENGTH;
+        tx.tag = Tag.fromTrytes(trytes.sub(startPos, Tag.LENGTH));
+        startPos += Tag.LENGTH;
+        tx.attachmentTimestamp = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.attachmentTimestampLowerBound = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.attachmentTimestampUpperBound = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.nonce = Tag.fromTrytes(trytes.sub(startPos, Tag.LENGTH));
 &nbsp;
         return tx;
     }
@@ -583,31 +654,39 @@ export class Transaction {
      * @return The transaction as trytes.
      */
     public toTrytes(): Trytes {
-        if (this.signatureMessageFragment === undefined || this.signatureMessageFragment === null) {
+        return Trytes.fromString(this.toString());
+    }
+&nbsp;
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    public toString(): string {
+        if (!ObjectHelper.isType(this.signatureMessageFragment, SignatureMessageFragment)) {
             throw new DataError(`The signatureMessageFragment must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
         }
 &nbsp;
-        if (this.address === undefined || this.address === null) {
+        if (!ObjectHelper.isType(this.address, Address)) {
             throw new DataError(`The address must be set to create transaction trytes`, { address: this.address });
         }
 &nbsp;
-        if (this.obsoleteTag === undefined || this.obsoleteTag === null) {
+        if (!ObjectHelper.isType(this.obsoleteTag, Tag)) {
             throw new DataError(`The obsoleteTag must be set to create transaction trytes`, { obsoleteTag: this.obsoleteTag });
         }
 &nbsp;
-        if (this.bundle === undefined || this.bundle === null) {
+        if (!ObjectHelper.isType(this.bundle, Hash)) {
             throw new DataError(`The bundle must be set to create transaction trytes`, { bundle: this.bundle });
         }
 &nbsp;
-        if (this.trunkTransaction === undefined || this.trunkTransaction === null) {
+        if (!ObjectHelper.isType(this.trunkTransaction, Hash)) {
             throw new DataError(`The trunkTransaction must be set to create transaction trytes`, { trunkTransaction: this.trunkTransaction });
         }
 &nbsp;
-        if (this.branchTransaction === undefined || this.branchTransaction === null) {
+        if (!ObjectHelper.isType(this.branchTransaction, Hash)) {
             throw new DataError(`The branchTransaction must be set to create transaction trytes`, { branchTransaction: this.branchTransaction });
         }
 &nbsp;
-        if (this.nonce === undefined || this.nonce === null) {
+        if (!ObjectHelper.isType(this.nonce, Tag)) {
             throw new DataError(`The nonce must be set to create transaction trytes`, { nonce: this.nonce });
         }
 &nbsp;
@@ -633,9 +712,8 @@ export class Transaction {
             throw new DataError(`The trytes must be ${Transaction.LENGTH} in length ${length}`, { length });
         }
 &nbsp;
-        return Trytes.fromString(trytes);
+        return trytes;
     }
-&nbsp;
 }
 &nbsp;</pre></td></tr>
 </table></pre>
@@ -643,7 +721,7 @@ export class Transaction {
 </div><!-- /wrapper -->
 <div class='footer quiet pad2 space-top1 center small'>
   Code coverage
-  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Tue Feb 27 2018 16:01:34 GMT+0300 (Turkey Standard Time)
+  generated by <a href="https://istanbul.js.org/" target="_blank">istanbul</a> at Fri Mar 02 2018 14:23:27 GMT+0300 (Turkey Standard Time)
 </div>
 </div>
 <script src="..\..\prettify.js"></script>

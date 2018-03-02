@@ -63,4 +63,18 @@ describe("TryteNumber", () => {
             chai.expect(TryteNumber.fromTrytes(Trytes.fromString("A".repeat(3))).toTrytes().toString()).to.equal("A".repeat(3) + "9".repeat(6));
         });
     });
+
+    describe("toString", () => {
+        it("can succeed", () => {
+            const obj = TryteNumber.fromNumber(20);
+            chai.expect(obj.toString()).to.equal("20");
+        });
+    });
+
+    describe("valueOf", () => {
+        it("can succeed", () => {
+            const obj = TryteNumber.fromNumber(20);
+            chai.expect(obj.valueOf()).to.equal(20);
+        });
+    });
 });

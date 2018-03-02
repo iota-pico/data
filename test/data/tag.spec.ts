@@ -25,4 +25,11 @@ describe("Tag", () => {
             chai.expect(obj.toTrytes().toString()).to.equal("A".repeat(10) + "9".repeat(17));
         });
     });
+
+    describe("toString", () => {
+        it("can succeed", () => {
+            const obj = Tag.fromTrytes(Trytes.fromString("A".repeat(27)));
+            chai.expect(obj.toString()).to.equal("A".repeat(27));
+        });
+    });
 });

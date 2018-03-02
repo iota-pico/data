@@ -18,7 +18,9 @@ A class for handling tryte number.
 ### Methods
 
 * [toNumber](trytenumber.md#tonumber)
+* [toString](trytenumber.md#tostring)
 * [toTrytes](trytenumber.md#totrytes)
+* [valueOf](trytenumber.md#valueof)
 * [fromNumber](trytenumber.md#fromnumber)
 * [fromTrytes](trytenumber.md#fromtrytes)
 
@@ -32,7 +34,7 @@ A class for handling tryte number.
 
 **●  EMPTY_9**:  *[TryteNumber](trytenumber.md)*  =  TryteNumber.fromNumber(0, TryteNumber.LENGTH_9)
 
-*Defined in [data/tryteNumber.ts:14](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tryteNumber.ts#L14)*
+*Defined in [data/tryteNumber.ts:14](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L14)*
 
 
 
@@ -46,7 +48,7 @@ ___
 
 **●  LENGTH_9**:  *`number`*  = 9
 
-*Defined in [data/tryteNumber.ts:12](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tryteNumber.ts#L12)*
+*Defined in [data/tryteNumber.ts:12](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L12)*
 
 
 
@@ -64,7 +66,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:95](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tryteNumber.ts#L95)*
+*Defined in [data/tryteNumber.ts:95](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L95)*
 
 
 
@@ -83,6 +85,33 @@ number value of the tryte number.
 
 ___
 
+<a id="tostring"></a>
+
+###  toString
+
+► **toString**(): `string`
+
+
+
+*Defined in [data/tryteNumber.ts:103](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L103)*
+
+
+
+Get the string view of the object.
+
+
+
+
+**Returns:** `string`
+string of the trytes.
+
+
+
+
+
+
+___
+
 <a id="totrytes"></a>
 
 ###  toTrytes
@@ -91,7 +120,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:87](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tryteNumber.ts#L87)*
+*Defined in [data/tryteNumber.ts:87](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L87)*
 
 
 
@@ -110,6 +139,33 @@ Trytes version of the tryte number.
 
 ___
 
+<a id="valueof"></a>
+
+###  valueOf
+
+► **valueOf**(): `number`
+
+
+
+*Defined in [data/tryteNumber.ts:111](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L111)*
+
+
+
+Get the value of the object.
+
+
+
+
+**Returns:** `number`
+string of the trytes.
+
+
+
+
+
+
+___
+
 <a id="fromnumber"></a>
 
 ### «Static» fromNumber
@@ -118,7 +174,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:30](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tryteNumber.ts#L30)*
+*Defined in [data/tryteNumber.ts:30](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L30)*
 
 
 
@@ -154,7 +210,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:62](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tryteNumber.ts#L62)*
+*Defined in [data/tryteNumber.ts:62](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tryteNumber.ts#L62)*
 
 
 

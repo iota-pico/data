@@ -17,6 +17,7 @@ A class for handling tags.
 
 ### Methods
 
+* [toString](tag.md#tostring)
 * [toTrytes](tag.md#totrytes)
 * [fromTrytes](tag.md#fromtrytes)
 
@@ -30,7 +31,7 @@ A class for handling tags.
 
 **●  EMPTY**:  *[Tag](tag.md)*  =  Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)))
 
-*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tag.ts#L12)*
+*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tag.ts#L12)*
 
 
 
@@ -44,7 +45,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 27
 
-*Defined in [data/tag.ts:10](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tag.ts#L10)*
+*Defined in [data/tag.ts:10](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tag.ts#L10)*
 
 
 
@@ -54,6 +55,33 @@ ___
 
 
 ## Methods
+<a id="tostring"></a>
+
+###  toString
+
+► **toString**(): `string`
+
+
+
+*Defined in [data/tag.ts:57](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tag.ts#L57)*
+
+
+
+Get the string view of the object.
+
+
+
+
+**Returns:** `string`
+string of the trytes.
+
+
+
+
+
+
+___
+
 <a id="totrytes"></a>
 
 ###  toTrytes
@@ -62,7 +90,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:49](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tag.ts#L49)*
+*Defined in [data/tag.ts:49](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tag.ts#L49)*
 
 
 
@@ -89,7 +117,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:27](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/tag.ts#L27)*
+*Defined in [data/tag.ts:27](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/tag.ts#L27)*
 
 
 

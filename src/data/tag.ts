@@ -49,4 +49,12 @@ export class Tag {
     public toTrytes(): Trytes {
         return Trytes.fromString(this._trytes);
     }
+
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    public toString(): string {
+        return this._trytes;
+    }
 }

@@ -4,7 +4,7 @@
 import * as chai from "chai";
 import { Address } from "../../src/data/address";
 import { Bundle } from "../../src/data/bundle";
-import { SignatureFragment } from "../../src/data/signatureFragment";
+import { SignatureMessageFragment } from "../../src/data/signatureMessageFragment";
 import { Tag } from "../../src/data/tag";
 import { Trytes } from "../../src/data/trytes";
 
@@ -41,10 +41,10 @@ describe("Bundle", () => {
         });
     });
 
-    describe("addSignatureFragments", () => {
+    describe("addSignatureMessageFragments", () => {
         it("can fail to add signatures", () => {
             const obj = new Bundle();
-            chai.expect(() => obj.addSignatureFragments(undefined)).to.throw("The signatureFragments");
+            chai.expect(() => obj.addSignatureMessageFragments(undefined)).to.throw("The signatureMessageFragments");
         });
 
         it("can succeed adding signatures", () => {
@@ -56,8 +56,8 @@ describe("Bundle", () => {
                                 Tag.fromTrytes(Trytes.fromString("B".repeat(27))),
                                 2345);
 
-            obj.addSignatureFragments([
-                SignatureFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
+            obj.addSignatureMessageFragments([
+                SignatureMessageFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
                 undefined
             ]);
 

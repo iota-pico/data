@@ -1,5 +1,5 @@
 import { Address } from "./address";
-import { SignatureFragment } from "./signatureFragment";
+import { SignatureMessageFragment } from "./signatureMessageFragment";
 import { Tag } from "./tag";
 import { Transaction } from "./transaction";
 /**
@@ -23,7 +23,7 @@ export declare class Bundle {
     addTransactions(signatureMessageLength: number, address: Address, value: number, tag: Tag, timestamp: number): void;
     /**
      * Add signature fragments to the bundle.
-     * @param signatureFragments The signature fragments to add to the bundle transactions.
+     * @param signatureMessageFragments The signature fragments to add to the bundle transactions.
      */
-    addSignatureFragments(signatureFragments: SignatureFragment[]): void;
+    addSignatureMessageFragments(signatureMessageFragments: SignatureMessageFragment[]): void;
 }

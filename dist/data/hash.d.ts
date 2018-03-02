@@ -16,4 +16,9 @@ export declare class Hash {
      * @returns Trytes version of the hash.
      */
     toTrytes(): Trytes;
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    toString(): string;
 }

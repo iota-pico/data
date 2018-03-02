@@ -44,4 +44,12 @@ export class Hash {
     public toTrytes(): Trytes {
         return this._trytes;
     }
+
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    public toString(): string {
+        return this._trytes.toString();
+    }
 }

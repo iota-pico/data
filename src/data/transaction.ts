@@ -2,7 +2,7 @@ import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { DataError } from "../error/dataError";
 import { Address } from "./address";
 import { Hash } from "./hash";
-import { SignatureFragment } from "./signatureFragment";
+import { SignatureMessageFragment } from "./signatureMessageFragment";
 import { Tag } from "./tag";
 import { TryteNumber } from "./tryteNumber";
 import { Trytes } from "./trytes";
@@ -14,13 +14,16 @@ export class Transaction {
     /* The valid length for a transaction */
     public static readonly LENGTH: number = 2673;
 
+    /* Check value length */
+    public static readonly CHECK_VALUE_LENGTH: number = 16;
+
     /* Additional check value always all 9s */
-    public static readonly CHECK_VALUE: string = "9".repeat(16);
+    public static readonly CHECK_VALUE: string = "9".repeat(Transaction.CHECK_VALUE_LENGTH);
 
     /* @internal */
     private static readonly EMPTY_11: TryteNumber = TryteNumber.fromNumber(0, 11);
 
-    public signatureMessageFragment: SignatureFragment;
+    public signatureMessageFragment: SignatureMessageFragment;
     public address: Address;
     public value: TryteNumber;
     public obsoleteTag: Tag;
@@ -59,7 +62,7 @@ export class Transaction {
      * @param nonce The nonce.
      * @return New instance of transaction.
      */
-    public static fromParams(signatureMessageFragment: SignatureFragment,
+    public static fromParams(signatureMessageFragment: SignatureMessageFragment,
                              address: Address,
                              value: number,
                              obsoleteTag: Tag,
@@ -118,21 +121,37 @@ export class Transaction {
 
         const tx = new Transaction();
 
-        tx.signatureMessageFragment = SignatureFragment.fromTrytes(trytes.sub(0, SignatureFragment.LENGTH));
-        tx.address = Address.fromTrytes(trytes.sub(2187, Address.LENGTH));
-        tx.value = TryteNumber.fromTrytes(trytes.sub(2268, 11), 11);
-        tx.obsoleteTag = Tag.fromTrytes(trytes.sub(2295, Tag.LENGTH));
-        tx.timestamp = TryteNumber.fromTrytes(trytes.sub(2322, TryteNumber.LENGTH_9));
-        tx.currentIndex = TryteNumber.fromTrytes(trytes.sub(2331, TryteNumber.LENGTH_9));
-        tx.lastIndex = TryteNumber.fromTrytes(trytes.sub(2340, TryteNumber.LENGTH_9));
-        tx.bundle = Hash.fromTrytes(trytes.sub(2349, Hash.LENGTH));
-        tx.trunkTransaction = Hash.fromTrytes(trytes.sub(2430, Hash.LENGTH));
-        tx.branchTransaction = Hash.fromTrytes(trytes.sub(2511, Hash.LENGTH));
-        tx.tag = Tag.fromTrytes(trytes.sub(2592, Tag.LENGTH));
-        tx.attachmentTimestamp = TryteNumber.fromTrytes(trytes.sub(2619, TryteNumber.LENGTH_9));
-        tx.attachmentTimestampLowerBound = TryteNumber.fromTrytes(trytes.sub(2628, TryteNumber.LENGTH_9));
-        tx.attachmentTimestampUpperBound = TryteNumber.fromTrytes(trytes.sub(2637, TryteNumber.LENGTH_9));
-        tx.nonce = Tag.fromTrytes(trytes.sub(2646, Tag.LENGTH));
+        let startPos = 0;
+        tx.signatureMessageFragment = SignatureMessageFragment.fromTrytes(trytes.sub(startPos, SignatureMessageFragment.LENGTH));
+        startPos += SignatureMessageFragment.LENGTH;
+        tx.address = Address.fromTrytes(trytes.sub(startPos, Address.LENGTH));
+        startPos += Address.LENGTH;
+        tx.value = TryteNumber.fromTrytes(trytes.sub(startPos, 11), 11);
+        startPos += 11;
+        startPos += Transaction.CHECK_VALUE_LENGTH;
+        tx.obsoleteTag = Tag.fromTrytes(trytes.sub(startPos, Tag.LENGTH));
+        startPos += Tag.LENGTH;
+        tx.timestamp = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.currentIndex = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.lastIndex = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.bundle = Hash.fromTrytes(trytes.sub(startPos, Hash.LENGTH));
+        startPos += Hash.LENGTH;
+        tx.trunkTransaction = Hash.fromTrytes(trytes.sub(startPos, Hash.LENGTH));
+        startPos += Hash.LENGTH;
+        tx.branchTransaction = Hash.fromTrytes(trytes.sub(startPos, Hash.LENGTH));
+        startPos += Hash.LENGTH;
+        tx.tag = Tag.fromTrytes(trytes.sub(startPos, Tag.LENGTH));
+        startPos += Tag.LENGTH;
+        tx.attachmentTimestamp = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.attachmentTimestampLowerBound = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.attachmentTimestampUpperBound = TryteNumber.fromTrytes(trytes.sub(startPos, TryteNumber.LENGTH_9));
+        startPos += TryteNumber.LENGTH_9;
+        tx.nonce = Tag.fromTrytes(trytes.sub(startPos, Tag.LENGTH));
 
         return tx;
     }
@@ -142,31 +161,39 @@ export class Transaction {
      * @return The transaction as trytes.
      */
     public toTrytes(): Trytes {
-        if (this.signatureMessageFragment === undefined || this.signatureMessageFragment === null) {
+        return Trytes.fromString(this.toString());
+    }
+
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    public toString(): string {
+        if (!ObjectHelper.isType(this.signatureMessageFragment, SignatureMessageFragment)) {
             throw new DataError(`The signatureMessageFragment must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
         }
 
-        if (this.address === undefined || this.address === null) {
+        if (!ObjectHelper.isType(this.address, Address)) {
             throw new DataError(`The address must be set to create transaction trytes`, { address: this.address });
         }
 
-        if (this.obsoleteTag === undefined || this.obsoleteTag === null) {
+        if (!ObjectHelper.isType(this.obsoleteTag, Tag)) {
             throw new DataError(`The obsoleteTag must be set to create transaction trytes`, { obsoleteTag: this.obsoleteTag });
         }
 
-        if (this.bundle === undefined || this.bundle === null) {
+        if (!ObjectHelper.isType(this.bundle, Hash)) {
             throw new DataError(`The bundle must be set to create transaction trytes`, { bundle: this.bundle });
         }
 
-        if (this.trunkTransaction === undefined || this.trunkTransaction === null) {
+        if (!ObjectHelper.isType(this.trunkTransaction, Hash)) {
             throw new DataError(`The trunkTransaction must be set to create transaction trytes`, { trunkTransaction: this.trunkTransaction });
         }
 
-        if (this.branchTransaction === undefined || this.branchTransaction === null) {
+        if (!ObjectHelper.isType(this.branchTransaction, Hash)) {
             throw new DataError(`The branchTransaction must be set to create transaction trytes`, { branchTransaction: this.branchTransaction });
         }
 
-        if (this.nonce === undefined || this.nonce === null) {
+        if (!ObjectHelper.isType(this.nonce, Tag)) {
             throw new DataError(`The nonce must be set to create transaction trytes`, { nonce: this.nonce });
         }
 
@@ -192,7 +219,6 @@ export class Transaction {
             throw new DataError(`The trytes must be ${Transaction.LENGTH} in length ${length}`, { length });
         }
 
-        return Trytes.fromString(trytes);
+        return trytes;
     }
-
 }

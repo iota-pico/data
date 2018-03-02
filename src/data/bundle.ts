@@ -2,7 +2,7 @@ import { ObjectHelper } from "@iota-pico/core/dist/helpers/objectHelper";
 import { DataError } from "../error/dataError";
 import { Address } from "./address";
 import { Hash } from "./hash";
-import { SignatureFragment } from "./signatureFragment";
+import { SignatureMessageFragment } from "./signatureMessageFragment";
 import { Tag } from "./tag";
 import { Transaction } from "./transaction";
 import { TryteNumber } from "./tryteNumber";
@@ -40,15 +40,15 @@ export class Bundle {
 
     /**
      * Add signature fragments to the bundle.
-     * @param signatureFragments The signature fragments to add to the bundle transactions.
+     * @param signatureMessageFragments The signature fragments to add to the bundle transactions.
      */
-    public addSignatureFragments(signatureFragments: SignatureFragment[]): void {
-        if (ObjectHelper.isEmpty(signatureFragments)) {
-            throw new DataError("The signatureFragments should be an array of SignatureFragments");
+    public addSignatureMessageFragments(signatureMessageFragments: SignatureMessageFragment[]): void {
+        if (ObjectHelper.isEmpty(signatureMessageFragments)) {
+            throw new DataError("The signatureMessageFragments should be an array of SignatureMessageFragments");
         }
 
         for (let i = 0; i < this.transactions.length; i++) {
-            this.transactions[i].signatureMessageFragment = (signatureFragments[i] || SignatureFragment.EMPTY);
+            this.transactions[i].signatureMessageFragment = (signatureMessageFragments[i] || SignatureMessageFragment.EMPTY);
             this.transactions[i].trunkTransaction = Hash.EMPTY;
             this.transactions[i].branchTransaction = Hash.EMPTY;
             this.transactions[i].attachmentTimestamp = TryteNumber.EMPTY_9;

@@ -22,4 +22,9 @@ export declare class Address {
      * @returns Trytes version of the address with checksu,.
      */
     toTrytesWithChecksum(): Trytes;
+    /**
+     * Get the string view of the object.
+     * @returns string of the trytes.
+     */
+    toString(): string;
 }

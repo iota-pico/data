@@ -22,7 +22,7 @@ A class for handling bundles.
 
 ### Methods
 
-* [addSignatureFragments](bundle.md#addsignaturefragments)
+* [addSignatureMessageFragments](bundle.md#addsignaturemessagefragments)
 * [addTransactions](bundle.md#addtransactions)
 
 
@@ -35,7 +35,7 @@ A class for handling bundles.
 ### ⊕ **new Bundle**(): [Bundle](bundle.md)
 
 
-*Defined in [data/bundle.ts:15](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/bundle.ts#L15)*
+*Defined in [data/bundle.ts:15](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/bundle.ts#L15)*
 
 
 
@@ -56,7 +56,7 @@ Create a new instance of Bundle.
 
 **●  inclusionState**:  *`boolean`* 
 
-*Defined in [data/bundle.ts:15](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/bundle.ts#L15)*
+*Defined in [data/bundle.ts:15](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/bundle.ts#L15)*
 
 
 
@@ -70,7 +70,7 @@ ___
 
 **●  transactions**:  *[Transaction](transaction.md)[]* 
 
-*Defined in [data/bundle.ts:14](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/bundle.ts#L14)*
+*Defined in [data/bundle.ts:14](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/bundle.ts#L14)*
 
 
 
@@ -80,15 +80,15 @@ ___
 
 
 ## Methods
-<a id="addsignaturefragments"></a>
+<a id="addsignaturemessagefragments"></a>
 
-###  addSignatureFragments
+###  addSignatureMessageFragments
 
-► **addSignatureFragments**(signatureFragments: *[SignatureFragment](signaturefragment.md)[]*): `void`
+► **addSignatureMessageFragments**(signatureMessageFragments: *[SignatureMessageFragment](signaturemessagefragment.md)[]*): `void`
 
 
 
-*Defined in [data/bundle.ts:45](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/bundle.ts#L45)*
+*Defined in [data/bundle.ts:45](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/bundle.ts#L45)*
 
 
 
@@ -99,7 +99,7 @@ Add signature fragments to the bundle.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| signatureFragments | [SignatureFragment](signaturefragment.md)[]   |  The signature fragments to add to the bundle transactions. |
+| signatureMessageFragments | [SignatureMessageFragment](signaturemessagefragment.md)[]   |  The signature fragments to add to the bundle transactions. |
 
 
 
@@ -121,7 +121,7 @@ ___
 
 
 
-*Defined in [data/bundle.ts:32](https://github.com/iotaeco/iota-pico-data/blob/5154449/src/data/bundle.ts#L32)*
+*Defined in [data/bundle.ts:32](https://github.com/iotaeco/iota-pico-data/blob/20bfe09/src/data/bundle.ts#L32)*
 
 
 

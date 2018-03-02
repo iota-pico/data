@@ -4,7 +4,7 @@
 import * as chai from "chai";
 import { Address } from "../../src/data/address";
 import { Hash } from "../../src/data/hash";
-import { SignatureFragment } from "../../src/data/signatureFragment";
+import { SignatureMessageFragment } from "../../src/data/signatureMessageFragment";
 import { Tag } from "../../src/data/tag";
 import { Transaction } from "../../src/data/transaction";
 import { TryteNumber } from "../../src/data/tryteNumber";
@@ -35,7 +35,7 @@ describe("Transaction", () => {
         });
 
         it("can succeed converting from object", () => {
-            const obj = Transaction.fromParams(SignatureFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
+            const obj = Transaction.fromParams(SignatureMessageFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
                                                Address.fromTrytes(Trytes.fromString("B".repeat(81))),
                                                10,
                                                Tag.fromTrytes(Trytes.fromString("C".repeat(27))),
@@ -171,7 +171,7 @@ describe("Transaction", () => {
         });
 
         it("can succeed converting from object", () => {
-            const obj = Transaction.fromParams(SignatureFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
+            const obj = Transaction.fromParams(SignatureMessageFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
                                                Address.fromTrytes(Trytes.fromString("B".repeat(81))),
                                                10,
                                                Tag.fromTrytes(Trytes.fromString("C".repeat(27))),
@@ -192,7 +192,7 @@ describe("Transaction", () => {
         });
 
         it("can succeed with missing numbers", () => {
-            const obj = Transaction.fromParams(SignatureFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
+            const obj = Transaction.fromParams(SignatureMessageFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
                                                Address.fromTrytes(Trytes.fromString("B".repeat(81))),
                                                10,
                                                Tag.fromTrytes(Trytes.fromString("C".repeat(27))),
@@ -220,7 +220,7 @@ describe("Transaction", () => {
         });
 
         it("can succeed with missing tag", () => {
-            const obj = Transaction.fromParams(SignatureFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
+            const obj = Transaction.fromParams(SignatureMessageFragment.fromTrytes(Trytes.fromString("A".repeat(2187))),
                                                Address.fromTrytes(Trytes.fromString("B".repeat(81))),
                                                10,
                                                Tag.fromTrytes(Trytes.fromString("C".repeat(27))),
