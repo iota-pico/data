@@ -31,7 +31,7 @@ A class for handling signature message fragments.
 
 **●  EMPTY**:  *[SignatureMessageFragment](signaturemessagefragment.md)*  =  SignatureMessageFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureMessageFragment.LENGTH)))
 
-*Defined in [data/signatureMessageFragment.ts:12](https://github.com/iotaeco/iota-pico-data/blob/5a71c27/src/data/signatureMessageFragment.ts#L12)*
+*Defined in [data/signatureMessageFragment.ts:12](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/signatureMessageFragment.ts#L12)*
 
 
 
@@ -45,7 +45,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 2187
 
-*Defined in [data/signatureMessageFragment.ts:10](https://github.com/iotaeco/iota-pico-data/blob/5a71c27/src/data/signatureMessageFragment.ts#L10)*
+*Defined in [data/signatureMessageFragment.ts:10](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/signatureMessageFragment.ts#L10)*
 
 
 
@@ -63,7 +63,7 @@ ___
 
 
 
-*Defined in [data/signatureMessageFragment.ts:51](https://github.com/iotaeco/iota-pico-data/blob/5a71c27/src/data/signatureMessageFragment.ts#L51)*
+*Defined in [data/signatureMessageFragment.ts:51](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/signatureMessageFragment.ts#L51)*
 
 
 
@@ -90,7 +90,7 @@ ___
 
 
 
-*Defined in [data/signatureMessageFragment.ts:43](https://github.com/iotaeco/iota-pico-data/blob/5a71c27/src/data/signatureMessageFragment.ts#L43)*
+*Defined in [data/signatureMessageFragment.ts:43](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/signatureMessageFragment.ts#L43)*
 
 
 
@@ -117,7 +117,7 @@ ___
 
 
 
-*Defined in [data/signatureMessageFragment.ts:27](https://github.com/iotaeco/iota-pico-data/blob/5a71c27/src/data/signatureMessageFragment.ts#L27)*
+*Defined in [data/signatureMessageFragment.ts:27](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/signatureMessageFragment.ts#L27)*
 
 
 

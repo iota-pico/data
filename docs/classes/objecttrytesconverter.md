@@ -37,7 +37,7 @@ The generic type for the conversion methods.
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[from](../interfaces/itrytesconverter.md#from)*
 
-*Defined in [converters/objectTrytesConverter.ts:39](https://github.com/iotaeco/iota-pico-data/blob/5a71c27/src/converters/objectTrytesConverter.ts#L39)*
+*Defined in [converters/objectTrytesConverter.ts:39](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/converters/objectTrytesConverter.ts#L39)*
 
 
 
@@ -74,7 +74,7 @@ ___
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[to](../interfaces/itrytesconverter.md#to)*
 
-*Defined in [converters/objectTrytesConverter.ts:19](https://github.com/iotaeco/iota-pico-data/blob/5a71c27/src/converters/objectTrytesConverter.ts#L19)*
+*Defined in [converters/objectTrytesConverter.ts:19](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/converters/objectTrytesConverter.ts#L19)*
 
 
 
