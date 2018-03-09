@@ -6,9 +6,13 @@ import { Trytes } from "./trytes";
  * A class for handling tags.
  */
 export class Tag {
-    /* The valid length for a tag */
+    /**
+     * The length of a valid tag (27).
+     */
     public static readonly LENGTH: number = 27;
-    /* An empty tag */
+    /**
+     * An empty tag all 9s.
+     */
     public static readonly EMPTY: Tag = Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)));
 
     /* @internal */

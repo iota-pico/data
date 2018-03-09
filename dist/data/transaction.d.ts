@@ -8,23 +8,77 @@ import { Trytes } from "./trytes";
  * A class for handling transactions.
  */
 export declare class Transaction {
+    /**
+     * The length of a valid transaction (2673).
+     */
     static readonly LENGTH: number;
+    /**
+     * The length of a valid check value (16).
+     */
     static readonly CHECK_VALUE_LENGTH: number;
+    /**
+     * The check value for bundles all 9s.
+     */
     static readonly CHECK_VALUE: string;
+    /**
+     * The signature message fragment for the transaction.
+     */
     signatureMessageFragment: SignatureMessageFragment;
+    /**
+     * The address for the transaction.
+     */
     address: Address;
+    /**
+     * The value for the transaction.
+     */
     value: TryteNumber;
+    /**
+     * The obsolete tag for the transaction.
+     */
     obsoleteTag: Tag;
+    /**
+     * The timestamp for the transaction.
+     */
     timestamp: TryteNumber;
+    /**
+     * The current index for the transaction.
+     */
     currentIndex: TryteNumber;
+    /**
+     * The last index for the transaction bundle.
+     */
     lastIndex: TryteNumber;
+    /**
+     * The bundle hash for the transaction.
+     */
     bundle: Hash;
+    /**
+     * The trunk transaction for the transaction.
+     */
     trunkTransaction: Hash;
+    /**
+     * The branch transaction for the transaction.
+     */
     branchTransaction: Hash;
+    /**
+     * The tag for the transaction.
+     */
     tag: Tag;
+    /**
+     * The attachment timestamp for the transaction.
+     */
     attachmentTimestamp: TryteNumber;
+    /**
+     * The attachment timestamp lower bound for the transaction.
+     */
     attachmentTimestampLowerBound: TryteNumber;
+    /**
+     * The attachment timestamp upper bound for the transaction.
+     */
     attachmentTimestampUpperBound: TryteNumber;
+    /**
+     * The nonce for the transaction.
+     */
     nonce: Tag;
     /**
      * Create instance of transaction from parameters.

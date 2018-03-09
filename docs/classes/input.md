@@ -31,8 +31,11 @@ A class for handling inputs.
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in [data/input.ts:11](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/input.ts#L11)*
+*Defined in [data/input.ts:14](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/input.ts#L14)*
 
+
+
+The address used for a transfer input.
 
 
 
@@ -45,8 +48,11 @@ ___
 
 **●  balance**:  *`number`* 
 
-*Defined in [data/input.ts:14](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/input.ts#L14)*
+*Defined in [data/input.ts:26](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/input.ts#L26)*
 
+
+
+The balance of the input.
 
 
 
@@ -59,8 +65,11 @@ ___
 
 **●  keyIndex**:  *`number`* 
 
-*Defined in [data/input.ts:13](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/input.ts#L13)*
+*Defined in [data/input.ts:22](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/input.ts#L22)*
 
+
+
+The index of the address from the seed.
 
 
 
@@ -73,8 +82,11 @@ ___
 
 **●  security**:  *[AddressSecurity](../enums/addresssecurity.md)* 
 
-*Defined in [data/input.ts:12](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/input.ts#L12)*
+*Defined in [data/input.ts:18](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/input.ts#L18)*
 
+
+
+The security level of the address.
 
 
 
@@ -91,7 +103,7 @@ ___
 
 
 
-*Defined in [data/input.ts:28](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/input.ts#L28)*
+*Defined in [data/input.ts:40](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/input.ts#L40)*
 
 
 

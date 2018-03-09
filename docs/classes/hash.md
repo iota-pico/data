@@ -31,8 +31,11 @@ A class for handling hashes.
 
 **●  EMPTY**:  *[Hash](hash.md)*  =  Hash.fromTrytes(Trytes.fromString("9".repeat(Hash.LENGTH)))
 
-*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/hash.ts#L12)*
+*Defined in [data/hash.ts:16](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/hash.ts#L16)*
 
+
+
+An empty hash all 9s.
 
 
 
@@ -45,8 +48,11 @@ ___
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/hash.ts:10](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/hash.ts#L10)*
+*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/hash.ts#L12)*
 
+
+
+The length for a valid hash (81).
 
 
 
@@ -63,7 +69,7 @@ ___
 
 
 
-*Defined in [data/hash.ts:52](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/hash.ts#L52)*
+*Defined in [data/hash.ts:56](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/hash.ts#L56)*
 
 
 
@@ -90,7 +96,7 @@ ___
 
 
 
-*Defined in [data/hash.ts:44](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/hash.ts#L44)*
+*Defined in [data/hash.ts:48](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/hash.ts#L48)*
 
 
 
@@ -117,7 +123,7 @@ ___
 
 
 
-*Defined in [data/hash.ts:27](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/hash.ts#L27)*
+*Defined in [data/hash.ts:31](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/hash.ts#L31)*
 
 
 

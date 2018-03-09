@@ -6,9 +6,13 @@ import { Trytes } from "./trytes";
  * A class for handling signature message fragments.
  */
 export class SignatureMessageFragment {
-    /* The valid length for a signature fragment */
+    /**
+     * The length of a valid signature message fragment (2187)
+     */
     public static readonly LENGTH: number = 2187;
-    /* An empty signature fragment */
+    /**
+     * An empty signature message fragment all 9s.
+     */
     public static readonly EMPTY: SignatureMessageFragment = SignatureMessageFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureMessageFragment.LENGTH)));
 
     /* @internal */

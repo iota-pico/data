@@ -6,6 +6,9 @@ import { DataError } from "../error/dataError";
  * A class for handling trytes.
  */
 export class Trytes {
+    /**
+     * All the characters that can be used in trytes.
+     */
     public static ALPHABET: string = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ";
 
     /* @internal */

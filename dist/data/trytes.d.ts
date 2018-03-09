@@ -2,6 +2,9 @@
  * A class for handling trytes.
  */
 export declare class Trytes {
+    /**
+     * All the characters that can be used in trytes.
+     */
     static ALPHABET: string;
     /**
      * Create trytes from a string.

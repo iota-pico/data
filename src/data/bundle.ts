@@ -11,7 +11,13 @@ import { TryteNumber } from "./tryteNumber";
  * A class for handling bundles.
  */
 export class Bundle {
+    /**
+     * The transactions that form the bundle.
+     */
     public transactions: Transaction[];
+    /**
+     * The include state for the items in the bundle, populated if required during getTransfers.
+     */
     public inclusionState: boolean;
 
     /**

@@ -6,11 +6,17 @@ import { Trytes } from "./trytes";
  * A class for handling addresses.
  */
 export class Address {
-    /* The valid length for a tag without a checksum */
+    /**
+     * The length for a valid address without checksum (81).
+     */
     public static readonly LENGTH: number = 81;
-    /* The valid length for a checksum */
+    /**
+     * The length for an address checksum (9).
+     */
     public static readonly LENGTH_CHECKSUM: number = 9;
-    /* The valid length for a tag with a checksum */
+    /**
+     * The length for valid address with checksum (90).
+     */
     public static readonly LENGTH_WITH_CHECKSUM: number = Address.LENGTH + Address.LENGTH_CHECKSUM;
 
     /* @internal */

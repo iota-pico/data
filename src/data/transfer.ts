@@ -9,9 +9,21 @@ import { Trytes } from "./trytes";
  * A class for handling transfers.
  */
 export class Transfer {
+    /**
+     * The address to send the transfer to.
+     */
     public address: Address;
+    /**
+     * The value to send.
+     */
     public value: number;
+    /**
+     * Message to include with the transfer.
+     */
     public message: Trytes;
+    /**
+     * Tag for the transfer.
+     */
     public tag: Tag;
 
     /* @internal */

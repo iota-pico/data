@@ -33,8 +33,11 @@ A class for handling addresses.
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/address.ts:10](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/address.ts#L10)*
+*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/address.ts#L12)*
 
+
+
+The length for a valid address without checksum (81).
 
 
 
@@ -47,8 +50,11 @@ ___
 
 **●  LENGTH_CHECKSUM**:  *`number`*  = 9
 
-*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/address.ts#L12)*
+*Defined in [data/address.ts:16](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/address.ts#L16)*
 
+
+
+The length for an address checksum (9).
 
 
 
@@ -61,8 +67,11 @@ ___
 
 **●  LENGTH_WITH_CHECKSUM**:  *`number`*  =  Address.LENGTH + Address.LENGTH_CHECKSUM
 
-*Defined in [data/address.ts:14](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/address.ts#L14)*
+*Defined in [data/address.ts:20](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/address.ts#L20)*
 
+
+
+The length for valid address with checksum (90).
 
 
 
@@ -79,7 +88,7 @@ ___
 
 
 
-*Defined in [data/address.ts:75](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/address.ts#L75)*
+*Defined in [data/address.ts:81](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/address.ts#L81)*
 
 
 
@@ -106,7 +115,7 @@ ___
 
 
 
-*Defined in [data/address.ts:55](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/address.ts#L55)*
+*Defined in [data/address.ts:61](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/address.ts#L61)*
 
 
 
@@ -133,7 +142,7 @@ ___
 
 
 
-*Defined in [data/address.ts:63](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/address.ts#L63)*
+*Defined in [data/address.ts:69](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/address.ts#L69)*
 
 
 
@@ -160,7 +169,7 @@ ___
 
 
 
-*Defined in [data/address.ts:32](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/address.ts#L32)*
+*Defined in [data/address.ts:38](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/address.ts#L38)*
 
 
 

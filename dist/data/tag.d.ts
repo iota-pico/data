@@ -3,7 +3,13 @@ import { Trytes } from "./trytes";
  * A class for handling tags.
  */
 export declare class Tag {
+    /**
+     * The length of a valid tag (27).
+     */
     static readonly LENGTH: number;
+    /**
+     * An empty tag all 9s.
+     */
     static readonly EMPTY: Tag;
     /**
      * Create tag from trytes.

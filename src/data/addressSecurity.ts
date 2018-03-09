@@ -1,6 +1,5 @@
 /**
  * Represents an enum for the address security values.
- * @interface
  */
 export enum AddressSecurity {
     low =  1,

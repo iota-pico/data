@@ -6,9 +6,13 @@ import { Trytes } from "./trytes";
  * A class for handling hashes.
  */
 export class Hash {
-    /* The valid length for a hash */
+    /**
+     * The length for a valid hash (81).
+     */
     public static readonly LENGTH: number = 81;
-    /* An empty hash */
+    /**
+     * An empty hash all 9s.
+     */
     public static readonly EMPTY: Hash = Hash.fromTrytes(Trytes.fromString("9".repeat(Hash.LENGTH)));
 
     /* @internal */

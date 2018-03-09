@@ -5,9 +5,21 @@ import { Trytes } from "./trytes";
  * A class for handling transfers.
  */
 export declare class Transfer {
+    /**
+     * The address to send the transfer to.
+     */
     address: Address;
+    /**
+     * The value to send.
+     */
     value: number;
+    /**
+     * Message to include with the transfer.
+     */
     message: Trytes;
+    /**
+     * Tag for the transfer.
+     */
     tag: Tag;
     /**
      * Create instance of transfer from parameters.

@@ -8,9 +8,13 @@ import { Trytes } from "./trytes";
  * A class for handling tryte number.
  */
 export class TryteNumber {
-    /* An 9 length tryte */
+    /**
+     * Length of a number that uses 9 trytes.
+     */
     public static readonly LENGTH_9: number = 9;
-    /* An empty 9 length tryte number */
+    /**
+     * An emnpty 9 length tryte number.
+     */
     public static readonly EMPTY_9: TryteNumber = TryteNumber.fromNumber(0, TryteNumber.LENGTH_9);
 
     /* @internal */

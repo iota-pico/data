@@ -3,8 +3,17 @@ import { Trytes } from "./trytes";
  * A class for handling addresses.
  */
 export declare class Address {
+    /**
+     * The length for a valid address without checksum (81).
+     */
     static readonly LENGTH: number;
+    /**
+     * The length for an address checksum (9).
+     */
     static readonly LENGTH_CHECKSUM: number;
+    /**
+     * The length for valid address with checksum (90).
+     */
     static readonly LENGTH_WITH_CHECKSUM: number;
     /**
      * Create address from trytes.

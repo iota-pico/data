@@ -3,7 +3,13 @@ import { Trytes } from "./trytes";
  * A class for handling hashes.
  */
 export declare class Hash {
+    /**
+     * The length for a valid hash (81).
+     */
     static readonly LENGTH: number;
+    /**
+     * An empty hash all 9s.
+     */
     static readonly EMPTY: Hash;
     /**
      * Create hash from trytes.

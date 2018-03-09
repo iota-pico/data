@@ -8,9 +8,21 @@ import { AddressSecurity } from "./addressSecurity";
  * A class for handling inputs.
  */
 export class Input {
+    /**
+     * The address used for a transfer input.
+     */
     public address: Address;
+    /**
+     * The security level of the address.
+     */
     public security: AddressSecurity;
+    /**
+     * The index of the address from the seed.
+     */
     public keyIndex: number;
+    /**
+     * The balance of the input.
+     */
     public balance: number;
 
     /* @internal */

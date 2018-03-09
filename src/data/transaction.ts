@@ -11,32 +11,83 @@ import { Trytes } from "./trytes";
  * A class for handling transactions.
  */
 export class Transaction {
-    /* The valid length for a transaction */
+    /**
+     * The length of a valid transaction (2673).
+     */
     public static readonly LENGTH: number = 2673;
 
-    /* Check value length */
+    /**
+     * The length of a valid check value (16).
+     */
     public static readonly CHECK_VALUE_LENGTH: number = 16;
 
-    /* Additional check value always all 9s */
+    /**
+     * The check value for bundles all 9s.
+     */
     public static readonly CHECK_VALUE: string = "9".repeat(Transaction.CHECK_VALUE_LENGTH);
 
     /* @internal */
     private static readonly EMPTY_11: TryteNumber = TryteNumber.fromNumber(0, 11);
 
+    /**
+     * The signature message fragment for the transaction.
+     */
     public signatureMessageFragment: SignatureMessageFragment;
+    /**
+     * The address for the transaction.
+     */
     public address: Address;
+    /**
+     * The value for the transaction.
+     */
     public value: TryteNumber;
+    /**
+     * The obsolete tag for the transaction.
+     */
     public obsoleteTag: Tag;
+    /**
+     * The timestamp for the transaction.
+     */
     public timestamp: TryteNumber;
+    /**
+     * The current index for the transaction.
+     */
     public currentIndex: TryteNumber;
+    /**
+     * The last index for the transaction bundle.
+     */
     public lastIndex: TryteNumber;
+    /**
+     * The bundle hash for the transaction.
+     */
     public bundle: Hash;
+    /**
+     * The trunk transaction for the transaction.
+     */
     public trunkTransaction: Hash;
+    /**
+     * The branch transaction for the transaction.
+     */
     public branchTransaction: Hash;
+    /**
+     * The tag for the transaction.
+     */
     public tag: Tag;
+    /**
+     * The attachment timestamp for the transaction.
+     */
     public attachmentTimestamp: TryteNumber;
+    /**
+     * The attachment timestamp lower bound for the transaction.
+     */
     public attachmentTimestampLowerBound: TryteNumber;
+    /**
+     * The attachment timestamp upper bound for the transaction.
+     */
     public attachmentTimestampUpperBound: TryteNumber;
+    /**
+     * The nonce for the transaction.
+     */
     public nonce: Tag;
 
     /* @internal */

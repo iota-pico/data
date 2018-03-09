@@ -31,8 +31,11 @@ A class for handling tags.
 
 **●  EMPTY**:  *[Tag](tag.md)*  =  Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)))
 
-*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/tag.ts#L12)*
+*Defined in [data/tag.ts:16](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/tag.ts#L16)*
 
+
+
+An empty tag all 9s.
 
 
 
@@ -45,8 +48,11 @@ ___
 
 **●  LENGTH**:  *`number`*  = 27
 
-*Defined in [data/tag.ts:10](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/tag.ts#L10)*
+*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/tag.ts#L12)*
 
+
+
+The length of a valid tag (27).
 
 
 
@@ -63,7 +69,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:57](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/tag.ts#L57)*
+*Defined in [data/tag.ts:61](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/tag.ts#L61)*
 
 
 
@@ -90,7 +96,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:49](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/tag.ts#L49)*
+*Defined in [data/tag.ts:53](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/tag.ts#L53)*
 
 
 
@@ -117,7 +123,7 @@ ___
 
 
 
-*Defined in [data/tag.ts:27](https://github.com/iotaeco/iota-pico-data/blob/94a854f/src/data/tag.ts#L27)*
+*Defined in [data/tag.ts:31](https://github.com/iotaeco/iota-pico-data/blob/b5a374b/src/data/tag.ts#L31)*
 
 
 

@@ -6,7 +6,13 @@ import { Transaction } from "./transaction";
  * A class for handling bundles.
  */
 export declare class Bundle {
+    /**
+     * The transactions that form the bundle.
+     */
     transactions: Transaction[];
+    /**
+     * The include state for the items in the bundle, populated if required during getTransfers.
+     */
     inclusionState: boolean;
     /**
      * Create a new instance of Bundle.

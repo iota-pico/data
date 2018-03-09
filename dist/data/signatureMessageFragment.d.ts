@@ -3,7 +3,13 @@ import { Trytes } from "./trytes";
  * A class for handling signature message fragments.
  */
 export declare class SignatureMessageFragment {
+    /**
+     * The length of a valid signature message fragment (2187)
+     */
     static readonly LENGTH: number;
+    /**
+     * An empty signature message fragment all 9s.
+     */
     static readonly EMPTY: SignatureMessageFragment;
     /**
      * Create signature fragment from trytes.

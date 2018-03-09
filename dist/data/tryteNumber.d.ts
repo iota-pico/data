@@ -3,7 +3,13 @@ import { Trytes } from "./trytes";
  * A class for handling tryte number.
  */
 export declare class TryteNumber {
+    /**
+     * Length of a number that uses 9 trytes.
+     */
     static readonly LENGTH_9: number;
+    /**
+     * An emnpty 9 length tryte number.
+     */
     static readonly EMPTY_9: TryteNumber;
     /**
      * Create tryte number from number.
