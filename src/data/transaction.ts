@@ -212,14 +212,6 @@ export class Transaction {
      * @return The transaction as trytes.
      */
     public toTrytes(): Trytes {
-        return Trytes.fromString(this.toString());
-    }
-
-    /**
-     * Get the string view of the object.
-     * @returns string of the trytes.
-     */
-    public toString(): string {
         if (!ObjectHelper.isType(this.signatureMessageFragment, SignatureMessageFragment)) {
             throw new DataError(`The signatureMessageFragment must be set to create transaction trytes`, { signatureMessageFragment: this.signatureMessageFragment });
         }
@@ -270,6 +262,28 @@ export class Transaction {
             throw new DataError(`The trytes must be ${Transaction.LENGTH} in length ${length}`, { length });
         }
 
-        return trytes;
+        return Trytes.fromString(trytes);
+    }
+
+    /**
+     * Get the string view of the object.
+     * @returns string view of the object.
+     */
+    public toString(): string {
+        return `signatureMessageFragment: ${this.signatureMessageFragment.toTrytes().toString()}` +
+            `address: ${(this.address || Address.EMPTY).toTrytes().toString()}` +
+            `value ${(this.value || Transaction.EMPTY_11).toString()}` +
+            `obsoleteTag: ${(this.obsoleteTag || Tag.EMPTY).toTrytes().toString()}` +
+            `timestamp: ${(this.timestamp || TryteNumber.EMPTY_9).toTrytes().toString()}` +
+            `currentIndex: ${(this.currentIndex || TryteNumber.EMPTY_9).toTrytes().toString()}` +
+            `lastIndex: ${(this.lastIndex || TryteNumber.EMPTY_9).toTrytes().toString()}` +
+            `bundle: ${(this.bundle || Hash.EMPTY).toTrytes().toString()}` +
+            `trunkTransaction: ${(this.trunkTransaction || Hash.EMPTY).toTrytes().toString()}` +
+            `branchTransaction: ${(this.branchTransaction || Hash.EMPTY).toTrytes().toString()}` +
+            `tag: ${(this.tag || this.obsoleteTag || Tag.EMPTY).toTrytes().toString()}` +
+            `attachmentTimestamp: ${(this.attachmentTimestamp || TryteNumber.EMPTY_9).toTrytes().toString()}` +
+            `attachmentTimestampLowerBound: ${(this.attachmentTimestampLowerBound || TryteNumber.EMPTY_9).toTrytes().toString()}` +
+            `attachmentTimestampUpperBound: ${(this.attachmentTimestampUpperBound || TryteNumber.EMPTY_9).toTrytes().toString()}` +
+            `nonce: ${(this.nonce || Tag.EMPTY).toTrytes().toString()}`;
     }
 }

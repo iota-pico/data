@@ -19,6 +19,11 @@ export class Address {
      */
     public static readonly LENGTH_WITH_CHECKSUM: number = Address.LENGTH + Address.LENGTH_CHECKSUM;
 
+    /**
+     * An empty hash all 9s.
+     */
+    public static readonly EMPTY: Address = Address.fromTrytes(Trytes.fromString("9".repeat(Address.LENGTH)));
+
     /* @internal */
     private readonly _addressTrytes: string;
     /* @internal */
