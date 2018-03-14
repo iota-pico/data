@@ -105,7 +105,7 @@ export class TryteNumber {
      * @returns string of the trytes.
      */
     public toString(): string {
-        return this.toNumber().toString();
+        return this._trytes;
     }
 
     /**

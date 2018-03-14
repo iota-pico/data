@@ -16,6 +16,10 @@ export declare class Address {
      */
     static readonly LENGTH_WITH_CHECKSUM: number;
     /**
+     * An empty hash all 9s.
+     */
+    static readonly EMPTY: Address;
+    /**
      * Create address from trytes.
      * @param address The trytes to create the address from.
      * @returns An instance of Address.

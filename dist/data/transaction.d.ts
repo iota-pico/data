@@ -113,7 +113,7 @@ export declare class Transaction {
     toTrytes(): Trytes;
     /**
      * Get the string view of the object.
-     * @returns string of the trytes.
+     * @returns string view of the object.
      */
     toString(): string;
 }

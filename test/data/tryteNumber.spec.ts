@@ -67,7 +67,7 @@ describe("TryteNumber", () => {
     describe("toString", () => {
         it("can succeed", () => {
             const obj = TryteNumber.fromNumber(20);
-            chai.expect(obj.toString()).to.equal("20");
+            chai.expect(obj.toString()).to.equal("TA9999999");
         });
     });
 

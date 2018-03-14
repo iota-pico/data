@@ -270,20 +270,22 @@ export class Transaction {
      * @returns string view of the object.
      */
     public toString(): string {
-        return `signatureMessageFragment: ${this.signatureMessageFragment.toTrytes().toString()}` +
-            `address: ${(this.address || Address.EMPTY).toTrytes().toString()}` +
-            `value ${(this.value || Transaction.EMPTY_11).toString()}` +
-            `obsoleteTag: ${(this.obsoleteTag || Tag.EMPTY).toTrytes().toString()}` +
-            `timestamp: ${(this.timestamp || TryteNumber.EMPTY_9).toTrytes().toString()}` +
-            `currentIndex: ${(this.currentIndex || TryteNumber.EMPTY_9).toTrytes().toString()}` +
-            `lastIndex: ${(this.lastIndex || TryteNumber.EMPTY_9).toTrytes().toString()}` +
-            `bundle: ${(this.bundle || Hash.EMPTY).toTrytes().toString()}` +
-            `trunkTransaction: ${(this.trunkTransaction || Hash.EMPTY).toTrytes().toString()}` +
-            `branchTransaction: ${(this.branchTransaction || Hash.EMPTY).toTrytes().toString()}` +
-            `tag: ${(this.tag || this.obsoleteTag || Tag.EMPTY).toTrytes().toString()}` +
-            `attachmentTimestamp: ${(this.attachmentTimestamp || TryteNumber.EMPTY_9).toTrytes().toString()}` +
-            `attachmentTimestampLowerBound: ${(this.attachmentTimestampLowerBound || TryteNumber.EMPTY_9).toTrytes().toString()}` +
-            `attachmentTimestampUpperBound: ${(this.attachmentTimestampUpperBound || TryteNumber.EMPTY_9).toTrytes().toString()}` +
-            `nonce: ${(this.nonce || Tag.EMPTY).toTrytes().toString()}`;
+        return `{
+\tsignatureMessageFragment: "${(this.signatureMessageFragment || SignatureMessageFragment.EMPTY).toTrytes().toString()}"
+\taddress: "${(this.address || Address.EMPTY).toTrytes().toString()}"
+\tvalue: ${(this.value || Transaction.EMPTY_11).toNumber()}
+\tobsoleteTag: "${(this.obsoleteTag || Tag.EMPTY).toTrytes().toString()}"
+\ttimestamp: ${(this.timestamp || TryteNumber.EMPTY_9).toNumber()}
+\tcurrentIndex: ${(this.currentIndex || TryteNumber.EMPTY_9).toNumber()}
+\tlastIndex: ${(this.lastIndex || TryteNumber.EMPTY_9).toNumber()}
+\tbundle: "${(this.bundle || Hash.EMPTY).toTrytes().toString()}"
+\ttrunkTransaction: "${(this.trunkTransaction || Hash.EMPTY).toTrytes().toString()}"
+\tbranchTransaction: "${(this.branchTransaction || Hash.EMPTY).toTrytes().toString()}"
+\ttag: "${(this.tag || this.obsoleteTag || Tag.EMPTY).toTrytes().toString()}"
+\tattachmentTimestamp: ${(this.attachmentTimestamp || TryteNumber.EMPTY_9).toNumber()}
+\tattachmentTimestampLowerBound: ${(this.attachmentTimestampLowerBound || TryteNumber.EMPTY_9).toNumber()}
+\tattachmentTimestampUpperBound: ${(this.attachmentTimestampUpperBound || TryteNumber.EMPTY_9).toNumber()}
+\tnonce: "${(this.nonce || Tag.EMPTY).toTrytes().toString()}"
+}`;
     }
 }

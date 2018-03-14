@@ -30,6 +30,7 @@ A data implementation of an error.
 ### Properties
 
 * [additional](dataerror.md#additional)
+* [domain](dataerror.md#domain)
 * [innerError](dataerror.md#innererror)
 * [message](dataerror.md#message)
 * [name](dataerror.md#name)
@@ -51,13 +52,13 @@ A data implementation of an error.
 ### ⊕ **new DataError**(message: *`string`*, additional?: *`object`*, innerError?: *`Error`*): [DataError](dataerror.md)
 
 
-*Inherited from CoreError.__constructor*
+*Overrides CoreError.__constructor*
 
-*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:14*
+*Defined in [error/dataError.ts:6](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/error/dataError.ts#L6)*
 
 
 
-Create an instance of CoreError.
+Create an instance of DataError.
 
 
 **Parameters:**
@@ -86,7 +87,7 @@ Create an instance of CoreError.
 
 *Inherited from CoreError.additional*
 
-*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:8*
+*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:12*
 
 
 
@@ -104,6 +105,25 @@ Additional details about the error.
 
 ___
 
+<a id="domain"></a>
+
+###  domain
+
+**●  domain**:  *`string`* 
+
+*Inherited from CoreError.domain*
+
+*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:8*
+
+
+
+The domain of the error.
+
+
+
+
+___
+
 <a id="innererror"></a>
 
 ### «Optional» innerError
@@ -112,7 +132,7 @@ ___
 
 *Inherited from CoreError.innerError*
 
-*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:14*
+*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:18*
 
 
 
@@ -183,7 +203,7 @@ ___
 
 *Inherited from CoreError.format*
 
-*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:33*
+*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:37*
 
 
 
@@ -210,7 +230,7 @@ ___
 
 *Inherited from CoreError.isError*
 
-*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:29*
+*Defined in D:/Workarea/iotaeco/iota-pico-data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:33*
 
 
 

@@ -11,6 +11,7 @@ A class for handling addresses.
 
 ### Properties
 
+* [EMPTY](address.md#empty)
 * [LENGTH](address.md#length)
 * [LENGTH_CHECKSUM](address.md#length_checksum)
 * [LENGTH_WITH_CHECKSUM](address.md#length_with_checksum)
@@ -27,13 +28,30 @@ A class for handling addresses.
 
 ---
 ## Properties
+<a id="empty"></a>
+
+### «Static» EMPTY
+
+**●  EMPTY**:  *[Address](address.md)*  =  Address.fromTrytes(Trytes.fromString("9".repeat(Address.LENGTH)))
+
+*Defined in [data/address.ts:25](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L25)*
+
+
+
+An empty hash all 9s.
+
+
+
+
+___
+
 <a id="length"></a>
 
 ### «Static» LENGTH
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/e821738/src/data/address.ts#L12)*
+*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L12)*
 
 
 
@@ -50,7 +68,7 @@ ___
 
 **●  LENGTH_CHECKSUM**:  *`number`*  = 9
 
-*Defined in [data/address.ts:16](https://github.com/iotaeco/iota-pico-data/blob/e821738/src/data/address.ts#L16)*
+*Defined in [data/address.ts:16](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L16)*
 
 
 
@@ -67,7 +85,7 @@ ___
 
 **●  LENGTH_WITH_CHECKSUM**:  *`number`*  =  Address.LENGTH + Address.LENGTH_CHECKSUM
 
-*Defined in [data/address.ts:20](https://github.com/iotaeco/iota-pico-data/blob/e821738/src/data/address.ts#L20)*
+*Defined in [data/address.ts:20](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L20)*
 
 
 
@@ -88,7 +106,7 @@ ___
 
 
 
-*Defined in [data/address.ts:81](https://github.com/iotaeco/iota-pico-data/blob/e821738/src/data/address.ts#L81)*
+*Defined in [data/address.ts:86](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L86)*
 
 
 
@@ -115,7 +133,7 @@ ___
 
 
 
-*Defined in [data/address.ts:61](https://github.com/iotaeco/iota-pico-data/blob/e821738/src/data/address.ts#L61)*
+*Defined in [data/address.ts:66](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L66)*
 
 
 
@@ -142,7 +160,7 @@ ___
 
 
 
-*Defined in [data/address.ts:69](https://github.com/iotaeco/iota-pico-data/blob/e821738/src/data/address.ts#L69)*
+*Defined in [data/address.ts:74](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L74)*
 
 
 
@@ -169,7 +187,7 @@ ___
 
 
 
-*Defined in [data/address.ts:38](https://github.com/iotaeco/iota-pico-data/blob/e821738/src/data/address.ts#L38)*
+*Defined in [data/address.ts:43](https://github.com/iotaeco/iota-pico-data/blob/5656943/src/data/address.ts#L43)*
 
 
 
