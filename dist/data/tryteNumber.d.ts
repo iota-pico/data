@@ -8,7 +8,7 @@ export declare class TryteNumber {
      */
     static readonly LENGTH_9: number;
     /**
-     * An emnpty 9 length tryte number.
+     * An empty 9 length tryte number.
      */
     static readonly EMPTY_9: TryteNumber;
     /**

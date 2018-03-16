@@ -94,7 +94,7 @@ class TryteNumber {
  */
 TryteNumber.LENGTH_9 = 9;
 /**
- * An emnpty 9 length tryte number.
+ * An empty 9 length tryte number.
  */
 TryteNumber.EMPTY_9 = TryteNumber.fromNumber(0, TryteNumber.LENGTH_9);
 exports.TryteNumber = TryteNumber;

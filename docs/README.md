@@ -26,6 +26,7 @@
 * [Trits](classes/trits.md)
 * [TryteNumber](classes/trytenumber.md)
 * [Trytes](classes/trytes.md)
+* [UnitsHelper](classes/unitshelper.md)
 
 
 ### Interfaces
