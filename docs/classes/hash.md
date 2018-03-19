@@ -31,7 +31,7 @@ A class for handling hashes.
 
 **●  EMPTY**:  *[Hash](hash.md)*  =  Hash.fromTrytes(Trytes.fromString("9".repeat(Hash.LENGTH)))
 
-*Defined in [data/hash.ts:16](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/hash.ts#L16)*
+*Defined in [data/hash.ts:16](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/hash.ts#L16)*
 
 
 
@@ -48,7 +48,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/hash.ts#L12)*
+*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/hash.ts#L12)*
 
 
 
@@ -69,7 +69,7 @@ ___
 
 
 
-*Defined in [data/hash.ts:56](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/hash.ts#L56)*
+*Defined in [data/hash.ts:56](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/hash.ts#L56)*
 
 
 
@@ -96,7 +96,7 @@ ___
 
 
 
-*Defined in [data/hash.ts:48](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/hash.ts#L48)*
+*Defined in [data/hash.ts:48](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/hash.ts#L48)*
 
 
 
@@ -123,7 +123,7 @@ ___
 
 
 
-*Defined in [data/hash.ts:31](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/hash.ts#L31)*
+*Defined in [data/hash.ts:31](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/hash.ts#L31)*
 
 
 

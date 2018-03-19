@@ -34,7 +34,7 @@ A class for handling tryte number.
 
 **●  EMPTY_9**:  *[TryteNumber](trytenumber.md)*  =  TryteNumber.fromNumber(0, TryteNumber.LENGTH_9)
 
-*Defined in [data/tryteNumber.ts:18](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L18)*
+*Defined in [data/tryteNumber.ts:18](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L18)*
 
 
 
@@ -51,7 +51,7 @@ ___
 
 **●  LENGTH_9**:  *`number`*  = 9
 
-*Defined in [data/tryteNumber.ts:14](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L14)*
+*Defined in [data/tryteNumber.ts:14](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L14)*
 
 
 
@@ -72,7 +72,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:99](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L99)*
+*Defined in [data/tryteNumber.ts:99](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L99)*
 
 
 
@@ -99,7 +99,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:107](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L107)*
+*Defined in [data/tryteNumber.ts:107](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L107)*
 
 
 
@@ -126,7 +126,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:91](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L91)*
+*Defined in [data/tryteNumber.ts:91](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L91)*
 
 
 
@@ -153,7 +153,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:115](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L115)*
+*Defined in [data/tryteNumber.ts:115](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L115)*
 
 
 
@@ -180,7 +180,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:34](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L34)*
+*Defined in [data/tryteNumber.ts:34](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L34)*
 
 
 
@@ -216,7 +216,7 @@ ___
 
 
 
-*Defined in [data/tryteNumber.ts:66](https://github.com/iotaeco/iota-pico-data/blob/f0f6425/src/data/tryteNumber.ts#L66)*
+*Defined in [data/tryteNumber.ts:66](https://github.com/iotaeco/iota-pico-data/blob/4b85ad8/src/data/tryteNumber.ts#L66)*
 
 
 
