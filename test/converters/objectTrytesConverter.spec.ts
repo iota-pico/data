@@ -55,6 +55,11 @@ describe("ObjectTrytesConverter", () => {
             chai.expect(obj.to("This is a test\r\nOn multiple lines").toString()).to.equal("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDKCFDKCBDYBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGDGA");
         });
 
+        it("can succeed converting with arrays", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.to([1, 2, 3]).toString()).to.equal("JCVAQAWAQAXALC");
+        });
+
         it("can succeed converting with objects", () => {
             const obj = new ObjectTrytesConverter();
             chai.expect(obj.to({ a: "foo", b: [1, 2, 3], c: true }).toString()).to.equal("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBHDFDIDTCQD");
@@ -115,6 +120,11 @@ describe("ObjectTrytesConverter", () => {
         it("can succeed converting with multiline string", () => {
             const obj = new ObjectTrytesConverter();
             chai.expect(obj.from(Trytes.fromString("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDKCFDKCBDYBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGDGA"))).to.equal("This is a test\r\nOn multiple lines");
+        });
+
+        it("can succeed converting with arrays", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.fromString("JCVAQAWAQAXALC"))).to.deep.equal([1, 2, 3]);
         });
 
         it("can succeed converting with objects", () => {
