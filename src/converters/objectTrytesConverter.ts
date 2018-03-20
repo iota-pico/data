@@ -48,9 +48,11 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
             throw new DataError("The trytes do not represent an object");
         }
 
-        // The start and end must be either {} or "" to represent a JSON object
-        if (!((ascii[0] === "{" && ascii[ascii.length - 1] === "}") || (ascii[0] === "\"" && ascii[ascii.length - 1] === "\""))) {
-            throw new DataError("The trytes do not represent an object");
+        // The start and end must be either {}, [] or "" to represent a JSON object
+        if (!((ascii[0] === "{" && ascii[ascii.length - 1] === "}") ||
+              (ascii[0] === "[" && ascii[ascii.length - 1] === "]") ||
+              (ascii[0] === "\"" && ascii[ascii.length - 1] === "\""))) {
+            throw new DataError("The trytes do not represent an object", { ascii });
         }
 
         const decoded = StringHelper.decodeNonASCII(ascii);
