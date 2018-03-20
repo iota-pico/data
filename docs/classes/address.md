@@ -34,7 +34,7 @@ A class for handling addresses.
 
 **●  EMPTY**:  *[Address](address.md)*  =  Address.fromTrytes(Trytes.fromString("9".repeat(Address.LENGTH)))
 
-*Defined in [data/address.ts:25](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L25)*
+*Defined in [data/address.ts:25](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L25)*
 
 
 
@@ -51,7 +51,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L12)*
+*Defined in [data/address.ts:12](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L12)*
 
 
 
@@ -68,7 +68,7 @@ ___
 
 **●  LENGTH_CHECKSUM**:  *`number`*  = 9
 
-*Defined in [data/address.ts:16](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L16)*
+*Defined in [data/address.ts:16](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L16)*
 
 
 
@@ -85,7 +85,7 @@ ___
 
 **●  LENGTH_WITH_CHECKSUM**:  *`number`*  =  Address.LENGTH + Address.LENGTH_CHECKSUM
 
-*Defined in [data/address.ts:20](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L20)*
+*Defined in [data/address.ts:20](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L20)*
 
 
 
@@ -106,7 +106,7 @@ ___
 
 
 
-*Defined in [data/address.ts:86](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L86)*
+*Defined in [data/address.ts:86](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L86)*
 
 
 
@@ -133,7 +133,7 @@ ___
 
 
 
-*Defined in [data/address.ts:66](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L66)*
+*Defined in [data/address.ts:66](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L66)*
 
 
 
@@ -160,7 +160,7 @@ ___
 
 
 
-*Defined in [data/address.ts:74](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L74)*
+*Defined in [data/address.ts:74](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L74)*
 
 
 
@@ -187,7 +187,7 @@ ___
 
 
 
-*Defined in [data/address.ts:43](https://github.com/iotaeco/iota-pico-data/blob/af0ab77/src/data/address.ts#L43)*
+*Defined in [data/address.ts:43](https://github.com/iotaeco/iota-pico-data/blob/0635260/src/data/address.ts#L43)*
 
 
 
