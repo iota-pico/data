@@ -127,7 +127,7 @@ export class Trits {
      * Add two trits together.
      * @param first The first trit.
      * @param second The second trit.
-     * @return New trit which is the addition of the a + b.
+     * @returns New trit which is the addition of the a + b.
      */
     public static add(first: Trits, second: Trits): Trits {
         if (!ObjectHelper.isType(first, Trits)) {

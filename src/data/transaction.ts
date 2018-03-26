@@ -111,7 +111,7 @@ export class Transaction {
      * @param attachmentTimestampLowerBound The attachment timestamp lower bound.
      * @param attachmentTimestampUpperBound  The attachment timestamp upper bound.
      * @param nonce The nonce.
-     * @return New instance of transaction.
+     * @returns New instance of transaction.
      */
     public static fromParams(signatureMessageFragment: SignatureMessageFragment,
                              address: Address,
@@ -209,7 +209,7 @@ export class Transaction {
 
     /**
      * Convert the transaction to trytes.
-     * @return The transaction as trytes.
+     * @returns The transaction as trytes.
      */
     public toTrytes(): Trytes {
         if (!ObjectHelper.isType(this.signatureMessageFragment, SignatureMessageFragment)) {

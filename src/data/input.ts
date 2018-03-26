@@ -35,7 +35,7 @@ export class Input {
      * @param security The address security.
      * @param keyIndex The key index.
      * @param balance The balance of the address.
-     * @return New instance of Input.
+     * @returns New instance of Input.
      */
     public static fromParams(address: Address,
                              security: AddressSecurity,

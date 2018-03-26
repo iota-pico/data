@@ -36,7 +36,7 @@ export class Transfer {
      * @param value The value.
      * @param messsage The message for the transfer.
      * @param tag The tag.
-     * @return New instance of Transfer.
+     * @returns New instance of Transfer.
      */
     public static fromParams(address: Address,
                              value: number,

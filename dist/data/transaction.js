@@ -31,7 +31,7 @@ class Transaction {
      * @param attachmentTimestampLowerBound The attachment timestamp lower bound.
      * @param attachmentTimestampUpperBound  The attachment timestamp upper bound.
      * @param nonce The nonce.
-     * @return New instance of transaction.
+     * @returns New instance of transaction.
      */
     static fromParams(signatureMessageFragment, address, value, obsoleteTag, timestamp, currentIndex, lastIndex, bundle, trunkTransaction, branchTransaction, tag, attachmentTimestamp, attachmentTimestampLowerBound, attachmentTimestampUpperBound, nonce) {
         const tx = new Transaction();
@@ -107,7 +107,7 @@ class Transaction {
     }
     /**
      * Convert the transaction to trytes.
-     * @return The transaction as trytes.
+     * @returns The transaction as trytes.
      */
     toTrytes() {
         if (!objectHelper_1.ObjectHelper.isType(this.signatureMessageFragment, signatureMessageFragment_1.SignatureMessageFragment)) {

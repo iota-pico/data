@@ -31,7 +31,7 @@ export declare class Trits {
      * Add two trits together.
      * @param first The first trit.
      * @param second The second trit.
-     * @return New trit which is the addition of the a + b.
+     * @returns New trit which is the addition of the a + b.
      */
     static add(first: Trits, second: Trits): Trits;
     /**

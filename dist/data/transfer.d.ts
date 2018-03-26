@@ -27,7 +27,7 @@ export declare class Transfer {
      * @param value The value.
      * @param messsage The message for the transfer.
      * @param tag The tag.
-     * @return New instance of Transfer.
+     * @returns New instance of Transfer.
      */
     static fromParams(address: Address, value: number, message: Trytes, tag: Tag): Transfer;
 }

@@ -17,7 +17,7 @@ class Input {
      * @param security The address security.
      * @param keyIndex The key index.
      * @param balance The balance of the address.
-     * @return New instance of Input.
+     * @returns New instance of Input.
      */
     static fromParams(address, security, keyIndex, balance) {
         if (!objectHelper_1.ObjectHelper.isType(address, address_1.Address)) {

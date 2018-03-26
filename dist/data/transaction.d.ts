@@ -97,7 +97,7 @@ export declare class Transaction {
      * @param attachmentTimestampLowerBound The attachment timestamp lower bound.
      * @param attachmentTimestampUpperBound  The attachment timestamp upper bound.
      * @param nonce The nonce.
-     * @return New instance of transaction.
+     * @returns New instance of transaction.
      */
     static fromParams(signatureMessageFragment: SignatureMessageFragment, address: Address, value: number, obsoleteTag: Tag, timestamp: number, currentIndex: number, lastIndex: number, bundle: Hash, trunkTransaction: Hash, branchTransaction: Hash, tag: Tag, attachmentTimestamp: number, attachmentTimestampLowerBound: number, attachmentTimestampUpperBound: number, nonce: Tag): Transaction;
     /**
@@ -108,7 +108,7 @@ export declare class Transaction {
     static fromTrytes(trytes: Trytes): Transaction;
     /**
      * Convert the transaction to trytes.
-     * @return The transaction as trytes.
+     * @returns The transaction as trytes.
      */
     toTrytes(): Trytes;
     /**
