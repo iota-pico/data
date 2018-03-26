@@ -54,7 +54,7 @@ describe("AsciiTrytesConverter", () => {
             chai.expect(() => obj.from(null)).to.throw("is empty");
         });
 
-        it("can fail to convert with an an object that is not trytes", () => {
+        it("can fail to convert with an object that is not trytes", () => {
             const obj = new AsciiTrytesConverter();
             chai.expect(() => obj.from(<any>{})).to.throw("is empty");
         });
