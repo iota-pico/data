@@ -54,7 +54,7 @@ A data implementation of an error.
 
 *Overrides CoreError.__constructor*
 
-*Defined in [error/dataError.ts:6](https://github.com/iotaeco/iota-pico-data/blob/830c7c0/src/error/dataError.ts#L6)*
+*Defined in [error/dataError.ts:6](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/error/dataError.ts#L6)*
 
 
 

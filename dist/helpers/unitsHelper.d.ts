@@ -17,4 +17,11 @@ export declare class UnitsHelper {
      * @returns The converted value.
      */
     static convertUnits(value: string, unitFrom: string, unitTo: string): string;
+    /**
+     * Format the iota value as its best representation.
+     * @param value The value in iotas to format.
+     * @param maxDecimalPlaces The maximum number of decimal places to include.
+     * @returns The iota value formatted with units.
+     */
+    static format(value: string, maxDecimalPlaces?: number): string;
 }

@@ -103,4 +103,47 @@ export class UnitsHelper {
             return workingValue;
         }
     }
+
+    /**
+     * Format the iota value as its best representation.
+     * @param value The value in iotas to format.
+     * @param maxDecimalPlaces The maximum number of decimal places to include.
+     * @returns The iota value formatted with units.
+     */
+    public static format(value: string, maxDecimalPlaces: number = 0): string {
+        if (!NumberHelper.isIntegerString(value)) {
+            throw new DataError("The value must be a number formatted as a string");
+        }
+
+        if (!NumberHelper.isNumber(maxDecimalPlaces) || maxDecimalPlaces < 0) {
+            throw new DataError("The maxDecimalPlaces must be a number >= 0");
+        }
+
+        const checkLength = value.length;
+
+        let bestUnits = "i";
+        if (checkLength > 15) {
+            bestUnits = "Pi";
+        } else if (checkLength > 12) {
+            bestUnits = "Ti";
+        } else if (checkLength > 9) {
+            bestUnits = "Gi";
+        } else if (checkLength > 6) {
+            bestUnits = "Mi";
+        } else if (checkLength > 3) {
+            bestUnits = "Ki";
+        }
+
+        const converted = UnitsHelper.convertUnits(value, "i", bestUnits);
+
+        const parts = converted.split(".");
+        const major = parts[0];
+        let minor = "";
+
+        if (parts.length === 2 && maxDecimalPlaces > 0 && parts[1].length > maxDecimalPlaces) {
+            minor = parts[1].substr(0, maxDecimalPlaces);
+        }
+
+        return minor.length === 0 ? `${major} ${bestUnits}` : `${major}.${minor} ${bestUnits}`;
+    }
 }

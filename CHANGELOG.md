@@ -1,5 +1,7 @@
 # Changelog
 
+* Added UnitsHelper.format for formatting IOTA with units
+
 ## v0.9.2
 
 * Added support for root array in objectTrytesConverter
