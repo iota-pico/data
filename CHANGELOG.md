@@ -1,5 +1,7 @@
 # Changelog
 
+## v0.9.3
+
 * Added UnitsHelper.format for formatting IOTA with units
 
 ## v0.9.2

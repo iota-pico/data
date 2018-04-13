@@ -1,6 +1,6 @@
 {
     "name": "@iota-pico/data",
-    "version": "0.9.2",
+    "version": "0.9.3",
     "description": "IOTA Pico Framework Data Structures and Helpers",
     "typings": "dist/index.d.ts",
     "main": "dist/index.js",
@@ -47,7 +47,7 @@
         "dist": "npm-run-all build test pkg docs"
     },
     "dependencies": {
-        "@iota-pico/core": "^0.9.2"
+        "@iota-pico/core": "^0.9.3"
     },
     "devDependencies": {
         "@babel/core": "^7.0.0-beta.42",

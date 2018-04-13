@@ -31,7 +31,7 @@ Helper class for units conversion.
 
 
 
-*Defined in [helpers/unitsHelper.ts:29](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L29)*
+*Defined in [helpers/unitsHelper.ts:29](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L29)*
 
 
 
@@ -68,7 +68,7 @@ ___
 
 
 
-*Defined in [helpers/unitsHelper.ts:113](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L113)*
+*Defined in [helpers/unitsHelper.ts:113](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L113)*
 
 
 
@@ -111,7 +111,7 @@ Conversion table for units.
 
 **●  Gi**:  *`number`*  = 9
 
-*Defined in [helpers/unitsHelper.ts:16](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L16)*
+*Defined in [helpers/unitsHelper.ts:16](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L16)*
 
 
 
@@ -124,7 +124,7 @@ ___
 
 **●  Ki**:  *`number`*  = 3
 
-*Defined in [helpers/unitsHelper.ts:14](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L14)*
+*Defined in [helpers/unitsHelper.ts:14](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L14)*
 
 
 
@@ -137,7 +137,7 @@ ___
 
 **●  Mi**:  *`number`*  = 6
 
-*Defined in [helpers/unitsHelper.ts:15](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L15)*
+*Defined in [helpers/unitsHelper.ts:15](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L15)*
 
 
 
@@ -150,7 +150,7 @@ ___
 
 **●  Pi**:  *`number`*  = 15
 
-*Defined in [helpers/unitsHelper.ts:18](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L18)*
+*Defined in [helpers/unitsHelper.ts:18](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L18)*
 
 
 
@@ -163,7 +163,7 @@ ___
 
 **●  Ti**:  *`number`*  = 12
 
-*Defined in [helpers/unitsHelper.ts:17](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L17)*
+*Defined in [helpers/unitsHelper.ts:17](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L17)*
 
 
 
@@ -176,7 +176,7 @@ ___
 
 **●  i**:  *`number`*  = 0
 
-*Defined in [helpers/unitsHelper.ts:13](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/helpers/unitsHelper.ts#L13)*
+*Defined in [helpers/unitsHelper.ts:13](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/helpers/unitsHelper.ts#L13)*
 
 
 

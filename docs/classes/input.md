@@ -31,7 +31,7 @@ A class for handling inputs.
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in [data/input.ts:14](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/data/input.ts#L14)*
+*Defined in [data/input.ts:14](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L14)*
 
 
 
@@ -48,7 +48,7 @@ ___
 
 **●  balance**:  *`number`* 
 
-*Defined in [data/input.ts:26](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/data/input.ts#L26)*
+*Defined in [data/input.ts:26](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L26)*
 
 
 
@@ -65,7 +65,7 @@ ___
 
 **●  keyIndex**:  *`number`* 
 
-*Defined in [data/input.ts:22](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/data/input.ts#L22)*
+*Defined in [data/input.ts:22](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L22)*
 
 
 
@@ -82,7 +82,7 @@ ___
 
 **●  security**:  *[AddressSecurity](../enums/addresssecurity.md)* 
 
-*Defined in [data/input.ts:18](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/data/input.ts#L18)*
+*Defined in [data/input.ts:18](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L18)*
 
 
 
@@ -103,7 +103,7 @@ ___
 
 
 
-*Defined in [data/input.ts:40](https://github.com/iotaeco/iota-pico-data/blob/4950012/src/data/input.ts#L40)*
+*Defined in [data/input.ts:40](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L40)*
 
 
 
