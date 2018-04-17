@@ -140,8 +140,11 @@ export class UnitsHelper {
         const major = parts[0];
         let minor = "";
 
-        if (parts.length === 2 && maxDecimalPlaces > 0 && parts[1].length > maxDecimalPlaces) {
-            minor = parts[1].substr(0, maxDecimalPlaces);
+        if (parts.length === 2 && maxDecimalPlaces > 0) {
+            minor = parts[1];
+            if (minor.length > maxDecimalPlaces) {
+                minor = minor.substr(0, maxDecimalPlaces);
+            }
         }
 
         return minor.length === 0 ? `${major} ${bestUnits}` : `${major}.${minor} ${bestUnits}`;
