@@ -3,6 +3,7 @@
 ## v0.9.3
 
 * Added UnitsHelper.format for formatting IOTA with units
+* Fixed UnitsHelper.convertUnits to have no decimals places if unitTo is 'i'
 
 ## v0.9.2
 

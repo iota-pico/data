@@ -38,7 +38,7 @@ describe("UnitsHelper", () => {
 
         it("can convert from and to", () => {
             const tests: { value: string; from: string; to: string; expected: string }[] = [
-                { value: "1234.5678", from: "i", to: "i", expected: "1234.5678"},
+                { value: "1234.5678", from: "i", to: "i", expected: "1234"},
                 { value: "100", from: "Gi", to: "i", expected: "100000000000"},
                 { value: "10.1", from: "Gi", to: "i", expected: "10100000000"},
                 { value: "1", from: "i", to: "Ti", expected: "0.000000000001"},

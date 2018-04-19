@@ -47,12 +47,11 @@ export class UnitsHelper {
             throw new DataError(`The unitTo must be one of [${Object.keys(UnitsHelper.UNIT_MAP).join(", ")}]`);
         }
 
-        if (unitTo === unitFrom) {
-            return value;
-        } else {
+        let workingValue = value;
+        if (unitTo !== unitFrom) {
             // First strip and remember any negative
             const isNeg = value[0] === "-";
-            let workingValue = value.replace("-", "");
+            workingValue = workingValue.replace("-", "");
 
             // If the first character is a dot then prepend 0
             if (workingValue[0] === ".") {
@@ -99,9 +98,15 @@ export class UnitsHelper {
             if (isNeg) {
                 workingValue = `-${workingValue}`;
             }
-
-            return workingValue;
         }
+
+        // If the to is 'i' then no decimal places allowed
+        if (unitTo === "i") {
+            const parts = workingValue.split(".");
+            workingValue = parts[0];
+        }
+
+        return workingValue;
     }
 
     /**
