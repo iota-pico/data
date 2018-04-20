@@ -1,6 +1,4 @@
 
-
-
 #  @iota-pico/data
 
 ## Index
@@ -8,7 +6,6 @@
 ### Enumerations
 
 * [AddressSecurity](enums/addresssecurity.md)
-
 
 ### Classes
 
@@ -28,11 +25,9 @@
 * [Trytes](classes/trytes.md)
 * [UnitsHelper](classes/unitshelper.md)
 
-
 ### Interfaces
 
 * [ITrytesConverter](interfaces/itrytesconverter.md)
 
-
-
 ---
+

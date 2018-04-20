@@ -1,9 +1,6 @@
 [@iota-pico/data](../README.md) > [AddressSecurity](../enums/addresssecurity.md)
 
-
-
 # Enumeration: AddressSecurity
-
 
 Represents an enum for the address security values.
 
@@ -15,21 +12,17 @@ Represents an enum for the address security values.
 * [low](addresssecurity.md#low)
 * [medium](addresssecurity.md#medium)
 
-
-
 ---
+
 ## Enumeration members
+
 <a id="high"></a>
 
 ###  high
 
 ** high**:    = 3
 
-*Defined in [data/addressSecurity.ts:7](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/addressSecurity.ts#L7)*
-
-
-
-
+*Defined in [data/addressSecurity.ts:7](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/addressSecurity.ts#L7)*
 
 ___
 
@@ -39,11 +32,7 @@ ___
 
 ** low**:    = 1
 
-*Defined in [data/addressSecurity.ts:5](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/addressSecurity.ts#L5)*
-
-
-
-
+*Defined in [data/addressSecurity.ts:5](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/addressSecurity.ts#L5)*
 
 ___
 
@@ -53,12 +42,7 @@ ___
 
 ** medium**:    = 2
 
-*Defined in [data/addressSecurity.ts:6](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/addressSecurity.ts#L6)*
-
-
-
-
+*Defined in [data/addressSecurity.ts:6](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/addressSecurity.ts#L6)*
 
 ___
-
 

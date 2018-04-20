@@ -1,18 +1,18 @@
 [@iota-pico/data](../README.md) > [Trytes](../classes/trytes.md)
 
-
-
 # Class: Trytes
 
-
 A class for handling trytes.
+
+## Hierarchy
+
+**Trytes**
 
 ## Index
 
 ### Properties
 
 * [ALPHABET](trytes.md#alphabet)
-
 
 ### Methods
 
@@ -22,53 +22,36 @@ A class for handling trytes.
 * [fromString](trytes.md#fromstring)
 * [isValid](trytes.md#isvalid)
 
-
-
 ---
+
 ## Properties
+
 <a id="alphabet"></a>
 
-### «Static» ALPHABET
+### `<Static>` ALPHABET
 
 **●  ALPHABET**:  *`string`*  = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-*Defined in [data/trytes.ts:12](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/trytes.ts#L12)*
-
-
+*Defined in [data/trytes.ts:12](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/trytes.ts#L12)*
 
 All the characters that can be used in trytes.
 
-
-
-
 ___
 
-
 ## Methods
+
 <a id="length"></a>
 
 ###  length
 
-► **length**(): `number`
+▸ **length**(): `number`
 
-
-
-*Defined in [data/trytes.ts:67](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/trytes.ts#L67)*
-
-
+*Defined in [data/trytes.ts:67](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/trytes.ts#L67)*
 
 Get the length of the trytes.
 
-
-
-
 **Returns:** `number`
 The length of the trytes.
-
-
-
-
-
 
 ___
 
@@ -76,16 +59,11 @@ ___
 
 ###  sub
 
-► **sub**(start: *`number`*, length: *`number`*): [Trytes](trytes.md)
+▸ **sub**(start: *`number`*, length: *`number`*): [Trytes](trytes.md)
 
-
-
-*Defined in [data/trytes.ts:77](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/trytes.ts#L77)*
-
-
+*Defined in [data/trytes.ts:77](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/trytes.ts#L77)*
 
 Get a sub of the trytes.
-
 
 **Parameters:**
 
@@ -94,17 +72,8 @@ Get a sub of the trytes.
 | start | `number`   |  The start position to get the sub. |
 | length | `number`   |  The length of the sub. |
 
-
-
-
-
 **Returns:** [Trytes](trytes.md)
 The trytes sub.
-
-
-
-
-
 
 ___
 
@@ -112,43 +81,26 @@ ___
 
 ###  toString
 
-► **toString**(): `string`
+▸ **toString**(): `string`
 
-
-
-*Defined in [data/trytes.ts:59](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/trytes.ts#L59)*
-
-
+*Defined in [data/trytes.ts:59](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/trytes.ts#L59)*
 
 Convert the trytes to a string.
 
-
-
-
 **Returns:** `string`
 String representation of the trytes.
-
-
-
-
-
 
 ___
 
 <a id="fromstring"></a>
 
-### «Static» fromString
+### `<Static>` fromString
 
-► **fromString**(value: *`string`*, length?: *`number`*): [Trytes](trytes.md)
+▸ **fromString**(value: *`string`*, length?: *`number`*): [Trytes](trytes.md)
 
-
-
-*Defined in [data/trytes.ts:28](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/trytes.ts#L28)*
-
-
+*Defined in [data/trytes.ts:28](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/trytes.ts#L28)*
 
 Create trytes from a string.
-
 
 **Parameters:**
 
@@ -157,34 +109,20 @@ Create trytes from a string.
 | value | `string`  | - |   A string to create the trytes from. |
 | length | `number`  | 0 |   An optional validation length for the trytes, 0 means ignore length. |
 
-
-
-
-
 **Returns:** [Trytes](trytes.md)
 An instance of Trytes.
-
-
-
-
-
 
 ___
 
 <a id="isvalid"></a>
 
-### «Static» isValid
+### `<Static>` isValid
 
-► **isValid**(value: *`string`*, length?: *`number`*): `boolean`
+▸ **isValid**(value: *`string`*, length?: *`number`*): `boolean`
 
-
-
-*Defined in [data/trytes.ts:47](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/trytes.ts#L47)*
-
-
+*Defined in [data/trytes.ts:47](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/trytes.ts#L47)*
 
 Does the value contain valid trytes.
-
 
 **Parameters:**
 
@@ -193,18 +131,8 @@ Does the value contain valid trytes.
 | value | `string`  | - |   A string to validate as trytes. |
 | length | `number`  | 0 |   An optional validation length for the trytes, 0 means ignore length. |
 
-
-
-
-
 **Returns:** `boolean`
 True if the input was valid trytes.
 
-
-
-
-
-
 ___
-
 

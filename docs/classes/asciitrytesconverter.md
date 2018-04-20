@@ -1,11 +1,12 @@
 [@iota-pico/data](../README.md) > [AsciiTrytesConverter](../classes/asciitrytesconverter.md)
 
-
-
 # Class: AsciiTrytesConverter
 
-
 Trytes converter that converts to and from a string.
+
+## Hierarchy
+
+**AsciiTrytesConverter**
 
 ## Implements
 
@@ -18,26 +19,21 @@ Trytes converter that converts to and from a string.
 * [from](asciitrytesconverter.md#from)
 * [to](asciitrytesconverter.md#to)
 
-
-
 ---
+
 ## Methods
+
 <a id="from"></a>
 
 ###  from
 
-► **from**(trytes: *[Trytes](trytes.md)*): `string`
-
-
+▸ **from**(trytes: *[Trytes](trytes.md)*): `string`
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[from](../interfaces/itrytesconverter.md#from)*
 
-*Defined in [converters/asciiTrytesConverter.ts:44](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/converters/asciiTrytesConverter.ts#L44)*
-
-
+*Defined in [converters/asciiTrytesConverter.ts:44](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/converters/asciiTrytesConverter.ts#L44)*
 
 Convert trytes into a string value.
-
 
 **Parameters:**
 
@@ -45,17 +41,8 @@ Convert trytes into a string value.
 | ------ | ------ | ------ |
 | trytes | [Trytes](trytes.md)   |  to convert into a string value. |
 
-
-
-
-
 **Returns:** `string`
 The string value converted from the trytes.
-
-
-
-
-
 
 ___
 
@@ -63,16 +50,11 @@ ___
 
 ###  to
 
-► **to**(value: *`string`*): [Trytes](trytes.md)
+▸ **to**(value: *`string`*): [Trytes](trytes.md)
 
-
-
-*Defined in [converters/asciiTrytesConverter.ts:16](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/converters/asciiTrytesConverter.ts#L16)*
-
-
+*Defined in [converters/asciiTrytesConverter.ts:16](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/converters/asciiTrytesConverter.ts#L16)*
 
 Convert a string value into trytes.
-
 
 **Parameters:**
 
@@ -80,18 +62,8 @@ Convert a string value into trytes.
 | ------ | ------ | ------ |
 | value | `string`   |  - |
 
-
-
-
-
 **Returns:** [Trytes](trytes.md)
 The trytes representation of the value.
 
-
-
-
-
-
 ___
-
 

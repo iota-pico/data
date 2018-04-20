@@ -1,11 +1,12 @@
 [@iota-pico/data](../README.md) > [Hash](../classes/hash.md)
 
-
-
 # Class: Hash
 
-
 A class for handling hashes.
+
+## Hierarchy
+
+**Hash**
 
 ## Index
 
@@ -14,77 +15,54 @@ A class for handling hashes.
 * [EMPTY](hash.md#empty)
 * [LENGTH](hash.md#length)
 
-
 ### Methods
 
 * [toString](hash.md#tostring)
 * [toTrytes](hash.md#totrytes)
 * [fromTrytes](hash.md#fromtrytes)
 
-
-
 ---
+
 ## Properties
+
 <a id="empty"></a>
 
-### «Static» EMPTY
+### `<Static>` EMPTY
 
 **●  EMPTY**:  *[Hash](hash.md)*  =  Hash.fromTrytes(Trytes.fromString("9".repeat(Hash.LENGTH)))
 
-*Defined in [data/hash.ts:16](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/hash.ts#L16)*
-
-
+*Defined in [data/hash.ts:16](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/hash.ts#L16)*
 
 An empty hash all 9s.
-
-
-
 
 ___
 
 <a id="length"></a>
 
-### «Static» LENGTH
+### `<Static>` LENGTH
 
 **●  LENGTH**:  *`number`*  = 81
 
-*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/hash.ts#L12)*
-
-
+*Defined in [data/hash.ts:12](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/hash.ts#L12)*
 
 The length for a valid hash (81).
 
-
-
-
 ___
 
-
 ## Methods
+
 <a id="tostring"></a>
 
 ###  toString
 
-► **toString**(): `string`
+▸ **toString**(): `string`
 
-
-
-*Defined in [data/hash.ts:56](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/hash.ts#L56)*
-
-
+*Defined in [data/hash.ts:56](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/hash.ts#L56)*
 
 Get the string view of the object.
 
-
-
-
 **Returns:** `string`
 string of the trytes.
-
-
-
-
-
 
 ___
 
@@ -92,43 +70,26 @@ ___
 
 ###  toTrytes
 
-► **toTrytes**(): [Trytes](trytes.md)
+▸ **toTrytes**(): [Trytes](trytes.md)
 
-
-
-*Defined in [data/hash.ts:48](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/hash.ts#L48)*
-
-
+*Defined in [data/hash.ts:48](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/hash.ts#L48)*
 
 Convert the hash to trytes.
 
-
-
-
 **Returns:** [Trytes](trytes.md)
 Trytes version of the hash.
-
-
-
-
-
 
 ___
 
 <a id="fromtrytes"></a>
 
-### «Static» fromTrytes
+### `<Static>` fromTrytes
 
-► **fromTrytes**(hash: *[Trytes](trytes.md)*): [Hash](hash.md)
+▸ **fromTrytes**(hash: *[Trytes](trytes.md)*): [Hash](hash.md)
 
-
-
-*Defined in [data/hash.ts:31](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/hash.ts#L31)*
-
-
+*Defined in [data/hash.ts:31](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/hash.ts#L31)*
 
 Create hash from trytes.
-
 
 **Parameters:**
 
@@ -136,18 +97,8 @@ Create hash from trytes.
 | ------ | ------ | ------ |
 | hash | [Trytes](trytes.md)   |  The trytes to create the hash from. |
 
-
-
-
-
 **Returns:** [Hash](hash.md)
 An instance of Hash.
 
-
-
-
-
-
 ___
-
 

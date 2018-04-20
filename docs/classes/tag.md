@@ -1,11 +1,12 @@
 [@iota-pico/data](../README.md) > [Tag](../classes/tag.md)
 
-
-
 # Class: Tag
 
-
 A class for handling tags.
+
+## Hierarchy
+
+**Tag**
 
 ## Index
 
@@ -14,77 +15,54 @@ A class for handling tags.
 * [EMPTY](tag.md#empty)
 * [LENGTH](tag.md#length)
 
-
 ### Methods
 
 * [toString](tag.md#tostring)
 * [toTrytes](tag.md#totrytes)
 * [fromTrytes](tag.md#fromtrytes)
 
-
-
 ---
+
 ## Properties
+
 <a id="empty"></a>
 
-### «Static» EMPTY
+### `<Static>` EMPTY
 
 **●  EMPTY**:  *[Tag](tag.md)*  =  Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)))
 
-*Defined in [data/tag.ts:16](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/tag.ts#L16)*
-
-
+*Defined in [data/tag.ts:16](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/tag.ts#L16)*
 
 An empty tag all 9s.
-
-
-
 
 ___
 
 <a id="length"></a>
 
-### «Static» LENGTH
+### `<Static>` LENGTH
 
 **●  LENGTH**:  *`number`*  = 27
 
-*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/tag.ts#L12)*
-
-
+*Defined in [data/tag.ts:12](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/tag.ts#L12)*
 
 The length of a valid tag (27).
 
-
-
-
 ___
 
-
 ## Methods
+
 <a id="tostring"></a>
 
 ###  toString
 
-► **toString**(): `string`
+▸ **toString**(): `string`
 
-
-
-*Defined in [data/tag.ts:61](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/tag.ts#L61)*
-
-
+*Defined in [data/tag.ts:61](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/tag.ts#L61)*
 
 Get the string view of the object.
 
-
-
-
 **Returns:** `string`
 string of the trytes.
-
-
-
-
-
 
 ___
 
@@ -92,43 +70,26 @@ ___
 
 ###  toTrytes
 
-► **toTrytes**(): [Trytes](trytes.md)
+▸ **toTrytes**(): [Trytes](trytes.md)
 
-
-
-*Defined in [data/tag.ts:53](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/tag.ts#L53)*
-
-
+*Defined in [data/tag.ts:53](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/tag.ts#L53)*
 
 Convert the tag to trytes.
 
-
-
-
 **Returns:** [Trytes](trytes.md)
 Trytes version of the tag.
-
-
-
-
-
 
 ___
 
 <a id="fromtrytes"></a>
 
-### «Static» fromTrytes
+### `<Static>` fromTrytes
 
-► **fromTrytes**(tag: *[Trytes](trytes.md)*): [Tag](tag.md)
+▸ **fromTrytes**(tag: *[Trytes](trytes.md)*): [Tag](tag.md)
 
-
-
-*Defined in [data/tag.ts:31](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/tag.ts#L31)*
-
-
+*Defined in [data/tag.ts:31](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/tag.ts#L31)*
 
 Create tag from trytes.
-
 
 **Parameters:**
 
@@ -136,18 +97,8 @@ Create tag from trytes.
 | ------ | ------ | ------ |
 | tag | [Trytes](trytes.md)   |  The trytes to create the tag from. |
 
-
-
-
-
 **Returns:** [Tag](tag.md)
 An instance of Tag.
 
-
-
-
-
-
 ___
-
 

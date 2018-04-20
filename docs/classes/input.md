@@ -1,11 +1,12 @@
 [@iota-pico/data](../README.md) > [Input](../classes/input.md)
 
-
-
 # Class: Input
 
-
 A class for handling inputs.
+
+## Hierarchy
+
+**Input**
 
 ## Index
 
@@ -16,29 +17,23 @@ A class for handling inputs.
 * [keyIndex](input.md#keyindex)
 * [security](input.md#security)
 
-
 ### Methods
 
 * [fromParams](input.md#fromparams)
 
-
-
 ---
+
 ## Properties
+
 <a id="address"></a>
 
 ###  address
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in [data/input.ts:14](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L14)*
-
-
+*Defined in [data/input.ts:14](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/input.ts#L14)*
 
 The address used for a transfer input.
-
-
-
 
 ___
 
@@ -48,14 +43,9 @@ ___
 
 **●  balance**:  *`number`* 
 
-*Defined in [data/input.ts:26](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L26)*
-
-
+*Defined in [data/input.ts:26](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/input.ts#L26)*
 
 The balance of the input.
-
-
-
 
 ___
 
@@ -65,14 +55,9 @@ ___
 
 **●  keyIndex**:  *`number`* 
 
-*Defined in [data/input.ts:22](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L22)*
-
-
+*Defined in [data/input.ts:22](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/input.ts#L22)*
 
 The index of the address from the seed.
-
-
-
 
 ___
 
@@ -82,33 +67,23 @@ ___
 
 **●  security**:  *[AddressSecurity](../enums/addresssecurity.md)* 
 
-*Defined in [data/input.ts:18](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L18)*
-
-
+*Defined in [data/input.ts:18](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/input.ts#L18)*
 
 The security level of the address.
 
-
-
-
 ___
 
-
 ## Methods
+
 <a id="fromparams"></a>
 
-### «Static» fromParams
+### `<Static>` fromParams
 
-► **fromParams**(address: *[Address](address.md)*, security: *[AddressSecurity](../enums/addresssecurity.md)*, keyIndex: *`number`*, balance: *`number`*): [Input](input.md)
+▸ **fromParams**(address: *[Address](address.md)*, security: *[AddressSecurity](../enums/addresssecurity.md)*, keyIndex: *`number`*, balance: *`number`*): [Input](input.md)
 
-
-
-*Defined in [data/input.ts:40](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/input.ts#L40)*
-
-
+*Defined in [data/input.ts:40](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/input.ts#L40)*
 
 Create instance of input from parameters.
-
 
 **Parameters:**
 
@@ -119,18 +94,8 @@ Create instance of input from parameters.
 | keyIndex | `number`   |  The key index. |
 | balance | `number`   |  The balance of the address. |
 
-
-
-
-
 **Returns:** [Input](input.md)
 New instance of Input.
 
-
-
-
-
-
 ___
-
 

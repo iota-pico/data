@@ -1,11 +1,12 @@
 [@iota-pico/data](../README.md) > [Transfer](../classes/transfer.md)
 
-
-
 # Class: Transfer
 
-
 A class for handling transfers.
+
+## Hierarchy
+
+**Transfer**
 
 ## Index
 
@@ -16,29 +17,23 @@ A class for handling transfers.
 * [tag](transfer.md#tag)
 * [value](transfer.md#value)
 
-
 ### Methods
 
 * [fromParams](transfer.md#fromparams)
 
-
-
 ---
+
 ## Properties
+
 <a id="address"></a>
 
 ###  address
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in [data/transfer.ts:15](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/transfer.ts#L15)*
-
-
+*Defined in [data/transfer.ts:15](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/transfer.ts#L15)*
 
 The address to send the transfer to.
-
-
-
 
 ___
 
@@ -48,14 +43,9 @@ ___
 
 **●  message**:  *[Trytes](trytes.md)* 
 
-*Defined in [data/transfer.ts:23](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/transfer.ts#L23)*
-
-
+*Defined in [data/transfer.ts:23](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/transfer.ts#L23)*
 
 Message to include with the transfer.
-
-
-
 
 ___
 
@@ -65,14 +55,9 @@ ___
 
 **●  tag**:  *[Tag](tag.md)* 
 
-*Defined in [data/transfer.ts:27](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/transfer.ts#L27)*
-
-
+*Defined in [data/transfer.ts:27](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/transfer.ts#L27)*
 
 Tag for the transfer.
-
-
-
 
 ___
 
@@ -82,33 +67,23 @@ ___
 
 **●  value**:  *`number`* 
 
-*Defined in [data/transfer.ts:19](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/transfer.ts#L19)*
-
-
+*Defined in [data/transfer.ts:19](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/transfer.ts#L19)*
 
 The value to send.
 
-
-
-
 ___
 
-
 ## Methods
+
 <a id="fromparams"></a>
 
-### «Static» fromParams
+### `<Static>` fromParams
 
-► **fromParams**(address: *[Address](address.md)*, value: *`number`*, message: *[Trytes](trytes.md)*, tag: *[Tag](tag.md)*): [Transfer](transfer.md)
+▸ **fromParams**(address: *[Address](address.md)*, value: *`number`*, message: *[Trytes](trytes.md)*, tag: *[Tag](tag.md)*): [Transfer](transfer.md)
 
-
-
-*Defined in [data/transfer.ts:41](https://github.com/iotaeco/iota-pico-data/blob/0b1108f/src/data/transfer.ts#L41)*
-
-
+*Defined in [data/transfer.ts:41](https://github.com/iotaeco/iota-pico-data/blob/ecbfc47/src/data/transfer.ts#L41)*
 
 Create instance of transfer from parameters.
-
 
 **Parameters:**
 
@@ -119,18 +94,8 @@ Create instance of transfer from parameters.
 | message | [Trytes](trytes.md)   |  - |
 | tag | [Tag](tag.md)   |  The tag. |
 
-
-
-
-
 **Returns:** [Transfer](transfer.md)
 New instance of Transfer.
 
-
-
-
-
-
 ___
-
 
