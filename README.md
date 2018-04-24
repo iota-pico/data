@@ -1,5 +1,5 @@
-[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/iotaeco/iota-pico-data/master/LICENSE) [![Build Status](https://travis-ci.org/iotaeco/iota-pico-data.svg?branch=master)](https://travis-ci.org/iotaeco/iota-pico-data) [![NSP Status](https://nodesecurity.io/orgs/iotaeco/projects/7c87b8c0-6bbd-4a10-b219-51de27a4977b/badge)](https://nodesecurity.io/orgs/iotaeco/projects/7c87b8c0-6bbd-4a10-b219-51de27a4977b)
-[![Coveralls](https://img.shields.io/coveralls/iotaeco/iota-pico-data.svg)](https://coveralls.io/github/iotaeco/iota-pico-data)
+[![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg)](https://raw.githubusercontent.com/https://github.com/iota-pico/data/master/LICENSE) [![Build Status](https://travis-ci.org/https://github.com/iota-pico/data.svg?branch=master)](https://travis-ci.org/https://github.com/iota-pico/data) [![NSP Status](https://nodesecurity.io/orgs/https://github.com/iota-pico/projects/f60d7c1f-fd3a-4e6c-be0e-ee7c14d0cd73/badge)](https://nodesecurity.io/orgs/https://github.com/iota-pico/projects/f60d7c1f-fd3a-4e6c-be0e-ee7c14d0cd73)
+[![Coveralls](https://img.shields.io/coveralls/https://github.com/iota-pico/data.svg)](https://coveralls.io/github/https://github.com/iota-pico/data)
 
 # IOTA Pico Framework Data
 
@@ -16,8 +16,8 @@ npm install @iota-pico/data --save
 The IOTA Pico Framework is a multi-layered set of object oriented JavaScript libraries for use with the IOTA tangle.
 
 If you don't want to use the layered versions of the libraries consider using the  ready bundled versions:
-* [@iota-pico/lib-browser](https://github.com/iotaeco/iota-pico-lib-browser)
-* [@iota-pico/lib-nodejs](https://github.com/iotaeco/iota-pico-lib-nodejs)
+* [@iota-pico/lib-browser](https://github.com/iota-pico/lib-browser)
+* [@iota-pico/lib-nodejs](https://github.com/iota-pico/lib-nodejs)
 
 Each layer is fully abstracted allowing you to replace components with your own implementations very easily.
 
@@ -29,7 +29,7 @@ Documentation for the code can be found in [docs](./docs/README.md) folder.
 
 # Tutorials
 
-Some tutorials can be found in the following repo [@iota-pico/tutorials](https://github.com/iotaeco/iota-pico-tutorials)
+Some tutorials can be found in the following repo [@iota-pico/tutorials](https://github.com/iota-pico/tutorials)
 
 # Contributing
 
