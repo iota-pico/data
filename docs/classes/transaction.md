@@ -48,7 +48,7 @@ A class for handling transactions.
 
 **●  address**:  *[Address](address.md)* 
 
-*Defined in [data/transaction.ts:39](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L39)*
+*Defined in [data/transaction.ts:39](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L39)*
 
 The address for the transaction.
 
@@ -60,7 +60,7 @@ ___
 
 **●  attachmentTimestamp**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:79](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L79)*
+*Defined in [data/transaction.ts:79](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L79)*
 
 The attachment timestamp for the transaction.
 
@@ -72,7 +72,7 @@ ___
 
 **●  attachmentTimestampLowerBound**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:83](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L83)*
+*Defined in [data/transaction.ts:83](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L83)*
 
 The attachment timestamp lower bound for the transaction.
 
@@ -84,7 +84,7 @@ ___
 
 **●  attachmentTimestampUpperBound**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:87](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L87)*
+*Defined in [data/transaction.ts:87](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L87)*
 
 The attachment timestamp upper bound for the transaction.
 
@@ -96,7 +96,7 @@ ___
 
 **●  branchTransaction**:  *[Hash](hash.md)* 
 
-*Defined in [data/transaction.ts:71](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L71)*
+*Defined in [data/transaction.ts:71](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L71)*
 
 The branch transaction for the transaction.
 
@@ -108,7 +108,7 @@ ___
 
 **●  bundle**:  *[Hash](hash.md)* 
 
-*Defined in [data/transaction.ts:63](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L63)*
+*Defined in [data/transaction.ts:63](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L63)*
 
 The bundle hash for the transaction.
 
@@ -120,7 +120,7 @@ ___
 
 **●  currentIndex**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:55](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L55)*
+*Defined in [data/transaction.ts:55](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L55)*
 
 The current index for the transaction.
 
@@ -132,7 +132,7 @@ ___
 
 **●  lastIndex**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:59](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L59)*
+*Defined in [data/transaction.ts:59](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L59)*
 
 The last index for the transaction bundle.
 
@@ -144,7 +144,7 @@ ___
 
 **●  nonce**:  *[Tag](tag.md)* 
 
-*Defined in [data/transaction.ts:91](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L91)*
+*Defined in [data/transaction.ts:91](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L91)*
 
 The nonce for the transaction.
 
@@ -156,7 +156,7 @@ ___
 
 **●  obsoleteTag**:  *[Tag](tag.md)* 
 
-*Defined in [data/transaction.ts:47](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L47)*
+*Defined in [data/transaction.ts:47](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L47)*
 
 The obsolete tag for the transaction.
 
@@ -168,7 +168,7 @@ ___
 
 **●  signatureMessageFragment**:  *[SignatureMessageFragment](signaturemessagefragment.md)* 
 
-*Defined in [data/transaction.ts:35](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L35)*
+*Defined in [data/transaction.ts:35](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L35)*
 
 The signature message fragment for the transaction.
 
@@ -180,7 +180,7 @@ ___
 
 **●  tag**:  *[Tag](tag.md)* 
 
-*Defined in [data/transaction.ts:75](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L75)*
+*Defined in [data/transaction.ts:75](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L75)*
 
 The tag for the transaction.
 
@@ -192,7 +192,7 @@ ___
 
 **●  timestamp**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:51](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L51)*
+*Defined in [data/transaction.ts:51](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L51)*
 
 The timestamp for the transaction.
 
@@ -204,7 +204,7 @@ ___
 
 **●  trunkTransaction**:  *[Hash](hash.md)* 
 
-*Defined in [data/transaction.ts:67](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L67)*
+*Defined in [data/transaction.ts:67](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L67)*
 
 The trunk transaction for the transaction.
 
@@ -216,7 +216,7 @@ ___
 
 **●  value**:  *[TryteNumber](trytenumber.md)* 
 
-*Defined in [data/transaction.ts:43](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L43)*
+*Defined in [data/transaction.ts:43](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L43)*
 
 The value for the transaction.
 
@@ -228,7 +228,7 @@ ___
 
 **●  CHECK_VALUE**:  *`string`*  =  "9".repeat(Transaction.CHECK_VALUE_LENGTH)
 
-*Defined in [data/transaction.ts:27](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L27)*
+*Defined in [data/transaction.ts:27](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L27)*
 
 The check value for bundles all 9s.
 
@@ -240,7 +240,7 @@ ___
 
 **●  CHECK_VALUE_LENGTH**:  *`number`*  = 16
 
-*Defined in [data/transaction.ts:22](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L22)*
+*Defined in [data/transaction.ts:22](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L22)*
 
 The length of a valid check value (16).
 
@@ -252,7 +252,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 2673
 
-*Defined in [data/transaction.ts:17](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L17)*
+*Defined in [data/transaction.ts:17](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L17)*
 
 The length of a valid transaction (2673).
 
@@ -266,7 +266,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/transaction.ts:272](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L272)*
+*Defined in [data/transaction.ts:272](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L272)*
 
 Get the string view of the object.
 
@@ -281,7 +281,7 @@ ___
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/transaction.ts:214](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L214)*
+*Defined in [data/transaction.ts:214](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L214)*
 
 Convert the transaction to trytes.
 
@@ -296,7 +296,7 @@ ___
 
 ▸ **fromParams**(signatureMessageFragment: *[SignatureMessageFragment](signaturemessagefragment.md)*, address: *[Address](address.md)*, value: *`number`*, obsoleteTag: *[Tag](tag.md)*, timestamp: *`number`*, currentIndex: *`number`*, lastIndex: *`number`*, bundle: *[Hash](hash.md)*, trunkTransaction: *[Hash](hash.md)*, branchTransaction: *[Hash](hash.md)*, tag: *[Tag](tag.md)*, attachmentTimestamp: *`number`*, attachmentTimestampLowerBound: *`number`*, attachmentTimestampUpperBound: *`number`*, nonce: *[Tag](tag.md)*): [Transaction](transaction.md)
 
-*Defined in [data/transaction.ts:116](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L116)*
+*Defined in [data/transaction.ts:116](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L116)*
 
 Create instance of transaction from parameters.
 
@@ -331,7 +331,7 @@ ___
 
 ▸ **fromTrytes**(trytes: *[Trytes](trytes.md)*): [Transaction](transaction.md)
 
-*Defined in [data/transaction.ts:155](https://github.com/iota-pico/data/blob/11a821c/src/data/transaction.ts#L155)*
+*Defined in [data/transaction.ts:155](https://github.com/iota-pico/data/blob/619b016/src/data/transaction.ts#L155)*
 
 Create instance of transaction from trytes.
 

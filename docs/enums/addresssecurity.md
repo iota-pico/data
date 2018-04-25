@@ -22,7 +22,7 @@ Represents an enum for the address security values.
 
 ** high**:    = 3
 
-*Defined in [data/addressSecurity.ts:7](https://github.com/iota-pico/data/blob/11a821c/src/data/addressSecurity.ts#L7)*
+*Defined in [data/addressSecurity.ts:7](https://github.com/iota-pico/data/blob/619b016/src/data/addressSecurity.ts#L7)*
 
 ___
 
@@ -32,7 +32,7 @@ ___
 
 ** low**:    = 1
 
-*Defined in [data/addressSecurity.ts:5](https://github.com/iota-pico/data/blob/11a821c/src/data/addressSecurity.ts#L5)*
+*Defined in [data/addressSecurity.ts:5](https://github.com/iota-pico/data/blob/619b016/src/data/addressSecurity.ts#L5)*
 
 ___
 
@@ -42,7 +42,7 @@ ___
 
 ** medium**:    = 2
 
-*Defined in [data/addressSecurity.ts:6](https://github.com/iota-pico/data/blob/11a821c/src/data/addressSecurity.ts#L6)*
+*Defined in [data/addressSecurity.ts:6](https://github.com/iota-pico/data/blob/619b016/src/data/addressSecurity.ts#L6)*
 
 ___
 

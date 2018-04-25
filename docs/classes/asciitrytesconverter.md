@@ -31,7 +31,7 @@ Trytes converter that converts to and from a string.
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[from](../interfaces/itrytesconverter.md#from)*
 
-*Defined in [converters/asciiTrytesConverter.ts:44](https://github.com/iota-pico/data/blob/11a821c/src/converters/asciiTrytesConverter.ts#L44)*
+*Defined in [converters/asciiTrytesConverter.ts:44](https://github.com/iota-pico/data/blob/619b016/src/converters/asciiTrytesConverter.ts#L44)*
 
 Convert trytes into a string value.
 
@@ -52,7 +52,7 @@ ___
 
 ▸ **to**(value: *`string`*): [Trytes](trytes.md)
 
-*Defined in [converters/asciiTrytesConverter.ts:16](https://github.com/iota-pico/data/blob/11a821c/src/converters/asciiTrytesConverter.ts#L16)*
+*Defined in [converters/asciiTrytesConverter.ts:16](https://github.com/iota-pico/data/blob/619b016/src/converters/asciiTrytesConverter.ts#L16)*
 
 Convert a string value into trytes.
 

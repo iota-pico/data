@@ -4,6 +4,8 @@
 
 * Added UnitsHelper.format for formatting IOTA with units
 * Fixed UnitsHelper.convertUnits to have no decimals places if unitTo is 'i'
+* Repo rename
+* Updated webpack major ver
 
 ## v0.9.2
 
