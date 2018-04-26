@@ -16,7 +16,7 @@ class Transfer {
      * Create instance of transfer from parameters.
      * @param address The address.
      * @param value The value.
-     * @param messsage The message for the transfer.
+     * @param message The message for the transfer.
      * @param tag The tag.
      * @returns New instance of Transfer.
      */

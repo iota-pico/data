@@ -40,7 +40,7 @@ A data implementation of an error.
 
 *Overrides CoreError.__constructor*
 
-*Defined in [error/dataError.ts:6](https://github.com/iota-pico/data/blob/619b016/src/error/dataError.ts#L6)*
+*Defined in [error/dataError.ts:6](https://github.com/iota-pico/data/blob/e43ea32/src/error/dataError.ts#L6)*
 
 Create an instance of DataError.
 
@@ -150,11 +150,12 @@ ___
 
 *Inherited from CoreError.format*
 
-*Defined in D:/Workarea/iota-pico/data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:37*
+*Defined in D:/Workarea/iota-pico/data/node_modules/@iota-pico/core/dist/error/coreError.d.ts:38*
 
 Format the error to a readable version.
 
 **Returns:** `string`
+Formatted version of the error.
 
 ___
 

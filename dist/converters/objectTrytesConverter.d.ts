@@ -7,7 +7,7 @@ import { ITrytesConverter } from "../interfaces/ITrytesConverter";
 export declare class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
     /**
      * Convert an object value into trytes.
-     * @param object to convert into trytes.
+     * @param value to convert into trytes.
      * @returns The trytes representation of the object.
      */
     to(value: T): Trytes;

@@ -10,7 +10,7 @@ import { ITrytesConverter } from "../interfaces/ITrytesConverter";
 export class AsciiTrytesConverter implements ITrytesConverter<string> {
     /**
      * Convert a string value into trytes.
-     * @param string value to convert into trytes.
+     * @param value value to convert into trytes.
      * @returns The trytes representation of the value.
      */
     public to(value: string): Trytes {

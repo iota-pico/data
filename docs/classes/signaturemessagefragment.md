@@ -31,7 +31,7 @@ A class for handling signature message fragments.
 
 **●  EMPTY**:  *[SignatureMessageFragment](signaturemessagefragment.md)*  =  SignatureMessageFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureMessageFragment.LENGTH)))
 
-*Defined in [data/signatureMessageFragment.ts:16](https://github.com/iota-pico/data/blob/619b016/src/data/signatureMessageFragment.ts#L16)*
+*Defined in [data/signatureMessageFragment.ts:16](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L16)*
 
 An empty signature message fragment all 9s.
 
@@ -43,7 +43,7 @@ ___
 
 **●  LENGTH**:  *`number`*  = 2187
 
-*Defined in [data/signatureMessageFragment.ts:12](https://github.com/iota-pico/data/blob/619b016/src/data/signatureMessageFragment.ts#L12)*
+*Defined in [data/signatureMessageFragment.ts:12](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L12)*
 
 The length of a valid signature message fragment (2187)
 
@@ -57,7 +57,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/signatureMessageFragment.ts:55](https://github.com/iota-pico/data/blob/619b016/src/data/signatureMessageFragment.ts#L55)*
+*Defined in [data/signatureMessageFragment.ts:55](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L55)*
 
 Get the string view of the object.
 
@@ -72,7 +72,7 @@ ___
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/signatureMessageFragment.ts:47](https://github.com/iota-pico/data/blob/619b016/src/data/signatureMessageFragment.ts#L47)*
+*Defined in [data/signatureMessageFragment.ts:47](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L47)*
 
 Convert the signature fragment to trytes.
 
@@ -87,7 +87,7 @@ ___
 
 ▸ **fromTrytes**(signatureMessageFragment: *[Trytes](trytes.md)*): [SignatureMessageFragment](signaturemessagefragment.md)
 
-*Defined in [data/signatureMessageFragment.ts:31](https://github.com/iota-pico/data/blob/619b016/src/data/signatureMessageFragment.ts#L31)*
+*Defined in [data/signatureMessageFragment.ts:31](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L31)*
 
 Create signature fragment from trytes.
 
