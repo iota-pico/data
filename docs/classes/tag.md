@@ -29,21 +29,20 @@ A class for handling tags.
 
 ### `<Static>` EMPTY
 
-**●  EMPTY**:  *[Tag](tag.md)*  =  Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)))
+**● EMPTY**: *[Tag](tag.md)* =  Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)))
 
-*Defined in [data/tag.ts:16](https://github.com/iota-pico/data/blob/e43ea32/src/data/tag.ts#L16)*
+*Defined in [data/tag.ts:16](https://github.com/iota-pico/data/blob/56eb85f/src/data/tag.ts#L16)*
 
 An empty tag all 9s.
 
 ___
-
 <a id="length"></a>
 
 ### `<Static>` LENGTH
 
-**●  LENGTH**:  *`number`*  = 27
+**● LENGTH**: *`number`* = 27
 
-*Defined in [data/tag.ts:12](https://github.com/iota-pico/data/blob/e43ea32/src/data/tag.ts#L12)*
+*Defined in [data/tag.ts:12](https://github.com/iota-pico/data/blob/56eb85f/src/data/tag.ts#L12)*
 
 The length of a valid tag (27).
 
@@ -57,7 +56,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/tag.ts:61](https://github.com/iota-pico/data/blob/e43ea32/src/data/tag.ts#L61)*
+*Defined in [data/tag.ts:61](https://github.com/iota-pico/data/blob/56eb85f/src/data/tag.ts#L61)*
 
 Get the string view of the object.
 
@@ -65,14 +64,13 @@ Get the string view of the object.
 string of the trytes.
 
 ___
-
 <a id="totrytes"></a>
 
 ###  toTrytes
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/tag.ts:53](https://github.com/iota-pico/data/blob/e43ea32/src/data/tag.ts#L53)*
+*Defined in [data/tag.ts:53](https://github.com/iota-pico/data/blob/56eb85f/src/data/tag.ts#L53)*
 
 Convert the tag to trytes.
 
@@ -80,14 +78,13 @@ Convert the tag to trytes.
 Trytes version of the tag.
 
 ___
-
 <a id="fromtrytes"></a>
 
 ### `<Static>` fromTrytes
 
 ▸ **fromTrytes**(tag: *[Trytes](trytes.md)*): [Tag](tag.md)
 
-*Defined in [data/tag.ts:31](https://github.com/iota-pico/data/blob/e43ea32/src/data/tag.ts#L31)*
+*Defined in [data/tag.ts:31](https://github.com/iota-pico/data/blob/56eb85f/src/data/tag.ts#L31)*
 
 Create tag from trytes.
 
@@ -95,7 +92,7 @@ Create tag from trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| tag | [Trytes](trytes.md)   |  The trytes to create the tag from. |
+| tag | [Trytes](trytes.md) |  The trytes to create the tag from. |
 
 **Returns:** [Tag](tag.md)
 An instance of Tag.

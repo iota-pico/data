@@ -32,21 +32,20 @@ A class for handling tryte number.
 
 ### `<Static>` EMPTY_9
 
-**●  EMPTY_9**:  *[TryteNumber](trytenumber.md)*  =  TryteNumber.fromNumber(0, TryteNumber.LENGTH_9)
+**● EMPTY_9**: *[TryteNumber](trytenumber.md)* =  TryteNumber.fromNumber(0, TryteNumber.LENGTH_9)
 
-*Defined in [data/tryteNumber.ts:18](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L18)*
+*Defined in [data/tryteNumber.ts:18](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L18)*
 
 An empty 9 length tryte number.
 
 ___
-
 <a id="length_9"></a>
 
 ### `<Static>` LENGTH_9
 
-**●  LENGTH_9**:  *`number`*  = 9
+**● LENGTH_9**: *`number`* = 9
 
-*Defined in [data/tryteNumber.ts:14](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L14)*
+*Defined in [data/tryteNumber.ts:14](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L14)*
 
 Length of a number that uses 9 trytes.
 
@@ -60,7 +59,7 @@ ___
 
 ▸ **toNumber**(): `number`
 
-*Defined in [data/tryteNumber.ts:99](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L99)*
+*Defined in [data/tryteNumber.ts:99](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L99)*
 
 Convert the tryte number to number.
 
@@ -68,14 +67,13 @@ Convert the tryte number to number.
 number value of the tryte number.
 
 ___
-
 <a id="tostring"></a>
 
 ###  toString
 
 ▸ **toString**(): `string`
 
-*Defined in [data/tryteNumber.ts:107](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L107)*
+*Defined in [data/tryteNumber.ts:107](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L107)*
 
 Get the string view of the object.
 
@@ -83,14 +81,13 @@ Get the string view of the object.
 string of the trytes.
 
 ___
-
 <a id="totrytes"></a>
 
 ###  toTrytes
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/tryteNumber.ts:91](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L91)*
+*Defined in [data/tryteNumber.ts:91](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L91)*
 
 Convert the tryte number to trytes.
 
@@ -98,14 +95,13 @@ Convert the tryte number to trytes.
 Trytes version of the tryte number.
 
 ___
-
 <a id="valueof"></a>
 
 ###  valueOf
 
 ▸ **valueOf**(): `number`
 
-*Defined in [data/tryteNumber.ts:115](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L115)*
+*Defined in [data/tryteNumber.ts:115](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L115)*
 
 Get the value of the object.
 
@@ -113,14 +109,13 @@ Get the value of the object.
 string of the trytes.
 
 ___
-
 <a id="fromnumber"></a>
 
 ### `<Static>` fromNumber
 
 ▸ **fromNumber**(value: *`number`*, length?: *`number`*): [TryteNumber](trytenumber.md)
 
-*Defined in [data/tryteNumber.ts:34](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L34)*
+*Defined in [data/tryteNumber.ts:34](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L34)*
 
 Create tryte number from number.
 
@@ -128,21 +123,20 @@ Create tryte number from number.
 
 | Param | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| value | `number`  | - |   The number value to create the object from. |
-| length | `number`  |  TryteNumber.LENGTH_9 |   The tryte length to pad the number with. |
+| value | `number` | - |  The number value to create the object from. |
+| `Default value` length | `number` |  TryteNumber.LENGTH_9 |  The tryte length to pad the number with. |
 
 **Returns:** [TryteNumber](trytenumber.md)
 An instance of TryteNumber.
 
 ___
-
 <a id="fromtrytes"></a>
 
 ### `<Static>` fromTrytes
 
 ▸ **fromTrytes**(value: *[Trytes](trytes.md)*, length?: *`number`*): [TryteNumber](trytenumber.md)
 
-*Defined in [data/tryteNumber.ts:66](https://github.com/iota-pico/data/blob/e43ea32/src/data/tryteNumber.ts#L66)*
+*Defined in [data/tryteNumber.ts:66](https://github.com/iota-pico/data/blob/56eb85f/src/data/tryteNumber.ts#L66)*
 
 Create tryte number from trytes.
 
@@ -150,8 +144,8 @@ Create tryte number from trytes.
 
 | Param | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| value | [Trytes](trytes.md)  | - |   The number value to create the object from. |
-| length | `number`  |  TryteNumber.LENGTH_9 |   The tryte length to pad the number with. |
+| value | [Trytes](trytes.md) | - |  The number value to create the object from. |
+| `Default value` length | `number` |  TryteNumber.LENGTH_9 |  The tryte length to pad the number with. |
 
 **Returns:** [TryteNumber](trytenumber.md)
 An instance of TryteNumber.

@@ -29,45 +29,42 @@ A class for handling inputs.
 
 ###  address
 
-**●  address**:  *[Address](address.md)* 
+**● address**: *[Address](address.md)*
 
-*Defined in [data/input.ts:14](https://github.com/iota-pico/data/blob/e43ea32/src/data/input.ts#L14)*
+*Defined in [data/input.ts:14](https://github.com/iota-pico/data/blob/56eb85f/src/data/input.ts#L14)*
 
 The address used for a transfer input.
 
 ___
-
 <a id="balance"></a>
 
 ###  balance
 
-**●  balance**:  *`number`* 
+**● balance**: *`number`*
 
-*Defined in [data/input.ts:26](https://github.com/iota-pico/data/blob/e43ea32/src/data/input.ts#L26)*
+*Defined in [data/input.ts:26](https://github.com/iota-pico/data/blob/56eb85f/src/data/input.ts#L26)*
 
 The balance of the input.
 
 ___
-
 <a id="keyindex"></a>
 
 ###  keyIndex
 
-**●  keyIndex**:  *`number`* 
+**● keyIndex**: *`number`*
 
-*Defined in [data/input.ts:22](https://github.com/iota-pico/data/blob/e43ea32/src/data/input.ts#L22)*
+*Defined in [data/input.ts:22](https://github.com/iota-pico/data/blob/56eb85f/src/data/input.ts#L22)*
 
 The index of the address from the seed.
 
 ___
-
 <a id="security"></a>
 
 ###  security
 
-**●  security**:  *[AddressSecurity](../enums/addresssecurity.md)* 
+**● security**: *[AddressSecurity](../enums/addresssecurity.md)*
 
-*Defined in [data/input.ts:18](https://github.com/iota-pico/data/blob/e43ea32/src/data/input.ts#L18)*
+*Defined in [data/input.ts:18](https://github.com/iota-pico/data/blob/56eb85f/src/data/input.ts#L18)*
 
 The security level of the address.
 
@@ -81,7 +78,7 @@ ___
 
 ▸ **fromParams**(address: *[Address](address.md)*, security: *[AddressSecurity](../enums/addresssecurity.md)*, keyIndex: *`number`*, balance: *`number`*): [Input](input.md)
 
-*Defined in [data/input.ts:40](https://github.com/iota-pico/data/blob/e43ea32/src/data/input.ts#L40)*
+*Defined in [data/input.ts:40](https://github.com/iota-pico/data/blob/56eb85f/src/data/input.ts#L40)*
 
 Create instance of input from parameters.
 
@@ -89,10 +86,10 @@ Create instance of input from parameters.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| address | [Address](address.md)   |  The address. |
-| security | [AddressSecurity](../enums/addresssecurity.md)   |  The address security. |
-| keyIndex | `number`   |  The key index. |
-| balance | `number`   |  The balance of the address. |
+| address | [Address](address.md) |  The address. |
+| security | [AddressSecurity](../enums/addresssecurity.md) |  The address security. |
+| keyIndex | `number` |  The key index. |
+| balance | `number` |  The balance of the address. |
 
 **Returns:** [Input](input.md)
 New instance of Input.

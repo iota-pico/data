@@ -36,7 +36,7 @@ The generic type for the conversion methods.
 
 ▸ **from**(trytes: *[Trytes](../classes/trytes.md)*): `T`
 
-*Defined in [interfaces/ITrytesConverter.ts:21](https://github.com/iota-pico/data/blob/e43ea32/src/interfaces/ITrytesConverter.ts#L21)*
+*Defined in [interfaces/ITrytesConverter.ts:21](https://github.com/iota-pico/data/blob/56eb85f/src/interfaces/ITrytesConverter.ts#L21)*
 
 Convert a trytes into a value.
 
@@ -44,20 +44,19 @@ Convert a trytes into a value.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| trytes | [Trytes](../classes/trytes.md)   |  to convert into value. |
+| trytes | [Trytes](../classes/trytes.md) |  to convert into value. |
 
 **Returns:** `T`
 The value converted from the trytes.
 
 ___
-
 <a id="to"></a>
 
 ###  to
 
 ▸ **to**(value: *`T`*): [Trytes](../classes/trytes.md)
 
-*Defined in [interfaces/ITrytesConverter.ts:14](https://github.com/iota-pico/data/blob/e43ea32/src/interfaces/ITrytesConverter.ts#L14)*
+*Defined in [interfaces/ITrytesConverter.ts:14](https://github.com/iota-pico/data/blob/56eb85f/src/interfaces/ITrytesConverter.ts#L14)*
 
 Convert a value into trytes.
 
@@ -65,7 +64,7 @@ Convert a value into trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `T`   |  to convert into trytes. |
+| value | `T` |  to convert into trytes. |
 
 **Returns:** [Trytes](../classes/trytes.md)
 The trytes representation of the value.

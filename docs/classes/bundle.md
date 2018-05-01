@@ -30,15 +30,17 @@ A class for handling bundles.
 
 <a id="constructor"></a>
 
-### ⊕ **new Bundle**(): [Bundle](bundle.md)
+###  constructor
 
-*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/blob/e43ea32/src/data/bundle.ts#L21)*
+⊕ **new Bundle**(): [Bundle](bundle.md)
+
+*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/blob/56eb85f/src/data/bundle.ts#L21)*
 
 Create a new instance of Bundle.
 
 **Returns:** [Bundle](bundle.md)
 
----
+___
 
 ## Properties
 
@@ -46,21 +48,20 @@ Create a new instance of Bundle.
 
 ###  inclusionState
 
-**●  inclusionState**:  *`boolean`* 
+**● inclusionState**: *`boolean`*
 
-*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/blob/e43ea32/src/data/bundle.ts#L21)*
+*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/blob/56eb85f/src/data/bundle.ts#L21)*
 
 The include state for the items in the bundle, populated if required during getTransfers.
 
 ___
-
 <a id="transactions"></a>
 
 ###  transactions
 
-**●  transactions**:  *[Transaction](transaction.md)[]* 
+**● transactions**: *[Transaction](transaction.md)[]*
 
-*Defined in [data/bundle.ts:17](https://github.com/iota-pico/data/blob/e43ea32/src/data/bundle.ts#L17)*
+*Defined in [data/bundle.ts:17](https://github.com/iota-pico/data/blob/56eb85f/src/data/bundle.ts#L17)*
 
 The transactions that form the bundle.
 
@@ -74,7 +75,7 @@ ___
 
 ▸ **addSignatureMessageFragments**(signatureMessageFragments: *[SignatureMessageFragment](signaturemessagefragment.md)[]*): `void`
 
-*Defined in [data/bundle.ts:51](https://github.com/iota-pico/data/blob/e43ea32/src/data/bundle.ts#L51)*
+*Defined in [data/bundle.ts:51](https://github.com/iota-pico/data/blob/56eb85f/src/data/bundle.ts#L51)*
 
 Add signature fragments to the bundle.
 
@@ -82,19 +83,18 @@ Add signature fragments to the bundle.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| signatureMessageFragments | [SignatureMessageFragment](signaturemessagefragment.md)[]   |  The signature fragments to add to the bundle transactions. |
+| signatureMessageFragments | [SignatureMessageFragment](signaturemessagefragment.md)[] |  The signature fragments to add to the bundle transactions. |
 
 **Returns:** `void`
 
 ___
-
 <a id="addtransactions"></a>
 
 ###  addTransactions
 
 ▸ **addTransactions**(signatureMessageLength: *`number`*, address: *[Address](address.md)*, value: *`number`*, tag: *[Tag](tag.md)*, timestamp: *`number`*): `void`
 
-*Defined in [data/bundle.ts:38](https://github.com/iota-pico/data/blob/e43ea32/src/data/bundle.ts#L38)*
+*Defined in [data/bundle.ts:38](https://github.com/iota-pico/data/blob/56eb85f/src/data/bundle.ts#L38)*
 
 Add new transactions to the bundle.
 
@@ -102,11 +102,11 @@ Add new transactions to the bundle.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| signatureMessageLength | `number`   |  The number of transactions to add. |
-| address | [Address](address.md)   |  The address for the transactions. |
-| value | `number`   |  The value for the first of the transactions. |
-| tag | [Tag](tag.md)   |  The tag to include in the transactions. |
-| timestamp | `number`   |  The timestamp for the transactions. |
+| signatureMessageLength | `number` |  The number of transactions to add. |
+| address | [Address](address.md) |  The address for the transactions. |
+| value | `number` |  The value for the first of the transactions. |
+| tag | [Tag](tag.md) |  The tag to include in the transactions. |
+| timestamp | `number` |  The timestamp for the transactions. |
 
 **Returns:** `void`
 

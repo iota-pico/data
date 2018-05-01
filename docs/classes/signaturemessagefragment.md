@@ -29,21 +29,20 @@ A class for handling signature message fragments.
 
 ### `<Static>` EMPTY
 
-**●  EMPTY**:  *[SignatureMessageFragment](signaturemessagefragment.md)*  =  SignatureMessageFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureMessageFragment.LENGTH)))
+**● EMPTY**: *[SignatureMessageFragment](signaturemessagefragment.md)* =  SignatureMessageFragment.fromTrytes(Trytes.fromString("9".repeat(SignatureMessageFragment.LENGTH)))
 
-*Defined in [data/signatureMessageFragment.ts:16](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L16)*
+*Defined in [data/signatureMessageFragment.ts:16](https://github.com/iota-pico/data/blob/56eb85f/src/data/signatureMessageFragment.ts#L16)*
 
 An empty signature message fragment all 9s.
 
 ___
-
 <a id="length"></a>
 
 ### `<Static>` LENGTH
 
-**●  LENGTH**:  *`number`*  = 2187
+**● LENGTH**: *`number`* = 2187
 
-*Defined in [data/signatureMessageFragment.ts:12](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L12)*
+*Defined in [data/signatureMessageFragment.ts:12](https://github.com/iota-pico/data/blob/56eb85f/src/data/signatureMessageFragment.ts#L12)*
 
 The length of a valid signature message fragment (2187)
 
@@ -57,7 +56,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/signatureMessageFragment.ts:55](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L55)*
+*Defined in [data/signatureMessageFragment.ts:55](https://github.com/iota-pico/data/blob/56eb85f/src/data/signatureMessageFragment.ts#L55)*
 
 Get the string view of the object.
 
@@ -65,14 +64,13 @@ Get the string view of the object.
 string of the trytes.
 
 ___
-
 <a id="totrytes"></a>
 
 ###  toTrytes
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/signatureMessageFragment.ts:47](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L47)*
+*Defined in [data/signatureMessageFragment.ts:47](https://github.com/iota-pico/data/blob/56eb85f/src/data/signatureMessageFragment.ts#L47)*
 
 Convert the signature fragment to trytes.
 
@@ -80,14 +78,13 @@ Convert the signature fragment to trytes.
 Trytes version of the signature fragment.
 
 ___
-
 <a id="fromtrytes"></a>
 
 ### `<Static>` fromTrytes
 
 ▸ **fromTrytes**(signatureMessageFragment: *[Trytes](trytes.md)*): [SignatureMessageFragment](signaturemessagefragment.md)
 
-*Defined in [data/signatureMessageFragment.ts:31](https://github.com/iota-pico/data/blob/e43ea32/src/data/signatureMessageFragment.ts#L31)*
+*Defined in [data/signatureMessageFragment.ts:31](https://github.com/iota-pico/data/blob/56eb85f/src/data/signatureMessageFragment.ts#L31)*
 
 Create signature fragment from trytes.
 
@@ -95,7 +92,7 @@ Create signature fragment from trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| signatureMessageFragment | [Trytes](trytes.md)   |  The trytes to create the signature fragment from. |
+| signatureMessageFragment | [Trytes](trytes.md) |  The trytes to create the signature fragment from. |
 
 **Returns:** [SignatureMessageFragment](signaturemessagefragment.md)
 An instance of SignatureMessageFragment.

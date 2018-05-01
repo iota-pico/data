@@ -34,7 +34,7 @@ A class for handling trits.
 
 ▸ **length**(): `number`
 
-*Defined in [data/trits.ts:256](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L256)*
+*Defined in [data/trits.ts:256](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L256)*
 
 What is the length of the trits.
 
@@ -42,14 +42,13 @@ What is the length of the trits.
 Length of the trits.
 
 ___
-
 <a id="sub"></a>
 
 ###  sub
 
 ▸ **sub**(start: *`number`*, length: *`number`*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:266](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L266)*
+*Defined in [data/trits.ts:266](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L266)*
 
 Get a sub of the trits.
 
@@ -57,21 +56,20 @@ Get a sub of the trits.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| start | `number`   |  The start position to get the sub. |
-| length | `number`   |  The length of the sub. |
+| start | `number` |  The start position to get the sub. |
+| length | `number` |  The length of the sub. |
 
 **Returns:** [Trits](trits.md)
 The trits sub.
 
 ___
-
 <a id="toarray"></a>
 
 ###  toArray
 
 ▸ **toArray**(): `Int8Array`
 
-*Defined in [data/trits.ts:204](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L204)*
+*Defined in [data/trits.ts:204](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L204)*
 
 Get the value of the trits array.
 
@@ -79,14 +77,13 @@ Get the value of the trits array.
 Array representation of the trits.
 
 ___
-
 <a id="tonumber"></a>
 
 ###  toNumber
 
 ▸ **toNumber**(): `number`
 
-*Defined in [data/trits.ts:242](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L242)*
+*Defined in [data/trits.ts:242](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L242)*
 
 Get the trits as a number.
 
@@ -94,14 +91,13 @@ Get the trits as a number.
 The trits converted to a number.
 
 ___
-
 <a id="tonumberarray"></a>
 
 ###  toNumberArray
 
 ▸ **toNumberArray**(): `number`[]
 
-*Defined in [data/trits.ts:212](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L212)*
+*Defined in [data/trits.ts:212](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L212)*
 
 Get the value of the trits array as a number array.
 
@@ -109,14 +105,13 @@ Get the value of the trits array as a number array.
 Array representation of the trits.
 
 ___
-
 <a id="totrytes"></a>
 
 ###  toTrytes
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/trits.ts:220](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L220)*
+*Defined in [data/trits.ts:220](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L220)*
 
 Get the trits as trytes.
 
@@ -124,14 +119,13 @@ Get the trits as trytes.
 Instance of Trytes.
 
 ___
-
 <a id="add"></a>
 
 ### `<Static>` add
 
 ▸ **add**(first: *[Trits](trits.md)*, second: *[Trits](trits.md)*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:132](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L132)*
+*Defined in [data/trits.ts:132](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L132)*
 
 Add two trits together.
 
@@ -139,21 +133,20 @@ Add two trits together.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| first | [Trits](trits.md)   |  The first trit. |
-| second | [Trits](trits.md)   |  The second trit. |
+| first | [Trits](trits.md) |  The first trit. |
+| second | [Trits](trits.md) |  The second trit. |
 
 **Returns:** [Trits](trits.md)
 New trit which is the addition of the a + b.
 
 ___
-
 <a id="fromarray"></a>
 
 ### `<Static>` fromArray
 
 ▸ **fromArray**(value: *`Int8Array`*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:55](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L55)*
+*Defined in [data/trits.ts:55](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L55)*
 
 Create instance of trits from Int8Array array.
 
@@ -161,20 +154,19 @@ Create instance of trits from Int8Array array.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `Int8Array`   |  Trytes used to create trits. |
+| value | `Int8Array` |  Trytes used to create trits. |
 
 **Returns:** [Trits](trits.md)
 An instance of Trits.
 
 ___
-
 <a id="fromnumber"></a>
 
 ### `<Static>` fromNumber
 
 ▸ **fromNumber**(value: *`number`*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:99](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L99)*
+*Defined in [data/trits.ts:99](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L99)*
 
 Create instance of trits from number
 
@@ -182,20 +174,19 @@ Create instance of trits from number
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `number`   |  Number used to create trits. |
+| value | `number` |  Number used to create trits. |
 
 **Returns:** [Trits](trits.md)
 An instance of Trits.
 
 ___
-
 <a id="fromnumberarray"></a>
 
 ### `<Static>` fromNumberArray
 
 ▸ **fromNumberArray**(value: *`number`[]*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:67](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L67)*
+*Defined in [data/trits.ts:67](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L67)*
 
 Create instance of trits from number array.
 
@@ -203,20 +194,19 @@ Create instance of trits from number array.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `number`[]   |  Trytes used to create trits. |
+| value | `number`[] |  Trytes used to create trits. |
 
 **Returns:** [Trits](trits.md)
 An instance of Trits.
 
 ___
-
 <a id="fromtrytes"></a>
 
 ### `<Static>` fromTrytes
 
 ▸ **fromTrytes**(value: *[Trytes](trytes.md)*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:79](https://github.com/iota-pico/data/blob/e43ea32/src/data/trits.ts#L79)*
+*Defined in [data/trits.ts:79](https://github.com/iota-pico/data/blob/56eb85f/src/data/trits.ts#L79)*
 
 Create instance of trits from trytes.
 
@@ -224,7 +214,7 @@ Create instance of trits from trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | [Trytes](trytes.md)   |  Trytes used to create trits. |
+| value | [Trytes](trytes.md) |  Trytes used to create trits. |
 
 **Returns:** [Trits](trits.md)
 An instance of Trits.

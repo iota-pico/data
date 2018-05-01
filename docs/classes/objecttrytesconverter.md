@@ -15,7 +15,7 @@ The generic type for the conversion methods.
 
 ## Implements
 
-* [ITrytesConverter](../interfaces/itrytesconverter.md)`T`
+* [ITrytesConverter](../interfaces/itrytesconverter.md)<`T`>
 
 ## Index
 
@@ -36,7 +36,7 @@ The generic type for the conversion methods.
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[from](../interfaces/itrytesconverter.md#from)*
 
-*Defined in [converters/objectTrytesConverter.ts:39](https://github.com/iota-pico/data/blob/e43ea32/src/converters/objectTrytesConverter.ts#L39)*
+*Defined in [converters/objectTrytesConverter.ts:39](https://github.com/iota-pico/data/blob/56eb85f/src/converters/objectTrytesConverter.ts#L39)*
 
 Convert trytes into a string value.
 
@@ -44,13 +44,12 @@ Convert trytes into a string value.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| trytes | [Trytes](trytes.md)   |  to convert into a string value. |
+| trytes | [Trytes](trytes.md) |  to convert into a string value. |
 
 **Returns:** `T`
 The string value converted from the trytes.
 
 ___
-
 <a id="to"></a>
 
 ###  to
@@ -59,7 +58,7 @@ ___
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[to](../interfaces/itrytesconverter.md#to)*
 
-*Defined in [converters/objectTrytesConverter.ts:19](https://github.com/iota-pico/data/blob/e43ea32/src/converters/objectTrytesConverter.ts#L19)*
+*Defined in [converters/objectTrytesConverter.ts:19](https://github.com/iota-pico/data/blob/56eb85f/src/converters/objectTrytesConverter.ts#L19)*
 
 Convert an object value into trytes.
 
@@ -67,7 +66,7 @@ Convert an object value into trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `T`   |  to convert into trytes. |
+| value | `T` |  to convert into trytes. |
 
 **Returns:** [Trytes](trytes.md)
 The trytes representation of the object.

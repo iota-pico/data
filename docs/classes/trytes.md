@@ -30,9 +30,9 @@ A class for handling trytes.
 
 ### `<Static>` ALPHABET
 
-**●  ALPHABET**:  *`string`*  = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+**● ALPHABET**: *`string`* = "9ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 
-*Defined in [data/trytes.ts:12](https://github.com/iota-pico/data/blob/e43ea32/src/data/trytes.ts#L12)*
+*Defined in [data/trytes.ts:12](https://github.com/iota-pico/data/blob/56eb85f/src/data/trytes.ts#L12)*
 
 All the characters that can be used in trytes.
 
@@ -46,7 +46,7 @@ ___
 
 ▸ **length**(): `number`
 
-*Defined in [data/trytes.ts:67](https://github.com/iota-pico/data/blob/e43ea32/src/data/trytes.ts#L67)*
+*Defined in [data/trytes.ts:67](https://github.com/iota-pico/data/blob/56eb85f/src/data/trytes.ts#L67)*
 
 Get the length of the trytes.
 
@@ -54,14 +54,13 @@ Get the length of the trytes.
 The length of the trytes.
 
 ___
-
 <a id="sub"></a>
 
 ###  sub
 
 ▸ **sub**(start: *`number`*, length: *`number`*): [Trytes](trytes.md)
 
-*Defined in [data/trytes.ts:77](https://github.com/iota-pico/data/blob/e43ea32/src/data/trytes.ts#L77)*
+*Defined in [data/trytes.ts:77](https://github.com/iota-pico/data/blob/56eb85f/src/data/trytes.ts#L77)*
 
 Get a sub of the trytes.
 
@@ -69,21 +68,20 @@ Get a sub of the trytes.
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| start | `number`   |  The start position to get the sub. |
-| length | `number`   |  The length of the sub. |
+| start | `number` |  The start position to get the sub. |
+| length | `number` |  The length of the sub. |
 
 **Returns:** [Trytes](trytes.md)
 The trytes sub.
 
 ___
-
 <a id="tostring"></a>
 
 ###  toString
 
 ▸ **toString**(): `string`
 
-*Defined in [data/trytes.ts:59](https://github.com/iota-pico/data/blob/e43ea32/src/data/trytes.ts#L59)*
+*Defined in [data/trytes.ts:59](https://github.com/iota-pico/data/blob/56eb85f/src/data/trytes.ts#L59)*
 
 Convert the trytes to a string.
 
@@ -91,14 +89,13 @@ Convert the trytes to a string.
 String representation of the trytes.
 
 ___
-
 <a id="fromstring"></a>
 
 ### `<Static>` fromString
 
 ▸ **fromString**(value: *`string`*, length?: *`number`*): [Trytes](trytes.md)
 
-*Defined in [data/trytes.ts:28](https://github.com/iota-pico/data/blob/e43ea32/src/data/trytes.ts#L28)*
+*Defined in [data/trytes.ts:28](https://github.com/iota-pico/data/blob/56eb85f/src/data/trytes.ts#L28)*
 
 Create trytes from a string.
 
@@ -106,21 +103,20 @@ Create trytes from a string.
 
 | Param | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| value | `string`  | - |   A string to create the trytes from. |
-| length | `number`  | 0 |   An optional validation length for the trytes, 0 means ignore length. |
+| value | `string` | - |  A string to create the trytes from. |
+| `Default value` length | `number` | 0 |  An optional validation length for the trytes, 0 means ignore length. |
 
 **Returns:** [Trytes](trytes.md)
 An instance of Trytes.
 
 ___
-
 <a id="isvalid"></a>
 
 ### `<Static>` isValid
 
 ▸ **isValid**(value: *`string`*, length?: *`number`*): `boolean`
 
-*Defined in [data/trytes.ts:47](https://github.com/iota-pico/data/blob/e43ea32/src/data/trytes.ts#L47)*
+*Defined in [data/trytes.ts:47](https://github.com/iota-pico/data/blob/56eb85f/src/data/trytes.ts#L47)*
 
 Does the value contain valid trytes.
 
@@ -128,8 +124,8 @@ Does the value contain valid trytes.
 
 | Param | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| value | `string`  | - |   A string to validate as trytes. |
-| length | `number`  | 0 |   An optional validation length for the trytes, 0 means ignore length. |
+| value | `string` | - |  A string to validate as trytes. |
+| `Default value` length | `number` | 0 |  An optional validation length for the trytes, 0 means ignore length. |
 
 **Returns:** `boolean`
 True if the input was valid trytes.

@@ -29,7 +29,7 @@ Helper class for units conversion.
 
 ▸ **convertUnits**(value: *`string`*, unitFrom: *`string`*, unitTo: *`string`*): `string`
 
-*Defined in [helpers/unitsHelper.ts:29](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L29)*
+*Defined in [helpers/unitsHelper.ts:29](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L29)*
 
 Convert from one unit to another. [https://github.com/iotaledger/iota.lib.js/blob/a1b2e9e05d7cab3ef394900e5ca75fb46464e608/lib/utils/utils.js#L16-L51](https://github.com/iotaledger/iota.lib.js/blob/a1b2e9e05d7cab3ef394900e5ca75fb46464e608/lib/utils/utils.js#L16-L51)
 
@@ -37,22 +37,21 @@ Convert from one unit to another. [https://github.com/iotaledger/iota.lib.js/blo
 
 | Param | Type | Description |
 | ------ | ------ | ------ |
-| value | `string`   |  To convert the units. |
-| unitFrom | `string`   |  The source unit of the value. |
-| unitTo | `string`   |  The destination unit of the value. |
+| value | `string` |  To convert the units. |
+| unitFrom | `string` |  The source unit of the value. |
+| unitTo | `string` |  The destination unit of the value. |
 
 **Returns:** `string`
 The converted value.
 
 ___
-
 <a id="format"></a>
 
 ### `<Static>` format
 
 ▸ **format**(value: *`string`*, maxDecimalPlaces?: *`number`*): `string`
 
-*Defined in [helpers/unitsHelper.ts:118](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L118)*
+*Defined in [helpers/unitsHelper.ts:118](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L118)*
 
 Format the iota value as its best representation.
 
@@ -60,8 +59,8 @@ Format the iota value as its best representation.
 
 | Param | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
-| value | `string`  | - |   The value in iotas to format. |
-| maxDecimalPlaces | `number`  | 0 |   The maximum number of decimal places to include. |
+| value | `string` | - |  The value in iotas to format. |
+| `Default value` maxDecimalPlaces | `number` | 0 |  The maximum number of decimal places to include. |
 
 **Returns:** `string`
 The iota value formatted with units.
@@ -74,9 +73,9 @@ ___
 
 ### `<Static>` UNIT_MAP
 
-** UNIT_MAP**:  *`object`* 
+**UNIT_MAP**: *`object`*
 
-*Defined in [helpers/unitsHelper.ts:12](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L12)*
+*Defined in [helpers/unitsHelper.ts:12](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L12)*
 
 Conversion table for units.
 
@@ -84,54 +83,54 @@ Conversion table for units.
 
 ####  Gi
 
-**●  Gi**:  *`number`*  = 9
+**● Gi**: *`number`* = 9
 
-*Defined in [helpers/unitsHelper.ts:16](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L16)*
+*Defined in [helpers/unitsHelper.ts:16](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L16)*
 
 ___
 <a id="unit_map.ki"></a>
 
 ####  Ki
 
-**●  Ki**:  *`number`*  = 3
+**● Ki**: *`number`* = 3
 
-*Defined in [helpers/unitsHelper.ts:14](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L14)*
+*Defined in [helpers/unitsHelper.ts:14](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L14)*
 
 ___
 <a id="unit_map.mi"></a>
 
 ####  Mi
 
-**●  Mi**:  *`number`*  = 6
+**● Mi**: *`number`* = 6
 
-*Defined in [helpers/unitsHelper.ts:15](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L15)*
+*Defined in [helpers/unitsHelper.ts:15](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L15)*
 
 ___
 <a id="unit_map.pi"></a>
 
 ####  Pi
 
-**●  Pi**:  *`number`*  = 15
+**● Pi**: *`number`* = 15
 
-*Defined in [helpers/unitsHelper.ts:18](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L18)*
+*Defined in [helpers/unitsHelper.ts:18](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L18)*
 
 ___
 <a id="unit_map.ti"></a>
 
 ####  Ti
 
-**●  Ti**:  *`number`*  = 12
+**● Ti**: *`number`* = 12
 
-*Defined in [helpers/unitsHelper.ts:17](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L17)*
+*Defined in [helpers/unitsHelper.ts:17](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L17)*
 
 ___
 <a id="unit_map.i"></a>
 
 ####  i
 
-**●  i**:  *`number`*  = 0
+**● i**: *`number`* = 0
 
-*Defined in [helpers/unitsHelper.ts:13](https://github.com/iota-pico/data/blob/e43ea32/src/helpers/unitsHelper.ts#L13)*
+*Defined in [helpers/unitsHelper.ts:13](https://github.com/iota-pico/data/blob/56eb85f/src/helpers/unitsHelper.ts#L13)*
 
 ___
 
