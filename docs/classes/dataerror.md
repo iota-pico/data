@@ -42,7 +42,7 @@ A data implementation of an error.
 
 *Overrides CoreError.__constructor*
 
-*Defined in [error/dataError.ts:6](https://github.com/iota-pico/data/blob/56eb85f/src/error/dataError.ts#L6)*
+*Defined in [error/dataError.ts:6](https://github.com/iota-pico/data/blob/de666e2/src/error/dataError.ts#L6)*
 
 Create an instance of DataError.
 
