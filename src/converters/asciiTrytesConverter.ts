@@ -54,10 +54,8 @@ export class AsciiTrytesConverter implements ITrytesConverter<string> {
         let ascii = "";
 
         for (let i = 0; i < trytesString.length; i += 2) {
-            const trytesPair = trytesString[i] + trytesString[i + 1];
-
-            const firstValue = Trytes.ALPHABET.indexOf(trytesPair[0]);
-            const secondValue = Trytes.ALPHABET.indexOf(trytesPair[1]);
+            const firstValue = Trytes.ALPHABET.indexOf(trytesString[i]);
+            const secondValue = Trytes.ALPHABET.indexOf(trytesString[i + 1]);
 
             const decimalValue = firstValue + secondValue * 27;
 

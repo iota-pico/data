@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.9.6
+
+* Dependency Updates
+* Object trytes converter conforms to JSON spec for data
+
 ## v0.9.5
 
 * GitHub and Npm Version alignment

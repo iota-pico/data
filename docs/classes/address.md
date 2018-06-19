@@ -34,7 +34,7 @@ A class for handling addresses.
 
 **● EMPTY**: *[Address](address.md)* =  Address.fromTrytes(Trytes.fromString("9".repeat(Address.LENGTH)))
 
-*Defined in [data/address.ts:25](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L25)*
+*Defined in [data/address.ts:25](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L25)*
 
 An empty hash all 9s.
 
@@ -45,7 +45,7 @@ ___
 
 **● LENGTH**: *`number`* = 81
 
-*Defined in [data/address.ts:12](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L12)*
+*Defined in [data/address.ts:12](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L12)*
 
 The length for a valid address without checksum (81).
 
@@ -56,7 +56,7 @@ ___
 
 **● LENGTH_CHECKSUM**: *`number`* = 9
 
-*Defined in [data/address.ts:16](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L16)*
+*Defined in [data/address.ts:16](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L16)*
 
 The length for an address checksum (9).
 
@@ -67,7 +67,7 @@ ___
 
 **● LENGTH_WITH_CHECKSUM**: *`number`* =  Address.LENGTH + Address.LENGTH_CHECKSUM
 
-*Defined in [data/address.ts:20](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L20)*
+*Defined in [data/address.ts:20](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L20)*
 
 The length for valid address with checksum (90).
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/address.ts:86](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L86)*
+*Defined in [data/address.ts:86](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L86)*
 
 Get the string view of the object.
 
@@ -95,7 +95,7 @@ ___
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/address.ts:66](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L66)*
+*Defined in [data/address.ts:66](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L66)*
 
 Convert the address to trytes with no checksum.
 
@@ -109,7 +109,7 @@ ___
 
 ▸ **toTrytesWithChecksum**(): [Trytes](trytes.md)
 
-*Defined in [data/address.ts:74](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L74)*
+*Defined in [data/address.ts:74](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L74)*
 
 Convert the address to trytes with a checksum, creating a blank one if needed.
 
@@ -123,7 +123,7 @@ ___
 
 ▸ **fromTrytes**(address: *[Trytes](trytes.md)*): [Address](address.md)
 
-*Defined in [data/address.ts:43](https://github.com/iota-pico/data/blob/de666e2/src/data/address.ts#L43)*
+*Defined in [data/address.ts:43](https://github.com/iota-pico/data/blob/501a2d7/src/data/address.ts#L43)*
 
 Create address from trytes.
 

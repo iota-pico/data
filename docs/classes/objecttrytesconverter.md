@@ -36,7 +36,7 @@ The generic type for the conversion methods.
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[from](../interfaces/itrytesconverter.md#from)*
 
-*Defined in [converters/objectTrytesConverter.ts:39](https://github.com/iota-pico/data/blob/de666e2/src/converters/objectTrytesConverter.ts#L39)*
+*Defined in [converters/objectTrytesConverter.ts:39](https://github.com/iota-pico/data/blob/501a2d7/src/converters/objectTrytesConverter.ts#L39)*
 
 Convert trytes into a string value.
 
@@ -58,7 +58,7 @@ ___
 
 *Implementation of [ITrytesConverter](../interfaces/itrytesconverter.md).[to](../interfaces/itrytesconverter.md#to)*
 
-*Defined in [converters/objectTrytesConverter.ts:19](https://github.com/iota-pico/data/blob/de666e2/src/converters/objectTrytesConverter.ts#L19)*
+*Defined in [converters/objectTrytesConverter.ts:19](https://github.com/iota-pico/data/blob/501a2d7/src/converters/objectTrytesConverter.ts#L19)*
 
 Convert an object value into trytes.
 

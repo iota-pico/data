@@ -29,7 +29,7 @@ Helper class for units conversion.
 
 ▸ **convertUnits**(value: *`string`*, unitFrom: *`string`*, unitTo: *`string`*): `string`
 
-*Defined in [helpers/unitsHelper.ts:29](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L29)*
+*Defined in [helpers/unitsHelper.ts:29](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L29)*
 
 Convert from one unit to another. [https://github.com/iotaledger/iota.lib.js/blob/a1b2e9e05d7cab3ef394900e5ca75fb46464e608/lib/utils/utils.js#L16-L51](https://github.com/iotaledger/iota.lib.js/blob/a1b2e9e05d7cab3ef394900e5ca75fb46464e608/lib/utils/utils.js#L16-L51)
 
@@ -51,7 +51,7 @@ ___
 
 ▸ **format**(value: *`string`*, maxDecimalPlaces?: *`number`*): `string`
 
-*Defined in [helpers/unitsHelper.ts:118](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L118)*
+*Defined in [helpers/unitsHelper.ts:118](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L118)*
 
 Format the iota value as its best representation.
 
@@ -75,7 +75,7 @@ ___
 
 **UNIT_MAP**: *`object`*
 
-*Defined in [helpers/unitsHelper.ts:12](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L12)*
+*Defined in [helpers/unitsHelper.ts:12](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L12)*
 
 Conversion table for units.
 
@@ -85,7 +85,7 @@ Conversion table for units.
 
 **● Gi**: *`number`* = 9
 
-*Defined in [helpers/unitsHelper.ts:16](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L16)*
+*Defined in [helpers/unitsHelper.ts:16](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L16)*
 
 ___
 <a id="unit_map.ki"></a>
@@ -94,7 +94,7 @@ ___
 
 **● Ki**: *`number`* = 3
 
-*Defined in [helpers/unitsHelper.ts:14](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L14)*
+*Defined in [helpers/unitsHelper.ts:14](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L14)*
 
 ___
 <a id="unit_map.mi"></a>
@@ -103,7 +103,7 @@ ___
 
 **● Mi**: *`number`* = 6
 
-*Defined in [helpers/unitsHelper.ts:15](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L15)*
+*Defined in [helpers/unitsHelper.ts:15](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L15)*
 
 ___
 <a id="unit_map.pi"></a>
@@ -112,7 +112,7 @@ ___
 
 **● Pi**: *`number`* = 15
 
-*Defined in [helpers/unitsHelper.ts:18](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L18)*
+*Defined in [helpers/unitsHelper.ts:18](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L18)*
 
 ___
 <a id="unit_map.ti"></a>
@@ -121,7 +121,7 @@ ___
 
 **● Ti**: *`number`* = 12
 
-*Defined in [helpers/unitsHelper.ts:17](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L17)*
+*Defined in [helpers/unitsHelper.ts:17](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L17)*
 
 ___
 <a id="unit_map.i"></a>
@@ -130,7 +130,7 @@ ___
 
 **● i**: *`number`* = 0
 
-*Defined in [helpers/unitsHelper.ts:13](https://github.com/iota-pico/data/blob/de666e2/src/helpers/unitsHelper.ts#L13)*
+*Defined in [helpers/unitsHelper.ts:13](https://github.com/iota-pico/data/blob/501a2d7/src/helpers/unitsHelper.ts#L13)*
 
 ___
 

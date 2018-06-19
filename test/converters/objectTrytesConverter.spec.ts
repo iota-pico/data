@@ -12,16 +12,6 @@ describe("ObjectTrytesConverter", () => {
     });
 
     describe("to", () => {
-        it("can fail to convert with undefined string", () => {
-            const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.to(undefined)).to.throw("The value");
-        });
-
-        it("can fail to convert with null string", () => {
-            const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.to(null)).to.throw("The value");
-        });
-
         it("can fail when JSON.stringify fails", () => {
             const obj = new ObjectTrytesConverter();
 
@@ -53,6 +43,36 @@ describe("ObjectTrytesConverter", () => {
         it("can succeed converting with multiline string", () => {
             const obj = new ObjectTrytesConverter();
             chai.expect(obj.to("This is a test\r\nOn multiple lines").toString()).to.equal("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDKCFDKCBDYBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGDGA");
+        });
+
+        it("can succeed converting with numbers", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.to(42).toString()).to.equal("YAWA");
+        });
+
+        it("can succeed converting with string", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.to("hello").toString()).to.equal("GAWCTC9D9DCDGA");
+        });
+
+        it("can succeed converting with false", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.to(false).toString()).to.equal("UCPC9DGDTC");
+        });
+
+        it("can succeed converting with true", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.to(true).toString()).to.equal("HDFDIDTC");
+        });
+
+        it("can succeed converting with null", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.to(null).toString()).to.equal("BDID9D9D");
+        });
+
+        it("can fail to convert with undefined", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(() => obj.to(undefined)).to.throw("The value");
         });
 
         it("can succeed converting with arrays", () => {
@@ -87,19 +107,9 @@ describe("ObjectTrytesConverter", () => {
             chai.expect(() => obj.from(Trytes.fromString("ABC"))).to.throw("be an even number");
         });
 
-        it("can fail with not enough data", () => {
-            const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.fromString(""))).to.throw("do not represent an object");
-        });
-
-        it("can fail with invalid start and end characters", () => {
-            const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.fromString("BABA"))).to.throw("do not represent an object");
-        });
-
         it("can fail if the JSON.parse fails", () => {
             const obj = new ObjectTrytesConverter();
-            chai.expect(() => obj.from(Trytes.fromString("ODCCCCQD"))).to.throw("converting the object from JSON");
+            chai.expect(() => obj.from(Trytes.fromString("ODCCCCQD"))).to.throw("There was a problem converting");
         });
 
         it("can succeed converting with empty JSON string", () => {
@@ -122,6 +132,31 @@ describe("ObjectTrytesConverter", () => {
             chai.expect(obj.from(Trytes.fromString("GACCWCXCGDEAXCGDEAPCEAHDTCGDHDKCFDKCBDYBBDEAADID9DHDXCDD9DTCEA9DXCBDTCGDGA"))).to.equal("This is a test\r\nOn multiple lines");
         });
 
+        it("can succeed converting with numbers", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.fromString("YAWA"))).to.deep.equal(42);
+        });
+
+        it("can succeed converting with string", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.fromString("GAWCTC9D9DCDGA"))).to.deep.equal("hello");
+        });
+
+        it("can succeed converting with true", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.fromString("HDFDIDTC"))).to.deep.equal(true);
+        });
+
+        it("can succeed converting with false", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.fromString("UCPC9DGDTC"))).to.deep.equal(false);
+        });
+
+        it("can succeed converting with null", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.fromString("BDID9D9D"))).to.deep.equal(null);
+        });
+
         it("can succeed converting with arrays", () => {
             const obj = new ObjectTrytesConverter();
             chai.expect(obj.from(Trytes.fromString("JCVAQAWAQAXALC"))).to.deep.equal([1, 2, 3]);
@@ -135,6 +170,11 @@ describe("ObjectTrytesConverter", () => {
         it("can succeed converting with objects with non ASCII characters", () => {
             const obj = new ObjectTrytesConverter();
             chai.expect(obj.from(Trytes.fromString("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: "ℜ" });
+        });
+
+        it("can succeed converting with objects with trailing 9s", () => {
+            const obj = new ObjectTrytesConverter();
+            chai.expect(obj.from(Trytes.fromString("ODGAPCGADBGAUCCDCDGAQAGAQCGADBJCVAQAWAQAXALCQAGARCGADBGAKCIDWAVAVARCGAQD9999999999999999"))).to.deep.equal({ a: "foo", b: [1, 2, 3], c: "ℜ" });
         });
     });
 });

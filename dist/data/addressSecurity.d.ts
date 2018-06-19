@@ -4,5 +4,5 @@
 export declare enum AddressSecurity {
     low = 1,
     medium = 2,
-    high = 3,
+    high = 3
 }

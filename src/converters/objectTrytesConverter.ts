@@ -17,10 +17,6 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
      * @returns The trytes representation of the object.
      */
     public to(value: T): Trytes {
-        if (ObjectHelper.isEmpty(value)) {
-            throw new DataError("The value can not be empty");
-        }
-
         let json;
         try {
             json = JsonHelper.stringify(value);
@@ -28,7 +24,11 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
             throw new DataError("There was a problem converting the object to JSON", { err });
         }
 
-        return new AsciiTrytesConverter().to(StringHelper.encodeNonASCII(json));
+        // Encode any non ascii chars
+        const encoded = StringHelper.encodeNonASCII(json);
+
+        // Convert to ascii trytes
+        return new AsciiTrytesConverter().to(encoded);
     }
 
     /**
@@ -41,19 +41,10 @@ export class ObjectTrytesConverter<T> implements ITrytesConverter<T> {
             throw new DataError("The trytes parameter is empty or not the correct type");
         }
 
-        const ascii = new AsciiTrytesConverter().from(trytes);
+        let ascii = new AsciiTrytesConverter().from(trytes);
 
-        // Must have a a start and closing pairs
-        if (ascii.length < 2) {
-            throw new DataError("The trytes do not represent an object");
-        }
-
-        // The start and end must be either {}, [] or "" to represent a JSON object
-        if (!((ascii[0] === "{" && ascii[ascii.length - 1] === "}") ||
-              (ascii[0] === "[" && ascii[ascii.length - 1] === "]") ||
-              (ascii[0] === "\"" && ascii[ascii.length - 1] === "\""))) {
-            throw new DataError("The trytes do not represent an object", { ascii });
-        }
+        // trim any trailing nulls (9s in trytes)
+        ascii = ascii.replace(/\0+$/, "");
 
         const decoded = StringHelper.decodeNonASCII(ascii);
 
