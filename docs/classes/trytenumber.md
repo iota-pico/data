@@ -34,7 +34,7 @@ A class for handling tryte number.
 
 **● EMPTY_9**: *[TryteNumber](trytenumber.md)* =  TryteNumber.fromNumber(0, TryteNumber.LENGTH_9)
 
-*Defined in [data/tryteNumber.ts:18](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L18)*
+*Defined in [data/tryteNumber.ts:18](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L18)*
 
 An empty 9 length tryte number.
 
@@ -45,7 +45,7 @@ ___
 
 **● LENGTH_9**: *`number`* = 9
 
-*Defined in [data/tryteNumber.ts:14](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L14)*
+*Defined in [data/tryteNumber.ts:14](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L14)*
 
 Length of a number that uses 9 trytes.
 
@@ -59,7 +59,7 @@ ___
 
 ▸ **toNumber**(): `number`
 
-*Defined in [data/tryteNumber.ts:99](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L99)*
+*Defined in [data/tryteNumber.ts:99](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L99)*
 
 Convert the tryte number to number.
 
@@ -73,7 +73,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/tryteNumber.ts:107](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L107)*
+*Defined in [data/tryteNumber.ts:107](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L107)*
 
 Get the string view of the object.
 
@@ -87,7 +87,7 @@ ___
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/tryteNumber.ts:91](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L91)*
+*Defined in [data/tryteNumber.ts:91](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L91)*
 
 Convert the tryte number to trytes.
 
@@ -101,7 +101,7 @@ ___
 
 ▸ **valueOf**(): `number`
 
-*Defined in [data/tryteNumber.ts:115](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L115)*
+*Defined in [data/tryteNumber.ts:115](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L115)*
 
 Get the value of the object.
 
@@ -115,7 +115,7 @@ ___
 
 ▸ **fromNumber**(value: *`number`*, length?: *`number`*): [TryteNumber](trytenumber.md)
 
-*Defined in [data/tryteNumber.ts:34](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L34)*
+*Defined in [data/tryteNumber.ts:34](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L34)*
 
 Create tryte number from number.
 
@@ -136,7 +136,7 @@ ___
 
 ▸ **fromTrytes**(value: *[Trytes](trytes.md)*, length?: *`number`*): [TryteNumber](trytenumber.md)
 
-*Defined in [data/tryteNumber.ts:66](https://github.com/iota-pico/data/blob/501a2d7/src/data/tryteNumber.ts#L66)*
+*Defined in [data/tryteNumber.ts:66](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tryteNumber.ts#L66)*
 
 Create tryte number from trytes.
 

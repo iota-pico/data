@@ -31,7 +31,7 @@ A class for handling tags.
 
 **● EMPTY**: *[Tag](tag.md)* =  Tag.fromTrytes(Trytes.fromString("9".repeat(Tag.LENGTH)))
 
-*Defined in [data/tag.ts:16](https://github.com/iota-pico/data/blob/501a2d7/src/data/tag.ts#L16)*
+*Defined in [data/tag.ts:16](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tag.ts#L16)*
 
 An empty tag all 9s.
 
@@ -42,7 +42,7 @@ ___
 
 **● LENGTH**: *`number`* = 27
 
-*Defined in [data/tag.ts:12](https://github.com/iota-pico/data/blob/501a2d7/src/data/tag.ts#L12)*
+*Defined in [data/tag.ts:12](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tag.ts#L12)*
 
 The length of a valid tag (27).
 
@@ -56,7 +56,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/tag.ts:61](https://github.com/iota-pico/data/blob/501a2d7/src/data/tag.ts#L61)*
+*Defined in [data/tag.ts:61](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tag.ts#L61)*
 
 Get the string view of the object.
 
@@ -70,7 +70,7 @@ ___
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/tag.ts:53](https://github.com/iota-pico/data/blob/501a2d7/src/data/tag.ts#L53)*
+*Defined in [data/tag.ts:53](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tag.ts#L53)*
 
 Convert the tag to trytes.
 
@@ -84,7 +84,7 @@ ___
 
 ▸ **fromTrytes**(tag: *[Trytes](trytes.md)*): [Tag](tag.md)
 
-*Defined in [data/tag.ts:31](https://github.com/iota-pico/data/blob/501a2d7/src/data/tag.ts#L31)*
+*Defined in [data/tag.ts:31](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/tag.ts#L31)*
 
 Create tag from trytes.
 

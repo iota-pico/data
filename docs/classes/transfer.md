@@ -31,7 +31,7 @@ A class for handling transfers.
 
 **● address**: *[Address](address.md)*
 
-*Defined in [data/transfer.ts:15](https://github.com/iota-pico/data/blob/501a2d7/src/data/transfer.ts#L15)*
+*Defined in [data/transfer.ts:15](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/transfer.ts#L15)*
 
 The address to send the transfer to.
 
@@ -42,7 +42,7 @@ ___
 
 **● message**: *[Trytes](trytes.md)*
 
-*Defined in [data/transfer.ts:23](https://github.com/iota-pico/data/blob/501a2d7/src/data/transfer.ts#L23)*
+*Defined in [data/transfer.ts:23](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/transfer.ts#L23)*
 
 Message to include with the transfer.
 
@@ -53,7 +53,7 @@ ___
 
 **● tag**: *[Tag](tag.md)*
 
-*Defined in [data/transfer.ts:27](https://github.com/iota-pico/data/blob/501a2d7/src/data/transfer.ts#L27)*
+*Defined in [data/transfer.ts:27](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/transfer.ts#L27)*
 
 Tag for the transfer.
 
@@ -64,7 +64,7 @@ ___
 
 **● value**: *`number`*
 
-*Defined in [data/transfer.ts:19](https://github.com/iota-pico/data/blob/501a2d7/src/data/transfer.ts#L19)*
+*Defined in [data/transfer.ts:19](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/transfer.ts#L19)*
 
 The value to send.
 
@@ -78,7 +78,7 @@ ___
 
 ▸ **fromParams**(address: *[Address](address.md)*, value: *`number`*, message: *[Trytes](trytes.md)*, tag: *[Tag](tag.md)*): [Transfer](transfer.md)
 
-*Defined in [data/transfer.ts:41](https://github.com/iota-pico/data/blob/501a2d7/src/data/transfer.ts#L41)*
+*Defined in [data/transfer.ts:41](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/transfer.ts#L41)*
 
 Create instance of transfer from parameters.
 

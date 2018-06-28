@@ -34,7 +34,7 @@ A class for handling trits.
 
 ▸ **length**(): `number`
 
-*Defined in [data/trits.ts:256](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L256)*
+*Defined in [data/trits.ts:256](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L256)*
 
 What is the length of the trits.
 
@@ -48,7 +48,7 @@ ___
 
 ▸ **sub**(start: *`number`*, length: *`number`*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:266](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L266)*
+*Defined in [data/trits.ts:266](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L266)*
 
 Get a sub of the trits.
 
@@ -69,7 +69,7 @@ ___
 
 ▸ **toArray**(): `Int8Array`
 
-*Defined in [data/trits.ts:204](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L204)*
+*Defined in [data/trits.ts:204](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L204)*
 
 Get the value of the trits array.
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **toNumber**(): `number`
 
-*Defined in [data/trits.ts:242](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L242)*
+*Defined in [data/trits.ts:242](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L242)*
 
 Get the trits as a number.
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **toNumberArray**(): `number`[]
 
-*Defined in [data/trits.ts:212](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L212)*
+*Defined in [data/trits.ts:212](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L212)*
 
 Get the value of the trits array as a number array.
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/trits.ts:220](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L220)*
+*Defined in [data/trits.ts:220](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L220)*
 
 Get the trits as trytes.
 
@@ -125,7 +125,7 @@ ___
 
 ▸ **add**(first: *[Trits](trits.md)*, second: *[Trits](trits.md)*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:132](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L132)*
+*Defined in [data/trits.ts:132](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L132)*
 
 Add two trits together.
 
@@ -146,7 +146,7 @@ ___
 
 ▸ **fromArray**(value: *`Int8Array`*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:55](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L55)*
+*Defined in [data/trits.ts:55](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L55)*
 
 Create instance of trits from Int8Array array.
 
@@ -166,7 +166,7 @@ ___
 
 ▸ **fromNumber**(value: *`number`*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:99](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L99)*
+*Defined in [data/trits.ts:99](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L99)*
 
 Create instance of trits from number
 
@@ -186,7 +186,7 @@ ___
 
 ▸ **fromNumberArray**(value: *`number`[]*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:67](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L67)*
+*Defined in [data/trits.ts:67](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L67)*
 
 Create instance of trits from number array.
 
@@ -206,7 +206,7 @@ ___
 
 ▸ **fromTrytes**(value: *[Trytes](trytes.md)*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:79](https://github.com/iota-pico/data/blob/501a2d7/src/data/trits.ts#L79)*
+*Defined in [data/trits.ts:79](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/trits.ts#L79)*
 
 Create instance of trits from trytes.
 
