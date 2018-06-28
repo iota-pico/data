@@ -34,7 +34,7 @@ A class for handling bundles.
 
 ⊕ **new Bundle**(): [Bundle](bundle.md)
 
-*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/bundle.ts#L21)*
+*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/tree/master/src/data/bundle.ts#L21*
 
 Create a new instance of Bundle.
 
@@ -50,7 +50,7 @@ ___
 
 **● inclusionState**: *`boolean`*
 
-*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/bundle.ts#L21)*
+*Defined in [data/bundle.ts:21](https://github.com/iota-pico/data/tree/master/src/data/bundle.ts#L21*
 
 The include state for the items in the bundle, populated if required during getTransfers.
 
@@ -61,7 +61,7 @@ ___
 
 **● transactions**: *[Transaction](transaction.md)[]*
 
-*Defined in [data/bundle.ts:17](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/bundle.ts#L17)*
+*Defined in [data/bundle.ts:17](https://github.com/iota-pico/data/tree/master/src/data/bundle.ts#L17*
 
 The transactions that form the bundle.
 
@@ -75,7 +75,7 @@ ___
 
 ▸ **addSignatureMessageFragments**(signatureMessageFragments: *[SignatureMessageFragment](signaturemessagefragment.md)[]*): `void`
 
-*Defined in [data/bundle.ts:51](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/bundle.ts#L51)*
+*Defined in [data/bundle.ts:51](https://github.com/iota-pico/data/tree/master/src/data/bundle.ts#L51*
 
 Add signature fragments to the bundle.
 
@@ -94,7 +94,7 @@ ___
 
 ▸ **addTransactions**(signatureMessageLength: *`number`*, address: *[Address](address.md)*, value: *`number`*, tag: *[Tag](tag.md)*, timestamp: *`number`*): `void`
 
-*Defined in [data/bundle.ts:38](https://github.com/iota-pico/data/blob/a9ecaa2/src/data/bundle.ts#L38)*
+*Defined in [data/bundle.ts:38](https://github.com/iota-pico/data/tree/master/src/data/bundle.ts#L38*
 
 Add new transactions to the bundle.
 
