@@ -16,7 +16,7 @@ class AsciiTrytesConverter {
         if (!stringHelper_1.StringHelper.isString(value)) {
             throw new dataError_1.DataError("The value must be a string", { value });
         }
-        if (!stringHelper_1.StringHelper.isAscii(value)) {
+        if (!stringHelper_1.StringHelper.isASCII(value)) {
             throw new dataError_1.DataError("The value contains non ASCII characters", { value });
         }
         let trytes = "";

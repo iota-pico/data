@@ -18,7 +18,7 @@ export class AsciiTrytesConverter implements ITrytesConverter<string> {
             throw new DataError("The value must be a string", { value });
         }
 
-        if (!StringHelper.isAscii(value)) {
+        if (!StringHelper.isASCII(value)) {
             throw new DataError("The value contains non ASCII characters", { value });
         }
 
