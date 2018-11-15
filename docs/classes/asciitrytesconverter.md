@@ -37,7 +37,7 @@ Convert trytes into a string value.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | trytes | [Trytes](trytes.md) |  to convert into a string value. |
 
@@ -57,7 +57,7 @@ Convert a string value into trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | value | `string` |  value to convert into trytes. |
 

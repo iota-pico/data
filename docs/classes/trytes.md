@@ -66,7 +66,7 @@ Get a sub of the trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | start | `number` |  The start position to get the sub. |
 | length | `number` |  The length of the sub. |
@@ -101,7 +101,7 @@ Create trytes from a string.
 
 **Parameters:**
 
-| Param | Type | Default value | Description |
+| Name | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
 | value | `string` | - |  A string to create the trytes from. |
 | `Default value` length | `number` | 0 |  An optional validation length for the trytes, 0 means ignore length. |
@@ -122,7 +122,7 @@ Does the value contain valid trytes.
 
 **Parameters:**
 
-| Param | Type | Default value | Description |
+| Name | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
 | value | `string` | - |  A string to validate as trytes. |
 | `Default value` length | `number` | 0 |  An optional validation length for the trytes, 0 means ignore length. |

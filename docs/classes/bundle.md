@@ -81,7 +81,7 @@ Add signature fragments to the bundle.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | signatureMessageFragments | [SignatureMessageFragment](signaturemessagefragment.md)[] |  The signature fragments to add to the bundle transactions. |
 
@@ -100,7 +100,7 @@ Add new transactions to the bundle.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | signatureMessageLength | `number` |  The number of transactions to add. |
 | address | [Address](address.md) |  The address for the transactions. |

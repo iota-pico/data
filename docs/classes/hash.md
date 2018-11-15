@@ -90,7 +90,7 @@ Create hash from trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | hash | [Trytes](trytes.md) |  The trytes to create the hash from. |
 

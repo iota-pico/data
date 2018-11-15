@@ -90,7 +90,7 @@ Create tag from trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | tag | [Trytes](trytes.md) |  The trytes to create the tag from. |
 

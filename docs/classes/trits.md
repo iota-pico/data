@@ -54,7 +54,7 @@ Get a sub of the trits.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | start | `number` |  The start position to get the sub. |
 | length | `number` |  The length of the sub. |
@@ -131,7 +131,7 @@ Add two trits together.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | first | [Trits](trits.md) |  The first trit. |
 | second | [Trits](trits.md) |  The second trit. |
@@ -152,7 +152,7 @@ Create instance of trits from Int8Array array.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | value | `Int8Array` |  Trytes used to create trits. |
 
@@ -172,7 +172,7 @@ Create instance of trits from number
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | value | `number` |  Number used to create trits. |
 
@@ -192,7 +192,7 @@ Create instance of trits from number array.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | value | `number`[] |  Trytes used to create trits. |
 
@@ -212,7 +212,7 @@ Create instance of trits from trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | value | [Trytes](trytes.md) |  Trytes used to create trits. |
 

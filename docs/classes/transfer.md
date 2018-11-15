@@ -84,7 +84,7 @@ Create instance of transfer from parameters.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | address | [Address](address.md) |  The address. |
 | value | `number` |  The value. |

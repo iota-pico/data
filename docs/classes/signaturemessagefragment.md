@@ -90,7 +90,7 @@ Create signature fragment from trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | signatureMessageFragment | [Trytes](trytes.md) |  The trytes to create the signature fragment from. |
 

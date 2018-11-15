@@ -84,7 +84,7 @@ Create instance of input from parameters.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | address | [Address](address.md) |  The address. |
 | security | [AddressSecurity](../enums/addresssecurity.md) |  The address security. |

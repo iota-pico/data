@@ -42,7 +42,7 @@ Convert a trytes into a value.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | trytes | [Trytes](../classes/trytes.md) |  to convert into value. |
 
@@ -62,7 +62,7 @@ Convert a value into trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | value | `T` |  to convert into trytes. |
 

@@ -283,7 +283,7 @@ Create instance of transaction from parameters.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | signatureMessageFragment | [SignatureMessageFragment](signaturemessagefragment.md) |  The signature message fragment. |
 | address | [Address](address.md) |  The address. |
@@ -317,7 +317,7 @@ Create instance of transaction from trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | trytes | [Trytes](trytes.md) |  The trytes for the this. |
 

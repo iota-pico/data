@@ -129,7 +129,7 @@ Create address from trytes.
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | address | [Trytes](trytes.md) |  The trytes to create the address from. |
 

@@ -35,7 +35,7 @@ Convert from one unit to another. [https://github.com/iotaledger/iota.lib.js/blo
 
 **Parameters:**
 
-| Param | Type | Description |
+| Name | Type | Description |
 | ------ | ------ | ------ |
 | value | `string` |  To convert the units. |
 | unitFrom | `string` |  The source unit of the value. |
@@ -57,7 +57,7 @@ Format the iota value as its best representation.
 
 **Parameters:**
 
-| Param | Type | Default value | Description |
+| Name | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
 | value | `string` | - |  The value in iotas to format. |
 | `Default value` maxDecimalPlaces | `number` | 0 |  The maximum number of decimal places to include. |

@@ -121,7 +121,7 @@ Create tryte number from number.
 
 **Parameters:**
 
-| Param | Type | Default value | Description |
+| Name | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
 | value | `number` | - |  The number value to create the object from. |
 | `Default value` length | `number` |  TryteNumber.LENGTH_9 |  The tryte length to pad the number with. |
@@ -142,7 +142,7 @@ Create tryte number from trytes.
 
 **Parameters:**
 
-| Param | Type | Default value | Description |
+| Name | Type | Default value | Description |
 | ------ | ------ | ------ | ------ |
 | value | [Trytes](trytes.md) | - |  The number value to create the object from. |
 | `Default value` length | `number` |  TryteNumber.LENGTH_9 |  The tryte length to pad the number with. |
