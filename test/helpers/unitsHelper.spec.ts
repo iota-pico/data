@@ -3,6 +3,7 @@
  */
 import * as chai from "chai";
 import { UnitsHelper } from "../../src/helpers/unitsHelper";
+// tslint:disable-next-line:no-default-import
 import convertUnitsJson from "./convert-units.json";
 
 describe("UnitsHelper", () => {
