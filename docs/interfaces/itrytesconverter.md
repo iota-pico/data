@@ -3,6 +3,7 @@
 # Interface: ITrytesConverter
 
 Represents a converter which can convert to and from trytes.
+
 *__interface__*: 
 
 ## Type parameters
