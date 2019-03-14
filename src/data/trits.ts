@@ -190,7 +190,8 @@ export class Trits {
 
         if (s > 0) {
             return 1;
-        } else if (s < 0) {
+        }
+        if (s < 0) {
             return -1;
         }
 

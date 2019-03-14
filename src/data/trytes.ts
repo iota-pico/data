@@ -47,9 +47,8 @@ export class Trytes {
     public static isValid(value: string, length: number = 0): boolean {
         if (!StringHelper.isString(value)) {
             return false;
-        } else {
-            return new RegExp(`^[9A-Z]{${length ? length : "0,"}}$`).test(value);
         }
+        return new RegExp(`^[9A-Z]{${length ? length : "0,"}}$`).test(value);
     }
 
     /**

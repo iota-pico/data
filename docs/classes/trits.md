@@ -34,7 +34,7 @@ A class for handling trits.
 
 ▸ **length**(): `number`
 
-*Defined in [data/trits.ts:256](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L256*
+*Defined in [data/trits.ts:257](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L257*
 
 What is the length of the trits.
 
@@ -48,7 +48,7 @@ ___
 
 ▸ **sub**(start: *`number`*, length: *`number`*): [Trits](trits.md)
 
-*Defined in [data/trits.ts:266](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L266*
+*Defined in [data/trits.ts:267](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L267*
 
 Get a sub of the trits.
 
@@ -69,7 +69,7 @@ ___
 
 ▸ **toArray**(): `Int8Array`
 
-*Defined in [data/trits.ts:204](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L204*
+*Defined in [data/trits.ts:205](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L205*
 
 Get the value of the trits array.
 
@@ -83,7 +83,7 @@ ___
 
 ▸ **toNumber**(): `number`
 
-*Defined in [data/trits.ts:242](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L242*
+*Defined in [data/trits.ts:243](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L243*
 
 Get the trits as a number.
 
@@ -97,7 +97,7 @@ ___
 
 ▸ **toNumberArray**(): `number`[]
 
-*Defined in [data/trits.ts:212](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L212*
+*Defined in [data/trits.ts:213](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L213*
 
 Get the value of the trits array as a number array.
 
@@ -111,7 +111,7 @@ ___
 
 ▸ **toTrytes**(): [Trytes](trytes.md)
 
-*Defined in [data/trits.ts:220](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L220*
+*Defined in [data/trits.ts:221](https://github.com/iota-pico/data/tree/master/src/data/trits.ts#L221*
 
 Get the trits as trytes.
 

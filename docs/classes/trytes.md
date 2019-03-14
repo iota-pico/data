@@ -46,7 +46,7 @@ ___
 
 ▸ **length**(): `number`
 
-*Defined in [data/trytes.ts:67](https://github.com/iota-pico/data/tree/master/src/data/trytes.ts#L67*
+*Defined in [data/trytes.ts:66](https://github.com/iota-pico/data/tree/master/src/data/trytes.ts#L66*
 
 Get the length of the trytes.
 
@@ -60,7 +60,7 @@ ___
 
 ▸ **sub**(start: *`number`*, length: *`number`*): [Trytes](trytes.md)
 
-*Defined in [data/trytes.ts:77](https://github.com/iota-pico/data/tree/master/src/data/trytes.ts#L77*
+*Defined in [data/trytes.ts:76](https://github.com/iota-pico/data/tree/master/src/data/trytes.ts#L76*
 
 Get a sub of the trytes.
 
@@ -81,7 +81,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/trytes.ts:59](https://github.com/iota-pico/data/tree/master/src/data/trytes.ts#L59*
+*Defined in [data/trytes.ts:58](https://github.com/iota-pico/data/tree/master/src/data/trytes.ts#L58*
 
 Convert the trytes to a string.
 

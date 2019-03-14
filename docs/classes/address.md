@@ -81,7 +81,7 @@ ___
 
 ▸ **toString**(): `string`
 
-*Defined in [data/address.ts:86](https://github.com/iota-pico/data/tree/master/src/data/address.ts#L86*
+*Defined in [data/address.ts:85](https://github.com/iota-pico/data/tree/master/src/data/address.ts#L85*
 
 Get the string view of the object.
 

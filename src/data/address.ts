@@ -32,7 +32,7 @@ export class Address {
     /* @internal */
     private constructor(addressTrytes: string, checksumTrytes: string) {
         this._addressTrytes = addressTrytes;
-        this._checksumTrytes  = checksumTrytes;
+        this._checksumTrytes = checksumTrytes;
     }
 
     /**
@@ -74,9 +74,8 @@ export class Address {
     public toTrytesWithChecksum(): Trytes {
         if (!ObjectHelper.isEmpty(this._checksumTrytes)) {
             return Trytes.fromString(this._addressTrytes + this._checksumTrytes);
-        } else {
-            throw new DataError(`This address has no checksum calculated for it`);
         }
+        throw new DataError(`This address has no checksum calculated for it`);
     }
 
     /**
@@ -86,8 +85,7 @@ export class Address {
     public toString(): string {
         if (!ObjectHelper.isEmpty(this._checksumTrytes)) {
             return this._addressTrytes + this._checksumTrytes;
-        } else {
-            return this._addressTrytes;
         }
+        return this._addressTrytes;
     }
 }
